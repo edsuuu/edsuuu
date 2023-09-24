@@ -18,8 +18,8 @@ Here are some ideas to get you started:
 
 <div>
   <a href="https://github.com/edsuuu">
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=compact&langs_count=7&theme=nord"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=edsuuu&show_icons=true&theme=nord"/>
+<img height="200em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=compact&langs_count=7&theme=nord"/>
+<img height="200em" src="https://github-readme-stats.vercel.app/api?username=edsuuu&show_icons=true&theme=nord"/>
 	
  	
 
