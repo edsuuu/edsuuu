@@ -1,19 +1,16 @@
+<h1 align="center">Hi 👋, I'm Edsuu</h1>
+<h3 align="center">Front-End Developer</h3>
 
-    <h1 align="center">Hi 👋, I'm Edsuu</h1>
-    <h3 align="center">Front-End Developer</h3>
+<p align="center">- 🌱 I’m currently learning **React, JavaScript, Node**</p>
 
-    <p align="center">- 🌱 I’m currently learning **React, JavaScript, Node**</p>
+<p align="center">- 📫 How to reach me **edsonteles343@gmail.com**</p>
 
-    <p align="center">- 📫 How to reach me **edsonteles343@gmail.com**</p>
-
-    <h3 align="center">Connect with me:</h3>
-    <p align="center">
-        <a href="https://linkedin.com/in/https://www.linkedin.com/in/edsonlima343/" target="blank"><img align="center"
-                src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg"
-                alt="https://www.linkedin.com/in/edsonlima343/" height="30" width="40" /></a>
+<h3 align="center">Connect with me:</h3>
+<p align="center">
+<a href="https://linkedin.com/in/https://www.linkedin.com/in/edsonlima343/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/edsonlima343/" height="30" width="40" /></a>
     </p>
 
-    <br>
+<br>
     <div align="center">
         <img align="center" height="180em"
             src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=compact&langs_count=7&theme=nord" />
@@ -22,22 +19,22 @@
     </div>
     <br>
 
-    <div align="center">
+<div align="center">
         <h2 align="center" style="font-size: 1.7em; font-family: Georgia, 'Times New Roman', Times, serif;">Languages
             and Tools:</h2>
         <br>
 
 
-        <!-- React  -->
+<!-- React  -->
 
-        <abbr title="React">
+<abbr title="React">
             <abbr href="https://reactjs.org/" target="_blank" rel="noreferrer">
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
                     alt="react" width="40" height="40" />
                 </a>
             </abbr>
 
-            <!-- SASS -->
+<!-- SASS -->
 
             <abbr title="Sass">
                 <abbr href="https://sass-lang.com" target="_blank" rel="noreferrer">
