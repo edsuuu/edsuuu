@@ -11,6 +11,7 @@
 </p>
 
 <br>
+
 <div align="center">
     <img align="center" height="180em"
         src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=compact&langs_count=7&theme=nord" />
@@ -25,18 +26,19 @@
     <br>
 
 <!-- React -->
+
 <abbr title="React">
-    <abbr href="https://reactjs.org/" target="_blank" rel="noreferrer">
+<abbr href="https://reactjs.org/" target="_blank" rel="noreferrer">
             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
                 alt="react" width="40" height="40" />
         </abbr>
 
 <!-- SASS -->
-<abbr title="Sass"><abbr href="https://sass-lang.com" target="_blank" rel="noreferrer">
 
+<abbr title="Sass"><abbr href="https://sass-lang.com" target="_blank" rel="noreferrer">
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
         alt="sass" width="40" height="40" />
-    </abbr>
+</abbr>
 
 <!-- ANGULAR -->
 <abbr title="Angular">
