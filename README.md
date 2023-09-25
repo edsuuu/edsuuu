@@ -25,6 +25,15 @@
         and Tools:</h2>
     <br>
 
+
+
+<!-- ANGULAR -->
+<abbr title="Angular">
+        <abbr href="https://angular.io" target="_blank" rel="noreferrer">
+            <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40"
+                height="40" />
+        </abbr>
+        
 <!-- React -->
 
 <abbr title="React">
@@ -39,13 +48,6 @@
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
         alt="sass" width="40" height="40" />
 </abbr>
-
-<!-- ANGULAR -->
-<abbr title="Angular">
-        <abbr href="https://angular.io" target="_blank" rel="noreferrer">
-            <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40"
-                height="40" />
-        </abbr>
 
 <!-- Tailwindcss -->
 <abbr title="Tailwindcss">
