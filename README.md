@@ -35,13 +35,6 @@
                 alt="react" width="40" height="40" />
         </a>
 
-<!-- SASS -->
-
-<!-- <abbr title="Sass">
-<a href="https://sass-lang.com" target="_blank" rel="noreferrer">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
-        alt="sass" width="40" height="40" />
-</a> -->
 <!-- ANGULAR -->
 <abbr title="Angular">
         <abbr href="https://angular.io" target="_blank" rel="noreferrer">
@@ -49,6 +42,14 @@
                 height="40" />
         </abbr>
 
+<!-- SASS -->
+
+<abbr title="Sass">
+<a href="https://sass-lang.com" target="_blank" rel="noreferrer">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+        alt="sass" width="40" height="40" />
+</a> 
+    
 <!-- Tailwindcss -->
 <!-- <abbr title="Tailwindcss">
         <abbr href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
