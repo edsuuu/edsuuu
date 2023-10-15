@@ -51,7 +51,7 @@
 </a> 
     
 <!-- Tailwindcss -->
-<!-- <abbr title="Tailwindcss">
+<abbr title="Tailwindcss">
         <abbr href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
             <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind"
                 width="40" height="40" />
@@ -166,7 +166,7 @@
         </a>
     </abbr>
 
-![Snake animation](https://github.com/edsuuu/edsuuu/blob/output/github-contribution-grid-snake.svg)
+<!-- ![Snake animation](https://github.com/edsuuu/edsuuu/blob/output/github-contribution-grid-snake.svg) -->
 
 <p align="center">
         <br>
