@@ -167,10 +167,6 @@
     </abbr>
 
 
-![Snake animation](https://github.com/edsuuu/edsuuu/blob/output/github-contribution-grid-snake.svg)
-![Snake animation](https://github.com/blob/main/.github/workflows/main.yml)
-
-
 
 <p align="center">
         <br>
