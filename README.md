@@ -3,8 +3,6 @@
 
 <p align="center">- 🌱 Estou estudando **JavaScript, Python e MySQL**</p>
 
-x
-
 <h3 align="center">Linkedin:</h3>
 <p align="center">
     <a href="https://linkedin.com/in/https://www.linkedin.com/in/edsonlima343/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/edsonlima343/" height="30" width="40" /></a>
