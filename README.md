@@ -1,11 +1,11 @@
-<h1 align="center">Hi 👋, I'm Edsuu</h1>
-<h3 align="center">Front-End Developer</h3>
+<h1 align="center">Olá 👋, Eu sou o Edsu !!</h1>
+<h3 align="center">Desenvolvedor</h3>
 
-<p align="center">- 🌱 I’m currently learning **React, JavaScript, Node**</p>
+<p align="center">- 🌱 Estou estudando **JavaScript, Python e MySQL**</p>
 
-<p align="center">- 📫 How to reach me **edsonteles343@gmail.com**</p>
+x
 
-<h3 align="center">Connect with me:</h3>
+<h3 align="center">Linkedin:</h3>
 <p align="center">
     <a href="https://linkedin.com/in/https://www.linkedin.com/in/edsonlima343/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/edsonlima343/" height="30" width="40" /></a>
 </p>
@@ -20,8 +20,7 @@
 </div>
 <br>
 
-<h2 align="center" style="font-size: 1.7em; font-family: Georgia, 'Times New Roman', Times, serif;">Languages
-        and Tools:</h2>
+<h2 align="center" style="font-size: 1.7em; font-family: Georgia, 'Times New Roman', Times, serif;">Linguagens e ferramentas:</h2>
     <br>
 
 
