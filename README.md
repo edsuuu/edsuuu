@@ -1,7 +1,5 @@
 <h1 align="center">Olá 👋, Eu sou o Edsu !!</h1>
-<h3 align="center">Desenvolvedor</h3>
-
-<p align="center">- 🌱 Estou estudando **JavaScript, Python e MySQL**</p>
+<h3 align="center">Desenvolvedor FullStack</h3>
 
 <h3 align="center">Linkedin:</h3>
 <p align="center">
