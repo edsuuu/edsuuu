@@ -15,7 +15,8 @@
         src="https://github-readme-stats.vercel.app/api?username=edsuuu&show_icons=true&theme=nord" />
 </div>
 <br>
-    <img align="center" src="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&flatten=0&animation=mess&weeks=30&theme=green" />
+    ![Contribuições](https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&gradient=true&flatten=0&animation=wave&animation_duration=3&animation_delay=0.03&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=19_3&weeks=50&dark=true)
+
 
 <h2 align="center" style="font-size: 1.7em; font-family: Georgia, 'Times New Roman', Times, serif;">Linguagens e ferramentas:</h2>
     <br>
