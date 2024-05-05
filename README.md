@@ -16,12 +16,12 @@
 </div>
 <br>
 
-![Contribuições](https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&gradient=true&flatten=0&animation=wave&animation_duration=3&animation_delay=0.03&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=19_3&weeks=50&dark=true)
-
+<object data="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&gradient=true&flatten=0&animation=wave&animation_duration=3&animation_delay=0.03&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=19_3&weeks=50&dark=true" type="image/svg+xml" width="600" height="300">
+<img src="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&gradient=true&flatten=0&animation=wave&animation_duration=3&animation_delay=0.03&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=19_3&weeks=50&dark=true" alt="Commits">
+ </object>
 
 <h2 align="center" style="font-size: 1.7em; font-family: Georgia, 'Times New Roman', Times, serif;">Linguagens e ferramentas:</h2>
     <br>
-
 
 <div align="center">
 
