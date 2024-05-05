@@ -15,6 +15,7 @@
         src="https://github-readme-stats.vercel.app/api?username=edsuuu&show_icons=true&theme=nord" />
 </div>
 <br>
+    <img align="center" src="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&flatten=0&animation=mess&weeks=30&theme=green" />
 
 <h2 align="center" style="font-size: 1.7em; font-family: Georgia, 'Times New Roman', Times, serif;">Linguagens e ferramentas:</h2>
     <br>
