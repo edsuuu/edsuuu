@@ -1,12 +1,14 @@
 <h1 align="center">Olá 👋, Eu sou o Edsu !!</h1>
-<h3 align="center">Desenvolvedor FullStack</h3>
-
-
-
-<h3 align="center">Linkedin:</h3>
-<p align="center">
-    <a href="https://linkedin.com/in/https://www.linkedin.com/in/edsonlima343/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/edsonlima343/" height="30" width="40" /></a>
-</p>
+<div align="center">
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&random=false&width=435&lines=Hey+guys%2C+I+am+Edson+!+;Welcome+to+my+profile;FullStack++Developer+;Web+Developer+)](https://git.io/typing-svg)
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&random=false&width=435&lines=Hey+guys%2C+I+am+Edson+!+;Welcome+to+my+profile;FullStack++Developer+;Web+Developer+" alt="Typing SVG" /></a>
+</div>
+<div align='center'>
+  <p align='center'>
+    <a href="https://linkedin.com/in/https://www.linkedin.com/in/edsonlima343"><img height="30" src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/linkedin.png?raw=true"></a>&nbsp;&nbsp;
+    <a href="mailto:eeht1717@gmail.com.io"><img height="30" src="https://th.bing.com/th/id/OIP.9sT4UWsRfFiy6vPydv3_-QHaHO?pid=ImgDet&rs=1"></a>&nbsp;&nbsp;
+  </p>
+</div>
 
 <br>
 
