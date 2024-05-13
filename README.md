@@ -8,7 +8,9 @@
   </p>
 </div>
 
-[[https://spotify-github-profile.vercel.app/api/view.svg?uid=21kagorfvae5nlihwve7euw2q&redirect=true][https://spotify-github-profile.vercel.app/api/view.svg?uid=21kagorfvae5nlihwve7euw2q&cover_image=true&theme=novatorem&show_offline=true&background_color=000000&interchange=true&bar_color=00ffee&bar_color_cover=false)]]
+<div align="center">
+    <a href="https://spotify-github-profile.vercel.app/api/view.svg?uid=21kagorfvae5nlihwve7euw2q&redirect=true"><img src="https://spotify-github-profile.vercel.app/api/view.svg?uid=21kagorfvae5nlihwve7euw2q&cover_image=true&theme=novatorem&show_offline=true&background_color=000000&interchange=true&bar_color=00ffee&bar_color_cover=false" alt="Spotify" /></a>
+</div>
 
 <br/>
 
