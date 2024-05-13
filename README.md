@@ -11,6 +11,10 @@
 <br>
 
 <div align="center">
+    <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=edsuuu&theme=windows-dark&border_radius=5&locale=pt_BR&date_format=j%2Fn%5B%2FY%5D" alt="GitHub Streak" /></a>
+</div>
+
+<div align="center">
     <img align="center" height="180em"
         src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=compact&langs_count=7&theme=nord" />
     <img align="center" height="180em"
