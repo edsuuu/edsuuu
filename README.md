@@ -8,17 +8,25 @@
   </p>
 </div>
 
-<br>
+<br/>
 
 <div align="center">
     <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=edsuuu&theme=windows-dark&border_radius=5&locale=pt_BR&date_format=j%2Fn%5B%2FY%5D" alt="GitHub Streak" /></a>
 </div>
+<br/>
 
 <div align="center">
     <img align="center" height="180em"
         src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=compact&langs_count=7&theme=nord" />
     <img align="center" height="180em"
         src="https://github-readme-stats.vercel.app/api?username=edsuuu&show_icons=true&theme=nord" />
+</div>
+<br>
+
+<div align="center">
+
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=edsuuu&bg_color=000000&color=3391ff&line=3391ff&point=ffffff&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
 </div>
 <br>
 
