@@ -16,8 +16,7 @@
 <br/>
 
 <div align="center">
-    <img align="center" height="180em"
-        src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=compact&langs_count=7&theme=nord" />
+    <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=donut&langs_count=8&theme=github_dark" alt="img" />
     <img align="center" height="180em"
         src="https://github-readme-stats.vercel.app/api?username=edsuuu&show_icons=true&theme=nord" />
 </div>
