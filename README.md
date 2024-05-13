@@ -17,7 +17,7 @@
 
 <div align="center">
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=donut&langs_count=7&theme=github_dark&border_color=00a4ef&bg_color=000000" alt="img" />
-    <img src="https://github-readme-stats.vercel.app/api?username=edsuuu&&rank_icon=github&theme=github_dark&border_color=00a4ef&bg_color=000000&show=reviews,prs_merged,prs_merged_percentage" />
+    <img src="https://github-readme-stats.vercel.app/api?username=edsuuu&&rank_icon=github&theme=github_dark&border_color=00a4ef&bg_color=000000&show=reviews,prs_merged,prs_merged_percentage" style="height: 280px"/>
 </div>
 <br>
 
