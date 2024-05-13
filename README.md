@@ -1,7 +1,11 @@
 <div align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&pause=1000&color=76B4F7&center=true&random=false&width=475&lines=Hey+guys%2C+I+am+Edson+!+;Welcome+to+my+profile;FullStack++Developer+;Web+Developer+" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&pause=1000&color=00a4ef&center=true&random=false&width=475&lines=Hey+guys%2C+I+am+Edson+!+;Welcome+to+my+profile;FullStack++Developer+;Web+Developer+" alt="Typing SVG" /></a>
 </div>
 <div align='center'>
+
+  <p align='center'>
+  I current learning 
+  </p>
   <p align='center'>
     <a href="https://www.linkedin.com/in/edsonlima343"><img height="30" src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/linkedin.png?raw=true"></a>&nbsp;&nbsp;
     <a href="mailto:edsonteles343@gmail.com"><img height="30" src="https://th.bing.com/th/id/OIP.9sT4UWsRfFiy6vPydv3_-QHaHO?pid=ImgDet&rs=1"></a>&nbsp;&nbsp;
@@ -9,13 +13,13 @@
 </div>
 
 <div align="center">
-    <a href="https://spotify-github-profile.vercel.app/api/view.svg?uid=21kagorfvae5nlihwve7euw2q&redirect=true"><img src="https://spotify-github-profile.vercel.app/api/view.svg?uid=21kagorfvae5nlihwve7euw2q&cover_image=true&theme=novatorem&show_offline=true&background_color=000000&interchange=true&bar_color=00ffee&bar_color_cover=false" alt="Spotify" /></a>
+    <a href="https://spotify-github-profile.vercel.app/api/view.svg?uid=21kagorfvae5nlihwve7euw2q&redirect=true"><img src="https://spotify-github-profile.vercel.app/api/view.svg?uid=21kagorfvae5nlihwve7euw2q&cover_image=true&theme=novatorem&show_offline=true&background_color=000000&interchange=true&bar_color=00a4ef&bar_color_cover=false" alt="Spotify" /></a>
 </div>
 
 <br/>
 
 <div align="center">
-    <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=edsuuu&theme=windows-dark&border_radius=5&locale=pt_BR&date_format=j%2Fn%5B%2FY%5D" alt="GitHub Streak" /></a>
+    <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=edsuuu&theme=windows-dark&border_radius=5&locale=en&date_format=j%2Fn%5B%2FY%5D" alt="GitHub Streak" /></a>
 </div>
 <br/>
 
@@ -36,18 +40,25 @@
         <br/>
         <h3>👨‍💻 Programming Frameworks and Markup Languages</h3>
    <p>
-      <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=javascript&logoColor=black">
-      <img alt="Node.js" src="https://img.shields.io/badge/Node.js-43853D.svg?logo=node.js&logoColor=white">
-      <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC.svg?logo=typescript&logoColor=white">
-      <img alt="React" src="https://img.shields.io/badge/React-20232a.svg?logo=react&logoColor=%2361DAFB">
-      <img alt="C#" src="https://custom-icon-badges.demolab.com/badge/C%23-68217A.svg?logo=cs2&logoColor=white">
-      <img alt="Python" src="https://img.shields.io/badge/Python-14354C.svg?logo=python&logoColor=white">
-      <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-7952B3.svg?logo=bootstrap&logoColor=white">
-      <img alt="Electron" src="https://img.shields.io/badge/Electron-20232e.svg?logo=electron&logoColor=white">
-      <img alt="Express.js" src="https://img.shields.io/badge/Express.js-404d59.svg?logo=express&logoColor=white">
-      <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2671E5.svg?logo=github%20actions&logoColor=white">
-      <img alt="CSS" src="https://img.shields.io/badge/CSS-1572B6.svg?logo=css3&logoColor=white">
-      <img alt="HTML" src="https://img.shields.io/badge/HTML-E34F26.svg?logo=html5&logoColor=white">
+        <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=javascript&logoColor=black">
+        <img alt="Node.js" src="https://img.shields.io/badge/Node.js-43853D.svg?logo=node.js&logoColor=white">
+        <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC.svg?logo=typescript&logoColor=white">
+        <img alt="React" src="https://img.shields.io/badge/React-20232a.svg?logo=react&logoColor=%2361DAFB">
+        <img alt="C#" src="https://custom-icon-badges.demolab.com/badge/C%23-68217A.svg?logo=cs2&logoColor=white">
+        <img alt="Python" src="https://img.shields.io/badge/Python-14354C.svg?logo=python&logoColor=white">
+        <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-7952B3.svg?logo=bootstrap&logoColor=white">
+        <img alt="Electron" src="https://img.shields.io/badge/Electron-20232e.svg?logo=electron&logoColor=white">
+        <img alt="Express.js" src="https://img.shields.io/badge/Express.js-404d59.svg?logo=express&logoColor=white">
+        <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2671E5.svg?logo=github%20actions&logoColor=white">
+        <img alt="CSS" src="https://img.shields.io/badge/CSS-1572B6.svg?logo=css3&logoColor=white">
+        <img alt="HTML" src="https://img.shields.io/badge/HTML-E34F26.svg?logo=html5&logoColor=white">
+        <img alt="Webpack" src="https://img.shields.io/badge/Webpack-000?logo=webpack&logoColor=white" /> 
+        <img alt="Redux" src="https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white" />
+        <img alt="Sass" src="https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=white" />
+        <img alt="Styled Components" src="https://img.shields.io/badge/Styled_Components-0C0D0F?logo=styled-components&logoColor=white" />
+        <img alt="Prettier" src="https://img.shields.io/badge/Prettier-131a1e?logo=prettier&logoColor=white" />
+
+
    </p>
    <h3>🗄️ Databases and Cloud Hosting</h3>
    <p>
@@ -82,14 +93,17 @@
         <img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&logoColor=white">
         <img alt="Notion" src="https://img.shields.io/badge/Notion-010101.svg?logo=notion&logoColor=white">
         <img alt="Spotify" src="https://img.shields.io/badge/Spotify-000.svg?&style=flat-square&logo=spotify&logoColor=1ED760">
+        <img alt="Insomnia" src="https://img.shields.io/badge/Insomnia-5849BE?logo=insomnia&logoColor=white" />
+        <img alt="Npm" src="https://img.shields.io/badge/NPM-CB3837?logo=npm&logoColor=white" />
+
    </p>
 
 <img alt="ProfileVisits" src="https://komarev.com/ghpvc/?username=edsuuu&label=Profile%20Visits&color=blue&style=for-the-badge">
 <a href="https://www.twitch.tv/wncs_"><img alt="twitch" src="https://img.shields.io/twitch/status/wncs_?label=LiveStream&style=for-the-badge"></a>
 </div>
 
-<div>
-    <h1>Commits</h1>
+<div align="center">
+   <h3>⚡️ Daily Commits</h3>
     <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=3&gradient=true&flatten=0&animation=wave&animation_duration=3&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=19_3&format=svg&weeks=50&theme=blue&dark=true">
         <source media="(prefers-color-scheme: light)" srcset="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&flatten=2&animation=wave&animation_duration=4&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=0_3&format=svg&weeks=34&theme=blue">
