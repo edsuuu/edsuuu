@@ -28,9 +28,6 @@
 </div>
 <br>
 
-<h2 align="center" style="font-size: 1.7em; font-family: Georgia, 'Times New Roman', Times, serif;">Linguagens e ferramentas:</h2>
-    <br>
-
 <div align="center">
         <h2>🛠️ My Favorite Tools</h2>
         <br/>
@@ -81,8 +78,10 @@
       <img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&logoColor=white">
       <img alt="Notion" src="https://img.shields.io/badge/Notion-010101.svg?logo=notion&logoColor=white">
    </p>
+
+<img alt="ProfileVisits" src="https://komarev.com/ghpvc/?username=edsuuu&label=Profile%20Visits&color=blue&style=for-the-badge">
+<a href="https://www.twitch.tv/wncs_"><img alt="twitch" src="https://img.shields.io/twitch/status/wncs_?label=LiveStream&style=for-the-badge"></a>
 </div>
-<img src="https://komarev.com/ghpvc/?username=edsuuu&label=Profile%20views&color=0e75b6&style=flat" alt="edsuuu" />
 
 <div>
 <h1>Commits</h1>
@@ -94,6 +93,3 @@
 <img alt="" src="[https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&flatten=1&weeks=40&animation=wave&format=svg&gap=0.6&animation_frequency=0.2&animation_amplitude=20&theme=pink](https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&flatten=2&animation=wave&animation_duration=4&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=0_3&format=svg&weeks=34&theme=blue)">
 </picture>
 </div>
-
-<img alt="ProfileVisits" src="https://komarev.com/ghpvc/?username=edsuuu&label=Profile%20Visits&color=blue&style=for-the-badge">
-<a href="https://www.twitch.tv/wncs_"><img alt="twitch" src="https://img.shields.io/twitch/status/wncs_?label=LiveStream&style=for-the-badge"></a>
