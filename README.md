@@ -8,6 +8,8 @@
   </p>
 </div>
 
+[[https://spotify-github-profile.vercel.app/api/view.svg?uid=21kagorfvae5nlihwve7euw2q&redirect=true][https://spotify-github-profile.vercel.app/api/view.svg?uid=21kagorfvae5nlihwve7euw2q&cover_image=true&theme=novatorem&show_offline=true&background_color=000000&interchange=true&bar_color=00ffee&bar_color_cover=false)]]
+
 <br/>
 
 <div align="center">
@@ -26,7 +28,6 @@
 [![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=edsuuu&bg_color=000000&color=3391ff&line=3391ff&point=ffffff&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 </div>
-<br>
 
 <div align="center">
         <h2>🛠️ My Favorite Tools</h2>
@@ -86,12 +87,10 @@
 </div>
 
 <div>
-<h1>Commits</h1>
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=3&gradient=true&flatten=0&animation=wave&animation_duration=3&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=19_3&format=svg&weeks=50&theme=blue&dark=true">
-
-<source media="(prefers-color-scheme: light)" srcset="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&flatten=2&animation=wave&animation_duration=4&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=0_3&format=svg&weeks=34&theme=blue">
-
-<img alt="" src="[https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&flatten=1&weeks=40&animation=wave&format=svg&gap=0.6&animation_frequency=0.2&animation_amplitude=20&theme=pink](https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&flatten=2&animation=wave&animation_duration=4&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=0_3&format=svg&weeks=34&theme=blue)">
-</picture>
+    <h1>Commits</h1>
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=3&gradient=true&flatten=0&animation=wave&animation_duration=3&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=19_3&format=svg&weeks=50&theme=blue&dark=true">
+        <source media="(prefers-color-scheme: light)" srcset="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&flatten=2&animation=wave&animation_duration=4&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=0_3&format=svg&weeks=34&theme=blue">
+        <img alt="" src="[https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&flatten=1&weeks=40&animation=wave&format=svg&gap=0.6&animation_frequency=0.2&animation_amplitude=20&theme=pink](https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&flatten=2&animation=wave&animation_duration=4&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=0_3&format=svg&weeks=34&theme=blue)">
+    </picture>
 </div>
