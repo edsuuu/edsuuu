@@ -3,9 +3,9 @@
 </div>
 <div align='center'>
 
-  <p align='center'>
-  I current learning 
-  </p>
+  <h3 align='center'>
+  I current learning TypeScript <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="30" height="30"/> and NextJS <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="30" height="30"/> 
+  </h3>
   <p align='center'>
     <a href="https://www.linkedin.com/in/edsonlima343"><img height="30" src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/linkedin.png?raw=true"></a>&nbsp;&nbsp;
     <a href="mailto:edsonteles343@gmail.com"><img height="30" src="https://th.bing.com/th/id/OIP.9sT4UWsRfFiy6vPydv3_-QHaHO?pid=ImgDet&rs=1"></a>&nbsp;&nbsp;
@@ -38,7 +38,7 @@
 <div align="center">
         <h2>🛠️ My Favorite Tools</h2>
         <br/>
-        <h3>👨‍💻 Programming Frameworks and Markup Languages</h3>
+        <h3>👨‍💻 Programming, Frameworks and Markup Languages</h3>
    <p>
         <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=javascript&logoColor=black">
         <img alt="Node.js" src="https://img.shields.io/badge/Node.js-43853D.svg?logo=node.js&logoColor=white">
@@ -57,6 +57,7 @@
         <img alt="Sass" src="https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=white" />
         <img alt="Styled Components" src="https://img.shields.io/badge/Styled_Components-0C0D0F?logo=styled-components&logoColor=white" />
         <img alt="Prettier" src="https://img.shields.io/badge/Prettier-131a1e?logo=prettier&logoColor=white" />
+        <img alt="Tailwind" src="https://img.shields.io/badge/tailwindcss-090e1a.svg?&logo=tailwind-css&logoColor=white">
 
 
    </p>
@@ -73,6 +74,9 @@
         <img alt="AWS" src="https://img.shields.io/badge/-AWS-000?&logo=Amazon-AWS&logoColor=F90">
         <img alt="Docker" src="https://img.shields.io/badge/-Docker-000?&logo=Docker">
         <img alt="Google Cloud" src="https://img.shields.io/badge/Google%20Cloud-black?style=flat-square&logo=google-cloud">
+        <img alt="Azure" src="https://img.shields.io/badge/azure-%230072C6.svg?&logo=microsoftazure&logoColor=white">
+        <img alt="Netlify" src="https://img.shields.io/badge/netlify-%23000000.svg?&logo=netlify&logoColor=#00C7B7">
+        <img alt="Nginx" src="https://img.shields.io/badge/nginx-%23009639.svg?&logo=nginx&logoColor=white">
    </p>
    <h3>💻 Software and Tools</h3>
    <p>
@@ -105,8 +109,37 @@
 <div align="center">
    <h3>⚡️ Daily Commits</h3>
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=3&gradient=true&flatten=0&animation=wave&animation_duration=3&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=19_3&format=svg&weeks=50&theme=blue&dark=true">
-        <source media="(prefers-color-scheme: light)" srcset="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&flatten=2&animation=wave&animation_duration=4&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=0_3&format=svg&weeks=34&theme=blue">
-        <img alt="" src="[https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&flatten=1&weeks=40&animation=wave&format=svg&gap=0.6&animation_frequency=0.2&animation_amplitude=20&theme=pink](https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&flatten=2&animation=wave&animation_duration=4&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=0_3&format=svg&weeks=34&theme=blue)">
+        <a href="https://github.com/CatsJuice/ssr-contributions-img">
+            <source media="(prefers-color-scheme: dark)" srcset="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=3&gradient=true&flatten=0&animation=wave&animation_duration=3&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=19_3&format=svg&weeks=50&theme=blue&dark=true">
+            <source media="(prefers-color-scheme: light)" srcset="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&flatten=2&animation=wave&animation_duration=4&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=0_3&format=svg&weeks=34&theme=blue">
+            <img alt="" src="[https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&flatten=1&weeks=40&animation=wave&format=svg&gap=0.6&animation_frequency=0.2&animation_amplitude=20&theme=pink](https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&flatten=2&animation=wave&animation_duration=4&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=0_3&format=svg&weeks=34&theme=blue)">
+        </a>
     </picture>
+</div>
+<div align="center">
+   <h3 align="center">👨‍💻 Repositories</h3>
+   <div align="center">
+      <a href="https://github.com/edsuuu/portfolio" target="_blank">
+         <img
+            src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=portfolio&theme=react&border_color=00a4ef&bg_color=000"
+            alt="">
+      </a>
+      <a href="https://github.com/edsuuu/landing-page-nft" target="_blank">
+         <img
+            src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=landing-page-nft&theme=react&border_color=00a4ef&bg_color=000"
+            alt="">
+      </a>
+   </div>
+   <div align="center">
+      <a href="https://github.com/edsuuu/ubuntu-info" target="_blank">
+         <img
+            src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=ubuntu-info&theme=react&border_color=00a4ef&bg_color=000"
+            alt="">
+      </a>
+      <a href="https://github.com/edsuuu/api_escola" target="_blank">
+         <img
+            src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=api_escola&theme=react&border_color=00a4ef&bg_color=000"
+            alt="">
+      </a>
+   </div>
 </div>
