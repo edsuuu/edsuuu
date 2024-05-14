@@ -59,7 +59,6 @@
         <img alt="Prettier" src="https://img.shields.io/badge/Prettier-131a1e?logo=prettier&logoColor=white" />
         <img alt="Tailwind" src="https://img.shields.io/badge/tailwindcss-090e1a.svg?&logo=tailwind-css&logoColor=white">
 
-
    </p>
    <h3>🗄️ Databases and Cloud Hosting 🗄️</h3>
    <p>
@@ -118,31 +117,14 @@
 </div>
 <div align="center">
    <h3 align="center">👨‍💻 Favorite Repositories 👨‍💻</h3>
-   <div align="center">
       <a href="https://github.com/edsuuu/portfolio" target="_blank">
          <img
             src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=portfolio&theme=react&border_color=00a4ef&bg_color=000"
             alt="">
       </a>
-      <br/>
-      <a href="https://github.com/edsuuu/landing-page-nft" target="_blank">
-         <img
-            src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=landing-page-nft&theme=react&border_color=00a4ef&bg_color=000"
-            alt="">
-      </a>
-      <br/>
-   </div>
-   <div align="center">
       <a href="https://github.com/edsuuu/ubuntu-info" target="_blank">
          <img
             src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=ubuntu-info&theme=react&border_color=00a4ef&bg_color=000"
             alt="">
       </a>
-      <br/>
-      <a href="https://github.com/edsuuu/api_escola" target="_blank">
-         <img
-            src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=api_escola&theme=react&border_color=00a4ef&bg_color=000"
-            alt="">
-      </a>
-   </div>
 </div>
