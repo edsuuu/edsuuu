@@ -115,14 +115,13 @@
     </picture>
     </a>
 </div>
-<div align="center">
-   <h3 align="center">👨‍💻 Favorite Repositories 👨‍💻</h3>
+<h3 align="center">👨‍💻 Favorite Repositories 👨‍💻</h3>
+<div style="display: flex;justify-content: space-evenly;">
       <a href="https://github.com/edsuuu/portfolio" target="_blank">
          <img
             src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=portfolio&theme=react&border_color=00a4ef&bg_color=000"
             alt="">
       </a>
-      <div width="5px"></div>
       <a href="https://github.com/edsuuu/ubuntu-info" target="_blank">
          <img
             src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=ubuntu-info&theme=react&border_color=00a4ef&bg_color=000"
