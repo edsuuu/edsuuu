@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&pause=1000&color=00a4ef&center=true&random=false&width=475&lines=Hey+guys%2C+I+am+Edson+!+;Welcome+to+my+profile;FullStack++Developer+;Web+Developer+" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=500&color=00A4EF&center=true&random=false&width=500&height=55&lines=Hey+Guys%2C+I+am+Edson+%F0%9F%91%8B;Welcome+to+me+profile;I+am+FullStack+and;Web+Developer+)](https://git.io/typing-svg" alt="Typing SVG" /></a>
 </div>
 <div align='center'>
 
@@ -37,7 +37,6 @@
 
 <div align="center">
         <h2>🛠️ My Favorite Tools 🛠️</h2>
-        <br/>
         <h3>👨‍💻 Programming, Frameworks and Markup Languages 👨‍💻</h3>
    <p>
         <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=javascript&logoColor=black">
@@ -106,7 +105,7 @@
 </div>
 
 <div align="center">
-   <h3>⚡️ Daily Commits ⚡️</h3>
+   <h2>⚡️ Daily Commits ⚡️</h2>
    <a href="https://github.com/CatsJuice/ssr-contributions-img">
     <picture>
             <source media="(prefers-color-scheme: dark)" srcset="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=3&gradient=true&flatten=0&animation=wave&animation_duration=3&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=19_3&format=svg&weeks=50&theme=blue&dark=true">
@@ -115,8 +114,8 @@
     </picture>
     </a>
 </div>
-<h3 align="center">👨‍💻 Favorite Repositories 👨‍💻</h3>
-<div style="display: flex;justify-content: space-evenly;">
+<h2 align="center">👨‍💻 Favorite Repositories 👨‍💻</h2>
+<div align="center">
       <a href="https://github.com/edsuuu/portfolio" target="_blank">
          <img
             src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=portfolio&theme=react&border_color=00a4ef&bg_color=000"
