@@ -44,37 +44,34 @@
         <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC.svg?logo=typescript&logoColor=white">
         <img alt="React" src="https://img.shields.io/badge/React-20232a.svg?logo=react&logoColor=%2361DAFB">
         <img alt="C#" src="https://custom-icon-badges.demolab.com/badge/C%23-68217A.svg?logo=cs2&logoColor=white">
-        <img alt="Python" src="https://img.shields.io/badge/Python-14354C.svg?logo=python&logoColor=white">
         <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-7952B3.svg?logo=bootstrap&logoColor=white">
         <img alt="Electron" src="https://img.shields.io/badge/Electron-20232e.svg?logo=electron&logoColor=white">
         <img alt="Express.js" src="https://img.shields.io/badge/Express.js-404d59.svg?logo=express&logoColor=white">
-        <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2671E5.svg?logo=github%20actions&logoColor=white">
         <img alt="CSS" src="https://img.shields.io/badge/CSS-1572B6.svg?logo=css3&logoColor=white">
         <img alt="HTML" src="https://img.shields.io/badge/HTML-E34F26.svg?logo=html5&logoColor=white">
         <img alt="Webpack" src="https://img.shields.io/badge/Webpack-000?logo=webpack&logoColor=white" /> 
         <img alt="Redux" src="https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white" />
         <img alt="Sass" src="https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=white" />
-        <img alt="Styled Components" src="https://img.shields.io/badge/Styled_Components-0C0D0F?logo=styled-components&logoColor=white" />
+        <img alt="StyledComponents" src="https://img.shields.io/badge/Styled_Components-0C0D0F?logo=styled-components&logoColor=white"/>
         <img alt="Prettier" src="https://img.shields.io/badge/Prettier-131a1e?logo=prettier&logoColor=white" />
         <img alt="Tailwind" src="https://img.shields.io/badge/tailwindcss-090e1a.svg?&logo=tailwind-css&logoColor=white">
 
    </p>
    <h3>🗄️ Databases and Cloud Hosting 🗄️</h3>
    <p>
+        <img alt="Nginx" src="https://img.shields.io/badge/nginx-%23009639.svg?&logo=nginx&logoColor=white">
+        <img alt="Google Cloud" src="https://img.shields.io/badge/Google%20Cloud-black?style=flat-square&logo=google-cloud">
+        <img alt="Azure" src="https://img.shields.io/badge/azure-%230072C6.svg?&logo=microsoftazure&logoColor=white">
+        <img alt="AWS" src="https://img.shields.io/badge/-AWS-000?&logo=Amazon-AWS&logoColor=F90">
+        <img alt="Vercel" src="https://img.shields.io/badge/Vercel-000000.svg?logo=vercel&logoColor=white">
+        <img alt="Netlify" src="https://img.shields.io/badge/netlify-%23000000.svg?&logo=netlify&logoColor=#00C7B7">
         <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-4ea94b.svg?logo=mongodb&logoColor=white">
         <img alt="SQL" src="https://custom-icon-badges.demolab.com/badge/SQL-025E8C.svg?logo=database&logoColor=white">
-        <img alt="Oracle" src="https://img.shields.io/badge/Oracle-F00000.svg?logo=oracle&logoColor=white">
         <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-316192.svg?logo=postgresql&logoColor=white">
         <img alt="MySQL" src="https://img.shields.io/badge/MySQL-316192.svg?logo=mysql&logoColor=white">
         <img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub%20Pages-000.svg?logo=github&logoColor=white">
         <img alt="Render" src="https://img.shields.io/badge/Render-000.svg?logo=render&logoColor=white">
-        <img alt="Vercel" src="https://img.shields.io/badge/Vercel-000000.svg?logo=vercel&logoColor=white">
-        <img alt="AWS" src="https://img.shields.io/badge/-AWS-000?&logo=Amazon-AWS&logoColor=F90">
         <img alt="Docker" src="https://img.shields.io/badge/-Docker-000?&logo=Docker">
-        <img alt="Google Cloud" src="https://img.shields.io/badge/Google%20Cloud-black?style=flat-square&logo=google-cloud">
-        <img alt="Azure" src="https://img.shields.io/badge/azure-%230072C6.svg?&logo=microsoftazure&logoColor=white">
-        <img alt="Netlify" src="https://img.shields.io/badge/netlify-%23000000.svg?&logo=netlify&logoColor=#00C7B7">
-        <img alt="Nginx" src="https://img.shields.io/badge/nginx-%23009639.svg?&logo=nginx&logoColor=white">
    </p>
    <h3>💻 Software and Tools 💻</h3>
    <p>
