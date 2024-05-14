@@ -4,7 +4,7 @@
 <div align='center'>
 
   <h3 align='center'>
-  I current learning TypeScript and NextJS 📚
+ 📚 I current learning TypeScript and NextJS 📚
   </h3>
   <p align='center'>
     <a href="https://www.linkedin.com/in/edsonlima343"><img height="30" src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/linkedin.png?raw=true"></a>&nbsp;&nbsp;
@@ -36,9 +36,9 @@
 </div>
 
 <div align="center">
-        <h2>🛠️ My Favorite Tools</h2>
+        <h2>🛠️ My Favorite Tools 🛠️</h2>
         <br/>
-        <h3>👨‍💻 Programming, Frameworks and Markup Languages</h3>
+        <h3>👨‍💻 Programming, Frameworks and Markup Languages 👨‍💻</h3>
    <p>
         <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=javascript&logoColor=black">
         <img alt="Node.js" src="https://img.shields.io/badge/Node.js-43853D.svg?logo=node.js&logoColor=white">
@@ -61,7 +61,7 @@
 
 
    </p>
-   <h3>🗄️ Databases and Cloud Hosting</h3>
+   <h3>🗄️ Databases and Cloud Hosting 🗄️</h3>
    <p>
         <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-4ea94b.svg?logo=mongodb&logoColor=white">
         <img alt="SQL" src="https://custom-icon-badges.demolab.com/badge/SQL-025E8C.svg?logo=database&logoColor=white">
@@ -78,7 +78,7 @@
         <img alt="Netlify" src="https://img.shields.io/badge/netlify-%23000000.svg?&logo=netlify&logoColor=#00C7B7">
         <img alt="Nginx" src="https://img.shields.io/badge/nginx-%23009639.svg?&logo=nginx&logoColor=white">
    </p>
-   <h3>💻 Software and Tools</h3>
+   <h3>💻 Software and Tools 💻</h3>
    <p>
         <img alt="Adobe" src="https://img.shields.io/badge/Adobe-FF0000.svg?logo=adobe&logoColor=white">
         <img alt="Dark Reader" src="https://img.shields.io/badge/-Dark%20Reader-141E24?logo=dark-reader&logoColor=white">
@@ -107,7 +107,7 @@
 </div>
 
 <div align="center">
-   <h3>⚡️ Daily Commits</h3>
+   <h3>⚡️ Daily Commits ⚡️</h3>
    <a href="https://github.com/CatsJuice/ssr-contributions-img">
     <picture>
             <source media="(prefers-color-scheme: dark)" srcset="https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=3&gradient=true&flatten=0&animation=wave&animation_duration=3&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=19_3&format=svg&weeks=50&theme=blue&dark=true">
@@ -117,25 +117,31 @@
     </a>
 </div>
 <div align="center">
-   <h3 align="center">👨‍💻 Repositories</h3>
+   <h3 align="center">👨‍💻 Favorite Repositories 👨‍💻</h3>
    <div align="center">
+      <br/>
       <a href="https://github.com/edsuuu/portfolio" target="_blank">
          <img
             src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=portfolio&theme=react&border_color=00a4ef&bg_color=000"
             alt="">
       </a>
+      <br/>
       <a href="https://github.com/edsuuu/landing-page-nft" target="_blank">
          <img
             src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=landing-page-nft&theme=react&border_color=00a4ef&bg_color=000"
             alt="">
       </a>
+      <br/>
    </div>
+      <br/>
    <div align="center">
+      <br/>
       <a href="https://github.com/edsuuu/ubuntu-info" target="_blank">
          <img
             src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=ubuntu-info&theme=react&border_color=00a4ef&bg_color=000"
             alt="">
       </a>
+      <br/>
       <a href="https://github.com/edsuuu/api_escola" target="_blank">
          <img
             src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=api_escola&theme=react&border_color=00a4ef&bg_color=000"
