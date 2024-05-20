@@ -19,6 +19,12 @@
 <br/>
 
 <div align="center">
+    <img src="https://github-readme-stats.vercel.app/api/wakatime?username=20525642-7f6a-44d2-aa9f-b243c764fc51&layout=compact&theme=github_dark&border_color=00a4ef&bg_color=000000&"
+        alt="wakatime">
+</div>
+<br/>
+
+<div align="center">
     <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=edsuuu&theme=windows-dark&border_radius=5&locale=en&date_format=j%2Fn%5B%2FY%5D" alt="GitHub Streak" /></a>
 </div>
 <br/>
@@ -99,6 +105,8 @@
 
 <img alt="ProfileVisits" src="https://komarev.com/ghpvc/?username=edsuuu&label=Profile%20Visits&color=blue&style=for-the-badge">
 <a href="https://www.twitch.tv/wncs_"><img alt="twitch" src="https://img.shields.io/twitch/status/wncs_?label=LiveStream&style=for-the-badge"></a>
+<img src="https://wakatime.com/badge/user/20525642-7f6a-44d2-aa9f-b243c764fc51.svg?&color=blue&style=for-the-badge" alt="wakatime">
+
 </div>
 
 <div align="center">
