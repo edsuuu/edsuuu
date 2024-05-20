@@ -24,12 +24,6 @@
 <br/>
 
 <div align="center">
-    <img src="https://github-readme-stats.vercel.app/api/wakatime?username=20525642-7f6a-44d2-aa9f-b243c764fc51&layout=compact&theme=github_dark&border_color=00a4ef&bg_color=000000&"
-        alt="wakatime">
-</div>
-<br/>
-
-<div align="center">
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=donut&langs_count=7&theme=github_dark&border_color=00a4ef&bg_color=000000" alt="img" />
     <img src="https://github-readme-stats.vercel.app/api?username=edsuuu&&rank_icon=github&theme=github_dark&border_color=00a4ef&bg_color=000000&show=reviews,prs_merged,prs_merged_percentage" style="height: 280px"/>
 </div>
@@ -108,6 +102,13 @@
 <img src="https://wakatime.com/badge/user/20525642-7f6a-44d2-aa9f-b243c764fc51.svg?&color=blue&style=for-the-badge" alt="wakatime">
 
 </div>
+<br/>
+
+<div align="center">
+    <img src="https://github-readme-stats.vercel.app/api/wakatime?username=20525642-7f6a-44d2-aa9f-b243c764fc51&layout=compact&theme=github_dark&border_color=00a4ef&bg_color=000000&"
+        alt="wakatime">
+</div>
+<br/>
 
 <div align="center">
    <h2>⚡️ Daily Commits ⚡️</h2>
