@@ -132,7 +132,7 @@
 <div align="center">
       <a href="https://github.com/edsuuu/portfolio" target="_blank">
          <img
-            src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=portfolio&theme=react&border_color=00a4ef&bg_color=000"
+            src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=edsuuu&theme=react&border_color=00a4ef&bg_color=000"
             alt="">
       </a>
       <a href="https://github.com/edsuuu/ubuntu-info" target="_blank">
