@@ -1,4 +1,3 @@
-            src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=ubuntu-info&theme=react&border_color=00a4ef&bg_color=000"
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00a4ef&height=120&section=header" alt="ondas"/>
 
 <div align="center">
@@ -8,7 +7,7 @@
 
 <div align='center'>
 
-[Readme do Projeto](Readme.Project.md)
+[Readme do Portfólio](Readme.Portfolio.md)
 
   <h3 align='center'>
  📚 I current learning TypeScript and NextJS 📚
