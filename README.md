@@ -1,9 +1,14 @@
+            src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=ubuntu-info&theme=react&border_color=00a4ef&bg_color=000"
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00a4ef&height=120&section=header" alt="ondas"/>
 
 <div align="center">
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=500&color=00A4EF&center=true&random=false&width=500&height=55&lines=Hey+Guys%2C+I+am+Edson+%F0%9F%91%8B;Welcome+to+me+profile;I+am+FullStack+and;Web+Developer...;" alt="Typing SVG" /></a>
 </div>
+
+
 <div align='center'>
+
+[Readme do Projeto](Readme.Project.md)
 
   <h3 align='center'>
  📚 I current learning TypeScript and NextJS 📚
@@ -51,7 +56,7 @@
         <img alt="Express.js" src="https://img.shields.io/badge/Express.js-404d59.svg?logo=express&logoColor=white">
         <img alt="CSS" src="https://img.shields.io/badge/CSS-1572B6.svg?logo=css3&logoColor=white">
         <img alt="HTML" src="https://img.shields.io/badge/HTML-E34F26.svg?logo=html5&logoColor=white">
-        <img alt="Webpack" src="https://img.shields.io/badge/Webpack-000?logo=webpack&logoColor=white" /> 
+        <img alt="Webpack" src="https://img.shields.io/badge/Webpack-000?logo=webpack&logoColor=white" />
         <img alt="Redux" src="https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white" />
         <img alt="Sass" src="https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=white" />
         <img alt="StyledComponents" src="https://img.shields.io/badge/Styled_Components-0C0D0F?logo=styled-components&logoColor=white"/>
