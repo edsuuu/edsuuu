@@ -130,7 +130,7 @@
 </div>
 <h2 align="center">👨‍💻 Favorite Repositories 👨‍💻</h2>
 <div align="center">
-      <a href="https://github.com/edsuuu/portfolio" target="_blank">
+      <a href="https://github.com/edsuuu/edsuuu" target="_blank">
          <img
             src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=edsuuu&theme=react&border_color=00a4ef&bg_color=000"
             alt="">
