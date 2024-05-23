@@ -66,7 +66,8 @@ export const PwsNewTabs = styled.div`
     }
     .seta-bottom {
         border-radius: 0px 5px 5px 0px;
-        padding: 6px 8px 2px 6px;
+        padding: 6px 8px 2px 8px;
+        font-size: 13px;
         transition: 200ms ease-in-out;
 
         &:hover {
