@@ -8,9 +8,9 @@ export default function App(): JSX.Element {
     return (
         <>
             <Router>
-                <GlobalStyle />
                 <Navigation />
                 <AppRoutes />
+                <GlobalStyle />
                 <Footer />
             </Router>
         </>
