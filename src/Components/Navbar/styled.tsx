@@ -2,21 +2,22 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Navbar = styled.nav`
-    position: absolute;
-    width: 100%;
+    position: fixed;
     display: flex;
-    margin-top: 20px;
     justify-content: center;
+    width: 100%;
 `;
 
 export const LinksLista = styled.ul`
-    border: 1px solid black;
+    margin-top: 30px;
+    border: 0.5px solid #bebebe;
+    background-color: #02060E;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
     width: auto;
-    padding: 12px 30px;
+    padding: 6px 40px;
     list-style: none;
     border-radius: 20px;
 `;
@@ -24,10 +25,9 @@ export const LinksLista = styled.ul`
 export const LinkStyled = styled(Link)`
     box-sizing: border-box;
     text-decoration: none;
-    color: #000;
+    color: #ffffff;
     font-weight: bold;
     transition: 0.3s;
-
     &:hover {
         background-color: #4267ce;
         padding: 10px;

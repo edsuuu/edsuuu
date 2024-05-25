@@ -12,7 +12,7 @@ const Navigation = () => {
     return (
         <Navbar>
             <LinksLista>
-                <LinkTitle to={"/"}>
+                {/* <LinkTitle to={"/"}>
                     <Title>
                         <span className="credit">©</span>
                         <div>
@@ -23,7 +23,7 @@ const Navigation = () => {
                             </span>
                         </div>
                     </Title>
-                </LinkTitle>
+                </LinkTitle> */}
                 {rotas.map((rota, index) => (
                     <li key={index}>
                         <LinkStyled to={rota.to}>{rota.name}</LinkStyled>
