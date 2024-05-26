@@ -1,4 +1,4 @@
-import { Navbar, LinksLista, LinkStyled, LinkTitle, Title } from "./styled";
+import { Navbar, LinksLista, LinkStyled } from "./styled";
 
 const Navigation = () => {
     const rotas = [
