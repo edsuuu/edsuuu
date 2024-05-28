@@ -13,7 +13,7 @@ export const Container = styled.div`
 `;
 
 export const MainContact = styled.div`
-    width: 100%;
+    width: 1200px;
     display: flex;
     flex-direction: row;
     align-items: center;
