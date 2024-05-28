@@ -1,19 +1,26 @@
-import { Container } from './styled';
+import FormularioContato from '../../Components/FormularioContato';
+import RedesSociais from '../../Components/RedesSociais';
+import { Container, MainContact } from './styled';
 
 const Contact = () => {
     return (
         <Container>
-            <div>
-                <h1>
+            <MainContact>
+                {/* <h1>
                     <span>&lt;</span> Contato <span>&gt;</span>
                 </h1>
                     <p>
-                        formulario de preenchimento e redes 
+                        formulario de preenchimento e redes
                     </p>
                 <h1>
                     <span>&lt;</span> Contato / <span>&gt;</span>
-                </h1>
-            </div>
+                </h1> */}
+
+                <FormularioContato />
+
+                {/* Redes Sociais */}
+                <RedesSociais />
+            </MainContact>
         </Container>
     );
 };
