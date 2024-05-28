@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
     max-width: 1400px;
@@ -10,4 +10,13 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+`;
+
+export const MainContact = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 `;
