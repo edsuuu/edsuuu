@@ -1,4 +1,5 @@
 import { FaHome, FaUser, FaUsers } from 'react-icons/fa';
+import { Redes } from './styled';
 
 const rotas = [
     { name: 'Linkedin', to: 'https://www.linkedin.com/in/edsonlima343', icon: <FaHome size={20} /> },
@@ -8,7 +9,7 @@ const rotas = [
 
 export default function RedesSociais() {
     return (
-        <div>
+        <Redes>
             {rotas.map((rota, index) => (
                 <li key={index}>
                     <a href={rota.to} target="_blank">
@@ -17,6 +18,6 @@ export default function RedesSociais() {
                     </a>
                 </li>
             ))}
-        </div>
+        </Redes>
     );
 }
