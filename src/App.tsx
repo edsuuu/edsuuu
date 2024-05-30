@@ -11,7 +11,7 @@ export default function App(): JSX.Element {
                 <Navigation />
                 <AppRoutes />
                 <GlobalStyle />
-                <Footer />
+                {/* <Footer /> */}
             </Router>
         </>
     );
