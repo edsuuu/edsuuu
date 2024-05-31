@@ -11,12 +11,13 @@ export default function RedesSociais() {
     return (
         <Redes>
             {rotas.map((rota, index) => (
-                <li key={index}>
+                <div key={index}>
+
                     <a href={rota.to} target="_blank">
-                        <span>{rota.icon}</span>
+                    <span>{rota.icon}</span>
                         {rota.name}
                     </a>
-                </li>
+                </div>
             ))}
         </Redes>
     );

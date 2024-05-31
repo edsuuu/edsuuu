@@ -40,24 +40,24 @@ export const FormsContactGroup = styled.div`
     margin-bottom: 20px;
 
     input {
-        font-size: 12px;
+        font-size: 1.1rem;
         display: flex;
         flex: 1 1 100%;
         width: 100%;
-        height: 36px;
-        padding: 0 20px;
-        background: #2c2b2b;
-        color: #323840;
-        border: 1px solid #3d85d8;
+        height: 50px;
+        padding: 10px 15px;
+        background: gray;
+        color: white;
+        border: 1px solid #000000;
         border-radius: 4px;
         box-sizing: border-box;
 
         &:focus {
             outline: none;
             ~ label {
-                top: -8px;
-                font-size: 13px;
-                /* background: #ddd8d8; */
+                top: -10px;
+                font-size: 1.1rem;
+                background: gray;
             }
         }
 
@@ -69,12 +69,11 @@ export const FormsContactGroup = styled.div`
 
     label {
         color: #ffffff;
-        font-size: 13px;
-        font-weight: normal;
+        font-size: 1rem;
         position: absolute;
         pointer-events: none;
         left: 15px;
-        top: 11px;
+        top: 15px;
         padding: 0 5px;
         border-radius: 10px;
         transition: 0.2s ease all;
@@ -83,24 +82,26 @@ export const FormsContactGroup = styled.div`
     }
 
     textarea {
-        font-size: 12px;
+        font-size: 1.05rem;
         max-width: 800px;
         width: 100%;
         display: flex;
         flex: 1 1 100%;
         height: 350px;
         padding: 20px;
-        background: #2c2b2b;
-        border: 1px solid #3d85d8;
+        background: gray;
+        border: 1px solid #000000;
         border-radius: 4px;
         box-sizing: border-box;
+        resize: none;
+        color: white;
 
         &:focus {
             outline: none;
             ~ label {
-                top: -8px;
-                font-size: 13px;
-                /* background: #ddd8d8; */
+                top: -11px;
+                font-size: 1.1rem;
+                background-color: gray;
             }
         }
 
@@ -117,4 +118,15 @@ export const MensageAndButton = styled.div`
     gap: 5px;
 `;
 
-export const Button = styled.button``;
+export const Button = styled.button`
+    padding: 15px 20px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: none;
+    transition: .2s;
+    &:hover {
+        cursor: pointer;
+        background-color: #3d85d8;
+    }
+`;

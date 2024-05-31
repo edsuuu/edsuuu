@@ -6,7 +6,7 @@ export const Container = styled.div`
     align-items: center;
     width: 100vw;
     height: 100vh;
-`;
+    `;
 
 export const Content = styled.div`
     width: 1200px;
@@ -14,6 +14,7 @@ export const Content = styled.div`
     border: 1px solid red;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
     gap: 20px;
     /* background-color: #1E2021; */
@@ -21,6 +22,8 @@ export const Content = styled.div`
 
     @media (max-width: 768px) {
         flex-wrap: wrap;
-        padding: 15px;
+        padding: 20px;
     }
 `;
+
+
