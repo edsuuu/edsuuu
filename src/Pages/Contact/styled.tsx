@@ -1,22 +1,26 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    max-width: 1400px;
-    min-width: 375px;
-    height: 100vh;
-    border: 1px solid #000;
-    margin: 2px auto 0px auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 `;
 
-export const MainContact = styled.div`
+export const Content = styled.div`
     width: 1200px;
+    padding: 45px;
+    border: 1px solid red;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    gap: 30px;
+    flex-direction: row;
+    gap: 20px;
+    /* background-color: #1E2021; */
+    border-radius: 10px;
+
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+        padding: 15px;
+    }
 `;
