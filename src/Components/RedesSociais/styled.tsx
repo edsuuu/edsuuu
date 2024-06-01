@@ -9,7 +9,7 @@ export const Redes = styled.div`
     width: 100%;
     height: fit-content;
     flex: 1 1 250px;
-    margin-bottom: 170px;
+    margin-bottom: 90px;
 
     @media (max-width: 768px) {
         flex-direction: row;
@@ -53,7 +53,13 @@ export const LinksRedes = styled.div`
             background-color: #ff0000a2;
         }
     }
-    @media (max-width: 481px) {
+
+    .discord {
+        &:hover {
+            background-color: #3898ec;
+        }
+    }
+    @media (max-width: 632px) {
         border-radius: 50%;
 
         a {
