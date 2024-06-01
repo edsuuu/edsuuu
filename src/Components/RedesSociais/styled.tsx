@@ -17,6 +17,10 @@ export const Redes = styled.div`
         max-width: 100%;
         margin-bottom: 0px;
     }
+    @media (max-width: 1024px) {
+        margin-bottom: 70px;
+
+    }
 `;
 
 export const LinksRedes = styled.div`
