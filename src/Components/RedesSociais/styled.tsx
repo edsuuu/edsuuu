@@ -11,6 +11,7 @@ export const Redes = styled.div`
     height: fit-content;
     flex: 1 1 250px;
     margin-bottom: 242px;
+    
     div {
         border: 1px solid black;
     }
