@@ -1,20 +1,27 @@
 import styled from 'styled-components';
 
 export const Redes = styled.div`
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
     max-width: 350px;
     width: 100%;
     height: fit-content;
     flex: 1 1 250px;
-    margin-bottom: 242px;
-    
-    div {
-        border: 1px solid black;
+    margin-bottom: 170px;
+
+    @media (max-width: 768px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        max-width: 100%;
+        margin-bottom: 0px;
     }
+`;
+
+export const LinksRedes = styled.div`
+    border: 0.5px solid #ffffff5f;
+    border-radius: 15px;
 
     a {
         text-decoration: none;
@@ -22,26 +29,43 @@ export const Redes = styled.div`
         display: flex;
         align-items: center;
         flex-direction: row;
+        font-size: 1.2rem;
         justify-content: start;
-        padding: 10px 20px;
+        padding: 15px 20px;
         gap: 10px;
-        &:hover {
-            background-color: #f0f0f053;
-        }
+        transition: 300ms ease-in-out;
+        border-radius: 15px;
     }
 
-    @media (max-width: 768px) {
-        flex-direction: row;
-        justify-content: space-between;
-        max-width: 100%;
-        margin-bottom: 0px;
-
-        div {
-            width: 100%;
-            min-width: 100px;
-
-
+    .linkedin {
+        &:hover {
+            background-color: #004182;
         }
-        // Ocultar o texto a 420px e deixar apenas o icone no responsivo
+    }
+    .github {
+        &:hover {
+            background-color: #000000a2;
+        }
+    }
+    .gmail {
+        &:hover {
+            background-color: #ff0000a2;
+        }
+    }
+    @media (max-width: 431px) {
+        border-radius: 50%;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+        }
+
+        .name-redes-router {
+            display: none;
+        }
     }
 `;
