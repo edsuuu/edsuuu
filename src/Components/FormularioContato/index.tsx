@@ -5,7 +5,7 @@ export default function FormularioContato() {
         <FormMainContact>
             <TitleFormContact>
                 <h1>Contato</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nihil nulla</p>
+                <p>Entre em contato comigo utilizando o formulário abaixo ou através das minhas principais redes ao lado.</p>
             </TitleFormContact>
             <FormContact action="">
                 <InputGroup>
