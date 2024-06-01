@@ -20,6 +20,9 @@ export const Content = styled.div`
     /* background-color: #1E2021; */
     border-radius: 10px;
 
+    @media (max-width: 1024px) {
+        margin: 0px 30px 0px 30px;
+    }
     @media (max-width: 768px) {
         flex-wrap: wrap;
         padding: 20px;
