@@ -28,6 +28,7 @@ export const LinksRedes = styled.div`
         color: #fff;
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: row;
         font-size: 1.2rem;
         justify-content: start;
@@ -52,7 +53,7 @@ export const LinksRedes = styled.div`
             background-color: #ff0000a2;
         }
     }
-    @media (max-width: 431px) {
+    @media (max-width: 481px) {
         border-radius: 50%;
 
         a {
@@ -62,10 +63,13 @@ export const LinksRedes = styled.div`
             border-radius: 50%;
             width: 60px;
             height: 60px;
-        }
 
-        .name-redes-router {
-            display: none;
+            span {
+                height: 30px;
+            }
+            .name-redes-router {
+                display: none;
+            }
         }
     }
 `;
