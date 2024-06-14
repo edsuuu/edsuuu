@@ -44,7 +44,7 @@ export const LinksRedes = styled.div`
 
     .linkedin {
         &:hover {
-            background-color: #004182;
+            background-color: #3898ec;
         }
     }
     .github {
@@ -60,7 +60,7 @@ export const LinksRedes = styled.div`
 
     .discord {
         &:hover {
-            background-color: #3898ec;
+            background-color: #5865F2;
         }
     }
     @media (max-width: 632px) {

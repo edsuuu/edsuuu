@@ -3,7 +3,17 @@ import { Container } from './styled';
 const Experience = () => {
     return (
         <Container>
-            <h1>experiencia</h1>
+            <div>
+                <div>
+                    <h1>experiencia profissional</h1>
+                </div>
+                <div>
+                    <h1>Frelas</h1>
+                </div>
+                <div>
+                    <h1>tempo de desenvolvimento</h1>
+                </div>
+            </div>
         </Container>
     );
 };

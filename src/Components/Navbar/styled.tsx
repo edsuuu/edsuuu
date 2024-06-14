@@ -2,24 +2,17 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Navbar = styled.nav`
-    position: fixed;
-    display: flex;
-    justify-content: center;
     width: 100%;
+    background-color: #02060E;
 `;
 
 export const LinksLista = styled.ul`
-    margin-top: 30px;
-    border: 0.5px solid #bebebe;
-    background-color: #02060E;
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 30px;
     width: auto;
     padding: 6px 40px;
     list-style: none;
-    border-radius: 20px;
 `;
 
 export const LinkStyled = styled(Link)`
