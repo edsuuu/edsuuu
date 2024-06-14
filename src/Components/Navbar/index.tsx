@@ -18,14 +18,27 @@ const Navigation = () => {
                     </span>
                 </div>
 
-                {rotas.map((rota, index) => (
-                    <li key={index}>
-                        <LinkStyled to={rota.to}>{rota.name}</LinkStyled>
-                    </li>
-                ))}
-                <div>
-                    <p>pt/en</p>
-                    <p>light mode</p>
+                <div className="links">
+                    {rotas.map((rota, index) => (
+                        <div key={index}>
+                            <LinkStyled to={rota.to}>{rota.name}</LinkStyled>
+                        </div>
+                    ))}
+                </div>
+
+                <div className='buttons'>
+                    <form>
+                        <select name="theme">
+                            <option value="Dark-Mode">Dark-Mode</option>
+                            <option value="Light-Mode">Light-Mode</option>
+                        </select>
+                    </form>
+                    <form>
+                        <select name="language">
+                            <option value="PT-BR">PT-BR</option>
+                            <option value="EN-US">EN-US</option>
+                        </select>
+                    </form>
                 </div>
             </LinksLista>
         </Navbar>

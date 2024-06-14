@@ -3,16 +3,27 @@ import styled from "styled-components";
 
 export const Navbar = styled.nav`
     width: 100%;
-    background-color: #02060E;
+    background-color: #0b3c9c;
+    padding: 10px;
+    .links{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
 `;
 
-export const LinksLista = styled.ul`
+export const LinksLista = styled.div`
     display: flex;
     align-items: center;
-    gap: 30px;
-    width: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding: 6px 40px;
-    list-style: none;
 `;
 
 export const LinkStyled = styled(Link)`

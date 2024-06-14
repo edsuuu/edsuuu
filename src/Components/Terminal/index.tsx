@@ -11,7 +11,7 @@ export default function Terminal(): JSX.Element {
                         <PwsTabs>
                             <div>
                                 <Icon.VscTerminalPowershell />
-                                <PwsTabsTitle>PowerShell</PwsTabsTitle>
+                                <PwsTabsTitle>SobreMim</PwsTabsTitle>
                             </div>
                             <span className="pws-close-tabs">
                                 <Icon.VscClose />
@@ -46,8 +46,8 @@ export default function Terminal(): JSX.Element {
 
                 <ContentPSW>
                     <div>
-                        <p>PowerShell 7.4.2</p>
-                        <p>C:\Users\edsu&gt;{}</p>
+                        <p>PortFolio 1.0.0</p>
+                        <p>C:\Sobre\edsu&gt;{}</p>
                     </div>
                 </ContentPSW>
             </PowerShell>
