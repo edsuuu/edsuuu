@@ -1,9 +1,15 @@
+import Terminal from '../../Components/Terminal';
 import { Container } from './styled';
 
 const About = () => {
     return (
         <Container>
-            <h1>pagina de sobre </h1>
+
+            <Terminal />
+
+            <p>
+                skills/linguages, databases, ferramentas, databases, frameworks
+            </p>
         </Container>
     );
 };
