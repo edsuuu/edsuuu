@@ -2,14 +2,16 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-    `;
+    max-width: 1440px;
+    margin: auto;
+    height: 90vh;
+`;
 
 export const Content = styled.div`
-    width: 1200px;
+    width: 100%;
     padding: 45px;
     border: 1px solid #000;
     display: flex;
@@ -28,5 +30,3 @@ export const Content = styled.div`
         padding: 20px;
     }
 `;
-
-
