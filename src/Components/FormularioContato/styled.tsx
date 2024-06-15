@@ -46,8 +46,10 @@ export const FormsContactGroup = styled.div`
         width: 100%;
         height: 50px;
         padding: 10px 15px;
-        background: gray;
-        color: white;
+        background: transparent;
+
+        /* background: gray; */
+        color: #000000;
         border: 1px solid #000000;
         border-radius: 4px;
         box-sizing: border-box;
@@ -57,7 +59,8 @@ export const FormsContactGroup = styled.div`
             ~ label {
                 top: -10px;
                 font-size: 1.1rem;
-                background: gray;
+                background: white;
+                /* background: gray; */
             }
         }
 
@@ -68,7 +71,7 @@ export const FormsContactGroup = styled.div`
     }
 
     label {
-        color: #ffffff;
+        color: #000000;
         font-size: 1rem;
         position: absolute;
         pointer-events: none;
@@ -89,7 +92,9 @@ export const FormsContactGroup = styled.div`
         flex: 1 1 100%;
         height: 350px;
         padding: 20px;
-        background: gray;
+        background: transparent;
+
+        /* background: gray; */
         border: 1px solid #000000;
         border-radius: 4px;
         box-sizing: border-box;
@@ -101,7 +106,10 @@ export const FormsContactGroup = styled.div`
             ~ label {
                 top: -11px;
                 font-size: 1.1rem;
-                background-color: gray;
+                /* background-color: gray;
+                 */
+                background: white;
+
             }
         }
 
