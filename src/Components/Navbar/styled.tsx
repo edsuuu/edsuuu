@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const Navbar = styled.nav`
     width: 100%;
     background-color: #0b3c9c;
     padding: 10px;
-    .links{
+    .links {
         display: flex;
         flex-direction: row;
         gap: 50px;
     }
-    .buttons{
+    .buttons {
         display: flex;
         flex-direction: row;
         gap: 30px;
@@ -24,6 +24,10 @@ export const LinksLista = styled.div`
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 6px 40px;
+
+    .titles-nav {
+        color: white;
+    }
 `;
 
 export const LinkStyled = styled(Link)`
