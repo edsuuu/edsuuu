@@ -15,6 +15,15 @@ export const Navbar = styled.nav`
         flex-direction: row;
         gap: 30px;
     }
+
+    @media (max-width: 768px) {
+        .buttons {
+            display: none;
+        }
+        .links {
+            display: none;
+        }
+    }
 `;
 
 export const LinksLista = styled.div`
