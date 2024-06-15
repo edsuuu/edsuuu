@@ -6,7 +6,7 @@ interface MaquinaWriteProps {
     onComplete: () => void;
 }
 
-const MaquinaWrite: React.FC<MaquinaWriteProps> = ({ text, delay = 100, onComplete }) => {
+const MaquinaWriteHome: React.FC<MaquinaWriteProps> = ({ text, delay = 100, onComplete }) => {
     const [currentText, setCurrentText] = useState('');
 
     const writeText = (text: string, i = 0) => {
@@ -26,4 +26,4 @@ const MaquinaWrite: React.FC<MaquinaWriteProps> = ({ text, delay = 100, onComple
     return <h1>{currentText}</h1>;
 };
 
-export default MaquinaWrite;
+export default MaquinaWriteHome;
