@@ -24,12 +24,12 @@ export const Redes = styled.div`
 `;
 
 export const LinksRedes = styled.div`
-    border: 0.5px solid #ffffff5f;
+    border: 0.5px solid #0000005f;
     border-radius: 15px;
 
     a {
         text-decoration: none;
-        color: #fff;
+        color: #000000;
         display: flex;
         align-items: center;
         justify-content: center;
