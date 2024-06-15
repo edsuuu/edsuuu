@@ -6,9 +6,9 @@ export const AmongUsButton = styled.button`
     justify-content: center;
     gap: 10px;
     padding: 2px 20px;
-    color: white;
-    text-shadow: 2px 2px rgb(116, 116, 116);
-    text-transform: uppercase;
+    color: #000000;
+    text-shadow: 2px 2px rgb(252, 251, 251);
+    /* text-transform: uppercase; */
     cursor: pointer;
     border: solid 2px black;
     letter-spacing: 1px;
