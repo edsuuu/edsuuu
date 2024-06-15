@@ -10,11 +10,8 @@ const theme = {
 
 export const PowerShell = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    max-width: 800px;
-    width: 800px;
-    max-height: 500px;
-    height: 500px;
-    max-height: 500px;
+    width: 90%;
+    height: 700px;
     border-radius: 10px;
     background-color: ${theme.colorsTerminal.backgroundTerminal};
 `;
@@ -44,7 +41,6 @@ export const PwsNewTabs = styled.div`
     align-items: center;
     border-radius: 5px;
     margin-top: 5px;
-
 
     span {
         color: white;
@@ -161,4 +157,20 @@ export const ContentPSW = styled.div`
     color: white;
     height: 92.2%;
     font-family: 'Space Mono', monospace;
+
+    div:nth-child(1) {
+    }
+    div:nth-child(2) {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+`;
+
+
+export const ContainerButtonProjectPSW = styled.div`
+display: flex;
+flex-direction: column;
+    border: 1px solid white;
+    color: white;
 `;

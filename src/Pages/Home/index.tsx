@@ -2,11 +2,12 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ButtonAmongUS from '../../Components/ButtonAmongUS';
 import ButtonHacking from '../../Components/ButtonHacking';
-import MaquinaWrite from '../../Components/MaquinaWrite';
+import MaquinaWriteHome from '../../Components/MaquinaWriteHome';
 import { Container, LinksSociais, ButtonsNextPage, TitleHome } from './styled';
 
 const Home = () => {
-    const texts = ['Olá, Eu sou Edson !!', 'Sou Desenvolvedor Web e FullStack'];
+    // const texts = ['Olá, Eu sou Edson !!', 'Sou Desenvolvedor Web e FullStack'];
+    const texts = ['Hey guys, I am Edson !!', 'I am a FullStack Web Developer  '];
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const navigate = useNavigate();
@@ -21,7 +22,7 @@ const Home = () => {
 
     return (
         <Container>
-            <TitleHome>{texts.map((text, index) => index <= currentIndex && <MaquinaWrite key={index} text={text} onComplete={handleComplete} />)}</TitleHome>
+            <TitleHome>{texts.map((text, index) => index <= currentIndex && <MaquinaWriteHome key={index} text={text} onComplete={handleComplete} />)}</TitleHome>
 
             <LinksSociais>
                 <ButtonHacking text="Linkedin" />
@@ -30,7 +31,7 @@ const Home = () => {
 
             <ButtonsNextPage>
                 <div>
-                    <ButtonAmongUS textBefore="veja" textAfter="mais" onclick={handleNavigation} />
+                    <ButtonAmongUS textBefore="Sobre" textAfter="Mim" onclick={handleNavigation} />
                 </div>
             </ButtonsNextPage>
         </Container>

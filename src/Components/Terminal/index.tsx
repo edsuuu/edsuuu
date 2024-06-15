@@ -1,4 +1,5 @@
-import { AbasPowerShell, PowerShell, PwsNewTabs, PwsTabs, PwsTabsButtons, PwsWindowButtons, PwsTabsTitle, ContentPSW } from './styled';
+import MaquinaWriteAbout from '../MaquinaWriteAbout';
+import { AbasPowerShell, PowerShell, PwsNewTabs, PwsTabs, PwsTabsButtons, PwsWindowButtons, PwsTabsTitle, ContentPSW, ContainerButtonProjectPSW } from './styled';
 import * as Icon from 'react-icons/vsc';
 
 export default function Terminal(): JSX.Element {
@@ -47,8 +48,28 @@ export default function Terminal(): JSX.Element {
                 <ContentPSW>
                     <div>
                         <p>PortFolio 1.0.0</p>
-                        <p>C:\Sobre\edsu&gt;{}</p>
                     </div>
+                    <div>
+                        <p>C:\Sobre\edsu&gt;</p>
+                        <MaquinaWriteAbout text="cat sobre-mim.txt" />
+                    </div>
+
+                    <ContainerButtonProjectPSW>
+                        <h1>Componente precisa ser montado apos 1 segundo</h1>
+                        <br />
+                        <h1>pequena descricao sobre mim</h1>
+                        <br />
+
+                        <h1> soft skills</h1>
+                        <h1>skills/linguages, databases, ferramentas, frameworks</h1>
+                        <br />
+                        <h1>download para um Curriculo </h1>
+                        <br />
+
+                        <button>
+                            <h1>Button para navegar para projetos </h1>
+                        </button>
+                    </ContainerButtonProjectPSW>
                 </ContentPSW>
             </PowerShell>
         </>

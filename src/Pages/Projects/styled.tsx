@@ -11,8 +11,5 @@ export const Container = styled.div`
         gap: 20px;
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
-    .repo-card {
-        height: 200px;
-        border: 1px solid black;
-    }
+
 `;
