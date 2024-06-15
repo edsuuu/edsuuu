@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Container } from './styled';
 import axiosGithub from '../../services/axios-github';
+import CardRepository from '../../Components/CardRepository';
 
 const Project = () => {
     const [repository, setRepository] = useState([]);
@@ -34,7 +35,7 @@ const Project = () => {
                 <div>
                     <h1>mais repositorios</h1>
                 </div>
-                <div className="repositorios">
+                {/* <div className="repositorios">
                     {repository.slice(0, 8).map((item: any) => (
                         <div key={item.id}>
 
@@ -43,7 +44,8 @@ const Project = () => {
                             </div>
                         </div>
                     ))}
-                </div>
+                </div> */}
+                <CardRepository />
             </div>
         </Container>
     );

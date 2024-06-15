@@ -4,12 +4,9 @@ import { Container } from './styled';
 const About = () => {
     return (
         <Container>
-
             <Terminal />
+            {/* <p>skills/linguages, databases, ferramentas, databases, frameworks</p> */}
 
-            <p>
-                skills/linguages, databases, ferramentas, databases, frameworks
-            </p>
         </Container>
     );
 };
