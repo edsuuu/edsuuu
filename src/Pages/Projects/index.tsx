@@ -1,25 +1,25 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { Container } from './styled';
-import axiosGithub from '../../services/axios-github';
+// import axiosGithub from '../../services/axios-github';
 import CardRepository from '../../Components/CardRepository';
 
 const Project = () => {
-    const [repository, setRepository] = useState([]);
+    // const [repository, setRepository] = useState([]);
 
-    useEffect(() => {
-        async function getRepository() {
-            try {
-                const { data } = await axiosGithub.get('');
-                setRepository(data);
-            } catch (e) {
-                console.log(e);
-            }
-        }
+    // useEffect(() => {
+    //     async function getRepository() {
+    //         try {
+    //             const { data } = await axiosGithub.get('');
+    //             setRepository(data);
+    //         } catch (e) {
+    //             console.log(e);
+    //         }
+    //     }
 
-        getRepository();
-    }, []);
+    //     getRepository();
+    // }, []);
 
-    console.log(repository);
+    // console.log(repository);
 
     return (
         <Container>
