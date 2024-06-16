@@ -5,16 +5,64 @@ import Contact from '../Pages/Contact';
 import Experience from '../Pages/Experience';
 import Error404 from '../Pages/Error';
 import Project from '../Pages/Projects';
+import TesteParticlesJS from '../Pages/TesteParticlesJS';
+import { TransitionProvider } from '../Context/TransitionContext';
+import TransitionComponent from '../Components/Transition';
 
 export default function AppRoutes() {
     return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/sobre" element={<About />} />
-            <Route path="/projetos" element={<Project />} />
-            <Route path="/experiencia" element={<Experience />} />
-            <Route path="/contato" element={<Contact />} />
-            <Route path="*" element={<Error404 />} />
-        </Routes>
+        <TransitionProvider>
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <TransitionComponent>
+                            <Home />
+                        </TransitionComponent>
+                    }
+                />
+                <Route
+                    path="/sobre"
+                    element={
+                        <TransitionComponent>
+                            <About />
+                        </TransitionComponent>
+                    }
+                />
+                <Route
+                    path="/projetos"
+                    element={
+                        <TransitionComponent>
+                            <Project />
+                        </TransitionComponent>
+                    }
+                />
+                <Route
+                    path="/experiencia"
+                    element={
+                        <TransitionComponent>
+                            <Experience />
+                        </TransitionComponent>
+                    }
+                />
+                <Route
+                    path="/contato"
+                    element={
+                        <TransitionComponent>
+                            <Contact />
+                        </TransitionComponent>
+                    }
+                />
+                <Route
+                    path="/testeparticlesjs"
+                    element={
+                        <TransitionComponent>
+                            <TesteParticlesJS />
+                        </TransitionComponent>
+                    }
+                />
+                <Route path="*" element={<Error404 />} />
+            </Routes>
+        </TransitionProvider>
     );
 }
