@@ -21,20 +21,22 @@ const Home = () => {
     };
 
     return (
-        <Container>
-            <TitleHome>{texts.map((text, index) => index <= currentIndex && <MaquinaWriteHome key={index} text={text} onComplete={handleComplete} />)}</TitleHome>
+        <>
+            <Container>
+                <TitleHome>{texts.map((text, index) => index <= currentIndex && <MaquinaWriteHome key={index} text={text} onComplete={handleComplete} />)}</TitleHome>
 
-            <LinksSociais>
-                <ButtonHacking text="Linkedin" />
-                <ButtonHacking text="GitHub" />
-            </LinksSociais>
+                <LinksSociais>
+                    <ButtonHacking text="Linkedin" />
+                    <ButtonHacking text="GitHub" />
+                </LinksSociais>
 
-            <ButtonsNextPage>
-                <div>
-                    <ButtonAmongUS textBefore="Sobre" textAfter="Mim" onclick={handleNavigation} />
-                </div>
-            </ButtonsNextPage>
-        </Container>
+                <ButtonsNextPage>
+                    <div>
+                        <ButtonAmongUS textBefore="Sobre" textAfter="Mim" onclick={handleNavigation} />
+                    </div>
+                </ButtonsNextPage>
+            </Container>
+        </>
     );
 };
 
