@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    z-index: 1;
     max-width: 1440px;
     min-width: 320px;
     height: 90vh;
@@ -9,6 +10,7 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
 `;
 
 export const TitleHome = styled.div`

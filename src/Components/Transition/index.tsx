@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import { SwitchTransition, Transition } from 'react-transition-group';
 import { useLocation } from 'react-router-dom';
 import gsap from 'gsap';
@@ -11,6 +11,7 @@ interface TransitionComponentProps {
 
 const TransitionComponent: React.FC<TransitionComponentProps> = ({ children }) => {
     const location = useLocation();
+    const nodeRef = useRef<HTMLDivElement>(null);
     const { toggleCompleted }: any = useContext(TransitionContext);
 
     return (
@@ -18,22 +19,30 @@ const TransitionComponent: React.FC<TransitionComponentProps> = ({ children }) =
             <Transition
                 key={location.pathname}
                 timeout={500}
-                onEnter={(node: gsap.TweenTarget) => {
-                    toggleCompleted(false);
-                    gsap.set(node, { autoAlpha: 0, scale: 0.8, xPercent: -100 });
-                    gsap.timeline({
-                        paused: true,
-                        onComplete: () => toggleCompleted(true),
-                    })
-                        .to(node, { autoAlpha: 1, xPercent: 0, duration: 0.25 })
-                        .to(node, { scale: 1, duration: 0.25 })
-                        .play();
+                nodeRef={nodeRef}
+                onEnter={() => {
+                    if (nodeRef.current) {
+                        toggleCompleted(false);
+                        gsap.set(nodeRef.current, { autoAlpha: 0, scale: 0.8, xPercent: -100 });
+                        gsap.timeline({
+                            paused: true,
+                            onComplete: () => toggleCompleted(true),
+                        })
+                            .to(nodeRef.current, { autoAlpha: 1, xPercent: 0, duration: 0.25 })
+                            .to(nodeRef.current, { scale: 1, duration: 0.25 })
+                            .play();
+                    }
                 }}
-                onExit={(node) => {
-                    gsap.timeline({ paused: true }).to(node, { scale: 0.8, duration: 0.2 }).to(node, { xPercent: 100, autoAlpha: 0, duration: 0.2 }).play();
+                onExit={() => {
+                    if (nodeRef.current) {
+                        gsap.timeline({ paused: true })
+                            .to(nodeRef.current, { scale: 0.8, duration: 0.2 })
+                            .to(nodeRef.current, { xPercent: 100, autoAlpha: 0, duration: 0.2 })
+                            .play();
+                    }
                 }}
             >
-                {children}
+                <div ref={nodeRef}>{children}</div>
             </Transition>
         </SwitchTransition>
     );
