@@ -3,10 +3,16 @@ import styled from 'styled-components';
 export const FormMainContact = styled.div`
     max-width: 800px;
     width: 100%;
+
 `;
 export const TitleFormContact = styled.div`
-    padding: 10px;
+
     margin-bottom: 20px;
+    color: white;
+    /* backdrop-filter:  blur(10px);
+    border: 1px solid #ffffff5e;
+    border-radius: 4px; */
+
 
     h1 {
         font-size: 2.2rem;
@@ -49,8 +55,9 @@ export const FormsContactGroup = styled.div`
         background: transparent;
 
         /* background: gray; */
-        color: #000000;
-        border: 1px solid #000000;
+        backdrop-filter:  blur(10px);
+        color: #ffffff;
+        border: 1px solid #ffffff5f;
         border-radius: 4px;
         box-sizing: border-box;
 
@@ -59,7 +66,7 @@ export const FormsContactGroup = styled.div`
             ~ label {
                 top: -10px;
                 font-size: 1.1rem;
-                background: white;
+                background: #11111a;
                 /* background: gray; */
             }
         }
@@ -71,7 +78,7 @@ export const FormsContactGroup = styled.div`
     }
 
     label {
-        color: #000000;
+        color: #ffffff;
         font-size: 1rem;
         position: absolute;
         pointer-events: none;
@@ -85,6 +92,8 @@ export const FormsContactGroup = styled.div`
     }
 
     textarea {
+        backdrop-filter:  blur(10px);
+
         font-size: 1.05rem;
         max-width: 800px;
         width: 100%;
@@ -95,7 +104,7 @@ export const FormsContactGroup = styled.div`
         background: transparent;
 
         /* background: gray; */
-        border: 1px solid #000000;
+        border: 1px solid #ffffff5f;
         border-radius: 4px;
         box-sizing: border-box;
         resize: none;
@@ -108,7 +117,7 @@ export const FormsContactGroup = styled.div`
                 font-size: 1.1rem;
                 /* background-color: gray;
                  */
-                background: white;
+                background: #11111a;
 
             }
         }
