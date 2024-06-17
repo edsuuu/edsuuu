@@ -9,7 +9,6 @@ export const Redes = styled.div`
     width: 100%;
     height: fit-content;
     flex: 1 1 250px;
-    margin-bottom: 90px;
 
     @media (max-width: 768px) {
         flex-direction: row;
@@ -18,18 +17,17 @@ export const Redes = styled.div`
         margin-bottom: 0px;
     }
     @media (max-width: 1024px) {
-        margin-bottom: 70px;
 
     }
 `;
 
 export const LinksRedes = styled.div`
-    border: 0.5px solid #0000005f;
+    border: 0.5px solid #ffffff5f;
     border-radius: 15px;
 
     a {
         text-decoration: none;
-        color: #000000;
+        color: #ffffff;
         display: flex;
         align-items: center;
         justify-content: center;

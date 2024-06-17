@@ -1,5 +1,5 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import { GlobalStyle } from './GlobalStyled';
+import { GlobalStyle } from './styles/GlobalStyled';
 import AppRoutes from './Router';
 import Navigation from './Components/Navbar';
 import { useEffect, useMemo, useState } from 'react';
@@ -10,7 +10,7 @@ import { type Container, type ISourceOptions, MoveDirection, OutMode } from '@ts
 import { loadSlim } from '@tsparticles/slim';
 
 export default function App(): JSX.Element {
-    const [init, setInit] = useState(false);
+    const [init, setInit] = useState<boolean>(false);
 
     useEffect(() => {
         initParticlesEngine(async (engine) => {
@@ -28,7 +28,7 @@ export default function App(): JSX.Element {
         () => ({
             background: {
                 color: {
-                    value: '#5858583c',
+                    value: '#11111a',
                 },
             },
             fpsLimit: 120,
@@ -55,14 +55,14 @@ export default function App(): JSX.Element {
             },
             particles: {
                 color: {
-                    value: '#ffffff',
+                    value: '#00a4ef',
                 },
                 links: {
-                    color: '#ffffff',
+                    color: '#00a4ef',
                     distance: 150,
                     enable: true,
-                    opacity: 0.5,
-                    width: 1,
+                    opacity: 1,
+                    width: 2,
                 },
                 move: {
                     direction: MoveDirection.none,

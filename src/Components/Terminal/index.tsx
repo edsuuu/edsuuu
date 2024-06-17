@@ -1,8 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import MaquinaWriteAbout from '../MaquinaWriteAbout';
 import { AbasPowerShell, PowerShell, PwsNewTabs, PwsTabs, PwsTabsButtons, PwsWindowButtons, PwsTabsTitle, ContentPSW, ContainerButtonProjectPSW } from './styled';
 import * as Icon from 'react-icons/vsc';
 
 export default function Terminal(): JSX.Element {
+    const navigate = useNavigate();
+
+    const handleNavigation = () => {
+        navigate('/projetos');
+    };
+
     return (
         <>
             <PowerShell>
@@ -66,7 +73,7 @@ export default function Terminal(): JSX.Element {
                         <h1>download para um Curriculo </h1>
                         <br />
 
-                        <button>
+                        <button onClick={handleNavigation}>
                             <h1>Button para navegar para projetos </h1>
                         </button>
                     </ContainerButtonProjectPSW>

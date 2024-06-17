@@ -3,8 +3,10 @@ import styled from 'styled-components';
 
 export const Navbar = styled.nav`
     width: 100%;
-    background-color: #0b3c9c;
-    padding: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border-bottom: 1px solid #ffffff53;
     .links {
         display: flex;
         flex-direction: row;
