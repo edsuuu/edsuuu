@@ -7,11 +7,12 @@ module.exports = {
         'plugin:react-hooks/recommended',
         'plugin:prettier/recommended',
         'plugin:react/recommended',
+        'prettier', // Adiciona a configuração do Prettier
     ],
     ignorePatterns: ['dist', '.eslintrc.cjs'],
     globals: {
-        Atomics: "readonly",
-        SharedArrayBuffer: "readonly",
+        Atomics: 'readonly',
+        SharedArrayBuffer: 'readonly',
     },
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -20,15 +21,14 @@ module.exports = {
         project: ['./tsconfig.json', './tsconfig.node.json'],
         tsconfigRootDir: __dirname,
     },
-    plugins: ['react-refresh', '@typescript-eslint'],
+    plugins: ['react-refresh', '@typescript-eslint', 'react', 'prettier'],
     rules: {
         'react-refresh/only-export-components': [
             'warn',
             { allowConstantExport: true },
         ],
-        "prettier/prettier": 0,
-        "eslint-disable-next-line react/react-in-jsx-scope": off,
+        'prettier/prettier': 'error',
+        'react/react-in-jsx-scope': 'off',
+        indent: ['error', 4],
     },
-}
-
-
+};

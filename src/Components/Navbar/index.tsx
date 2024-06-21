@@ -12,7 +12,7 @@ const Navigation = () => {
         <Navbar>
             <LinksLista>
                 <div className="titles-nav">
-                    <h1>edsu dev</h1>
+                    <h1>Edsu dev</h1>
                 </div>
 
                 <div className="links">
@@ -23,7 +23,7 @@ const Navigation = () => {
                     ))}
                 </div>
 
-                <div className="buttons">
+                {/* <div className="buttons">
                     <form>
                         <select name="theme">
                             <option value="Dark-Mode">Dark-Mode</option>
@@ -36,7 +36,7 @@ const Navigation = () => {
                             <option value="EN-US">EN-US</option>
                         </select>
                     </form>
-                </div>
+                </div> */}
             </LinksLista>
         </Navbar>
     );
