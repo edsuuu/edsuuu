@@ -7,12 +7,12 @@ const NavbarBrandContainer = styled.div`
 `;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const RotatingIcon = styled.div`
-    transition: transform 500ms ease-in-out;
-    ${NavbarBrandContainer}:hover & {
-        transform: rotate(360deg);
-    }
-`;
+// const RotatingIcon = styled.div`
+//     transition: transform 500ms ease-in-out;
+//     ${NavbarBrandContainer}:hover & {
+//         transform: rotate(360deg);
+//     }
+// `;
 
 const TextContainer = styled.div`
     display: flex;
