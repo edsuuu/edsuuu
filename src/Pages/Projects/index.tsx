@@ -34,6 +34,9 @@ const Project = () => {
                     <ButtonCategory $active={category === 'null'} onClick={() => setCategory(null)}>
                         Todos
                     </ButtonCategory>
+                    <ButtonCategory $active={category === 'build'} onClick={() => handleFilterCategoryClick('build')}>
+                        Em Desenvolvimento
+                    </ButtonCategory>
                     <ButtonCategory $active={category === 'front'} onClick={() => handleFilterCategoryClick('front')}>
                         Front-End
                     </ButtonCategory>
@@ -42,9 +45,6 @@ const Project = () => {
                     </ButtonCategory>
                     <ButtonCategory $active={category === 'fullstack'} onClick={() => handleFilterCategoryClick('fullstack')}>
                         FullStack
-                    </ButtonCategory>
-                    <ButtonCategory $active={category === 'build'} onClick={() => handleFilterCategoryClick('build')}>
-                        Em Desenvolvimento
                     </ButtonCategory>
                 </div>
                 <div className="input-projects">
