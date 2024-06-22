@@ -6,6 +6,7 @@ interface ButtonAmongUsProps {
     onclick?: () => void;
 }
 
+// eslint-disable-next-line react/prop-types
 const ButtonAmongUS: React.FC<ButtonAmongUsProps> = ({ textBefore, textAfter, onclick }) => {
     return (
         <AmongUsButton onClick={onclick}>
