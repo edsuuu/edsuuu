@@ -9,7 +9,6 @@ const Home = () => {
     // const texts = ['Olá, Eu sou Edson !!', 'Sou Desenvolvedor Web e FullStack'];
     const texts = ['Hey guys, I am Edson !!', 'I am a FullStack Web Developer  '];
     const [currentIndex, setCurrentIndex] = useState(0);
-
     const navigate = useNavigate();
 
     const handleComplete = () => {

@@ -8,6 +8,7 @@ import Particles, { initParticlesEngine } from '@tsparticles/react';
 
 import { type Container, type ISourceOptions, MoveDirection, OutMode } from '@tsparticles/engine';
 import { loadSlim } from '@tsparticles/slim';
+import { ToastContainer } from 'react-toastify';
 
 export default function App(): JSX.Element {
     const [init, setInit] = useState<boolean>(false);
@@ -105,6 +106,7 @@ export default function App(): JSX.Element {
                     <AppRoutes />
                     <GlobalStyle />
                     {/* <Footer /> */}
+                    <ToastContainer autoClose={3000} className="toast-container" />
                 </div>
             </Router>
         </>

@@ -7,6 +7,7 @@ import Error404 from '../Pages/Error';
 import Project from '../Pages/Projects';
 import { TransitionProvider } from '../Context/TransitionContext';
 import TransitionComponent from '../Components/Transition';
+import ProjectInfo from '../Pages/Projects/ProjectInfo';
 
 export default function AppRoutes() {
     return (
@@ -33,6 +34,14 @@ export default function AppRoutes() {
                     element={
                         <TransitionComponent>
                             <Project />
+                        </TransitionComponent>
+                    }
+                />
+                <Route
+                    path="/projeto/:id"
+                    element={
+                        <TransitionComponent>
+                            <ProjectInfo />
                         </TransitionComponent>
                     }
                 />
