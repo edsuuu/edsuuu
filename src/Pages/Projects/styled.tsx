@@ -22,7 +22,7 @@ export const ProjetosContainer = styled.div`
 `;
 
 export const ButtonCategory = styled.button<{ $active: boolean }>`
-    background-color: ${(props) => (props.$active ? 'blue' : 'white')};
+    background-color: ${(props) => (props.$active ? '#4267ce' : 'white')};
     color: ${(props) => (props.$active ? 'white' : 'black')};
     border: 1px solid ${(props) => (props.$active ? 'blue' : 'black')};
     padding: 10px 20px;
@@ -32,7 +32,7 @@ export const ButtonCategory = styled.button<{ $active: boolean }>`
     transition: background-color 0.5s ease;
 
     &:hover {
-        background-color: ${(props) => (props.$active ? 'darkblue' : '#230094')};
+        background-color: ${(props) => (props.$active ? 'darkblue' : '#0083bf')};
         color: #ffffff;
     }
     &:focus {
@@ -60,7 +60,8 @@ export const Title = styled.div`
         min-width: 100px;
         padding: 15px;
         border-radius: 5px;
-        border: 1px solid white;
+        /* border: 1px solid #4267ce; */
+        border: 1px solid #ffffff;
         background-color: transparent;
         backdrop-filter: blur(10px);
         font-size: 1.2rem;
