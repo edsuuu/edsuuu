@@ -1,56 +1,82 @@
-import React, { useEffect, useState } from 'react';
-import { Container } from './styled';
+import React from 'react';
+import styled from 'styled-components';
 
-interface Post {
-    userId: number;
-    id: number;
-    name?: string;
-    title?: string;
-    body: string;
+interface Props {
+    name: string;
+    descricao: string;
+    githubURL?: string;
 }
 
-const CardRepository: React.FC = () => {
-    const [repositorios, setRepositorios] = useState<Post[]>([]);
-    const [loading, setLoading] = useState(true);
+export const Container = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 16px;
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                // const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-                const response = await fetch('https://api.github.com/users/edsuuu/repos');
-                // gerar uma chave para api https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting
-                const data = await response.json();
-                setRepositorios(data);
-            } catch (e) {
-                console.error('Erro ao buscar os dados:', e);
-            } finally {
-                setLoading(false);
-            }
-        };
+    .card {
+        width: 100%;
 
-        fetchData();
-    }, []);
-
-    if (loading) {
-        return (
-            <div className="loading-screen">
-                <p>Loading...</p>
-            </div>
-        );
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
     }
 
+    .card img {
+        max-width: 100%;
+        /* width: 400px;
+        height: 300px; */
+        height: auto;
+        display: block;
+    }
+
+    .card-content {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .card-title {
+        font-size: 1.25em;
+        margin: 0 0 8px;
+    }
+
+    .card-description {
+        font-size: 1em;
+        margin: 0 0 16px;
+    }
+
+    .card-buttons {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            flex: 1 1 100%;
+        }
+    }
+`;
+
+const CardRepository: React.FC<Props> = ({ name, descricao, githubURL }) => {
     return (
         <Container>
-            <div className="card-container">
-                {repositorios.map((repositorios) => (
-                    <div key={repositorios.id} className="repo-card">
-                        <img src={`https://via.placeholder.com/150/0000FF/808080?text=Post+${repositorios.id}`} alt="repo" className="repo-image" />
-                        <h2>{repositorios.name}</h2>
-                    </div>
-                ))}
+            <div className="card">
+                <img src="https://via.placeholder.com/400x300" alt="simple image" />
+
+                <div className="card-content">
+                    <h2 className="card-title">{name}</h2>
+                    <p className="card-description">{descricao}</p>
+
+                    <a href={githubURL} target="_blank" rel="noopener noreferrer">
+                        Repositorio
+                    </a>
+                </div>
             </div>
         </Container>
     );
 };
-
 export default CardRepository;

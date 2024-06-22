@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { ButtonCategory, Container, ProjetosContainer, Title } from './styled';
 import { projectsObj } from './data';
-import { useNavigate } from 'react-router-dom';
+import CardRepository from '../../Components/CardRepository';
 
 const Project = () => {
-    const navigate = useNavigate();
     const [category, setCategory] = useState<string | null>(null);
     const [buscarProjeto, setBuscarProjeto] = useState('');
 
@@ -14,6 +13,9 @@ const Project = () => {
 
     const pesquisarProjeto = (event: React.ChangeEvent<HTMLInputElement>) => {
         setBuscarProjeto(event.target.value);
+        if (category) {
+            setCategory(null);
+        }
     };
 
     const projetosFiltrados = projectsObj.filter((project) => {
@@ -22,47 +24,34 @@ const Project = () => {
         return categoryMatch && pesquisaPeloNome;
     });
 
-    const handleIndexTest = (item: { id: number; name: string; descricao: string; categories?: string[] }) => {
-        console.log('Clicou', item.id);
-        navigate(`/projeto/${item.id}`);
-    };
-
     return (
         <Container>
             <Title>
                 <div>
-                    <h1>Quais Projetos Você deseja ver</h1>
+                    <h1>Quais projetos você deseja ver ?</h1>
                 </div>
                 <div>
-                    <ButtonCategory active={category === 'front'} onClick={() => handleFilterCategoryClick('front')}>
+                    <ButtonCategory $active={category === 'front'} onClick={() => handleFilterCategoryClick('front')}>
                         Front-End
                     </ButtonCategory>
-                    <ButtonCategory active={category === 'backend'} onClick={() => handleFilterCategoryClick('backend')}>
+                    <ButtonCategory $active={category === 'backend'} onClick={() => handleFilterCategoryClick('backend')}>
                         Back-End
                     </ButtonCategory>
-                    <ButtonCategory active={category === 'fullstack'} onClick={() => handleFilterCategoryClick('fullstack')}>
+                    <ButtonCategory $active={category === 'fullstack'} onClick={() => handleFilterCategoryClick('fullstack')}>
                         FullStack
                     </ButtonCategory>
-                    <ButtonCategory active={category === 'build'} onClick={() => handleFilterCategoryClick('build')}>
+                    <ButtonCategory $active={category === 'build'} onClick={() => handleFilterCategoryClick('build')}>
                         Em Construção
                     </ButtonCategory>
                 </div>
                 <input type="text" placeholder="Buscar por nome..." value={buscarProjeto} onChange={pesquisarProjeto} />
             </Title>
 
-            <div className="favorites-projects">
-                <div>
-                    <h1>Projetos</h1>
-                </div>
-                <ProjetosContainer>
-                    {projetosFiltrados.map((item) => (
-                        <div key={item.id} onClick={() => handleIndexTest(item)}>
-                            <h3>{item.name}</h3>
-                            <p>{item.descricao}</p>
-                        </div>
-                    ))}
-                </ProjetosContainer>
-            </div>
+            <ProjetosContainer>
+                {projetosFiltrados.map((item, index) => (
+                    <CardRepository key={index} name={item.name} descricao={item.descricao} githubURL={item.githubURL} />
+                ))}
+            </ProjetosContainer>
         </Container>
     );
 };
