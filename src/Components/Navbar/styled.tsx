@@ -7,6 +7,7 @@ export const Navbar = styled.nav`
     backdrop-filter: blur(20px);
     padding: 20px;
     border-bottom: 1px solid #ffffff53;
+
     .links {
         display: flex;
         flex-direction: row;

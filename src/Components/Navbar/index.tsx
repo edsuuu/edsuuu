@@ -1,4 +1,5 @@
 import { Navbar, LinksLista, LinkStyled } from './styled';
+import { LogoNav } from './LogoNav';
 
 const Navigation = () => {
     const rotas = [
@@ -12,7 +13,7 @@ const Navigation = () => {
         <Navbar>
             <LinksLista>
                 <div className="titles-nav">
-                    <h1>Edsu dev</h1>
+                    <LogoNav />
                 </div>
 
                 <div className="links">
@@ -22,21 +23,6 @@ const Navigation = () => {
                         </div>
                     ))}
                 </div>
-
-                {/* <div className="buttons">
-                    <form>
-                        <select name="theme">
-                            <option value="Dark-Mode">Dark-Mode</option>
-                            <option value="Light-Mode">Light-Mode</option>
-                        </select>
-                    </form>
-                    <form>
-                        <select name="language">
-                            <option value="PT-BR">PT-BR</option>
-                            <option value="EN-US">EN-US</option>
-                        </select>
-                    </form>
-                </div> */}
             </LinksLista>
         </Navbar>
     );

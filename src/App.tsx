@@ -22,7 +22,7 @@ export default function App(): JSX.Element {
     }, []);
 
     const particlesLoaded = async (container?: Container): Promise<void> => {
-        console.log(container);
+        container;
     };
 
     const options: ISourceOptions = useMemo(
