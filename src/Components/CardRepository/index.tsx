@@ -5,6 +5,7 @@ interface Props {
     name: string;
     descricao: string;
     githubURL?: string;
+    imageURL: string;
 }
 
 export const Container = styled.div`
@@ -14,24 +15,29 @@ export const Container = styled.div`
     padding: 16px;
 
     .card {
+        /* backdrop-filter: blur(16px); */
         width: 100%;
-
-        border: 1px solid #ddd;
+        border: 1px solid #dddddd3c;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
+        transition: transform 0.3s ease;
+        &:hover {
+            border: 1px solid #ddd;
+            transform: scale(1.04);
+        }
     }
 
     .card img {
-        max-width: 100%;
-        /* width: 400px;
-        height: 300px; */
-        height: auto;
+        border-radius: 8px 8px 0px 0px;
+        width: 100%;
+        height: 300px;
         display: block;
     }
 
     .card-content {
+        /* text-align: center; */
         padding: 16px;
         display: flex;
         flex-direction: column;
@@ -61,16 +67,15 @@ export const Container = styled.div`
     }
 `;
 
-const CardRepository: React.FC<Props> = ({ name, descricao, githubURL }) => {
+const CardRepository: React.FC<Props> = ({ name, descricao, githubURL, imageURL }) => {
     return (
         <Container>
             <div className="card">
-                <img src="https://via.placeholder.com/400x300" alt="simple image" />
+                <img src={imageURL} alt="simple image" />
 
                 <div className="card-content">
                     <h2 className="card-title">{name}</h2>
                     <p className="card-description">{descricao}</p>
-
                     <a href={githubURL} target="_blank" rel="noopener noreferrer">
                         Repositorio
                     </a>

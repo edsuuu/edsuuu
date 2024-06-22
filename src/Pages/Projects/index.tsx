@@ -27,10 +27,13 @@ const Project = () => {
     return (
         <Container>
             <Title>
-                <div>
+                <div className="main-titles">
                     <h1>Quais projetos você deseja ver ?</h1>
                 </div>
-                <div>
+                <div className="content-buttons">
+                    <ButtonCategory $active={category === 'null'} onClick={() => setCategory(null)}>
+                        Todos
+                    </ButtonCategory>
                     <ButtonCategory $active={category === 'front'} onClick={() => handleFilterCategoryClick('front')}>
                         Front-End
                     </ButtonCategory>
@@ -41,16 +44,22 @@ const Project = () => {
                         FullStack
                     </ButtonCategory>
                     <ButtonCategory $active={category === 'build'} onClick={() => handleFilterCategoryClick('build')}>
-                        Em Construção
+                        Em Desenvolvimento
                     </ButtonCategory>
                 </div>
-                <input type="text" placeholder="Buscar por nome..." value={buscarProjeto} onChange={pesquisarProjeto} />
+                <div className="input-projects">
+                    <input type="search" className="dark" placeholder="Buscar projeto por nome..." value={buscarProjeto} onChange={pesquisarProjeto} />
+                </div>
             </Title>
 
             <ProjetosContainer>
-                {projetosFiltrados.map((item, index) => (
-                    <CardRepository key={index} name={item.name} descricao={item.descricao} githubURL={item.githubURL} />
-                ))}
+                {projetosFiltrados && projetosFiltrados.length > 0 ? (
+                    projetosFiltrados.map((item, index) => <CardRepository key={index} name={item.name} descricao={item.descricao} githubURL={item.githubURL} imageURL={item.imageURL} />)
+                ) : (
+                    <div className="projetoss">
+                        <h1>Nenhum projeto encontrado</h1>
+                    </div>
+                )}
             </ProjetosContainer>
         </Container>
     );
