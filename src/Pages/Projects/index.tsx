@@ -54,7 +54,19 @@ const Project = () => {
 
             <ProjetosContainer>
                 {projetosFiltrados && projetosFiltrados.length > 0 ? (
-                    projetosFiltrados.map((item, index) => <CardRepository key={index} name={item.name} descricao={item.descricao} githubURL={item.githubURL} imageURL={item.imageURL} />)
+                    projetosFiltrados.map((item, index) => (
+                        <CardRepository
+                            key={index}
+                            name={item.name}
+                            categories={item.categories}
+                            descricao={item.descricao}
+                            githubURL={item.githubURL}
+                            imageURL={item.imageURL}
+                            icons={item.icons}
+                            deployURL={item.deployURL}
+                            deploy={item.deploy}
+                        />
+                    ))
                 ) : (
                     <div className="projetoss">
                         <h1>Nenhum projeto encontrado</h1>
