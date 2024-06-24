@@ -40,7 +40,7 @@ export default function App(): JSX.Element {
                         mode: 'push',
                     },
                     onHover: {
-                        enable: true,
+                        enable: false,
                         mode: 'repulse',
                     },
                 },
@@ -49,8 +49,8 @@ export default function App(): JSX.Element {
                         quantity: 4,
                     },
                     repulse: {
-                        distance: 200,
-                        duration: 0.4,
+                        distance: 100,
+                        duration: 0.2,
                     },
                 },
             },
@@ -72,17 +72,17 @@ export default function App(): JSX.Element {
                         default: OutMode.out,
                     },
                     random: false,
-                    speed: 6,
+                    speed: 4,
                     straight: false,
                 },
                 number: {
                     density: {
                         enable: true,
                     },
-                    value: 80,
+                    value: 120,
                 },
                 opacity: {
-                    value: 0.5,
+                    value: 1,
                 },
                 shape: {
                     type: 'circle',

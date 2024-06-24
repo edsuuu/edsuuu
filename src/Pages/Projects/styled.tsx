@@ -10,15 +10,10 @@ export const Container = styled.div`
 
 export const ProjetosContainer = styled.div`
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2rem auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-
-    .projetoss {
-        width: 1200px;
-        text-align: center;
-        margin: 3rem auto;
-    }
+    gap: 10px;
 `;
 
 export const ButtonCategory = styled.button<{ $active: boolean }>`
