@@ -21,10 +21,10 @@ export const Card = styled.div`
     flex-direction: column;
     padding: 5px 2px 20px 0px;
     transition: transform 0.3s ease;
+
     &:hover {
         border: 1px solid #ddd;
         transform: scale(1.04);
-        filter: brightness(1.1); /* Ajuste o valor conforme necessário */
     }
     img {
         height: 200px;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MaquinaWriteAbout from '../MaquinaWriteAbout';
-import { AbasPowerShell, PowerShell, PwsNewTabs, PwsTabs, PwsTabsButtons, PwsWindowButtons, PwsTabsTitle, ContentPSW, ContainerButtonProjectPSW } from './styled';
+import { AbasPowerShell, PowerShell, PwsNewTabs, PwsTabs, PwsTabsButtons, PwsWindowButtons, PwsTabsTitle, ContentPSW, ContainerButtonProjectPSW, LinkStyled } from './styled';
 import * as Icon from 'react-icons/vsc';
 
 const Terminal: React.FC = () => {
@@ -83,12 +83,15 @@ const Terminal: React.FC = () => {
                             <h1>Soft skills</h1>
                             <h1>Skills, linguagens, databases, ferramentas, frameworks</h1>
                             <br />
-                            <h3>Download para o meu currículo</h3>
+                            {/* <h3>Download para o meu currículo</h3> */}
                             <br />
 
-                            <button onClick={handleNavigation}>
+                            {/* <button onClick={handleNavigation}>
                                 <h1>Botão para navegar para projetos</h1>
-                            </button>
+                            </button> */}
+                            <div>
+                                <LinkStyled to="/projetos"> Ir para Projetos</LinkStyled>
+                            </div>
                         </ContainerButtonProjectPSW>
                     </div>
                 </ContentPSW>
