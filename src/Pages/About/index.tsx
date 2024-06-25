@@ -1,11 +1,11 @@
+import React from 'react';
 import Terminal from '../../Components/Terminal';
 import { Container } from './styled';
 
-const About = () => {
+const About: React.FC = () => {
     return (
         <Container>
             <Terminal />
-            {/* <p>skills/linguages, databases, ferramentas, databases, frameworks</p> */}
         </Container>
     );
 };

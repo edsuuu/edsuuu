@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { ButtonCategory, Container, ProjetosContainer, Title } from './styled';
 import { projectsObj } from './data';
 import CardRepository from '../../Components/CardRepository';
 
-const Project = () => {
+const Project: React.FC = () => {
     const [category, setCategory] = useState<string | null>(null);
     const [buscarProjeto, setBuscarProjeto] = useState('');
 
@@ -62,6 +62,7 @@ const Project = () => {
                             descricao={item.descricao}
                             githubURL={item.githubURL}
                             imageURL={item.imageURL}
+                            tecnologias={item.tecnologias}
                             icons={item.icons}
                             deployURL={item.deployURL}
                             deploy={item.deploy}

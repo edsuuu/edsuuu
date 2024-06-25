@@ -28,7 +28,6 @@ module.exports = {
             { allowConstantExport: true },
         ],
         'prettier/prettier': 'error',
-        'react/react-in-jsx-scope': 'off',
         indent: ['error', 4],
     },
 };

@@ -1,7 +1,8 @@
+import React from 'react';
 import { FormContact, InputGroup, FormsContactGroup, Button, MensageAndButton, FormMainContact, TitleFormContact } from './styled';
 import { toast } from 'react-toastify';
 
-export default function FormularioContato() {
+const FormularioContato: React.FC = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         toast.error('Ainda não estou Funcionando', {
@@ -42,4 +43,6 @@ export default function FormularioContato() {
             </FormContact>
         </FormMainContact>
     );
-}
+};
+
+export default FormularioContato;

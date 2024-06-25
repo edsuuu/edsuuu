@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card, CardContent, Container, IconsContainer } from './styled';
-import ButtonCode, { ButtonsLinks } from './ButtonCode';
+import ButtonCode from '../ButtonCode';
 import { ProjectsObjProps } from '../../Pages/Projects/types/types';
 import { toast } from 'react-toastify';
+import { ButtonsLinks } from '../ButtonCode/styled';
 
 const alertToast = () => toast.error('Não estou em deploy');
 const alertRedirect = () => toast.info('Voce vai ser redirecionado em alguns segundos');
@@ -38,21 +39,10 @@ const CardRepository: React.FC<ProjectsObjProps> = ({ name, descricao, deployURL
                 <CardContent>
                     <div>
                         <h1>{name}</h1>
-                        {/* <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ducimus voluptates perspiciatis repellat ut ipsam, commodi quaerat ullam magnam tempora illo corrupti dolor
-                            nihil molestiae hic mollitia quia nulla minima?
-                        </p> */}
                         <p>{descricao}</p>
                     </div>
 
-                    <IconsContainer>
-                        {icons &&
-                            icons.map((Icon, index) => (
-                                <span key={index}>
-                                    <Icon size={40} />
-                                </span>
-                            ))}
-                    </IconsContainer>
+                    <IconsContainer>{icons && icons.map((Icon, index) => <Icon key={index} />)}</IconsContainer>
                     <ButtonsLinks>
                         <ButtonCode text={'Codigo'} onClick={handleCodeClick} />
                         <ButtonCode text={'Deploy'} onClick={handleDeployClick} />

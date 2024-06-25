@@ -17,7 +17,6 @@ export const Redes = styled.div`
         margin-bottom: 0px;
     }
     @media (max-width: 1024px) {
-
     }
 `;
 
@@ -58,7 +57,7 @@ export const LinksRedes = styled.div`
 
     .discord {
         &:hover {
-            background-color: #5865F2;
+            background-color: #5865f2;
         }
     }
     @media (max-width: 632px) {

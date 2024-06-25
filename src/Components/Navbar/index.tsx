@@ -1,19 +1,24 @@
+import React from 'react';
+import LogoNavbar from '../LogoNavbar';
 import { Navbar, LinksLista, LinkStyled } from './styled';
-import { LogoNav } from './LogoNav';
+
+interface RotasProps {
+    name: string;
+    to: string;
+}
+
+const rotas: RotasProps[] = [
+    { name: 'Home', to: '/' },
+    { name: 'Sobre', to: '/sobre' },
+    { name: 'Projetos', to: '/projetos' },
+    { name: 'Contato', to: '/contato' },
+];
 
 const Navigation: React.FC = () => {
-    const rotas = [
-        { name: 'Home', to: '/' },
-        { name: 'Sobre', to: '/sobre' },
-        { name: 'Projetos', to: '/projetos' },
-        { name: 'Contato', to: '/contato' },
-    ];
-
     return (
         <Navbar>
             <LinksLista>
-                <LogoNav />
-
+                <LogoNavbar />
                 <div className="links">
                     {rotas.map((rota, index) => (
                         <div key={index}>

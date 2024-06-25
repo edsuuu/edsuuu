@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const ButtonContainer = styled.div`
@@ -32,19 +31,3 @@ export const ButtonsLinks = styled.div`
     gap: 1rem;
     margin-top: 10px;
 `;
-
-interface ButtonTextProps {
-    text: string;
-    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-}
-
-const ButtonCode: React.FC<ButtonTextProps> = ({ text, onClick }) => {
-    return (
-        <ButtonContainer>
-            <button className="button" onClick={onClick}>
-                {text}
-            </button>
-        </ButtonContainer>
-    );
-};
-export default ButtonCode;

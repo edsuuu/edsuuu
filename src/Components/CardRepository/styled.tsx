@@ -5,7 +5,7 @@ export const Container = styled.div`
     flex-direction: row;
     gap: 16px;
     /* margin-bottom: 16px; */
-    padding: 10px;
+    margin: 10px;
     border-radius: 8px;
     transition: transform 0.3s ease;
     backdrop-filter: blur(16px);
@@ -62,4 +62,8 @@ export const CardContent = styled.div`
 
 export const IconsContainer = styled.div`
     margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
 `;
