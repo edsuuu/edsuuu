@@ -9,18 +9,6 @@ import { FaNode } from 'react-icons/fa';
 import { GrMysql } from 'react-icons/gr';
 import { BiLogoMongodb } from 'react-icons/bi';
 
-import api_1 from '../../assets/api-1.webp';
-import api_2 from '../../assets/api-2.webp';
-import api_3 from '../../assets/api-3.webp';
-import coffeShop from '../../assets/coffe-shop.png';
-import hydraPage from '../../assets/hydra-page.png';
-import portFolio from '../../assets/portfolio.png';
-import pomodoro from '../../assets/pomodoro.png';
-import projetoAgenda from '../../assets/pj-agenda.png';
-import frontEscola from '../../assets/front-escola.png';
-import frontValorant from '../../assets/valorant.png';
-import blogUniverse from '../../assets/blog-universe.png';
-
 export const projectsObj: ProjectsObjProps[] = [
     {
         name: 'Meu Portfolio',
@@ -29,7 +17,7 @@ export const projectsObj: ProjectsObjProps[] = [
         tecnologias: ['ReactTs', 'Styled Components'],
         icons: [DiReact, BiLogoTypescript, SiStyledcomponents],
         githubURL: 'https://github.com/edsuuu/edsuuu',
-        imageURL: portFolio,
+        imageURL: '',
         deploy: false,
         deployURL: '',
     },
@@ -40,7 +28,7 @@ export const projectsObj: ProjectsObjProps[] = [
         tecnologias: ['ReactTs', 'Styled Components'],
         icons: [DiReact, BiLogoTypescript, SiStyledcomponents],
         githubURL: 'https://github.com/edsuuu/hydra-landing-page',
-        imageURL: hydraPage,
+        imageURL: 'https://raw.githubusercontent.com/edsuuu/hydra-landing-page/main/hydra-page.png',
         deploy: true,
         deployURL: 'https://hydra-landing-page-nu.vercel.app',
     },
@@ -73,8 +61,8 @@ export const projectsObj: ProjectsObjProps[] = [
         categories: ['build', 'front', 'fullstack'],
         tecnologias: [],
         icons: [DiReact, BiLogoTypescript, SiStyledcomponents, BiLogoRedux],
-        githubURL: frontEscola,
-        imageURL: frontValorant,
+        githubURL: 'https://github.com/edsuuu/AccontsValorant',
+        imageURL: '',
         deploy: false,
         deployURL: '',
     },
@@ -86,7 +74,7 @@ export const projectsObj: ProjectsObjProps[] = [
         tecnologias: [],
         icons: [DiReact, RiJavascriptFill, TbBrandCss3],
         githubURL: 'https://github.com/edsuuu/pomodoro-app',
-        imageURL: pomodoro,
+        imageURL: '',
         deploy: true,
         deployURL: 'https://pomodoro-timer-tsx.vercel.app/',
     },
@@ -97,7 +85,7 @@ export const projectsObj: ProjectsObjProps[] = [
         tecnologias: ['HTML', 'CSS'],
         icons: [TiHtml5, TbBrandCss3],
         githubURL: 'https://github.com/edsuuu/coffee-shop',
-        imageURL: coffeShop,
+        imageURL: 'https://raw.githubusercontent.com/edsuuu/coffee-shop/main/img/coffe-shop.png',
         deploy: true,
         deployURL: 'https://edsuuu.github.io/coffee-shop/',
     },
@@ -108,7 +96,7 @@ export const projectsObj: ProjectsObjProps[] = [
         tecnologias: [],
         icons: [TiHtml5, TbBrandCss3],
         githubURL: 'https://github.com/edsuuu/universe',
-        imageURL: blogUniverse,
+        imageURL: 'https://raw.githubusercontent.com/edsuuu/universe/master/imagem/blog-universe.png',
         deploy: true,
         deployURL: 'https://edsuuu.github.io/universe/',
     },
@@ -119,8 +107,8 @@ export const projectsObj: ProjectsObjProps[] = [
         categories: ['build', 'backend'],
         tecnologias: [],
         icons: [BiLogoTypescript, BiLogoMongodb],
-        githubURL: '',
-        imageURL: api_3,
+        githubURL: 'https://github.com/edsuuu/api_contas_valorant',
+        imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/src/assets/api-1.webp',
         deploy: false,
         deployURL: '',
     },
@@ -130,8 +118,8 @@ export const projectsObj: ProjectsObjProps[] = [
         categories: ['fullstack', 'backend'],
         tecnologias: [],
         icons: [FaNode, GrMysql],
-        githubURL: '',
-        imageURL: api_1,
+        githubURL: 'https://github.com/edsuuu/api_escola',
+        imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/src/assets/api-2.webp',
         deploy: false,
         deployURL: '',
     },
@@ -141,8 +129,8 @@ export const projectsObj: ProjectsObjProps[] = [
         categories: ['fullstack', 'backend'],
         tecnologias: [],
         icons: [FaNode, GrMysql],
-        githubURL: '',
-        imageURL: api_2,
+        githubURL: 'https://github.com/edsuuu/api-carro',
+        imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/src/assets/api-3.webp',
         deploy: false,
         deployURL: '',
     },
@@ -153,7 +141,7 @@ export const projectsObj: ProjectsObjProps[] = [
         tecnologias: [],
         icons: [FaNode, BiLogoMongodb],
         githubURL: 'https://github.com/edsuuu/projeto_agenda_mvc',
-        imageURL: projetoAgenda,
+        imageURL: '',
         deploy: false,
         deployURL: '',
     },
