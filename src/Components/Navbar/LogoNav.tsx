@@ -1,9 +1,15 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const NavbarBrandContainer = styled.div`
     display: flex;
     cursor: pointer;
     padding-bottom: 5px;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
 `;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -53,11 +59,13 @@ export function LogoNav() {
         <NavbarBrandContainer>
             {/* <RotatingIcon>©</RotatingIcon> */}
 
-            <TextContainer>
-                <CodeBy>Code by</CodeBy>
-                <TitleOne>Edson</TitleOne>
-                <TitleTwo>Lima</TitleTwo>
-            </TextContainer>
+            <Link to={'/'}>
+                <TextContainer>
+                    <CodeBy>Code by</CodeBy>
+                    <TitleOne>Edson</TitleOne>
+                    <TitleTwo>Lima</TitleTwo>
+                </TextContainer>
+            </Link>
         </NavbarBrandContainer>
     );
 }

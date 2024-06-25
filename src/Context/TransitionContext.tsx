@@ -21,6 +21,7 @@ export const TransitionProvider: React.FC<TransitionProviderProps> = ({ children
     return <TransitionContext.Provider value={{ completed, toggleCompleted }}>{children}</TransitionContext.Provider>;
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useTransition = () => {
     const context = useContext(TransitionContext);
     if (context === undefined) {

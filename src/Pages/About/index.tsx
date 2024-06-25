@@ -6,7 +6,6 @@ const About = () => {
         <Container>
             <Terminal />
             {/* <p>skills/linguages, databases, ferramentas, databases, frameworks</p> */}
-
         </Container>
     );
 };

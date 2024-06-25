@@ -11,9 +11,19 @@ const theme = {
 export const PowerShell = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     width: 90%;
-    height: 700px;
+    height: auto;
     border-radius: 10px;
     background-color: ${theme.colorsTerminal.backgroundTerminal};
+    margin-top: 3rem;
+
+    .container-button-project-psw {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .show-content .container-button-project-psw {
+        opacity: 1;
+    }
 `;
 
 export const AbasPowerShell = styled.div`
@@ -70,6 +80,10 @@ export const PwsNewTabs = styled.div`
             background-color: #cccbcb47;
         }
     }
+
+    @media (max-width: 450px) {
+        display: none;
+    }
 `;
 
 export const PwsTabs = styled.div`
@@ -106,6 +120,12 @@ export const PwsTabs = styled.div`
             background-color: #cccbcb3b;
         }
     }
+
+    @media (max-width: 450px) {
+        .pws-close-tabs {
+            display: none;
+        }
+    }
 `;
 export const PwsTabsTitle = styled.span`
     font-family: 'Space Mono', monospace;
@@ -137,6 +157,13 @@ export const PwsWindowButtons = styled.div`
             background-color: #cccbcb6e;
         }
     }
+
+    @media (max-width: 450px) {
+        .max {
+            display: none;
+        }
+    }
+
     .clos {
         border-radius: 0px 10px 0px 0px;
         padding: 0px 15px 0px 15px;
@@ -167,10 +194,9 @@ export const ContentPSW = styled.div`
     }
 `;
 
-
 export const ContainerButtonProjectPSW = styled.div`
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
     border: 1px solid white;
     color: white;
 `;
