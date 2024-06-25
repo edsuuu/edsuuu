@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const NavbarBrandContainer = styled.div`
     display: flex;
     cursor: pointer;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
 
     a {
         text-decoration: none;
@@ -47,7 +47,7 @@ export const TitleOne = styled(Text)`
 export const TitleTwo = styled(Text)`
     position: absolute;
     left: 8rem;
-    padding-left: 0.25rem;
+    padding-left: 1rem;
     ${NavbarBrandContainer}:hover & {
         transform: translateX(-3.5rem);
     }

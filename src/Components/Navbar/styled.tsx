@@ -48,7 +48,7 @@ export const LinkStyled = styled(Link)`
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 0.5s;
     &:hover {
         background-color: #4267ce;
         padding: 10px;

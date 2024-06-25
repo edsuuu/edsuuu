@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const theme = {
@@ -199,4 +200,30 @@ export const ContainerButtonProjectPSW = styled.div`
     flex-direction: column;
     border: 1px solid white;
     color: white;
+`;
+
+export const LinkStyled = styled(Link)`
+    color: #fff;
+    line-height: 2;
+    position: relative;
+    padding-right: 4px;
+    &:hover {
+        text-decoration: underline;
+    }
+    &::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-top: solid 2px #fff;
+        border-right: solid 2px #fff;
+        border-radius: 2px;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%) rotate(45deg);
+        transition: transform 0.4s;
+    }
+    &:hover::before {
+        transform: translateY(-50%) rotate(45deg) scale(1.2);
+    }
 `;
