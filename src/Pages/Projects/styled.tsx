@@ -23,6 +23,7 @@ export const ProjetosContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 10px;
+    scroll-behavior: smooth;
     .projetoss {
         text-align: center;
         grid-column: span 3;
