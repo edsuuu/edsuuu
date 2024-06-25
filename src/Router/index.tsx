@@ -7,7 +7,7 @@ import Project from '../Pages/Projects';
 import { TransitionProvider } from '../Context/TransitionContext';
 import TransitionComponent from '../Components/Transition';
 import React from 'react';
-// import ProjectInfo from '../Pages/Projects/ProjectInfo';
+// import ProjectInfo from '../Pages/ProjectInfo';
 
 const AppRoutes: React.FC = () => {
     return (

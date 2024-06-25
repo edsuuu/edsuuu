@@ -3,9 +3,7 @@ import { GlobalStyle } from './styles/GlobalStyled';
 import AppRoutes from './Router';
 import Navigation from './Components/Navbar';
 import React, { useEffect, useMemo, useState } from 'react';
-
 import Particles, { initParticlesEngine } from '@tsparticles/react';
-
 import { type Container, type ISourceOptions, MoveDirection, OutMode } from '@tsparticles/engine';
 import { loadSlim } from '@tsparticles/slim';
 import { ToastContainer } from 'react-toastify';

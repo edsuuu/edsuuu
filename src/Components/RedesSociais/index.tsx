@@ -2,15 +2,9 @@ import { FaLinkedin, FaGithub, FaDiscord } from 'react-icons/fa';
 import { TbBrandGmail } from 'react-icons/tb';
 import { Redes, LinksRedes } from './styled';
 import React from 'react';
+import { RedesSociaisProps } from '../../interfaces';
 
-interface RotaProps {
-    name: string;
-    to: string;
-    icon: JSX.Element;
-    className: string;
-}
-
-const rotas: RotaProps[] = [
+const rotas: RedesSociaisProps[] = [
     { name: 'Linkedin', to: 'https://www.linkedin.com/in/edsonlima343', icon: <FaLinkedin size={30} />, className: 'linkedin' },
     { name: 'Github', to: 'https://github.com/edsuuu', icon: <FaGithub size={30} />, className: 'github' },
     { name: 'Gmail', to: '/gmail', icon: <TbBrandGmail size={30} />, className: 'gmail' },

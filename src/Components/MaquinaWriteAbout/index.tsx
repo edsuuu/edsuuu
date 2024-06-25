@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
-interface MaquinaWriteProps {
-    text: string;
-    delay?: number;
-}
+import { MaquinaWriteProps } from '../../interfaces';
 
 const MaquinaWriteAbout: React.FC<MaquinaWriteProps> = ({ text, delay = 130 }) => {
     const [currentText, setCurrentText] = useState('');

@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const GlobalStyle = createGlobalStyle`
@@ -48,30 +48,4 @@ body {
     z-index: 1; /* Para garantir que está acima dos particles */
 }
 
-`;
-
-export const ContentNav = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Para centralizar verticalmente */
-    flex-direction: column; /* Para que o botão e a navbar fiquem em coluna */
-
-    .menu-drop {
-        position: absolute;
-    }
-
-    .navbar {
-        opacity: 0;
-        transition: opacity 0.5s ease; /* Transição suave de 0.5 segundos */
-        max-height: 0;
-        overflow: hidden;
-        transition:
-            opacity 0.5s ease,
-            max-height 0.5s ease;
-    }
-
-    .navbar.show {
-        opacity: 1;
-        max-height: 70px; /* Altura máxima suficiente para mostrar o conteúdo */
-    }
 `;

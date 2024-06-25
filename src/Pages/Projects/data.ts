@@ -1,3 +1,4 @@
+import { ProjectsObjProps } from '../../interfaces';
 import {
     StyledBiLogoMongodb,
     StyledBiLogoRedux,
@@ -11,8 +12,6 @@ import {
     StyledTbBrandCss3,
     StyledTiHtml5,
 } from './styled';
-
-import { ProjectsObjProps } from './types/types';
 
 export const projectsObj: ProjectsObjProps[] = [
     {

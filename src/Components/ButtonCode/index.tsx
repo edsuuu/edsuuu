@@ -1,10 +1,6 @@
 import React from 'react';
 import { ButtonContainer } from './styled';
-
-interface ButtonTextProps {
-    text: string;
-    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-}
+import { ButtonTextProps } from '../../interfaces';
 
 const ButtonCode: React.FC<ButtonTextProps> = ({ text, onClick }) => {
     return (

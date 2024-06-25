@@ -1,9 +1,6 @@
 import React from 'react';
 import { Container } from './styled';
-
-interface ButtonHackingProps {
-    text: string;
-}
+import { ButtonHackingProps } from '../../interfaces';
 
 const ButtonHacking: React.FC<ButtonHackingProps> = ({ text }) => {
     return (

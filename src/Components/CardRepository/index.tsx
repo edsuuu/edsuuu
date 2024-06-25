@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, CardContent, Container, IconsContainer } from './styled';
 import ButtonCode from '../ButtonCode';
-import { ProjectsObjProps } from '../../Pages/Projects/types/types';
 import { toast } from 'react-toastify';
 import { ButtonsLinks } from '../ButtonCode/styled';
+import { ProjectsObjProps } from '../../interfaces';
 
 const alertToast = () => toast.error('Não estou em deploy');
 const alertRedirect = () => toast.info('Voce vai ser redirecionado em alguns segundos');
