@@ -1,13 +1,17 @@
-import { Link } from 'react-router-dom';
 import { Container } from './styled';
 import React from 'react';
 
 const Error404: React.FC = () => {
     return (
         <Container>
-            <h1>pagina nao existe</h1>
-            <Link to={'/'}>Voltar</Link>
+            <h1>Error 404</h1>
+            <h1>A página solicitada não existe ou não foi encontrada!</h1>
+            <div className="button">
+                <span className="text">Voltar para a página inicial</span>
+                <span className="arrow"></span>
+            </div>
         </Container>
     );
 };
+
 export default Error404;
