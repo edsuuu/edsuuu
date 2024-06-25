@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container } from './styled';
-import { ButtonProps } from '../../interfaces';
+import { ButtonTextProps } from '../../interfaces';
 
-const ButtonHacking: React.FC<ButtonProps> = ({ text }) => {
+const ButtonHacking: React.FC<ButtonTextProps> = ({ text, onClick }) => {
     return (
         <Container>
-            <button className="ui-btn">
+            <button className="ui-btn" onClick={onClick}>
                 <span>{text}</span>
             </button>
         </Container>

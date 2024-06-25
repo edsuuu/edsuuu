@@ -4,6 +4,7 @@ import ButtonAmongUS from '../../Components/ButtonAmongUS';
 import ButtonHacking from '../../Components/ButtonHacking';
 import MaquinaWriteHome from '../../Components/MaquinaWriteHome';
 import { Container, LinksSociais, ButtonsNextPage, TitleHome } from './styled';
+import { toast } from 'react-toastify';
 
 const Home: React.FC = () => {
     const texts = ['Olá, Eu sou Edson !!', 'Sou Desenvolvedor Web FullStack'];
@@ -18,19 +19,37 @@ const Home: React.FC = () => {
     const handleNavigation = () => {
         navigate('/sobre');
     };
+    const alertRedirect = () => toast.info('Voce vai ser redirecionado em alguns segundos');
+
+    const handleLinkedin = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        alertRedirect();
+
+        setTimeout(() => {
+            window.open('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', '_blank');
+        }, 3000);
+    };
+    const handleGithub = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        alertRedirect();
+
+        setTimeout(() => {
+            window.open('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', '_blank');
+        }, 3000);
+    };
 
     return (
         <Container>
             <TitleHome>{texts.map((text, index) => index <= currentIndex && <MaquinaWriteHome key={index} text={text} onComplete={handleComplete} />)}</TitleHome>
 
             <LinksSociais>
-                <ButtonHacking text="Linkedin" />
-                <ButtonHacking text="GitHub" />
+                <ButtonHacking text="Linkedin" onClick={handleLinkedin} />
+                <ButtonHacking text="GitHub" onClick={handleGithub} />
             </LinksSociais>
 
             <ButtonsNextPage>
                 <div>
-                    <ButtonAmongUS textBefore="Sobre" textAfter="Mim" onclick={handleNavigation} />
+                    <ButtonAmongUS textBefore="Sobre" textAfter="Mim" onClick={handleNavigation} />
                 </div>
             </ButtonsNextPage>
         </Container>

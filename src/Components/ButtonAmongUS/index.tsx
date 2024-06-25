@@ -3,9 +3,9 @@ import { AmongUsButton } from './styled';
 import { ButtonAmongUsProps } from '../../interfaces';
 
 // eslint-disable-next-line react/prop-types
-const ButtonAmongUS: React.FC<ButtonAmongUsProps> = ({ textBefore, textAfter, onclick }) => {
+const ButtonAmongUS: React.FC<ButtonAmongUsProps> = ({ textBefore, textAfter, onClick }) => {
     return (
-        <AmongUsButton onClick={onclick}>
+        <AmongUsButton onClick={onClick}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36px" height="36px">
                 <rect width="36" height="36" x="0" y="0" fill="#fdd835"></rect>
                 <path

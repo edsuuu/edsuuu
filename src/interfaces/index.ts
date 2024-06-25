@@ -1,15 +1,17 @@
 import { IconType } from 'react-icons';
 
 export interface ButtonProps {
-    text: string;
+    text?: string;
+    onClick?: () => void;
 }
-export interface ButtonTextProps extends ButtonProps {
+export interface ButtonTextProps {
+    text: string;
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 export interface ButtonAmongUsProps {
     textBefore: string;
     textAfter: string;
-    onclick?: () => void;
+    onClick?: () => void;
 }
 export interface ProjectsObjProps {
     name: string;
