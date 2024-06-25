@@ -34,7 +34,7 @@ const CardRepository: React.FC<ProjectsObjProps> = ({ name, descricao, deployURL
     return (
         <Container>
             <Card>
-                <img src={imageURL} loading="lazy" alt={name} />
+                <img src={imageURL} alt={name} />
 
                 <CardContent>
                     <div>
