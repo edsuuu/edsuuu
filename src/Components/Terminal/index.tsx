@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import MaquinaWriteAbout from '../MaquinaWriteAbout';
 import { AbasPowerShell, PowerShell, PwsNewTabs, PwsTabs, PwsTabsButtons, PwsWindowButtons, PwsTabsTitle, ContentPSW, ContainerButtonProjectPSW, LinkStyled } from './styled';
 import * as Icon from 'react-icons/vsc';
 
 const Terminal: React.FC = () => {
-    const navigate = useNavigate();
     const [showContent, setShowContent] = useState(false);
 
     useEffect(() => {
@@ -15,10 +13,6 @@ const Terminal: React.FC = () => {
 
         return () => clearTimeout(timer);
     }, []);
-
-    const handleNavigation = () => {
-        navigate('/projetos');
-    };
 
     return (
         <>
@@ -86,9 +80,6 @@ const Terminal: React.FC = () => {
                             {/* <h3>Download para o meu currículo</h3> */}
                             <br />
 
-                            {/* <button onClick={handleNavigation}>
-                                <h1>Botão para navegar para projetos</h1>
-                            </button> */}
                             <div>
                                 <LinkStyled to="/projetos"> Ir para Projetos</LinkStyled>
                             </div>
