@@ -1,20 +1,16 @@
 import { IconType } from 'react-icons';
 
+export interface ButtonProps {
+    text: string;
+}
+export interface ButtonTextProps extends ButtonProps {
+    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+}
 export interface ButtonAmongUsProps {
     textBefore: string;
     textAfter: string;
     onclick?: () => void;
 }
-
-export interface ButtonTextProps {
-    text: string;
-    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-}
-
-export interface ButtonHackingProps {
-    text: string;
-}
-
 export interface ProjectsObjProps {
     name: string;
     descricao: string;
@@ -32,9 +28,7 @@ export interface MaquinaWriteProps {
     delay?: number;
 }
 
-export interface MaquinaWriteHomeProps {
-    text: string;
-    delay?: number;
+export interface MaquinaWriteHomeProps extends MaquinaWriteProps {
     onComplete: () => void;
 }
 
@@ -43,9 +37,7 @@ export interface RotasNavigationProps {
     to: string;
 }
 
-export interface RedesSociaisProps {
-    name: string;
-    to: string;
+export interface RedesSociaisProps extends RotasNavigationProps {
     icon: JSX.Element;
     className: string;
 }
