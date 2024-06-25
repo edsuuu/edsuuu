@@ -12,9 +12,7 @@ const Navigation: React.FC = () => {
     return (
         <Navbar>
             <LinksLista>
-                <div className="links">
-                    <LogoNav />
-                </div>
+                <LogoNav />
 
                 <div className="links">
                     {rotas.map((rota, index) => (

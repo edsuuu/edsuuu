@@ -50,7 +50,7 @@ export default function App(): JSX.Element {
                         quantity: 4,
                     },
                     repulse: {
-                        distance: 100,
+                        distance: 120,
                         duration: 0.2,
                     },
                 },
@@ -63,8 +63,8 @@ export default function App(): JSX.Element {
                     color: '#00a4ef',
                     distance: 150,
                     enable: true,
-                    opacity: 1,
-                    width: 2,
+                    opacity: 0.9,
+                    width: 1,
                 },
                 move: {
                     direction: MoveDirection.none,
@@ -73,7 +73,7 @@ export default function App(): JSX.Element {
                         default: OutMode.out,
                     },
                     random: false,
-                    speed: 4,
+                    speed: 3,
                     straight: false,
                 },
                 number: {
@@ -83,13 +83,13 @@ export default function App(): JSX.Element {
                     value: 120,
                 },
                 opacity: {
-                    value: 1,
+                    value: 0.5,
                 },
                 shape: {
                     type: 'circle',
                 },
                 size: {
-                    value: { min: 1, max: 5 },
+                    value: { min: 1, max: 3 },
                 },
             },
             detectRetina: true,
