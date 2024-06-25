@@ -12,6 +12,7 @@ interface TransitionComponentProps {
 const TransitionComponent: React.FC<TransitionComponentProps> = ({ children }) => {
     const location = useLocation();
     const nodeRef = useRef<HTMLDivElement>(null);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const { toggleCompleted }: any = useContext(TransitionContext);
 
     return (
@@ -35,10 +36,7 @@ const TransitionComponent: React.FC<TransitionComponentProps> = ({ children }) =
                 }}
                 onExit={() => {
                     if (nodeRef.current) {
-                        gsap.timeline({ paused: true })
-                            .to(nodeRef.current, { scale: 0.8, duration: 0.2 })
-                            .to(nodeRef.current, { xPercent: 100, autoAlpha: 0, duration: 0.2 })
-                            .play();
+                        gsap.timeline({ paused: true }).to(nodeRef.current, { scale: 0.8, duration: 0.2 }).to(nodeRef.current, { xPercent: 100, autoAlpha: 0, duration: 0.2 }).play();
                     }
                 }}
             >

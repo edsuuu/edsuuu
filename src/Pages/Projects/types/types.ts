@@ -8,6 +8,6 @@ export interface ProjectsObjProps {
     githubURL?: string;
     tecnologias?: string[];
     icons: IconType[];
-    deploy: boolean; //fazer tipo um botao
-    deployURL: string; //fazer tipo um botao
+    deploy: boolean;
+    deployURL: string;
 }

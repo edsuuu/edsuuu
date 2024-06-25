@@ -21,6 +21,7 @@ const MaquinaWriteHome: React.FC<MaquinaWriteProps> = ({ text, delay = 100, onCo
 
     useEffect(() => {
         writeText(text);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [text]);
 
     return <h1>{currentText}</h1>;

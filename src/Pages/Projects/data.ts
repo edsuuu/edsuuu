@@ -1,21 +1,26 @@
-import { DiSass, DiReact } from 'react-icons/di';
-import { RiJavascriptFill } from 'react-icons/ri';
+import {
+    StyledBiLogoMongodb,
+    StyledBiLogoRedux,
+    StyledBiLogoTypescript,
+    StyledDiReact,
+    StyledDiSass,
+    StyledFaNode,
+    StyledGrMysql,
+    StyledRiJavascriptFill,
+    StyledSiStyledcomponents,
+    StyledTbBrandCss3,
+    StyledTiHtml5,
+} from './styled';
+
 import { ProjectsObjProps } from './types/types';
-import { TbBrandCss3 } from 'react-icons/tb';
-import { TiHtml5 } from 'react-icons/ti';
-import { BiLogoRedux, BiLogoTypescript } from 'react-icons/bi';
-import { SiStyledcomponents } from 'react-icons/si';
-import { FaNode } from 'react-icons/fa';
-import { GrMysql } from 'react-icons/gr';
-import { BiLogoMongodb } from 'react-icons/bi';
 
 export const projectsObj: ProjectsObjProps[] = [
     {
         name: 'Meu Portfolio',
-        descricao: 'Uma breve pagina',
+        descricao: 'Meu projeto principal, colocando todo conhecimento em pratica',
         categories: ['front', 'build'],
-        tecnologias: ['ReactTs', 'Styled Components'],
-        icons: [DiReact, BiLogoTypescript, SiStyledcomponents],
+        tecnologias: ['ReactTs ', 'Styled Components'],
+        icons: [StyledDiReact, StyledBiLogoTypescript, StyledSiStyledcomponents],
         githubURL: 'https://github.com/edsuuu/edsuuu',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/portfolio.png',
         deploy: false,
@@ -23,10 +28,10 @@ export const projectsObj: ProjectsObjProps[] = [
     },
     {
         name: 'Hydra Landing Page',
-        descricao: 'Uma breve pagina',
+        descricao: 'Uma landing page com um visual moderno',
         categories: ['front', 'build'],
-        tecnologias: ['ReactTs', 'Styled Components'],
-        icons: [DiReact, BiLogoTypescript, SiStyledcomponents],
+        tecnologias: ['ReactTs ', 'Styled Components'],
+        icons: [StyledDiReact, StyledBiLogoTypescript, StyledSiStyledcomponents],
         githubURL: 'https://github.com/edsuuu/hydra-landing-page',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/hydra-landing-page/main/hydra-page.png',
         deploy: true,
@@ -34,10 +39,10 @@ export const projectsObj: ProjectsObjProps[] = [
     },
     {
         name: 'NFT Landing Page',
-        descricao: 'Uma breve pagina',
+        descricao: 'Uma landing page voltada para NFTs.',
         categories: ['front'],
-        tecnologias: ['ReactJs', 'Scss'],
-        icons: [DiReact, RiJavascriptFill, DiSass],
+        tecnologias: ['ReactJs ', 'Scss'],
+        icons: [StyledDiReact, StyledRiJavascriptFill, StyledDiSass],
         githubURL: 'https://github.com/edsuuu/landing-page-nft',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/landing-page-nft/main/public/Home.PNG',
         deploy: true,
@@ -46,10 +51,10 @@ export const projectsObj: ProjectsObjProps[] = [
 
     {
         name: 'Front Escola',
-        descricao: 'Uma breve pagina',
+        descricao: 'Front para consumir a Api_Escola',
         categories: ['front', 'fullstack'],
-        tecnologias: [],
-        icons: [DiReact, RiJavascriptFill, SiStyledcomponents, BiLogoRedux],
+        tecnologias: ['ReactJs ', 'Javascript ', 'Styled Components ', 'Redux'],
+        icons: [StyledDiReact, StyledRiJavascriptFill, StyledSiStyledcomponents, StyledBiLogoRedux],
         githubURL: 'https://github.com/edsuuu/front-escola ',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/front-escola/main/public/image.png',
         deploy: false,
@@ -57,10 +62,10 @@ export const projectsObj: ProjectsObjProps[] = [
     },
     {
         name: 'Front Valorant',
-        descricao: 'Uma breve pagina',
+        descricao: 'Front para consumir a Api_Valorant',
         categories: ['build', 'front', 'fullstack'],
-        tecnologias: [],
-        icons: [DiReact, BiLogoTypescript, SiStyledcomponents, BiLogoRedux],
+        tecnologias: ['ReactTs ', 'TypeScript ', 'Styled Components ', 'Redux'],
+        icons: [StyledDiReact, StyledBiLogoTypescript, StyledSiStyledcomponents, StyledBiLogoRedux],
         githubURL: 'https://github.com/edsuuu/AccontsValorant',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/valorant.png',
         deploy: false,
@@ -69,10 +74,10 @@ export const projectsObj: ProjectsObjProps[] = [
 
     {
         name: 'Pomodoro App',
-        descricao: 'Uma breve pagina',
+        descricao: 'Criação do projeto do pomodoro app',
         categories: ['front'],
-        tecnologias: [],
-        icons: [DiReact, RiJavascriptFill, TbBrandCss3],
+        tecnologias: ['ReactJs ', 'Javascript ', 'Css'],
+        icons: [StyledDiReact, StyledRiJavascriptFill, StyledTbBrandCss3],
         githubURL: 'https://github.com/edsuuu/pomodoro-app',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/pomodoro.png',
         deploy: true,
@@ -80,10 +85,10 @@ export const projectsObj: ProjectsObjProps[] = [
     },
     {
         name: 'Coffe Shop ',
-        descricao: 'Uma breve pagina',
+        descricao: 'Umas das Primeiras pagina',
         categories: ['front'],
-        tecnologias: ['HTML', 'CSS'],
-        icons: [TiHtml5, TbBrandCss3],
+        tecnologias: ['HTML ', 'CSS'],
+        icons: [StyledTiHtml5, StyledTbBrandCss3],
         githubURL: 'https://github.com/edsuuu/coffee-shop',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/coffee-shop/main/img/coffe-shop.png',
         deploy: true,
@@ -91,10 +96,10 @@ export const projectsObj: ProjectsObjProps[] = [
     },
     {
         name: 'Blog Universe',
-        descricao: 'blog teste',
+        descricao: 'Umas das Primeiras pagina',
         categories: ['front'],
-        tecnologias: [],
-        icons: [TiHtml5, TbBrandCss3],
+        tecnologias: ['HTML ', 'SCSS'],
+        icons: [StyledTiHtml5, StyledDiSass],
         githubURL: 'https://github.com/edsuuu/universe',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/universe/master/imagem/blog-universe.png',
         deploy: true,
@@ -103,10 +108,10 @@ export const projectsObj: ProjectsObjProps[] = [
 
     {
         name: 'Api Valorant',
-        descricao: 'api cadastro de contas',
+        descricao: 'Api para cadastro de contas com sistema admin e sistema de logs',
         categories: ['build', 'backend'],
-        tecnologias: [],
-        icons: [BiLogoTypescript, BiLogoMongodb],
+        tecnologias: ['TypeScript ', 'Node ', 'MongoDB'],
+        icons: [StyledBiLogoTypescript, StyledFaNode, StyledBiLogoMongodb],
         githubURL: 'https://github.com/edsuuu/api_contas_valorant',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/api-2.webp',
         deploy: false,
@@ -114,10 +119,10 @@ export const projectsObj: ProjectsObjProps[] = [
     },
     {
         name: 'Api Escola',
-        descricao: 'Uma api que cadastra alunos com fotos',
+        descricao: 'Api para cadastro de perfil de alunos com upload de fotos',
         categories: ['fullstack', 'backend'],
-        tecnologias: [],
-        icons: [FaNode, GrMysql],
+        tecnologias: ['Node ', 'MySql ', 'Sucrase'],
+        icons: [StyledFaNode, StyledGrMysql],
         githubURL: 'https://github.com/edsuuu/api_escola',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/api-1.webp',
         deploy: false,
@@ -125,10 +130,10 @@ export const projectsObj: ProjectsObjProps[] = [
     },
     {
         name: 'Api Carros',
-        descricao: 'Uma api que cadastra carros',
+        descricao: 'Uma api que cadastra placa e modelo de carro',
         categories: ['fullstack', 'backend'],
-        tecnologias: [],
-        icons: [FaNode, GrMysql],
+        tecnologias: ['Node ', 'MySql'],
+        icons: [StyledFaNode, StyledGrMysql],
         githubURL: 'https://github.com/edsuuu/api-carro',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/api-3.webp',
         deploy: false,
@@ -136,10 +141,10 @@ export const projectsObj: ProjectsObjProps[] = [
     },
     {
         name: 'Agenda MVC ',
-        descricao: 'Projeto agenda mvc',
+        descricao: 'Um projeto MVC, usanando EJS para desenvolvimento da interface, simula uma agenda de contatos',
         categories: ['fullstack', 'backend', 'front'],
-        tecnologias: [],
-        icons: [FaNode, BiLogoMongodb],
+        tecnologias: ['Node ', 'EJS ', 'MongoDB'],
+        icons: [StyledFaNode, StyledBiLogoMongodb],
         githubURL: 'https://github.com/edsuuu/projeto_agenda_mvc',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/pj-agenda.png',
         deploy: false,

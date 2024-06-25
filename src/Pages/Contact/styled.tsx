@@ -13,7 +13,6 @@ export const Container = styled.div`
 export const Content = styled.div`
     width: 100%;
     padding: 45px;
-    /* border: 1px solid #ffffff; */
     display: flex;
     justify-content: center;
     align-items: center;

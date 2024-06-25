@@ -3,16 +3,10 @@ import styled from 'styled-components';
 export const FormMainContact = styled.div`
     max-width: 800px;
     width: 100%;
-
 `;
 export const TitleFormContact = styled.div`
-
     margin-bottom: 20px;
     color: white;
-    /* backdrop-filter:  blur(10px);
-    border: 1px solid #ffffff5e;
-    border-radius: 4px; */
-
 
     h1 {
         font-size: 2.2rem;
@@ -53,9 +47,7 @@ export const FormsContactGroup = styled.div`
         height: 50px;
         padding: 10px 15px;
         background: transparent;
-
-        /* background: gray; */
-        backdrop-filter:  blur(10px);
+        backdrop-filter: blur(10px);
         color: #ffffff;
         border: 1px solid #ffffff5f;
         border-radius: 4px;
@@ -67,7 +59,6 @@ export const FormsContactGroup = styled.div`
                 top: -10px;
                 font-size: 1.1rem;
                 background: #11111a;
-                /* background: gray; */
             }
         }
 
@@ -92,7 +83,7 @@ export const FormsContactGroup = styled.div`
     }
 
     textarea {
-        backdrop-filter:  blur(10px);
+        backdrop-filter: blur(10px);
 
         font-size: 1.05rem;
         max-width: 800px;
@@ -103,7 +94,6 @@ export const FormsContactGroup = styled.div`
         padding: 20px;
         background: transparent;
 
-        /* background: gray; */
         border: 1px solid #ffffff5f;
         border-radius: 4px;
         box-sizing: border-box;
@@ -115,10 +105,7 @@ export const FormsContactGroup = styled.div`
             ~ label {
                 top: -11px;
                 font-size: 1.1rem;
-                /* background-color: gray;
-                 */
                 background: #11111a;
-
             }
         }
 
@@ -141,7 +128,7 @@ export const Button = styled.button`
     margin: 0 auto;
     border-radius: 10px;
     border: none;
-    transition: .2s;
+    transition: 0.2s;
     &:hover {
         cursor: pointer;
         background-color: #3d85d8;

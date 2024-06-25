@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MaquinaWriteAbout from '../MaquinaWriteAbout';
 import { AbasPowerShell, PowerShell, PwsNewTabs, PwsTabs, PwsTabsButtons, PwsWindowButtons, PwsTabsTitle, ContentPSW, ContainerButtonProjectPSW } from './styled';
 import * as Icon from 'react-icons/vsc';
 
-export default function Terminal(): JSX.Element {
+const Terminal: React.FC = () => {
     const navigate = useNavigate();
     const [showContent, setShowContent] = useState(false);
 
@@ -68,7 +68,6 @@ export default function Terminal(): JSX.Element {
                         <MaquinaWriteAbout text="cat sobre-mim.txt" />
                     </div>
 
-                    {/* Aplica a classe condicionalmente */}
                     <div className={showContent ? 'show-content' : ''}>
                         <ContainerButtonProjectPSW className="container-button-project-psw">
                             <div>
@@ -96,4 +95,6 @@ export default function Terminal(): JSX.Element {
             </PowerShell>
         </>
     );
-}
+};
+
+export default Terminal;

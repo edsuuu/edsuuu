@@ -2,14 +2,14 @@ import { Routes, Route } from 'react-router-dom';
 import Home from '../Pages/Home';
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
-import Experience from '../Pages/Experience';
 import Error404 from '../Pages/Error';
 import Project from '../Pages/Projects';
 import { TransitionProvider } from '../Context/TransitionContext';
 import TransitionComponent from '../Components/Transition';
+import React from 'react';
 // import ProjectInfo from '../Pages/Projects/ProjectInfo';
 
-export default function AppRoutes() {
+const AppRoutes: React.FC = () => {
     return (
         <TransitionProvider>
             <Routes>
@@ -45,14 +45,7 @@ export default function AppRoutes() {
                         </TransitionComponent>
                     }
                 /> */}
-                <Route
-                    path="/experiencia"
-                    element={
-                        <TransitionComponent>
-                            <Experience />
-                        </TransitionComponent>
-                    }
-                />
+
                 <Route
                     path="/contato"
                     element={
@@ -66,4 +59,6 @@ export default function AppRoutes() {
             </Routes>
         </TransitionProvider>
     );
-}
+};
+
+export default AppRoutes;

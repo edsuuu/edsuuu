@@ -2,7 +2,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { GlobalStyle } from './styles/GlobalStyled';
 import AppRoutes from './Router';
 import Navigation from './Components/Navbar';
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 
@@ -10,9 +10,8 @@ import { type Container, type ISourceOptions, MoveDirection, OutMode } from '@ts
 import { loadSlim } from '@tsparticles/slim';
 import { ToastContainer } from 'react-toastify';
 
-export default function App(): JSX.Element {
+const App: React.FC = () => {
     const [init, setInit] = useState<boolean>(false);
-    // const [menuHidden, setMenuHidden] = useState<boolean>(true);
 
     useEffect(() => {
         initParticlesEngine(async (engine) => {
@@ -97,10 +96,6 @@ export default function App(): JSX.Element {
         [],
     );
 
-    // const handleMenuHidden = () => {
-    //     setMenuHidden(!menuHidden);
-    // };
-
     return (
         <>
             {init && <Particles id="tsparticles" className="particles-container" particlesLoaded={particlesLoaded} options={options} />}
@@ -108,27 +103,14 @@ export default function App(): JSX.Element {
             <Router>
                 <div className="content-container">
                     <Navigation />
-                    {/* <ContentNav>
-                        {menuHidden ? (
-                            <button className="menu-drop" onClick={handleMenuHidden}>
-                                Aparecer navbar
-                            </button>
-                        ) : (
-                            <>
-                                <Navigation className="navbar show" />
-                                <button className="menu-drop" onClick={handleMenuHidden}>
-                                    Esconder navbar
-                                </button>
-                            </>
-                        )}
-                    </ContentNav> */}
 
                     <AppRoutes />
                     <GlobalStyle />
-                    {/* <Footer /> */}
                     <ToastContainer autoClose={3000} className="toast-container" />
                 </div>
             </Router>
         </>
     );
-}
+};
+
+export default App;

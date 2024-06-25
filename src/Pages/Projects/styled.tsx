@@ -1,4 +1,13 @@
 import styled from 'styled-components';
+import { DiSass, DiReact } from 'react-icons/di';
+import { RiJavascriptFill } from 'react-icons/ri';
+import { TbBrandCss3 } from 'react-icons/tb';
+import { TiHtml5 } from 'react-icons/ti';
+import { BiLogoRedux, BiLogoTypescript } from 'react-icons/bi';
+import { SiStyledcomponents } from 'react-icons/si';
+import { FaNode } from 'react-icons/fa';
+import { GrMysql } from 'react-icons/gr';
+import { BiLogoMongodb } from 'react-icons/bi';
 
 export const Container = styled.div`
     max-width: 1300px;
@@ -55,7 +64,6 @@ export const Title = styled.div`
         min-width: 100px;
         padding: 15px;
         border-radius: 5px;
-        /* border: 1px solid #4267ce; */
         border: 1px solid #ffffff;
         background-color: transparent;
         backdrop-filter: blur(10px);
@@ -77,10 +85,8 @@ export const Title = styled.div`
             width: 1em;
             color: #fff;
             background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
-            /* background-size: contain; */
-            /* opacity: 0; */
-            /* pointer-events: none; */
         }
+
         input[type='search']:focus::-webkit-search-cancel-button {
             opacity: 0.8;
             pointer-events: all;
@@ -101,4 +107,59 @@ export const Title = styled.div`
         font-size: 1.3rem;
         text-align: center;
     }
+`;
+
+export const StyledDiSass = styled(DiSass)`
+    color: #ff69b4;
+    font-size: 40px;
+`;
+
+export const StyledDiReact = styled(DiReact)`
+    color: #61dafb;
+    font-size: 40px;
+`;
+
+export const StyledRiJavascriptFill = styled(RiJavascriptFill)`
+    color: #f0db4f;
+    font-size: 40px;
+`;
+
+export const StyledTbBrandCss3 = styled(TbBrandCss3)`
+    color: #1572b6;
+    font-size: 40px;
+`;
+
+export const StyledTiHtml5 = styled(TiHtml5)`
+    color: #e34f26;
+    font-size: 40px;
+`;
+
+export const StyledBiLogoRedux = styled(BiLogoRedux)`
+    color: #764abc;
+    font-size: 40px;
+`;
+
+export const StyledBiLogoTypescript = styled(BiLogoTypescript)`
+    color: #3178c6;
+    font-size: 40px;
+`;
+
+export const StyledSiStyledcomponents = styled(SiStyledcomponents)`
+    color: #db7093;
+    font-size: 40px;
+`;
+
+export const StyledFaNode = styled(FaNode)`
+    color: #68a063;
+    font-size: 40px;
+`;
+
+export const StyledGrMysql = styled(GrMysql)`
+    color: #4479a1;
+    font-size: 40px;
+`;
+
+export const StyledBiLogoMongodb = styled(BiLogoMongodb)`
+    color: #13aa52;
+    font-size: 40px;
 `;

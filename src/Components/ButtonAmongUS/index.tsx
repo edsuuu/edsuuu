@@ -1,3 +1,4 @@
+import React from 'react';
 import { AmongUsButton } from './styled';
 
 interface ButtonAmongUsProps {

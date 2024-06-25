@@ -1,9 +1,9 @@
 // import { Container } from './styled';
 // import { Link, useParams } from 'react-router-dom';
 // import { projectsObj, ProjectsObjProps } from '../data';
-// import { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
 
-// export default function ProjectInfo() {
+// const ProjectInfo: React.FC = () => {
 //     const { id } = useParams<{ id: string }>();
 //     const [projeto, setProjeto] = useState<ProjectsObjProps | null>(null);
 
@@ -37,4 +37,5 @@
 //             )}
 //         </Container>
 //     );
-// }
+// };
+// export default ProjectInfo;
