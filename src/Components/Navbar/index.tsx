@@ -1,13 +1,9 @@
 import React from 'react';
 import LogoNavbar from '../LogoNavbar';
 import { Navbar, LinksLista, LinkStyled } from './styled';
+import { RotasNavigationProps } from '../../interfaces';
 
-interface RotasProps {
-    name: string;
-    to: string;
-}
-
-const rotas: RotasProps[] = [
+const rotas: RotasNavigationProps[] = [
     { name: 'Home', to: '/' },
     { name: 'Sobre', to: '/sobre' },
     { name: 'Projetos', to: '/projetos' },

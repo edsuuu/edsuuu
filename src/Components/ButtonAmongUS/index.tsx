@@ -1,11 +1,6 @@
 import React from 'react';
 import { AmongUsButton } from './styled';
-
-interface ButtonAmongUsProps {
-    textBefore: string;
-    textAfter: string;
-    onclick?: () => void;
-}
+import { ButtonAmongUsProps } from '../../interfaces';
 
 // eslint-disable-next-line react/prop-types
 const ButtonAmongUS: React.FC<ButtonAmongUsProps> = ({ textBefore, textAfter, onclick }) => {

@@ -1,17 +1,9 @@
 import React, { createContext, useState, useContext } from 'react';
-
-interface TransitionContextType {
-    completed: boolean;
-    toggleCompleted: (value: boolean) => void;
-}
+import { TransitionComponentProps, TransitionContextType } from '../interfaces';
 
 const TransitionContext = createContext<TransitionContextType | undefined>(undefined);
 
-interface TransitionProviderProps {
-    children: React.ReactNode;
-}
-
-export const TransitionProvider: React.FC<TransitionProviderProps> = ({ children }) => {
+export const TransitionProvider: React.FC<TransitionComponentProps> = ({ children }) => {
     const [completed, setCompleted] = useState<boolean>(false);
 
     const toggleCompleted = (value: boolean) => {

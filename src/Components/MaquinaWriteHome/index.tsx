@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { MaquinaWriteHomeProps } from '../../interfaces';
 
-interface MaquinaWriteProps {
-    text: string;
-    delay?: number;
-    onComplete: () => void;
-}
-
-const MaquinaWriteHome: React.FC<MaquinaWriteProps> = ({ text, delay = 100, onComplete }) => {
+const MaquinaWriteHome: React.FC<MaquinaWriteHomeProps> = ({ text, delay = 100, onComplete }) => {
     const [currentText, setCurrentText] = useState('');
 
     const writeText = (text: string, i = 0) => {

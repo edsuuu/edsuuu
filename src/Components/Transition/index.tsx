@@ -4,10 +4,7 @@ import { useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 
 import TransitionContext from '../../Context/TransitionContext';
-
-interface TransitionComponentProps {
-    children: React.ReactNode;
-}
+import { TransitionComponentProps } from '../../interfaces';
 
 const TransitionComponent: React.FC<TransitionComponentProps> = ({ children }) => {
     const location = useLocation();

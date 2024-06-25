@@ -6,7 +6,7 @@ import MaquinaWriteHome from '../../Components/MaquinaWriteHome';
 import { Container, LinksSociais, ButtonsNextPage, TitleHome } from './styled';
 
 const Home: React.FC = () => {
-    // const texts = ['Olá, Eu sou Edson !!', 'Sou Desenvolvedor Web e FullStack'];
+    // const texts = ['Olá, Eu sou Edson !!', 'Sou Desenvolvedor Web FullStack'];
     const texts = ['Hey guys, I am Edson !!', 'I am a FullStack Web Developer  '];
     const [currentIndex, setCurrentIndex] = useState(0);
     const navigate = useNavigate();
