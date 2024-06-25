@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormContact, InputGroup, FormsContactGroup, Button, MensageAndButton, FormMainContact, TitleFormContact } from './styled';
-import { handleSubmitForms } from '../../services/send_email/email';
+import { handleSubmitForms } from '../../services/send_email';
 
 const FormularioContato: React.FC = () => {
     return (
