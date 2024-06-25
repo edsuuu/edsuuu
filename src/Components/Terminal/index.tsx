@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MaquinaWriteAbout from '../MaquinaWriteAbout';
 import { AbasPowerShell, PowerShell, PwsNewTabs, PwsTabs, PwsTabsButtons, PwsWindowButtons, PwsTabsTitle, ContentPSW, ContainerButtonProjectPSW } from './styled';
@@ -5,6 +6,15 @@ import * as Icon from 'react-icons/vsc';
 
 export default function Terminal(): JSX.Element {
     const navigate = useNavigate();
+    const [showContent, setShowContent] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowContent(true);
+        }, 2300);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     const handleNavigation = () => {
         navigate('/projetos');
@@ -13,7 +23,6 @@ export default function Terminal(): JSX.Element {
     return (
         <>
             <PowerShell>
-                {/* LINKS DO POWERSHELL, ABA, FECHAR  */}
                 <AbasPowerShell>
                     <PwsTabsButtons>
                         <PwsTabs>
@@ -41,11 +50,9 @@ export default function Terminal(): JSX.Element {
                         <span className="min">
                             <Icon.VscChromeMinimize />
                         </span>
-
                         <span className="max">
                             <Icon.VscChromeMaximize />
                         </span>
-
                         <span className="clos">
                             <Icon.VscClose />
                         </span>
@@ -61,22 +68,30 @@ export default function Terminal(): JSX.Element {
                         <MaquinaWriteAbout text="cat sobre-mim.txt" />
                     </div>
 
-                    <ContainerButtonProjectPSW>
-                        <h1>Componente precisa ser montado apos 1 segundo</h1>
-                        <br />
-                        <h1>pequena descricao sobre mim</h1>
-                        <br />
+                    {/* Aplica a classe condicionalmente */}
+                    <div className={showContent ? 'show-content' : ''}>
+                        <ContainerButtonProjectPSW className="container-button-project-psw">
+                            <div>
+                                <h1>Pequena descrição sobre mim</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi illo, distinctio repellendus exercitationem est dicta eius ut impedit odit. Sunt culpa in totam
+                                    illum, nemo a aliquam sequi omnis possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi illo, distinctio repellendus exercitationem est dicta
+                                    eius ut impedit odit. Sunt culpa in totam illum, nemo a aliquam sequi omnis possimus?
+                                </p>
+                            </div>
+                            <br />
 
-                        <h1> soft skills</h1>
-                        <h1>skills/linguages, databases, ferramentas, frameworks</h1>
-                        <br />
-                        <h1>download para um Curriculo </h1>
-                        <br />
+                            <h1>Soft skills</h1>
+                            <h1>Skills, linguagens, databases, ferramentas, frameworks</h1>
+                            <br />
+                            <h3>Download para o meu currículo</h3>
+                            <br />
 
-                        <button onClick={handleNavigation}>
-                            <h1>Button para navegar para projetos </h1>
-                        </button>
-                    </ContainerButtonProjectPSW>
+                            <button onClick={handleNavigation}>
+                                <h1>Botão para navegar para projetos</h1>
+                            </button>
+                        </ContainerButtonProjectPSW>
+                    </div>
                 </ContentPSW>
             </PowerShell>
         </>

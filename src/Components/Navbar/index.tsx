@@ -1,7 +1,12 @@
 import { Navbar, LinksLista, LinkStyled } from './styled';
 import { LogoNav } from './LogoNav';
 
-const Navigation = () => {
+interface NavProps {
+    className?: string;
+}
+
+// eslint-disable-next-line react/prop-types
+const Navigation: React.FC<NavProps> = ({ className }) => {
     const rotas = [
         { name: 'Home', to: '/' },
         { name: 'Sobre', to: '/sobre' },
@@ -10,9 +15,9 @@ const Navigation = () => {
     ];
 
     return (
-        <Navbar>
+        <Navbar className={className}>
             <LinksLista>
-                <div className="titles-nav">
+                <div className="links">
                     <LogoNav />
                 </div>
 

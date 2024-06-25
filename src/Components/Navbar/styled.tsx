@@ -12,6 +12,7 @@ export const Navbar = styled.nav`
         display: flex;
         flex-direction: row;
         gap: 50px;
+        color: white;
     }
     .buttons {
         display: flex;

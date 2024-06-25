@@ -12,6 +12,7 @@ import { ToastContainer } from 'react-toastify';
 
 export default function App(): JSX.Element {
     const [init, setInit] = useState<boolean>(false);
+    // const [menuHidden, setMenuHidden] = useState<boolean>(true);
 
     useEffect(() => {
         initParticlesEngine(async (engine) => {
@@ -96,6 +97,10 @@ export default function App(): JSX.Element {
         [],
     );
 
+    // const handleMenuHidden = () => {
+    //     setMenuHidden(!menuHidden);
+    // };
+
     return (
         <>
             {init && <Particles id="tsparticles" className="particles-container" particlesLoaded={particlesLoaded} options={options} />}
@@ -103,6 +108,21 @@ export default function App(): JSX.Element {
             <Router>
                 <div className="content-container">
                     <Navigation />
+                    {/* <ContentNav>
+                        {menuHidden ? (
+                            <button className="menu-drop" onClick={handleMenuHidden}>
+                                Aparecer navbar
+                            </button>
+                        ) : (
+                            <>
+                                <Navigation className="navbar show" />
+                                <button className="menu-drop" onClick={handleMenuHidden}>
+                                    Esconder navbar
+                                </button>
+                            </>
+                        )}
+                    </ContentNav> */}
+
                     <AppRoutes />
                     <GlobalStyle />
                     {/* <Footer /> */}
