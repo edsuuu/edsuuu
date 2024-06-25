@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container } from './styled';
-import { ButtonHackingProps } from '../../interfaces';
+import { ButtonProps } from '../../interfaces';
 
-const ButtonHacking: React.FC<ButtonHackingProps> = ({ text }) => {
+const ButtonHacking: React.FC<ButtonProps> = ({ text }) => {
     return (
         <Container>
             <button className="ui-btn">
