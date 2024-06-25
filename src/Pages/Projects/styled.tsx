@@ -23,6 +23,13 @@ export const ProjetosContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 10px;
+    .projetoss {
+        text-align: center;
+        grid-column: span 3;
+        @media (max-width: 768px) {
+            grid-column: span 1;
+        }
+    }
 `;
 
 export const ButtonCategory = styled.button<{ $active: boolean }>`
@@ -162,4 +169,49 @@ export const StyledGrMysql = styled(GrMysql)`
 export const StyledBiLogoMongodb = styled(BiLogoMongodb)`
     color: #13aa52;
     font-size: 40px;
+`;
+
+export const ButtonContacts = styled.div`
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+
+    button {
+        --b: 3px;
+        /* border thickness */
+        --s: 0.45em;
+        --color: #e2e2e2;
+        font-weight: bold;
+        padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+        color: var(--color);
+        --_p: var(--s);
+        background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
+        transition:
+            0.3s linear,
+            color 0s,
+            background-color 0s;
+        outline: var(--b) solid #0000;
+        outline-offset: 0.6em;
+        font-size: 16px;
+        border: 0;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        transition: 0.3s;
+    }
+
+    button:hover,
+    button:focus-visible {
+        --_p: 0px;
+        outline-color: #ffffff;
+        outline-offset: 0.05em;
+    }
+
+    button:active {
+        background: #ffffff;
+        color: #000000;
+    }
 `;

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { ButtonCategory, Container, ProjetosContainer, Title } from './styled';
+import { ButtonCategory, ButtonContacts, Container, ProjetosContainer, Title } from './styled';
 import { projectsObj } from './data';
 import CardRepository from '../../Components/CardRepository';
+import { useNavigate } from 'react-router-dom';
 
 const Project: React.FC = () => {
+    const navigate = useNavigate();
     const [category, setCategory] = useState<string | null>(null);
     const [buscarProjeto, setBuscarProjeto] = useState('');
 
@@ -23,6 +25,10 @@ const Project: React.FC = () => {
         const pesquisaPeloNome = project.name.toLowerCase().includes(buscarProjeto.toLowerCase());
         return categoryMatch && pesquisaPeloNome;
     });
+
+    const handleNavigation = () => {
+        navigate('/contato');
+    };
 
     return (
         <Container>
@@ -74,6 +80,9 @@ const Project: React.FC = () => {
                     </div>
                 )}
             </ProjetosContainer>
+            <ButtonContacts>
+                <button onClick={handleNavigation}>Contatos</button>
+            </ButtonContacts>
         </Container>
     );
 };
