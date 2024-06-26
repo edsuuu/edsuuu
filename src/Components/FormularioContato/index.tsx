@@ -7,12 +7,17 @@ import API_URL from '../../services';
 const FormularioContato: React.FC = () => {
     const [name, setNome] = useState<string>('');
     const [email, setEmail] = useState<string>('');
+    const [assunto, setAssunto] = useState<string>('');
     const [message, setMensagem] = useState<string>('');
+
+    const manutecao = true;
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         let formErrors = false;
+
+        if (manutecao) return toast.error('Não está funcionando, ainda estamos em Desenvolvimento', { theme: 'dark', position: 'top-right' });
 
         if (name.trim() === '') {
             formErrors = true;
@@ -23,6 +28,11 @@ const FormularioContato: React.FC = () => {
             formErrors = true;
             toast.error('Email inválido');
         }
+        if (assunto.trim() === '') {
+            formErrors = true;
+            toast.error('Assunto não pode ficar vazio.');
+        }
+
         if (message.trim() === '') {
             formErrors = true;
             toast.error('Mensagem não pode ficar vazio.');
@@ -30,19 +40,15 @@ const FormularioContato: React.FC = () => {
 
         if (formErrors) return;
 
+        console.log(formErrors);
         // mandar o payload para o backend, Nome, email e Mensagem
         try {
-            await API_URL.post('/email', { name, email, message });
-            toast.success('Email enviado com sucesso!');
-
-            // await axios.post(`/contas/`, {
-            //     dono_conta,
-            //     login_conta,
-            //     senha_conta,
-            // });
+            await API_URL.post('/email', { name, email, message, assunto });
+            console.log(name, email, message, assunto);
+            toast.success('Email enviado com sucesso!', { theme: 'dark' });
         } catch (error) {
             console.log(error);
-            toast.error('Ocorreu um erro ao enviar o email. Tente novamente mais tarde.');
+            toast.error('Ocorreu um erro ao enviar o email. Tente novamente mais tarde.', { theme: 'dark' });
         }
     };
 
@@ -56,6 +62,12 @@ const FormularioContato: React.FC = () => {
             <FormContact onSubmit={handleSubmit}>
                 <InputGroup>
                     <FormsContactGroup>
+                        <input type="text" placeholder=" " value={assunto} onChange={(e) => setAssunto(e.target.value)} />
+                        <label>Assunto</label>
+                    </FormsContactGroup>
+                </InputGroup>
+                <InputGroup>
+                    <FormsContactGroup>
                         <input type="text" placeholder=" " value={name} onChange={(e) => setNome(e.target.value)} />
                         <label>Nome</label>
                     </FormsContactGroup>
@@ -64,6 +76,7 @@ const FormularioContato: React.FC = () => {
                         <label>E-Mail</label>
                     </FormsContactGroup>
                 </InputGroup>
+
                 <MensageAndButton>
                     <FormsContactGroup>
                         <textarea placeholder=" " value={message} onChange={(e) => setMensagem(e.target.value)}></textarea>
