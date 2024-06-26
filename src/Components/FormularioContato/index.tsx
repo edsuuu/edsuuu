@@ -5,16 +5,16 @@ import { isEmail } from 'validator';
 import API_URL from '../../services';
 
 const FormularioContato: React.FC = () => {
-    const [nome, setNome] = useState<string>('');
+    const [name, setNome] = useState<string>('');
     const [email, setEmail] = useState<string>('');
-    const [mensagem, setMensagem] = useState<string>('');
+    const [message, setMensagem] = useState<string>('');
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         let formErrors = false;
 
-        if (nome.trim() === '') {
+        if (name.trim() === '') {
             formErrors = true;
             toast.error('Nome não pode ficar vazio.');
         }
@@ -23,7 +23,7 @@ const FormularioContato: React.FC = () => {
             formErrors = true;
             toast.error('Email inválido');
         }
-        if (mensagem.trim() === '') {
+        if (message.trim() === '') {
             formErrors = true;
             toast.error('Mensagem não pode ficar vazio.');
         }
@@ -32,7 +32,7 @@ const FormularioContato: React.FC = () => {
 
         // mandar o payload para o backend, Nome, email e Mensagem
         try {
-            await API_URL.get('/email');
+            await API_URL.post('/email', { name, email, message });
             toast.success('Email enviado com sucesso!');
 
             // await axios.post(`/contas/`, {
@@ -56,7 +56,7 @@ const FormularioContato: React.FC = () => {
             <FormContact onSubmit={handleSubmit}>
                 <InputGroup>
                     <FormsContactGroup>
-                        <input type="text" placeholder=" " value={nome} onChange={(e) => setNome(e.target.value)} />
+                        <input type="text" placeholder=" " value={name} onChange={(e) => setNome(e.target.value)} />
                         <label>Nome</label>
                     </FormsContactGroup>
                     <FormsContactGroup>
@@ -66,7 +66,7 @@ const FormularioContato: React.FC = () => {
                 </InputGroup>
                 <MensageAndButton>
                     <FormsContactGroup>
-                        <textarea placeholder=" " value={mensagem} onChange={(e) => setMensagem(e.target.value)}></textarea>
+                        <textarea placeholder=" " value={message} onChange={(e) => setMensagem(e.target.value)}></textarea>
                         <label>Digite sua mensagem...</label>
                     </FormsContactGroup>
                     <Button type="submit">Enviar</Button>
