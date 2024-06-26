@@ -5,6 +5,12 @@
 ```bash
 git clone https://github.com/edsuuu/edsuuu.git && cd edsuuu && code . && npm install && npm run dev
 ```
+# Clonar repositorio com SubModulos = Referencia para API, " ./src/Api "
+
+```bash
+git clone --recurse-submodules https://github.com/edsuuu/edsuuu.git && cd edsuuu && code . && npm install && npm run dev
+```
+
 
 ## Tecnologias Usadas no Projeto
 
