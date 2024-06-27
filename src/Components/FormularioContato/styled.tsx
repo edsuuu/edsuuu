@@ -46,8 +46,10 @@ export const FormsContactGroup = styled.div`
         width: 100%;
         height: 50px;
         padding: 10px 15px;
-        background: transparent;
-        backdrop-filter: blur(10px);
+        background-color: #11111a;
+
+        /* background: transparent; */
+        /* backdrop-filter: blur(10px); */
         color: #ffffff;
         border: 1px solid #ffffff5f;
         border-radius: 4px;
@@ -83,7 +85,8 @@ export const FormsContactGroup = styled.div`
     }
 
     textarea {
-        backdrop-filter: blur(10px);
+        /* backdrop-filter: blur(10px); */
+        background-color: #11111a;
 
         font-size: 1.05rem;
         max-width: 800px;
@@ -92,7 +95,7 @@ export const FormsContactGroup = styled.div`
         flex: 1 1 100%;
         height: 350px;
         padding: 20px;
-        background: transparent;
+        /* background: transparent; */
 
         border: 1px solid #ffffff5f;
         border-radius: 4px;

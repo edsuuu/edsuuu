@@ -3,11 +3,11 @@ import { InformacoesTecnicas, Title } from './styled';
 import { databasesObj, frameworksObj, hostingObj, languagesObj, sistemasEferramentasObj } from '../Terminal/data';
 import LanguagesComponent from '../LanguagesComponent';
 
-const SoftSkiils: React.FC = () => {
+const Skiils: React.FC = () => {
     return (
         <div>
             <Title>
-                <h1>Soft skills</h1>
+                <h1>Skills</h1>
             </Title>
             <InformacoesTecnicas>
                 <div className="card-infos">
@@ -79,4 +79,4 @@ const SoftSkiils: React.FC = () => {
         </div>
     );
 };
-export default SoftSkiils;
+export default Skiils;

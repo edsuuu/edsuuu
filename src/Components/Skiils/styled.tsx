@@ -1,12 +1,16 @@
 import styled from 'styled-components';
 
+export const Title = styled.div`
+    text-align: center;
+    margin-bottom: 20px;
+`;
+
 export const InformacoesTecnicas = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 10px;
-    border: 1px solid white;
+    gap: 5px;
 
     @media (max-width: 996px) {
         flex-wrap: wrap;
@@ -15,25 +19,27 @@ export const InformacoesTecnicas = styled.div`
         }
     }
     .content-icons {
+        margin-top: 15px;
         display: flex;
         flex-direction: row;
         gap: 20px;
     }
 
     .card-infos {
+        border-radius: 20px;
         padding: 25px;
         margin: 10px;
         width: 100%;
-        border: 1px solid white;
+        border: 1px solid #ffffff5c;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 15px;
         text-align: center;
+        transition: 0.3s;
+        &:hover {
+            transform: scale(1.05);
+        }
     }
-`;
-
-export const Title = styled.div`
-    text-align: center;
 `;

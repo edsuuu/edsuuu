@@ -187,8 +187,10 @@ export const ContentPSW = styled.div`
     height: 75vh;
     overflow-y: auto;
     font-family: 'Space Mono', monospace;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(5px); */
     border: 1px solid #ffffff39;
+    background-color: #11111a;
+
     border-top: none;
     border-radius: 0px 0px 10px 10px;
     .comands {
@@ -257,4 +259,20 @@ export const LinkStyled = styled(Link)`
     &:hover::before {
         transform: translateY(-50%) rotate(45deg) scale(1.2);
     }
+`;
+
+export const Curriculo = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+`;
+
+export const BreveDescricao = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
 `;

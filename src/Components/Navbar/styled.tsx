@@ -3,8 +3,10 @@ import styled from 'styled-components';
 
 export const Navbar = styled.nav`
     width: 100%;
-    background-color: transparent;
-    backdrop-filter: blur(20px);
+    background-color: #11111a;
+
+    /* background-color: transparent; */
+    /* backdrop-filter: blur(20px); */
     padding: 20px;
     border-bottom: 1px solid #ffffff53;
 

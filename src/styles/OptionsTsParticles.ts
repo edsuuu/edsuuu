@@ -6,7 +6,7 @@ export const OptionsTsParticles: ISourceOptions = {
             value: '#11111a',
         },
     },
-    fpsLimit: 120,
+    fpsLimit: 60,
     interactivity: {
         events: {
             onClick: {
@@ -20,7 +20,7 @@ export const OptionsTsParticles: ISourceOptions = {
         },
         modes: {
             push: {
-                quantity: 4,
+                quantity: 1,
             },
             repulse: {
                 distance: 120,
@@ -37,7 +37,7 @@ export const OptionsTsParticles: ISourceOptions = {
             distance: 150,
             enable: true,
             opacity: 0.9,
-            width: 1,
+            width: 0.8,
         },
         move: {
             direction: MoveDirection.none,
@@ -46,14 +46,14 @@ export const OptionsTsParticles: ISourceOptions = {
                 default: OutMode.out,
             },
             random: false,
-            speed: 3,
+            speed: 4,
             straight: false,
         },
         number: {
             density: {
                 enable: true,
             },
-            value: 120,
+            value: 100,
         },
         opacity: {
             value: 0.5,

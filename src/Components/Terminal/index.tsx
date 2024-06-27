@@ -1,8 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import MaquinaWriteAbout from '../MaquinaWriteAbout';
-import { AbasPowerShell, PowerShell, PwsNewTabs, PwsTabs, PwsTabsButtons, PwsWindowButtons, PwsTabsTitle, ContentPSW, ContainerButtonProjectPSW, LinkStyled } from './styled';
+import {
+    AbasPowerShell,
+    PowerShell,
+    PwsNewTabs,
+    PwsTabs,
+    PwsTabsButtons,
+    PwsWindowButtons,
+    PwsTabsTitle,
+    ContentPSW,
+    ContainerButtonProjectPSW,
+    LinkStyled,
+    Curriculo,
+    BreveDescricao,
+} from './styled';
 import * as Icon from 'react-icons/vsc';
-import SoftSkiils from '../SoftSkiils';
+import Skiils from '../Skiils';
 
 const Terminal: React.FC = () => {
     const [showContent, setShowContent] = useState(false);
@@ -16,85 +29,78 @@ const Terminal: React.FC = () => {
     }, []);
 
     return (
-        <>
-            <PowerShell>
-                <AbasPowerShell>
-                    <PwsTabsButtons>
-                        <PwsTabs>
-                            <div>
-                                <Icon.VscTerminalPowershell />
-                                <PwsTabsTitle>SobreMim</PwsTabsTitle>
-                            </div>
-                            <span className="pws-close-tabs">
-                                <Icon.VscClose />
-                            </span>
-                        </PwsTabs>
-
-                        <PwsNewTabs>
-                            <span className="plus">
-                                <Icon.VscAdd />
-                            </span>
-                            <span className="linha">|</span>
-                            <span className="seta-bottom">
-                                <Icon.VscChevronDown />
-                            </span>
-                        </PwsNewTabs>
-                    </PwsTabsButtons>
-
-                    <PwsWindowButtons>
-                        <span className="min">
-                            <Icon.VscChromeMinimize />
-                        </span>
-                        <span className="max">
-                            <Icon.VscChromeMaximize />
-                        </span>
-                        <span className="clos">
+        <PowerShell>
+            <AbasPowerShell>
+                <PwsTabsButtons>
+                    <PwsTabs>
+                        <div>
+                            <Icon.VscTerminalPowershell />
+                            <PwsTabsTitle>SobreMim</PwsTabsTitle>
+                        </div>
+                        <span className="pws-close-tabs">
                             <Icon.VscClose />
                         </span>
-                    </PwsWindowButtons>
-                </AbasPowerShell>
+                    </PwsTabs>
 
-                <ContentPSW>
-                    <div>
-                        <p>PortFolio 1.0.0</p>
-                    </div>
-                    <div className="comands">
-                        <p>C:\Sobre\edsu&gt;</p>
-                        <MaquinaWriteAbout text="cat sobre-mim.txt" />
-                    </div>
+                    <PwsNewTabs>
+                        <span className="plus">
+                            <Icon.VscAdd />
+                        </span>
+                        <span className="linha">|</span>
+                        <span className="seta-bottom">
+                            <Icon.VscChevronDown />
+                        </span>
+                    </PwsNewTabs>
+                </PwsTabsButtons>
 
-                    {/* <div className="status-github">
-                                <a href="https://github.com/anuraghazra/github-readme-stats">
-                                    <img
-                                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=donut-vertical&langs_count=10&theme=github_dark&border_color=00a4ef&bg_color=000000"
-                                        alt="github-readme-stats"
-                                    />
-                                </a>
-                            </div> */}
+                <PwsWindowButtons>
+                    <span className="min">
+                        <Icon.VscChromeMinimize />
+                    </span>
+                    <span className="max">
+                        <Icon.VscChromeMaximize />
+                    </span>
+                    <span className="clos">
+                        <Icon.VscClose />
+                    </span>
+                </PwsWindowButtons>
+            </AbasPowerShell>
 
-                    <div className={showContent ? 'show-content' : ''}>
-                        <ContainerButtonProjectPSW className="container-button-project-psw">
-                            <>
+            <ContentPSW>
+                <div>
+                    <p>PortFolio 1.0.0</p>
+                </div>
+                <div className="comands">
+                    <p>C:\Sobre\edsu&gt;</p>
+                    <MaquinaWriteAbout text="cat sobre-mim.txt" />
+                </div>
+
+                <div className={showContent ? 'show-content' : ''}>
+                    <ContainerButtonProjectPSW className="container-button-project-psw">
+                        <div>
+                            <BreveDescricao>
                                 <h2>Pequena descrição sobre mim</h2>
                                 <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt quaerat odio vero mollitia unde quas magni deserunt magnam eos quisquam alias, officia reiciendis?
-                                    Hic non neque repellendus maxime, aliquid quaerat.
+                                    Me chamo edson, era da area administrativa, e entrei para a area de desenvolvimento de software ah quase 2 anos, nesse tempo eu passei a desenvolver aplicoces web
+                                    seja single page, sistemas web, <LinkStyled to="/projetos"> Ver meus Projetos</LinkStyled>
                                 </p>
-                            </>
-                            <br />
-                            <h3>visualizar meu currículo</h3>
-                            <br />
+                            </BreveDescricao>
+                            <Curriculo>
+                                <div>
+                                    <h3>visualizar meu currículo</h3>
+                                </div>
+                                <div>
+                                    <button>Visualizar</button>
+                                    <button>Baixar</button>
+                                </div>
+                            </Curriculo>
+                        </div>
 
-                            <div>
-                                <LinkStyled to="/projetos"> Ver meus Projetos</LinkStyled>
-                            </div>
-
-                            <SoftSkiils />
-                        </ContainerButtonProjectPSW>
-                    </div>
-                </ContentPSW>
-            </PowerShell>
-        </>
+                        <Skiils />
+                    </ContainerButtonProjectPSW>
+                </div>
+            </ContentPSW>
+        </PowerShell>
     );
 };
 
