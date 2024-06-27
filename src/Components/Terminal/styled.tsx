@@ -11,10 +11,11 @@ const theme = {
 
 export const PowerShell = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    width: 90%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
-    background-color: ${theme.colorsTerminal.backgroundTerminal};
+    /* background-color: ${theme.colorsTerminal.backgroundTerminal}; */
+
     margin-top: 3rem;
 
     .container-button-project-psw {
@@ -181,25 +182,55 @@ export const PwsWindowButtons = styled.div`
 `;
 
 export const ContentPSW = styled.div`
-    padding: 13px;
+    padding: 1rem 1rem 1rem 1rem;
     color: white;
-    height: 92.2%;
+    height: 75vh;
+    overflow-y: auto;
     font-family: 'Space Mono', monospace;
-
-    div:nth-child(1) {
-    }
-    div:nth-child(2) {
+    backdrop-filter: blur(10px);
+    border: 1px solid #ffffff39;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    .comands {
         display: flex;
         flex-direction: row;
-        gap: 10px;
+        gap: 5px;
+        align-items: center;
     }
 `;
 
+export const Skills = styled.div`
+    width: 100%;
+    header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .languages {
+        margin-top: 30px;
+        padding: 1rem 5rem 1rem 5rem;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        row-gap: 45px;
+        column-gap: 30px;
+    }
+    .status-github {
+        img {
+        }
+    }
+`;
 export const ContainerButtonProjectPSW = styled.div`
     display: flex;
     flex-direction: column;
-    border: 1px solid white;
+    margin-top: 10px;
+    /* border: 1px solid white; */
     color: white;
+    h2 {
+        margin-bottom: 10px;
+    }
 `;
 
 export const LinkStyled = styled(Link)`
@@ -225,5 +256,39 @@ export const LinkStyled = styled(Link)`
     }
     &:hover::before {
         transform: translateY(-50%) rotate(45deg) scale(1.2);
+    }
+`;
+
+export const InformacoesTecnicas = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid white;
+
+    @media (max-width: 996px) {
+        flex-wrap: wrap;
+        .card-infos {
+            width: 100%;
+        }
+    }
+    .content-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .card-infos {
+        padding: 25px;
+        margin: 10px;
+        width: 100%;
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
     }
 `;
