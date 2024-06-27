@@ -26,7 +26,7 @@ const Home: React.FC = () => {
         alertRedirect();
 
         setTimeout(() => {
-            window.open('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', '_blank');
+            window.open('', '_blank');
         }, 3000);
     };
     const handleGithub = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
         alertRedirect();
 
         setTimeout(() => {
-            window.open('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', '_blank');
+            window.open('', '_blank');
         }, 3000);
     };
 
@@ -48,6 +48,7 @@ const Home: React.FC = () => {
             </LinksSociais>
 
             <ButtonsNextPage>
+                {/* trocar o among */}
                 <div>
                     <ButtonAmongUS textBefore="Sobre" textAfter="Mim" onClick={handleNavigation} />
                 </div>

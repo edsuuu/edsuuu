@@ -6,15 +6,15 @@ export const AmongUsButton = styled.button`
     justify-content: center;
     gap: 10px;
     padding: 0 20px;
-    color: #000000;
-    text-shadow: 2px 2px rgb(252, 251, 251);
+    color: #ffffff;
+    text-shadow: 2px 2px rgb(38, 38, 38);
     cursor: pointer;
     border: solid 2px black;
     letter-spacing: 1px;
     font-weight: 600;
     font-size: 17px;
-    background-color: hsl(49deg 98% 60%);
-    border-radius: 50px;
+    background-color: #00a4ef;
+    /* border-radius: 50px; */
     position: relative;
     overflow: hidden;
     transition: all 0.5s ease;
@@ -41,7 +41,7 @@ export const AmongUsButton = styled.button`
     .now {
         position: absolute;
         left: 0;
-        transform: translateX(-100%);
+        transform: translateX(-110%);
         transition: all 0.5s ease;
         z-index: 2;
     }

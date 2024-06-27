@@ -74,7 +74,9 @@ export const Title = styled.div`
         border-radius: 5px;
         border: 1px solid #ffffff;
         background-color: transparent;
-        backdrop-filter: blur(10px);
+        /* backdrop-filter: blur(10px); */
+        background-color: #11111a;
+
         font-size: 1.2rem;
     }
     .input-projects {

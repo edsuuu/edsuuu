@@ -274,8 +274,8 @@ export const languagesObj: IconItem[] = [
 export const frameworksObj: IconItem[] = [
     { name: 'React', Icon: StyledSiReact },
     { name: 'Redux', Icon: StyledSiRedux },
-    { name: 'Sass', Icon: StyledSiSass },
     { name: 'StyledComponents', Icon: StyledSiStyledcomponents },
+    { name: 'Sass', Icon: StyledSiSass },
     { name: 'HTML', Icon: StyledSiHtml5 },
     { name: 'CSS', Icon: StyledSiCss3 },
 ];

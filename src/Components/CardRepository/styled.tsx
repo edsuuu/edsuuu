@@ -8,7 +8,7 @@ export const Container = styled.div`
     margin: 10px;
     border-radius: 8px;
     transition: transform 0.3s ease;
-    backdrop-filter: blur(16px);
+    /* backdrop-filter: blur(16px); */
 `;
 
 export const Card = styled.div`
