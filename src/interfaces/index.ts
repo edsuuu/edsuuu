@@ -52,3 +52,8 @@ export interface TransitionContextType {
     completed: boolean;
     toggleCompleted: (value: boolean) => void;
 }
+
+export interface IconItem {
+    name: string;
+    Icon: IconType;
+}
