@@ -23,3 +23,9 @@ git clone --recurse-submodules https://github.com/edsuuu/edsuuu.git && cd edsuuu
 - React Transition group
 - Styled Components
 - Validator
+
+
+# Features Que falta
+
+- Otimizar a pagina projetos
+- Fazer o backend do formulario

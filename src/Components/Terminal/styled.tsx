@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 const theme = {
     colorsTerminal: {
-        Abaterminal: '#4e4e4e',
-        backgroundTerminal: '#000000',
+        // Abaterminal: '#4e4e4e',
+        Abaterminal: '#005f8b',
+        backgroundTerminal: '#11111a',
         textTerminal: '#fafafa',
     },
 };
@@ -14,7 +15,7 @@ export const PowerShell = styled.div`
     width: 100%;
     height: auto;
     border-radius: 10px;
-    /* background-color: ${theme.colorsTerminal.backgroundTerminal}; */
+    background-color: ${theme.colorsTerminal.backgroundTerminal};
 
     margin-top: 3rem;
 
@@ -189,7 +190,7 @@ export const ContentPSW = styled.div`
     font-family: 'Space Mono', monospace;
     /* backdrop-filter: blur(5px); */
     border: 1px solid #ffffff39;
-    background-color: #11111a;
+    /* background-color: #11111a; */
 
     border-top: none;
     border-radius: 0px 0px 10px 10px;
