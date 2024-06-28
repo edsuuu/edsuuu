@@ -46,6 +46,10 @@ export const InformacoesTecnicas = styled.div`
         gap: 15px;
         text-align: center;
         transition: 0.3s;
+
+        p {
+            padding: 0 15px;
+        }
         &:hover {
             transform: scale(1.05);
         }

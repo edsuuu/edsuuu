@@ -310,6 +310,7 @@ export const Curriculo = styled.div`
         display: flex;
         flex-direction: row;
         gap: 10px;
+        color: black;
     }
 
     .btn-download {
@@ -363,5 +364,65 @@ export const Curriculo = styled.div`
     .btn-download:hover .tooltip {
         opacity: 1;
         transition-duration: 0.3s;
+    }
+
+    .btn-visu {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #ffffff43;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+
+        &:hover {
+            background-color: #00a4ef;
+        }
+    }
+
+    .tooltip-reverse {
+        position: absolute;
+        /* right: 10px; */
+        right: 60px;
+        opacity: 0;
+        background-color: rgb(80, 80, 80);
+        color: white;
+        padding: 5px 15px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.2s;
+        pointer-events: none;
+        letter-spacing: 0.5px;
+    }
+
+    .tooltip-reverse::before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: rgb(80, 80, 80);
+        background-size: 1000%;
+        background-position: center;
+        transform: rotate(45deg);
+        left: 93.6%;
+        transition-duration: 0.3s;
+    }
+
+    .btn-visu:hover .tooltip-reverse {
+        opacity: 1;
+        transition-duration: 0.5s;
+    }
+    .icons-terminal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: #11111a;
     }
 `;

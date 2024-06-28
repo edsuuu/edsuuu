@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FormContact, InputGroup, FormsContactGroup, Button, MensageAndButton, FormMainContact, TitleFormContact } from './styled';
+import { FormContact, InputGroup, FormsContactGroup, MensageAndButton, FormMainContact, TitleFormContact, ButtonContainerSend } from './styled';
 import { toast } from 'react-toastify';
 import { isEmail } from 'validator';
 import API_URL from '../../services';
@@ -9,6 +9,7 @@ const FormularioContato: React.FC = () => {
     const [email, setEmail] = useState<string>('');
     const [assunto, setAssunto] = useState<string>('');
     const [message, setMensagem] = useState<string>('');
+    const [caracteres, setDiminuiCaracteres] = useState<number>(2500);
 
     const manutecao = true;
 
@@ -37,6 +38,10 @@ const FormularioContato: React.FC = () => {
             formErrors = true;
             toast.error('Mensagem não pode ficar vazio.');
         }
+        if (message.length > 2500) {
+            formErrors = true;
+            toast.error('Mensagem não ultrapassar 2500 Caracteres.');
+        }
 
         if (formErrors) return;
 
@@ -52,13 +57,51 @@ const FormularioContato: React.FC = () => {
         }
     };
 
+    const valueAndContage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        const newMessage = e.target.value;
+        if (newMessage.length <= 2500) {
+            setMensagem(newMessage);
+            setDiminuiCaracteres(2500 - newMessage.length);
+        }
+    };
+
+    const myEmail = import.meta.env.VITE_USER_MAIL;
+
+    const copiarEmail = () => {
+        navigator.clipboard.writeText(myEmail);
+        toast.success('Email copiado com sucesso!', { theme: 'dark' });
+    };
+
+    const handleLinkedin = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        toast.info('Você será redirecionado dentro de alguns segundos', { theme: 'dark' });
+
+        setTimeout(() => {
+            window.open('https://www.linkedin.com/in/edsonlima343/', '_blank');
+        }, 3000);
+    };
+
     return (
         <FormMainContact>
             <TitleFormContact>
                 <h1>
                     # <span>Contato</span>
                 </h1>
-                <p>Entre em contato comigo utilizando o formulário abaixo ou através das minhas principais redes ao lado.</p>
+                <p>Entre em contato comigo utilizando o formulário abaixo</p>
+                <p>
+                    Ou se preferir, você pode me encontrar nos link ao lado
+                    <abbr title="Copiar o Email">
+                        <a href="#" onClick={() => copiarEmail()}>
+                            Copiar Email
+                        </a>
+                    </abbr>
+                    ou
+                    <abbr title="Abrir Linkedin">
+                        <a href="#" onClick={handleLinkedin}>
+                            Acessar Linkedin
+                        </a>
+                    </abbr>
+                </p>
             </TitleFormContact>
 
             <FormContact onSubmit={handleSubmit}>
@@ -81,10 +124,26 @@ const FormularioContato: React.FC = () => {
 
                 <MensageAndButton>
                     <FormsContactGroup>
-                        <textarea placeholder=" " value={message} onChange={(e) => setMensagem(e.target.value)}></textarea>
+                        <textarea placeholder=" " value={message} onChange={valueAndContage}></textarea>
                         <label>Digite sua mensagem...</label>
                     </FormsContactGroup>
-                    <Button type="submit">Enviar</Button>
+                    <small> Caracteres restantes {caracteres}</small>
+                    <ButtonContainerSend>
+                        <button className="btn-send-message">
+                            <div className="svg-wrapper-1">
+                                <div className="svg-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path
+                                            fill="currentColor"
+                                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <span>Enviar</span>
+                        </button>
+                    </ButtonContainerSend>
                 </MensageAndButton>
             </FormContact>
         </FormMainContact>

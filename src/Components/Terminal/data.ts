@@ -13,11 +13,13 @@ import {
     SiMariadb,
     SiMicrosoft,
     SiMicrosoftazure,
+    SiMicrosoftexcel,
     SiMongodb,
     SiMysql,
     SiNetlify,
     SiNginx,
     SiNodedotjs,
+    SiOpensourcehardware,
     SiPostgresql,
     SiPrettier,
     SiReact,
@@ -275,6 +277,29 @@ export const StyledSiInsomnia = styled(SiInsomnia)`
     }
 `;
 
+export const StyledSiLinux = styled(SiLinux)`
+    color: white;
+    transition: 0.3s;
+    &:hover {
+        color: #fcc624;
+    }
+`;
+
+export const StyledSiMicrosoftexcel = styled(SiMicrosoftexcel)`
+    color: white;
+    transition: 0.3s;
+    &:hover {
+        color: #217346;
+    }
+`;
+export const StyledSiOpensourcehardware = styled(SiOpensourcehardware)`
+    color: white;
+    transition: 0.3s;
+    &:hover {
+        color: #3da638;
+    }
+`;
+
 export const languagesObj: IconItem[] = [
     { name: 'TypeScript', Icon: StyledSiTypescript },
     { name: 'Node.js', Icon: StyledSiNodedotjs },
@@ -293,7 +318,7 @@ export const hostingObj: IconItem[] = [
     { name: 'Azure', Icon: StyledSiAzuredevops },
     { name: 'Vercel', Icon: StyledSiVercel },
     { name: 'Nginx', Icon: StyledSiNginx },
-    { name: 'Netlify', Icon: StyledSiNetlify },
+    { name: 'OpenSource', Icon: StyledSiOpensourcehardware },
 ];
 
 export const databasesObj: IconItem[] = [
@@ -304,10 +329,11 @@ export const databasesObj: IconItem[] = [
 ];
 
 export const sistemasEferramentasObj: IconItem[] = [
-    { name: 'Linux', Icon: SiLinux },
+    { name: 'Linux', Icon: StyledSiLinux },
     { name: 'Windows', Icon: StyledSiMicrosoft },
     { name: 'Docker', Icon: StyledSiDocker },
     { name: 'Git', Icon: StyledSiGit },
     { name: 'Insomnia', Icon: StyledSiInsomnia },
+    { name: 'Excel', Icon: StyledSiMicrosoftexcel },
     { name: 'Spotify', Icon: StyledSiSpotify },
 ];
