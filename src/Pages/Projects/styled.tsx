@@ -15,6 +15,12 @@ export const Container = styled.div`
     padding: 40px 0px;
     color: white;
     margin: 0px auto 0px auto;
+    .loadMore {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 `;
 
 export const ProjetosContainer = styled.div`

@@ -8,6 +8,7 @@ const Project: React.FC = () => {
     const navigate = useNavigate();
     const [category, setCategory] = useState<string | null>(null);
     const [buscarProjeto, setBuscarProjeto] = useState('');
+    const [visibleProjects, setVisibleProjects] = useState(6);
 
     const handleFilterCategoryClick = (selectedCategory: string) => {
         setCategory((prevCategory) => (prevCategory === selectedCategory ? null : selectedCategory));
@@ -26,8 +27,14 @@ const Project: React.FC = () => {
         return categoryMatch && pesquisaPeloNome;
     });
 
+    const projetosVisiveis = projetosFiltrados.slice(0, visibleProjects);
+
     const handleNavigation = () => {
         navigate('/contato');
+    };
+
+    const handleLoadMoreRepository = () => {
+        setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 6);
     };
 
     return (
@@ -37,7 +44,7 @@ const Project: React.FC = () => {
                     <h1>Quais projetos você deseja ver ?</h1>
                 </div>
                 <div className="content-buttons">
-                    <ButtonCategory $active={category === 'null'} onClick={() => setCategory(null)}>
+                    <ButtonCategory $active={category === null} onClick={() => setCategory(null)}>
                         Todos
                     </ButtonCategory>
                     <ButtonCategory $active={category === 'build'} onClick={() => handleFilterCategoryClick('build')}>
@@ -59,8 +66,8 @@ const Project: React.FC = () => {
             </Title>
 
             <ProjetosContainer>
-                {projetosFiltrados && projetosFiltrados.length > 0 ? (
-                    projetosFiltrados.map((item, index) => (
+                {projetosVisiveis && projetosVisiveis.length > 0 ? (
+                    projetosVisiveis.map((item, index) => (
                         <CardRepository
                             key={index}
                             name={item.name}
@@ -80,6 +87,7 @@ const Project: React.FC = () => {
                     </div>
                 )}
             </ProjetosContainer>
+            <div className="loadMore">{visibleProjects < projetosFiltrados.length && <button onClick={handleLoadMoreRepository}>Carregar mais Projetos</button>}</div>
             <ButtonContacts>
                 <button onClick={handleNavigation}>Contatos</button>
             </ButtonContacts>
