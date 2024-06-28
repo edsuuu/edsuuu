@@ -2,11 +2,10 @@ import styled from 'styled-components';
 import { PDFPopupProps } from '../../interfaces';
 
 export const VisuButton = styled.button`
-    padding: 5px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    width: 150px;
+    width: 130px;
     transition: 0.3s;
     &:hover {
         background-color: #00a4ef;
