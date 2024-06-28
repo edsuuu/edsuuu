@@ -84,7 +84,7 @@ const Project: React.FC = () => {
             <div className="loadMore">
                 {visibleProjects < projetosFiltrados.length && (
                     <ButtonContacts>
-                        <button onClick={handleLoadMoreRepository}>Carregar mais posts </button>
+                        <button onClick={handleLoadMoreRepository}>Carregar mais Projetos </button>
                     </ButtonContacts>
                 )}
             </div>
