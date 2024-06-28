@@ -17,6 +17,7 @@ import {
 import * as Icon from 'react-icons/vsc';
 import Skiils from '../Skiils';
 import PDFViewer from '../PDFViewer';
+import { FaDownload } from 'react-icons/fa';
 
 const Terminal: React.FC = () => {
     const [showContent, setShowContent] = useState(false);
@@ -95,7 +96,14 @@ const Terminal: React.FC = () => {
                                             # <span>Meu currículo</span>
                                         </h2>
                                     </div>
-                                    <PDFViewer />
+                                    <div className="btns-curriculo">
+                                        <PDFViewer />
+                                        <button className="btn-download">
+                                            <FaDownload size={20} />
+                                            <span className="icon2"></span>
+                                            <span className="tooltip">Download</span>
+                                        </button>
+                                    </div>
                                 </Curriculo>
                             </BreveDescricao>
                         </>

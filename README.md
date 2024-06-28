@@ -50,8 +50,6 @@
         <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC.svg?logo=typescript&logoColor=white">
         <img alt="React" src="https://img.shields.io/badge/React-20232a.svg?logo=react&logoColor=%2361DAFB">
         <img alt="C#" src="https://custom-icon-badges.demolab.com/badge/C%23-68217A.svg?logo=cs2&logoColor=white">
-        <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-7952B3.svg?logo=bootstrap&logoColor=white">
-        <img alt="Electron" src="https://img.shields.io/badge/Electron-20232e.svg?logo=electron&logoColor=white">
         <img alt="Express.js" src="https://img.shields.io/badge/Express.js-404d59.svg?logo=express&logoColor=white">
         <img alt="CSS" src="https://img.shields.io/badge/CSS-1572B6.svg?logo=css3&logoColor=white">
         <img alt="HTML" src="https://img.shields.io/badge/HTML-E34F26.svg?logo=html5&logoColor=white">
@@ -59,20 +57,17 @@
         <img alt="Redux" src="https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white" />
         <img alt="Sass" src="https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=white" />
         <img alt="StyledComponents" src="https://img.shields.io/badge/Styled_Components-0C0D0F?logo=styled-components&logoColor=white"/>
-        <img alt="Prettier" src="https://img.shields.io/badge/Prettier-131a1e?logo=prettier&logoColor=white" />
-        <img alt="Tailwind" src="https://img.shields.io/badge/tailwindcss-090e1a.svg?&logo=tailwind-css&logoColor=white">
 
    </p>
    <h3>🗄️ Databases and Cloud Hosting 🗄️</h3>
    <p>
-        <img alt="Nginx" src="https://img.shields.io/badge/nginx-%23009639.svg?&logo=nginx&logoColor=white">
+        <img alt="AWS" src="https://img.shields.io/badge/-AWS-000?&logo=Amazon-AWS&logoColor=F90">
         <img alt="Google Cloud" src="https://img.shields.io/badge/Google%20Cloud-black?style=flat-square&logo=google-cloud">
         <img alt="Azure" src="https://img.shields.io/badge/azure-%230072C6.svg?&logo=microsoftazure&logoColor=white">
-        <img alt="AWS" src="https://img.shields.io/badge/-AWS-000?&logo=Amazon-AWS&logoColor=F90">
+        <img alt="Nginx" src="https://img.shields.io/badge/nginx-%23009639.svg?&logo=nginx&logoColor=white">
         <img alt="Vercel" src="https://img.shields.io/badge/Vercel-000000.svg?logo=vercel&logoColor=white">
         <img alt="Netlify" src="https://img.shields.io/badge/netlify-%23000000.svg?&logo=netlify&logoColor=#00C7B7">
         <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-4ea94b.svg?logo=mongodb&logoColor=white">
-        <img alt="SQL" src="https://custom-icon-badges.demolab.com/badge/SQL-025E8C.svg?logo=database&logoColor=white">
         <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-316192.svg?logo=postgresql&logoColor=white">
         <img alt="MySQL" src="https://img.shields.io/badge/MySQL-316192.svg?logo=mysql&logoColor=white">
         <img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub%20Pages-000.svg?logo=github&logoColor=white">
@@ -81,25 +76,17 @@
    </p>
    <h3>💻 Software and Tools 💻</h3>
    <p>
-        <img alt="Adobe" src="https://img.shields.io/badge/Adobe-FF0000.svg?logo=adobe&logoColor=white">
         <img alt="Dark Reader" src="https://img.shields.io/badge/-Dark%20Reader-141E24?logo=dark-reader&logoColor=white">
         <img alt="Discord" src="https://img.shields.io/badge/-Discord-5865F2.svg?logo=discord&logoColor=white">
         <img alt="GitHub Desktop" src="https://img.shields.io/badge/GitHub%20Desktop-8034A9.svg?logo=github&logoColor=white">
         <img alt="OBS Studio" src="https://img.shields.io/badge/-OBS-302E31?logo=obs-studio&logoColor=white">
-        <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white">
         <img alt="Git" src="https://img.shields.io/badge/-Git-black?style=flat-square&logo=git">
-        <img alt="GitHub" src="https://img.shields.io/badge/-GitHub-000?style=flat-square&logo=github">
-        <img alt="SonarLint" src="https://img.shields.io/badge/-SonarLint-CB2029?logo=sonarlint&logoColor=white">
         <img alt="Bash" src="https://img.shields.io/badge/Bash-121011.svg?logo=gnu-bash&logoColor=white">
         <img alt="Linux" src="https://img.shields.io/badge/-Linux-000?&logo=Linux">
         <img alt="Windows" src="https://img.shields.io/badge/Windows-000.svg?&style=flat-square&logo=windows&logoColor=0078D6">
         <img alt="PowerShell" src="https://img.shields.io/badge/Terminal-000.svg?&style=flat-square&logo=powershell&logoColor=white">
-        <img alt="Stack Overflow" src="https://img.shields.io/badge/-Stack%20Overflow-FE7A16?logo=stack-overflow&logoColor=white">
-        <img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&logoColor=white">
-        <img alt="Notion" src="https://img.shields.io/badge/Notion-010101.svg?logo=notion&logoColor=white">
         <img alt="Spotify" src="https://img.shields.io/badge/Spotify-000.svg?&style=flat-square&logo=spotify&logoColor=1ED760">
         <img alt="Insomnia" src="https://img.shields.io/badge/Insomnia-5849BE?logo=insomnia&logoColor=white" />
-        <img alt="Npm" src="https://img.shields.io/badge/NPM-CB3837?logo=npm&logoColor=white" />
 
    </p>
 

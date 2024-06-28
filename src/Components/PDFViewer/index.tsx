@@ -15,7 +15,7 @@ const PDFViewer: React.FC = () => {
 
     return (
         <>
-            <VisuButton onClick={openPopup}>Visualizar Curriculo</VisuButton>
+            <VisuButton onClick={openPopup}>Visualizar</VisuButton>
 
             <PDFPopup open={popupOpen}>
                 <PDFContainer>

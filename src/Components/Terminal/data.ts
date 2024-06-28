@@ -8,6 +8,7 @@ import {
     SiHtml5,
     SiInsomnia,
     SiJavascript,
+    SiJest,
     SiLinux,
     SiMariadb,
     SiMicrosoft,
@@ -99,6 +100,14 @@ export const StyledSiCss3 = styled(SiCss3)`
 `;
 
 export const StyledSiSass = styled(SiSass)`
+    color: white;
+    transition: 0.3s;
+    &:hover {
+        color: #cc6699;
+    }
+`;
+
+export const StyledSiJest = styled(SiJest)`
     color: white;
     transition: 0.3s;
     &:hover {
@@ -274,10 +283,9 @@ export const languagesObj: IconItem[] = [
 export const frameworksObj: IconItem[] = [
     { name: 'React', Icon: StyledSiReact },
     { name: 'Redux', Icon: StyledSiRedux },
+    { name: 'Jest ', Icon: StyledSiJest },
     { name: 'StyledComponents', Icon: StyledSiStyledcomponents },
     { name: 'Sass', Icon: StyledSiSass },
-    { name: 'HTML', Icon: StyledSiHtml5 },
-    { name: 'CSS', Icon: StyledSiCss3 },
 ];
 export const hostingObj: IconItem[] = [
     { name: 'AWS', Icon: StyledSiAmazon },

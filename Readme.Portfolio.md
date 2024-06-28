@@ -27,5 +27,7 @@ git clone --recurse-submodules https://github.com/edsuuu/edsuuu.git && cd edsuuu
 
 # Features Que falta
 
-- Otimizar a pagina projetos
-- Fazer o backend do formulario
+- Navbar Responsivo
+- Melhorar os cards de repositorio
+- Otimizar o site completo
+- Terminar o backend do formulario
