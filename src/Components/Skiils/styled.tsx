@@ -28,6 +28,8 @@ export const InformacoesTecnicas = styled.div`
         margin-top: 15px;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 20px;
     }
 

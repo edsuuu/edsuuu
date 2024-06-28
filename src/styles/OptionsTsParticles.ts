@@ -6,7 +6,7 @@ export const OptionsTsParticles: ISourceOptions = {
             value: '#11111a',
         },
     },
-    fpsLimit: 60,
+    fpsLimit: 120,
     interactivity: {
         events: {
             onClick: {

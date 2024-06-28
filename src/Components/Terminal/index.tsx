@@ -16,6 +16,7 @@ import {
 } from './styled';
 import * as Icon from 'react-icons/vsc';
 import Skiils from '../Skiils';
+import PDFViewer from '../PDFViewer';
 
 const Terminal: React.FC = () => {
     const [showContent, setShowContent] = useState(false);
@@ -94,10 +95,7 @@ const Terminal: React.FC = () => {
                                             # <span>Meu currículo</span>
                                         </h2>
                                     </div>
-                                    <div className="buttons-cv">
-                                        <button>Visualizar</button>
-                                        <button>Baixar</button>
-                                    </div>
+                                    <PDFViewer />
                                 </Curriculo>
                             </BreveDescricao>
                         </>
