@@ -9,7 +9,12 @@ export const Navbar = styled.nav`
     /* backdrop-filter: blur(20px); */
     padding: 20px;
     border-bottom: 1px solid #ffffff53;
-
+    .hamburguer {
+        color: white;
+        display: none;
+        border: 1px solid white;
+        height: 35px;
+    }
     .links {
         display: flex;
         flex-direction: row;
@@ -29,6 +34,9 @@ export const Navbar = styled.nav`
         .links {
             display: none;
         }
+        .hamburguer {
+            display: block;
+        }
     }
 `;
 
@@ -42,6 +50,9 @@ export const LinksLista = styled.div`
 
     .titles-nav {
         color: white;
+    }
+    @media (max-width: 768px) {
+        padding: 6px 20px;
     }
 `;
 
@@ -68,4 +79,34 @@ export const LinkTitle = styled(Link)`
     display: flex;
     flex-direction: row;
     gap: 10px;
+`;
+
+export const Container = styled.div`
+    .responsive-back {
+        position: absolute;
+        z-index: 1;
+        width: 100vw;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        .responsive-links {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border: 1px solid black;
+            .links-div {
+                background-color: gray;
+                border: 1px solid black;
+                display: flex;
+                justify-content: center;
+                a {
+                    text-align: center;
+                    width: 100%;
+                    color: #11111a;
+                    background-color: #00a4ef;
+                    padding: 10px;
+                }
+            }
+        }
+    }
 `;
