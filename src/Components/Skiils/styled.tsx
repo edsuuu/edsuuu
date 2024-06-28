@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const Title = styled.div`
     text-align: center;
     margin-bottom: 20px;
+    span {
+        color: #00a4ef;
+    }
 `;
 
 export const InformacoesTecnicas = styled.div`
@@ -12,6 +15,9 @@ export const InformacoesTecnicas = styled.div`
     justify-content: space-between;
     gap: 5px;
 
+    h2 {
+        color: #00a4ef;
+    }
     @media (max-width: 996px) {
         flex-wrap: wrap;
         .card-infos {

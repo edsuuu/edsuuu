@@ -46,7 +46,7 @@ export const TitleOne = styled(Text)`
 
 export const TitleTwo = styled(Text)`
     position: absolute;
-    left: 8rem;
+    left: 8.6rem;
     padding-left: 1rem;
     ${NavbarBrandContainer}:hover & {
         transform: translateX(-3.5rem);

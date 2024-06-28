@@ -77,24 +77,30 @@ const Terminal: React.FC = () => {
 
                 <div className={showContent ? 'show-content' : ''}>
                     <ContainerButtonProjectPSW className="container-button-project-psw">
-                        <div>
+                        <>
                             <BreveDescricao>
-                                <h2>Pequena descrição sobre mim</h2>
-                                <p>
-                                    Me chamo edson, era da area administrativa, e entrei para a area de desenvolvimento de software ah quase 2 anos, nesse tempo eu passei a desenvolver aplicoces web
-                                    seja single page, sistemas web, <LinkStyled to="/projetos"> Ver meus Projetos</LinkStyled>
-                                </p>
+                                <div>
+                                    <h2>
+                                        # <span>Sobre</span>
+                                    </h2>
+                                    <p>
+                                        Me chamo edson, era da area administrativa, e entrei para a area de desenvolvimento de software ah quase 2 anos, nesse tempo eu passei a desenvolver aplicoces
+                                        web seja single page, sistemas web, <LinkStyled to="/projetos"> Ver meus Projetos</LinkStyled>
+                                    </p>
+                                </div>
+                                <Curriculo>
+                                    <div>
+                                        <h2>
+                                            # <span>Meu currículo</span>
+                                        </h2>
+                                    </div>
+                                    <div className="buttons-cv">
+                                        <button>Visualizar</button>
+                                        <button>Baixar</button>
+                                    </div>
+                                </Curriculo>
                             </BreveDescricao>
-                            <Curriculo>
-                                <div>
-                                    <h3>visualizar meu currículo</h3>
-                                </div>
-                                <div>
-                                    <button>Visualizar</button>
-                                    <button>Baixar</button>
-                                </div>
-                            </Curriculo>
-                        </div>
+                        </>
 
                         <Skiils />
                     </ContainerButtonProjectPSW>

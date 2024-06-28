@@ -15,6 +15,9 @@ export const TitleFormContact = styled.div`
     p {
         font-size: 1.1rem;
     }
+    span {
+        color: #00a4ef;
+    }
 `;
 
 export const FormContact = styled.form`

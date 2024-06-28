@@ -5,13 +5,15 @@ import LanguagesComponent from '../LanguagesComponent';
 
 const Skiils: React.FC = () => {
     return (
-        <div>
+        <div className="skills-container">
             <Title>
-                <h1>Skills</h1>
+                <h2>
+                    # <span>Skills</span>
+                </h2>
             </Title>
             <InformacoesTecnicas>
                 <div className="card-infos">
-                    <h1>Linguagens</h1>
+                    <h2>Linguagens</h2>
                     <div className="content-icons">
                         {languagesObj.map((item, index) => (
                             <LanguagesComponent key={index} name={item.name} Icon={item.Icon} />
@@ -23,7 +25,7 @@ const Skiils: React.FC = () => {
                     </p>
                 </div>
                 <div className="card-infos">
-                    <h1>Frameworks</h1>
+                    <h2>Frameworks</h2>
                     <div className="content-icons">
                         {frameworksObj.map((item, index) => (
                             <LanguagesComponent key={index} name={item.name} Icon={item.Icon} />
@@ -36,7 +38,7 @@ const Skiils: React.FC = () => {
                 </div>
                 <div className="card-infos">
                     <div>
-                        <h1>DevOps</h1>
+                        <h2>DevOps</h2>
                     </div>
                     <div className="content-icons">
                         {hostingObj.slice(0, 5).map((item, index) => (

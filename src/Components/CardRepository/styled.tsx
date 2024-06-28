@@ -44,6 +44,8 @@ export const CardContent = styled.div`
     text-align: center;
 
     h1 {
+        color: #00a4ef;
+
         /* font-size: 1.25em; */
         margin: 0 0 8px;
         z-index: 3;
