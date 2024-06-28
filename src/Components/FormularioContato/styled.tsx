@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const FormMainContact = styled.div`
-    max-width: 800px;
+    max-width: 1100px;
     width: 100%;
+    @media (max-width: 540px) {
+        margin-top: 5rem;
+    }
 `;
 export const TitleFormContact = styled.div`
     margin-bottom: 20px;
@@ -17,6 +20,19 @@ export const TitleFormContact = styled.div`
     }
     span {
         color: #00a4ef;
+    }
+
+    abbr {
+        margin: 0px 5px;
+        text-decoration: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #00efef;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 `;
 
@@ -40,7 +56,6 @@ export const InputGroup = styled.div`
 export const FormsContactGroup = styled.div`
     width: 100%;
     position: relative;
-    margin-bottom: 20px;
 
     input {
         font-size: 1.1rem;
@@ -50,6 +65,7 @@ export const FormsContactGroup = styled.div`
         height: 50px;
         padding: 10px 15px;
         background-color: #11111a;
+        margin-bottom: 20px;
 
         /* background: transparent; */
         /* backdrop-filter: blur(10px); */
@@ -92,7 +108,9 @@ export const FormsContactGroup = styled.div`
         background-color: #11111a;
 
         font-size: 1.05rem;
-        max-width: 800px;
+        max-width: 1100px;
+        margin-bottom: 5px;
+
         width: 100%;
         display: flex;
         flex: 1 1 100%;
@@ -125,18 +143,69 @@ export const FormsContactGroup = styled.div`
 export const MensageAndButton = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    small {
+        margin-left: 5px;
+
+        color: white;
+    }
 `;
 
-export const Button = styled.button`
-    padding: 15px 20px;
-    width: 100px;
-    margin: 0 auto;
-    border-radius: 10px;
-    border: none;
-    transition: 0.2s;
-    &:hover {
+export const ButtonContainerSend = styled.div`
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    .btn-send-message {
+        font-family: inherit;
+        font-size: 20px;
+        background: #00a4ef;
+        color: #11111a;
+        padding: 0.7em 1em;
+        padding-left: 0.9em;
+        display: flex;
+        align-items: center;
+        border: none;
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.2s;
         cursor: pointer;
-        background-color: #3d85d8;
+    }
+
+    .btn-send-message span {
+        display: block;
+        margin-left: 0.3em;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btn-send-message svg {
+        display: block;
+        transform-origin: center center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .btn-send-message:hover .svg-wrapper {
+        animation: fly-1 0.6s ease-in-out infinite alternate;
+    }
+
+    .btn-send-message:hover svg {
+        transform: translateX(1.2em) rotate(45deg) scale(1.1);
+    }
+
+    .btn-send-message:hover span {
+        transform: translateX(5em);
+    }
+
+    .btn-send-message:active {
+        transform: scale(0.95);
+    }
+
+    @keyframes fly-1 {
+        from {
+            transform: translateY(0.1em);
+        }
+
+        to {
+            transform: translateY(-0.1em);
+        }
     }
 `;

@@ -1,6 +1,5 @@
 import React from 'react';
 import FormularioContato from '../../Components/FormularioContato';
-import RedesSociais from '../../Components/RedesSociais';
 import { Container, Content } from './styled';
 
 const Contact: React.FC = () => {
@@ -8,7 +7,7 @@ const Contact: React.FC = () => {
         <Container>
             <Content>
                 <FormularioContato />
-                <RedesSociais />
+                {/* <RedesSociais /> */}
             </Content>
         </Container>
     );

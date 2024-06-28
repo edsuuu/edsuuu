@@ -19,10 +19,7 @@ const Skiils: React.FC = () => {
                             <LanguagesComponent key={index} name={item.name} Icon={item.Icon} />
                         ))}
                     </div>
-                    <p>
-                        Aprendizado Contínuo: Gosto de estar sempre atualizado e aprender novas tecnologias e habilidades. Por isso, sempre procuro fazer cursos online para expandir meus
-                        conhecimentos.
-                    </p>
+                    <p>Gosto de estar sempre atualizado e aprender novas tecnologias e habilidades. Por isso, sempre procuro fazer cursos online para expandir meus conhecimentos.</p>
                 </div>
                 <div className="card-infos">
                     <h2>Frameworks</h2>
@@ -32,8 +29,8 @@ const Skiils: React.FC = () => {
                         ))}
                     </div>
                     <p>
-                        Aprendizado Contínuo: Gosto de estar sempre atualizado e aprender novas tecnologias e habilidades. Por isso, sempre procuro fazer cursos online para expandir meus
-                        conhecimentos.
+                        Experiência em desenvolver aplicações front-end utilizando frameworks como React e Redux, junto com ferramentas de estilização como Styled Components e Sass, para criar
+                        interfaces.
                     </p>
                 </div>
                 <div className="card-infos">
@@ -41,12 +38,15 @@ const Skiils: React.FC = () => {
                         <h2>DevOps</h2>
                     </div>
                     <div className="content-icons">
-                        {hostingObj.slice(0, 5).map((item, index) => (
+                        {hostingObj.map((item, index) => (
                             <LanguagesComponent key={index} name={item.name} Icon={item.Icon} />
                         ))}
                     </div>
                     <div>
-                        <p>Possuo habilidades em hospedagem de aplicações, sejam Single Page, Sistema Web e Banco de dados, nos maiores serviços de cloud</p>
+                        <p>
+                            Utilizo hospedagens da AWS, Google Cloud e Azure para criar um Ambiente de Produção em minhas aplicações, implementando novos recursos e descobrindo novos projetos Open
+                            Source.
+                        </p>
                     </div>
                 </div>
             </InformacoesTecnicas>
@@ -61,7 +61,7 @@ const Skiils: React.FC = () => {
                         ))}
                     </div>
                     <div>
-                        <p>Utilizo Windows/Linux como sistema operacional, que me forneceu habilidades com Linha de Comando, Bash e Docker.</p>
+                        <p>Trabalho com diversos banco de dados, incluindo MongoDB, MariaDB, MySQL e PostgreSQL, conforme cada projeto.</p>
                     </div>
                 </div>
                 <div className="card-infos">
@@ -74,7 +74,7 @@ const Skiils: React.FC = () => {
                         ))}
                     </div>
                     <div>
-                        <p>Utilizo Windows/Linux como sistema operacional, que me forneceu habilidades com Linha de Comando, Bash e Docker.</p>
+                        <p>Utilizo Windows/Linux como sistema operacional, que me forneceu habilidades com Linha de Comando, Bash, Git e Docker.</p>
                     </div>
                 </div>
             </InformacoesTecnicas>

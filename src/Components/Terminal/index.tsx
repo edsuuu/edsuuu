@@ -86,8 +86,8 @@ const Terminal: React.FC = () => {
                                         # <span>Sobre</span>
                                     </h2>
                                     <p>
-                                        Me chamo edson, era da area administrativa, e entrei para a area de desenvolvimento de software ah quase 2 anos, nesse tempo eu passei a desenvolver aplicoces
-                                        web seja single page, sistemas web, <LinkStyled to="/projetos"> Ver meus Projetos</LinkStyled>
+                                        Meu nome é Edson. Eu trabalhava na área administrativa e migrei para a área de desenvolvimento de software há mais de 1 ano. Durante esse tempo, passei a
+                                        desenvolver aplicações web, single-page applications e sistemas web. <LinkStyled to="/projetos"> Ver meus Projetos</LinkStyled>
                                     </p>
                                 </div>
                                 <Curriculo>
@@ -98,9 +98,11 @@ const Terminal: React.FC = () => {
                                     </div>
                                     <div className="btns-curriculo">
                                         <PDFViewer />
+
                                         <button className="btn-download">
-                                            <FaDownload size={20} />
-                                            <span className="icon2"></span>
+                                            <div className="icons-terminal">
+                                                <FaDownload size={20} />
+                                            </div>
                                             <span className="tooltip">Download</span>
                                         </button>
                                     </div>
