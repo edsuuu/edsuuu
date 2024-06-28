@@ -55,7 +55,9 @@ const FormularioContato: React.FC = () => {
     return (
         <FormMainContact>
             <TitleFormContact>
-                <h1>Contato</h1>
+                <h1>
+                    # <span>Contato</span>
+                </h1>
                 <p>Entre em contato comigo utilizando o formulário abaixo ou através das minhas principais redes ao lado.</p>
             </TitleFormContact>
 

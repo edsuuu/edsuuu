@@ -183,7 +183,7 @@ export const PwsWindowButtons = styled.div`
 `;
 
 export const ContentPSW = styled.div`
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 2.5rem 1rem;
     color: white;
     height: 75vh;
     overflow-y: auto;
@@ -237,43 +237,78 @@ export const ContainerButtonProjectPSW = styled.div`
 `;
 
 export const LinkStyled = styled(Link)`
-    color: #fff;
+    color: #00a4ef;
     line-height: 2;
     position: relative;
     padding-right: 4px;
+    text-decoration: none;
+    transition: 0.3s;
     &:hover {
         text-decoration: underline;
+        &::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-top: solid 2px #00a4ef;
+            border-right: solid 2px #00a4ef;
+            border-radius: 2px;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%) rotate(45deg);
+            transition: transform 0.4s;
+        }
     }
-    &::before {
-        content: '';
-        width: 6px;
-        height: 6px;
-        border-top: solid 2px #fff;
-        border-right: solid 2px #fff;
-        border-radius: 2px;
-        position: absolute;
-        top: 50%;
-        left: 100%;
-        transform: translateY(-50%) rotate(45deg);
-        transition: transform 0.4s;
-    }
-    &:hover::before {
-        transform: translateY(-50%) rotate(45deg) scale(1.2);
-    }
-`;
 
-export const Curriculo = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid white;
+    /* &:hover::before {
+        transform: translateY(-50%) rotate(45deg) scale(1.2);
+    } */
 `;
 
 export const BreveDescricao = styled.div`
+    padding: 1.5rem 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid white;
+    h2 {
+        text-align: center;
+    }
+    p {
+        padding: 0px 5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    span {
+        color: #00a4ef;
+    }
+`;
+export const Curriculo = styled.div`
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .buttons-cv {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        button {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            width: 120px;
+            transition: 0.3s;
+            &:hover {
+                background-color: #00a4ef;
+            }
+        }
+    }
+    span {
+        color: #00a4ef;
+    }
 `;
