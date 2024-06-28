@@ -18,7 +18,7 @@ const MaquinaWriteAbout: React.FC<MaquinaWriteProps> = ({ text, delay = 130 }) =
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [text]);
 
-    return <p>{currentText}</p>;
+    return <p className="write-text">{currentText}</p>;
 };
 
 export default MaquinaWriteAbout;

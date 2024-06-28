@@ -16,7 +16,6 @@ export const PowerShell = styled.div`
     height: auto;
     border-radius: 10px;
     background-color: ${theme.colorsTerminal.backgroundTerminal};
-
     margin-top: 3rem;
 
     .container-button-project-psw {
@@ -200,6 +199,11 @@ export const ContentPSW = styled.div`
         gap: 5px;
         align-items: center;
     }
+    @media (max-width: 450px) {
+        .write-text {
+            font-size: 0.95rem;
+        }
+    }
 `;
 
 export const Skills = styled.div`
@@ -282,6 +286,13 @@ export const BreveDescricao = styled.div`
     span {
         color: #00a4ef;
     }
+    @media (max-width: 768px) {
+        p {
+            padding: 0px 1rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    }
 `;
 export const Curriculo = styled.div`
     padding: 1rem;
@@ -290,24 +301,7 @@ export const Curriculo = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .buttons-cv {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-        button {
-            padding: 5px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            width: 120px;
-            transition: 0.3s;
-            &:hover {
-                background-color: #00a4ef;
-            }
-        }
-    }
+
     span {
         color: #00a4ef;
     }

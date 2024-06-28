@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { ButtonCategory, ButtonContacts, Container, ProjetosContainer, Title } from './styled';
 import { projectsObj } from './data';
 import CardRepository from '../../Components/CardRepository';
-import { useNavigate } from 'react-router-dom';
 
 const Project: React.FC = () => {
-    const navigate = useNavigate();
     const [category, setCategory] = useState<string | null>(null);
     const [buscarProjeto, setBuscarProjeto] = useState('');
     const [visibleProjects, setVisibleProjects] = useState(6);
@@ -28,10 +26,6 @@ const Project: React.FC = () => {
     });
 
     const projetosVisiveis = projetosFiltrados.slice(0, visibleProjects);
-
-    const handleNavigation = () => {
-        navigate('/contato');
-    };
 
     const handleLoadMoreRepository = () => {
         setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 6);
@@ -87,10 +81,13 @@ const Project: React.FC = () => {
                     </div>
                 )}
             </ProjetosContainer>
-            <div className="loadMore">{visibleProjects < projetosFiltrados.length && <button onClick={handleLoadMoreRepository}>Carregar mais Projetos</button>}</div>
-            <ButtonContacts>
-                <button onClick={handleNavigation}>Contatos</button>
-            </ButtonContacts>
+            <div className="loadMore">
+                {visibleProjects < projetosFiltrados.length && (
+                    <ButtonContacts>
+                        <button onClick={handleLoadMoreRepository}>Carregar mais posts </button>
+                    </ButtonContacts>
+                )}
+            </div>
         </Container>
     );
 };

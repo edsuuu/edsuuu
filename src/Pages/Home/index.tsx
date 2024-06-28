@@ -19,6 +19,7 @@ const Home: React.FC = () => {
     const handleNavigation = () => {
         navigate('/sobre');
     };
+
     const alertRedirect = () => toast.info('Voce vai ser redirecionado em alguns segundos');
 
     const handleLinkedin = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -26,7 +27,7 @@ const Home: React.FC = () => {
         alertRedirect();
 
         setTimeout(() => {
-            window.open('', '_blank');
+            window.open('https://www.linkedin.com/in/edsonlima343/', '_blank');
         }, 3000);
     };
     const handleGithub = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -34,7 +35,7 @@ const Home: React.FC = () => {
         alertRedirect();
 
         setTimeout(() => {
-            window.open('', '_blank');
+            window.open('https://github.com/edsuuu', '_blank');
         }, 3000);
     };
 

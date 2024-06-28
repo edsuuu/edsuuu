@@ -57,3 +57,7 @@ export interface IconItem {
     name: string;
     Icon: IconType;
 }
+
+export interface PDFPopupProps {
+    open: boolean;
+}
