@@ -11,7 +11,7 @@ const FormularioContato: React.FC = () => {
     const [message, setMensagem] = useState<string>('');
     const [caracteres, setDiminuiCaracteres] = useState<number>(2500);
 
-    const manutecao = true;
+    const manutecao = false;
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -107,18 +107,18 @@ const FormularioContato: React.FC = () => {
             <FormContact onSubmit={handleSubmit}>
                 <InputGroup>
                     <FormsContactGroup>
-                        <input type="text" placeholder=" " value={assunto} onChange={(e) => setAssunto(e.target.value)} />
-                        <label>Assunto</label>
-                    </FormsContactGroup>
-                </InputGroup>
-                <InputGroup>
-                    <FormsContactGroup>
                         <input type="text" placeholder=" " value={name} onChange={(e) => setNome(e.target.value)} />
                         <label>Nome</label>
                     </FormsContactGroup>
                     <FormsContactGroup>
                         <input type="email" placeholder=" " value={email} onChange={(e) => setEmail(e.target.value)} />
                         <label>E-Mail</label>
+                    </FormsContactGroup>
+                </InputGroup>
+                <InputGroup>
+                    <FormsContactGroup>
+                        <input type="text" placeholder=" " value={assunto} onChange={(e) => setAssunto(e.target.value)} />
+                        <label>Assunto</label>
                     </FormsContactGroup>
                 </InputGroup>
 
