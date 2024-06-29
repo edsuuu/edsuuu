@@ -84,7 +84,7 @@ export const LinkTitle = styled(Link)`
 export const Container = styled.div`
     .responsive-back {
         position: absolute;
-        z-index: 1;
+        z-index: 2;
         width: 100vw;
         height: 90vh;
         backdrop-filter: blur(20px);
