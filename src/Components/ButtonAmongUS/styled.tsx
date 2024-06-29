@@ -26,7 +26,7 @@ export const AmongUsButton = styled.button`
 
     svg {
         transition: all 0.5s ease;
-        /* z-index: 2; */
+        z-index: 1;
     }
 
     .play {
@@ -43,7 +43,7 @@ export const AmongUsButton = styled.button`
         left: 0;
         transform: translateX(-110%);
         transition: all 0.5s ease;
-        /* z-index: 2; */
+        z-index: 1;
     }
 
     &:hover .now {
