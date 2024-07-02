@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FormContact, InputGroup, FormsContactGroup, MensageAndButton, FormMainContact, TitleFormContact, ButtonContainerSend } from './styled';
+import { FormContact, InputGroup, FormsContactGroup, MensagemAndButton, FormMainContact, TitleFormContact, ButtonContainerSend } from './styled';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { isEmail } from 'validator';
@@ -162,7 +162,7 @@ const FormularioContato: React.FC = () => {
                     </FormsContactGroup>
                 </InputGroup>
 
-                <MensageAndButton>
+                <MensagemAndButton>
                     <FormsContactGroup>
                         <textarea placeholder=" " value={message} onChange={valueAndContagem}></textarea>
                         <label>Digite sua mensagem...</label>
@@ -184,7 +184,7 @@ const FormularioContato: React.FC = () => {
                             <span>Enviar</span>
                         </button>
                     </ButtonContainerSend>
-                </MensageAndButton>
+                </MensagemAndButton>
             </FormContact>
         </FormMainContact>
     );
