@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Navbar = styled.nav`
     width: 100%;
     background-color: #11111a;
-
+    z-index: 3;
     /* background-color: transparent; */
     /* backdrop-filter: blur(20px); */
     padding: 20px;
