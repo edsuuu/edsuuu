@@ -27,6 +27,7 @@ git clone --recurse-submodules https://github.com/edsuuu/edsuuu.git && cd edsuuu
 
 # Features Que falta
 
+- Troca de Tema claro e escuro
 - Correção de Reponsividade - NAVBAR
 - Navbar Responsivo
 - Melhorar os cards de repositorio
