@@ -131,13 +131,13 @@ const FormularioContato: React.FC = () => {
                 <p>
                     Ou se preferir, você pode me encontrar nos link ao lado
                     <abbr title="Copiar o Email">
-                        <a href="#" onClick={() => copiarEmail()}>
+                        <a href="" onClick={() => copiarEmail()}>
                             Copiar Email
                         </a>
                     </abbr>
                     ou
                     <abbr title="Abrir Linkedin">
-                        <a href="#" onClick={handleLinkedin}>
+                        <a href="" onClick={handleLinkedin}>
                             Acessar Linkedin
                         </a>
                     </abbr>
