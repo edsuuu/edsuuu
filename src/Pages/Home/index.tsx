@@ -21,7 +21,7 @@ const Home: React.FC = () => {
         navigate('/sobre');
     };
 
-    const alertRedirect = () => toast.info('Voce vai ser redirecionado em alguns segundos', { theme: 'dark' });
+    const alertRedirect = () => toast.info('Você será redirecionado em alguns segundos', { theme: 'colored' });
 
     const handleLinkedin = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
