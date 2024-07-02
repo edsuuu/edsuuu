@@ -140,7 +140,7 @@ export const FormsContactGroup = styled.div`
     }
 `;
 
-export const MensageAndButton = styled.div`
+export const MensagemAndButton = styled.div`
     display: flex;
     flex-direction: column;
     small {
