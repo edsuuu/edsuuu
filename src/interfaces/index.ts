@@ -61,3 +61,10 @@ export interface IconItem {
 export interface PDFPopupProps {
     open: boolean;
 }
+
+export interface ReturnBackend {
+    messageEmail: string;
+    messageSave: string;
+    statusCodeSaveMessage: number;
+    statusCodeSendEmail: number;
+}

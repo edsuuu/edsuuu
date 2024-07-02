@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { type Container } from '@tsparticles/engine';
 import { loadSlim } from '@tsparticles/slim';
-import { ToastContainer } from 'react-toastify';
+
 import { OptionsTsParticles } from './styles/OptionsTsParticles';
 
 const App: React.FC = () => {
@@ -31,10 +31,8 @@ const App: React.FC = () => {
             <Router>
                 <div className="content-container">
                     <Navigation />
-
                     <AppRoutes />
                     <GlobalStyle />
-                    <ToastContainer autoClose={3000} className="toast-container" />
                 </div>
             </Router>
         </>

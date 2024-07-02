@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { FormContact, InputGroup, FormsContactGroup, MensageAndButton, FormMainContact, TitleFormContact, ButtonContainerSend } from './styled';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { isEmail } from 'validator';
 import API_URL from '../../services';
+import { ReturnBackend } from '../../interfaces';
 
 const FormularioContato: React.FC = () => {
     const [name, setNome] = useState<string>('');
@@ -13,12 +15,24 @@ const FormularioContato: React.FC = () => {
 
     const manutecao = false;
 
+    function clearInputs() {
+        setNome('');
+        setEmail('');
+        setAssunto('');
+        setMensagem('');
+        setDiminuiCaracteres(2500);
+    }
+
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         let formErrors = false;
 
-        if (manutecao) return toast.error('Não está funcionando, ainda estamos em Desenvolvimento', { theme: 'dark', position: 'top-right' });
+        if (manutecao)
+            return toast.error('Não está funcionando, ainda estamos em Desenvolvimento', {
+                position: 'top-center',
+                theme: 'colored',
+            });
 
         if (name.trim() === '') {
             formErrors = true;
@@ -45,19 +59,45 @@ const FormularioContato: React.FC = () => {
 
         if (formErrors) return;
 
-        console.log(formErrors);
-        // mandar o payload para o backend, Nome, email e Mensagem
-        try {
-            await API_URL.post('/email', { name, email, message, assunto });
-            console.log(name, email, message, assunto);
-            toast.success('Email enviado com sucesso!', { theme: 'dark' });
-        } catch (error) {
-            console.log(error);
-            toast.error('Ocorreu um erro ao enviar o email. Tente novamente mais tarde.', { theme: 'dark' });
-        }
+        const sendEmail = async () => {
+            try {
+                const response = await API_URL.post('/email', { name, email, message, assunto });
+
+                const data = response.data as ReturnBackend;
+
+                if (data.statusCodeSaveMessage === 201) {
+                    toast.success(data.messageSave, {
+                        position: 'top-center',
+                        theme: 'colored',
+                    });
+                }
+
+                if (data.statusCodeSendEmail === 535) {
+                    toast.warn('Ocorreu um erro, Por Favor Entre em contato com o Administrador', {
+                        position: 'top-center',
+                        theme: 'colored',
+                    });
+                    return;
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        toast.promise(
+            sendEmail().then(clearInputs),
+            {
+                pending: 'Enviando email...',
+                success: 'Email enviado com sucesso!',
+                error: 'Ocorreu um erro ao enviar o email. Tente novamente mais tarde.',
+            },
+            {
+                position: 'top-center',
+                theme: 'colored',
+            },
+        );
     };
 
-    const valueAndContage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const valueAndContagem = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         const newMessage = e.target.value;
         if (newMessage.length <= 2500) {
             setMensagem(newMessage);
@@ -124,7 +164,7 @@ const FormularioContato: React.FC = () => {
 
                 <MensageAndButton>
                     <FormsContactGroup>
-                        <textarea placeholder=" " value={message} onChange={valueAndContage}></textarea>
+                        <textarea placeholder=" " value={message} onChange={valueAndContagem}></textarea>
                         <label>Digite sua mensagem...</label>
                     </FormsContactGroup>
                     <small> Caracteres restantes {caracteres}</small>
@@ -146,6 +186,7 @@ const FormularioContato: React.FC = () => {
                     </ButtonContainerSend>
                 </MensageAndButton>
             </FormContact>
+            <ToastContainer autoClose={3000} className="toast-container" />
         </FormMainContact>
     );
 };
