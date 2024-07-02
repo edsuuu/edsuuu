@@ -50,4 +50,10 @@ body {
     z-index: 1;
 }
 
+.toast-container {
+    width: auto;
+    margin-top: 4%;
+}
+
+
 `;

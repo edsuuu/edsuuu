@@ -36,25 +36,25 @@ const FormularioContato: React.FC = () => {
 
         if (name.trim() === '') {
             formErrors = true;
-            toast.error('Nome não pode ficar vazio.');
+            toast.error('Nome não pode ficar vazio.', { theme: 'colored' });
         }
 
         if (!isEmail(email)) {
             formErrors = true;
-            toast.error('Email inválido');
+            toast.error('Email inválido', { theme: 'colored' });
         }
         if (assunto.trim() === '') {
             formErrors = true;
-            toast.error('Assunto não pode ficar vazio.');
+            toast.error('Assunto não pode ficar vazio.', { theme: 'colored' });
         }
 
         if (message.trim() === '') {
             formErrors = true;
-            toast.error('Mensagem não pode ficar vazio.');
+            toast.error('Mensagem não pode ficar vazio.', { theme: 'colored' });
         }
         if (message.length > 2500) {
             formErrors = true;
-            toast.error('Mensagem não ultrapassar 2500 Caracteres.');
+            toast.error('Mensagem não ultrapassar 2500 Caracteres.', { theme: 'colored' });
         }
 
         if (formErrors) return;
