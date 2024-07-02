@@ -107,7 +107,8 @@ const FormularioContato: React.FC = () => {
 
     const myEmail = import.meta.env.VITE_USER_MAIL;
 
-    const copiarEmail = () => {
+    const copiarEmail = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
         navigator.clipboard.writeText(myEmail);
         toast.success('Email copiado com sucesso!', { theme: 'dark' });
     };
@@ -131,7 +132,7 @@ const FormularioContato: React.FC = () => {
                 <p>
                     Ou se preferir, você pode me encontrar nos link ao lado
                     <abbr title="Copiar o Email">
-                        <a href="" onClick={() => copiarEmail()}>
+                        <a href="" onClick={copiarEmail}>
                             Copiar Email
                         </a>
                     </abbr>
