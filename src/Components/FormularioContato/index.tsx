@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FormContact, InputGroup, FormsContactGroup, MensageAndButton, FormMainContact, TitleFormContact, ButtonContainerSend } from './styled';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { isEmail } from 'validator';
 import API_URL from '../../services';
@@ -80,7 +80,7 @@ const FormularioContato: React.FC = () => {
                     return;
                 }
             } catch (error) {
-                console.log(error);
+                console.log('err', error);
             }
         };
         toast.promise(
@@ -186,7 +186,6 @@ const FormularioContato: React.FC = () => {
                     </ButtonContainerSend>
                 </MensageAndButton>
             </FormContact>
-            <ToastContainer autoClose={3000} className="toast-container" />
         </FormMainContact>
     );
 };
