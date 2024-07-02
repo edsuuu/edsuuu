@@ -8,7 +8,6 @@
 <div align='center'>
 
 # [**Visite meu Portfolio**](https://meuportfolio-edsu.ddns.net)
-[Readme do Portfólio](Readme.Portfolio.md)
 
   <h3 align='center'>
  📚 I current learning TypeScript and NextJS 📚
