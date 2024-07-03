@@ -32,6 +32,7 @@ export const TitleFormContact = styled.div`
         color: #00efef;
         &:hover {
             text-decoration: underline;
+            cursor: pointer;
         }
     }
 `;
