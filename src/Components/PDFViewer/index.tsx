@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CloseButton, PDFContainer, PDFPopup } from './styled';
-// import curriculo from '../../../public/Assets/curriculo.pdf';
+import Curriculo from '../../Assets/Curriculo.pdf';
 import { BiSpreadsheet } from 'react-icons/bi';
 
 const PDFViewer: React.FC = () => {
@@ -26,7 +26,7 @@ const PDFViewer: React.FC = () => {
             <PDFPopup open={popupOpen}>
                 <PDFContainer>
                     <CloseButton onClick={closePopup}>Fechar PDF</CloseButton>
-                    <embed src="" type="application/pdf" />
+                    <embed src={Curriculo} type="application/pdf" />
                 </PDFContainer>
             </PDFPopup>
         </>

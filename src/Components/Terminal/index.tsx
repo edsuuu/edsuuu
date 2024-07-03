@@ -18,6 +18,8 @@ import * as Icon from 'react-icons/vsc';
 import Skills from '../Skills';
 import PDFViewer from '../PDFViewer';
 import { FaDownload } from 'react-icons/fa';
+import { toast } from 'react-toastify';
+import curriculo from '../../Assets/Curriculo.pdf';
 
 const Terminal: React.FC = () => {
     const [showContent, setShowContent] = useState(false);
@@ -29,6 +31,20 @@ const Terminal: React.FC = () => {
 
         return () => clearTimeout(timer);
     }, []);
+
+    const handleDownloadCurriculo = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        toast.success('O download será iniciado em alguns segundos ', { theme: 'dark' });
+
+        setTimeout(() => {
+            const link = document.createElement('a');
+            link.href = curriculo;
+            link.setAttribute('download', 'Curriculo.pdf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }, 3000);
+    };
 
     return (
         <PowerShell>
@@ -99,7 +115,7 @@ const Terminal: React.FC = () => {
                                     <div className="btns-curriculo">
                                         <PDFViewer />
 
-                                        <button className="btn-download">
+                                        <button className="btn-download" onClick={handleDownloadCurriculo}>
                                             <div className="icons-terminal">
                                                 <FaDownload size={20} />
                                             </div>
