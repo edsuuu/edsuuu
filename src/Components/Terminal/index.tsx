@@ -15,7 +15,7 @@ import {
     BreveDescricao,
 } from './styled';
 import * as Icon from 'react-icons/vsc';
-import Skiils from '../Skiils';
+import Skills from '../Skills';
 import PDFViewer from '../PDFViewer';
 import { FaDownload } from 'react-icons/fa';
 
@@ -86,8 +86,8 @@ const Terminal: React.FC = () => {
                                         # <span>Sobre</span>
                                     </h2>
                                     <p>
-                                        Meu nome é Edson. Eu trabalhava na área administrativa e migrei para a área de desenvolvimento de software há mais de 1 ano. Durante esse tempo, passei a
-                                        desenvolver aplicações web, single-page applications e sistemas web. <LinkStyled to="/projetos"> Ver meus Projetos</LinkStyled>
+                                        Meu nome é Edson. Atuava na área administrativa e migrei para a área de desenvolvimento de software há mais de 1 ano. Durante esse tempo, passei a desenvolver
+                                        aplicações web, single-page applications e sistemas web. <LinkStyled to="/projetos"> Ver meus Projetos</LinkStyled>
                                     </p>
                                 </div>
                                 <Curriculo>
@@ -110,7 +110,7 @@ const Terminal: React.FC = () => {
                             </BreveDescricao>
                         </>
 
-                        <Skiils />
+                        <Skills />
                     </ContainerButtonProjectPSW>
                 </div>
             </ContentPSW>

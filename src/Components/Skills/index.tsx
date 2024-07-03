@@ -3,7 +3,7 @@ import { InformacoesTecnicas, Title } from './styled';
 import { databasesObj, frameworksObj, hostingObj, languagesObj, sistemasEferramentasObj } from '../Terminal/data';
 import LanguagesComponent from '../LanguagesComponent';
 
-const Skiils: React.FC = () => {
+const Skills: React.FC = () => {
     return (
         <div className="skills-container">
             <Title>
@@ -28,10 +28,7 @@ const Skiils: React.FC = () => {
                             <LanguagesComponent key={index} name={item.name} Icon={item.Icon} />
                         ))}
                     </div>
-                    <p>
-                        Experiência em desenvolver aplicações front-end utilizando frameworks como React e Redux, junto com ferramentas de estilização como Styled Components e Sass, para criar
-                        interfaces.
-                    </p>
+                    <p>Costumo desenvolver aplicações front-end utilizando frameworks como React e Redux, e estilização como Styled Components e Sass, para criar interfaces.</p>
                 </div>
                 <div className="card-infos">
                     <div>
@@ -43,10 +40,7 @@ const Skiils: React.FC = () => {
                         ))}
                     </div>
                     <div>
-                        <p>
-                            Utilizo hospedagens da AWS, Google Cloud e Azure para criar um Ambiente de Produção em minhas aplicações, implementando novos recursos e descobrindo novos projetos Open
-                            Source.
-                        </p>
+                        <p>Tento sempre hospedar meus projetos em uma cloud para criar um ambiente de produção, implementando novos recursos e descobrindo novos projetos open source.</p>
                     </div>
                 </div>
             </InformacoesTecnicas>
@@ -81,4 +75,4 @@ const Skiils: React.FC = () => {
         </div>
     );
 };
-export default Skiils;
+export default Skills;
