@@ -40,7 +40,7 @@ const Skills: React.FC = () => {
                         ))}
                     </div>
                     <div>
-                        <p>Tento sempre hospedar meus projetos em uma cloud para criar um ambiente de produção, implementando novos recursos e descobrindo novos projetos open source.</p>
+                        <p>Priorizo sempre hospedar meus projetos em uma cloud para criar um ambiente de produção, implementando novos recursos e descobrindo novos projetos open source.</p>
                     </div>
                 </div>
             </InformacoesTecnicas>
