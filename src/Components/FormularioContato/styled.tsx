@@ -4,7 +4,7 @@ export const FormMainContact = styled.div`
     max-width: 1100px;
     width: 100%;
     @media (max-width: 540px) {
-        margin-top: 5rem;
+        margin-top: 1rem;
     }
 `;
 export const TitleFormContact = styled.div`
@@ -148,6 +148,11 @@ export const MensagemAndButton = styled.div`
         margin-left: 5px;
 
         color: white;
+    }
+    @media (max-width: 540px) {
+        small {
+            margin-bottom: 0.5rem;
+        }
     }
 `;
 
