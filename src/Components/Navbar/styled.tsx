@@ -13,6 +13,7 @@ export const Navbar = styled.nav`
         color: white;
         display: none;
         height: 35px;
+        cursor: pointer;
     }
     .links {
         display: flex;
@@ -51,7 +52,7 @@ export const LinksLista = styled.div`
         color: white;
     }
     @media (max-width: 768px) {
-        padding: 6px 20px;
+        padding: 6px;
     }
 `;
 
