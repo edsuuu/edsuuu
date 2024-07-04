@@ -12,7 +12,6 @@ export const Navbar = styled.nav`
     .hamburguer {
         color: white;
         display: none;
-        border: 1px solid white;
         height: 35px;
     }
     .links {
