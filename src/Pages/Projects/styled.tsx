@@ -45,7 +45,7 @@ export const ButtonCategory = styled.button<{ $active: boolean }>`
     border: 1px solid ${(props) => (props.$active ? 'blue' : 'black')};
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: background-color 0.5s ease;
 
@@ -67,6 +67,11 @@ export const Title = styled.div`
     align-items: center;
     justify-content: center;
     gap: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    span {
+        color: #00a4ef;
+    }
     div:nth-child(1) {
         padding-top: 20px;
     }
@@ -83,7 +88,7 @@ export const Title = styled.div`
         /* backdrop-filter: blur(10px); */
         background-color: #11111a;
 
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .input-projects {
         padding: 15px;

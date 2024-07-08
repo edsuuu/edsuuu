@@ -68,3 +68,9 @@ export interface ReturnBackend {
     statusCodeSaveMessage: number;
     statusCodeSendEmail: number;
 }
+export interface FreelancerData {
+    id: number;
+    nome: string;
+    descricao: string;
+    preco?: string;
+}

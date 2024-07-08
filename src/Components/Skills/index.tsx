@@ -1,7 +1,7 @@
 import React from 'react';
 import { InformacoesTecnicas, Title } from './styled';
 import { databasesObj, frameworksObj, hostingObj, languagesObj, sistemasEferramentasObj } from '../Terminal/data';
-import LanguagesComponent from '../LanguagesComponent';
+import IconsComponent from '../IconsComponent';
 
 const Skills: React.FC = () => {
     return (
@@ -16,7 +16,7 @@ const Skills: React.FC = () => {
                     <h2>Linguagens</h2>
                     <div className="content-icons">
                         {languagesObj.map((item, index) => (
-                            <LanguagesComponent key={index} name={item.name} Icon={item.Icon} />
+                            <IconsComponent key={index} name={item.name} Icon={item.Icon} />
                         ))}
                     </div>
                     <p>Gosto de estar sempre atualizado e aprender novas tecnologias e habilidades. Por isso, sempre procuro fazer cursos online para expandir meus conhecimentos.</p>
@@ -25,7 +25,7 @@ const Skills: React.FC = () => {
                     <h2>Frameworks</h2>
                     <div className="content-icons">
                         {frameworksObj.map((item, index) => (
-                            <LanguagesComponent key={index} name={item.name} Icon={item.Icon} />
+                            <IconsComponent key={index} name={item.name} Icon={item.Icon} />
                         ))}
                     </div>
                     <p>Costumo desenvolver aplicações front-end utilizando frameworks como React e Redux, e estilização como Styled Components e Sass, para criar interfaces.</p>
@@ -36,7 +36,7 @@ const Skills: React.FC = () => {
                     </div>
                     <div className="content-icons">
                         {hostingObj.map((item, index) => (
-                            <LanguagesComponent key={index} name={item.name} Icon={item.Icon} />
+                            <IconsComponent key={index} name={item.name} Icon={item.Icon} />
                         ))}
                     </div>
                     <div>
@@ -51,7 +51,7 @@ const Skills: React.FC = () => {
                     </div>
                     <div className="content-icons">
                         {databasesObj.map((item, index) => (
-                            <LanguagesComponent key={index} name={item.name} Icon={item.Icon} />
+                            <IconsComponent key={index} name={item.name} Icon={item.Icon} />
                         ))}
                     </div>
                     <div>
@@ -64,7 +64,7 @@ const Skills: React.FC = () => {
                     </div>
                     <div className="content-icons">
                         {sistemasEferramentasObj.map((item, index) => (
-                            <LanguagesComponent key={index} name={item.name} Icon={item.Icon} />
+                            <IconsComponent key={index} name={item.name} Icon={item.Icon} />
                         ))}
                     </div>
                     <div>

@@ -38,7 +38,7 @@ export const Container = styled.div`
         top: -46px;
         left: 50%;
         transform: translateX(-50%) scale(0);
-        z-index: 20;
+        z-index: 3;
         padding: 8px 16px;
         font-size: 0.875rem;
         font-weight: bold;
@@ -54,7 +54,7 @@ export const Container = styled.div`
     }
 `;
 
-const LanguagesComponent: React.FC<IconItem> = ({ name, Icon }) => {
+const IconsComponent: React.FC<IconItem> = ({ name, Icon }) => {
     return (
         <Container>
             <div className="icon-wrapper">
@@ -67,4 +67,4 @@ const LanguagesComponent: React.FC<IconItem> = ({ name, Icon }) => {
     );
 };
 
-export default LanguagesComponent;
+export default IconsComponent;

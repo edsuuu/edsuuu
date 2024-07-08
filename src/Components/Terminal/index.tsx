@@ -16,10 +16,10 @@ import {
 } from './styled';
 import * as Icon from 'react-icons/vsc';
 import Skills from '../Skills';
-import PDFViewer from '../PDFViewer';
 import { FaDownload } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import curriculo from '../../Assets/Curriculo.pdf';
+import PDFViewer from '../PDFViewer';
 
 const Terminal: React.FC = () => {
     const [showContent, setShowContent] = useState(false);

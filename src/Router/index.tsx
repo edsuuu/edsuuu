@@ -7,6 +7,7 @@ import Project from '../Pages/Projects';
 import { TransitionProvider } from '../Context/TransitionContext';
 import TransitionComponent from '../Components/Transition';
 import React from 'react';
+import Freelancer from '../Pages/Freelancer';
 // import ProjectInfo from '../Pages/ProjectInfo';
 
 const AppRoutes: React.FC = () => {
@@ -29,6 +30,7 @@ const AppRoutes: React.FC = () => {
                         </TransitionComponent>
                     }
                 />
+
                 <Route
                     path="/projetos"
                     element={
@@ -37,14 +39,15 @@ const AppRoutes: React.FC = () => {
                         </TransitionComponent>
                     }
                 />
-                {/* <Route
-                    path="/projeto/:id"
+
+                <Route
+                    path="/freelancer"
                     element={
                         <TransitionComponent>
-                            <ProjectInfo />
+                            <Freelancer />
                         </TransitionComponent>
                     }
-                /> */}
+                />
 
                 <Route
                     path="/contato"

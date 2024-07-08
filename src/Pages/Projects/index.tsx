@@ -35,8 +35,11 @@ const Project: React.FC = () => {
         <Container>
             <Title>
                 <div className="main-titles">
-                    <h1>Quais projetos você deseja ver ?</h1>
+                    <h2>
+                        # <span>Quais projetos você deseja ver ? </span>
+                    </h2>
                 </div>
+
                 <div className="content-buttons">
                     <ButtonCategory $active={category === null} onClick={() => setCategory(null)}>
                         Todos
