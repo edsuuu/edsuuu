@@ -1,9 +1,8 @@
 import React from 'react';
 import { ButtonContainerSend, InformacoesTecnicas, Title } from './styled';
 import { freelaObj } from './data';
-import { FreelancerData } from '../../interfaces';
 
-const ServicosFrellaCard: React.FC<FreelancerData> = () => {
+const ServicosFrellaCard: React.FC = () => {
     return (
         <div>
             <Title>
