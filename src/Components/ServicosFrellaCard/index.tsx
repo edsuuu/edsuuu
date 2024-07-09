@@ -3,6 +3,14 @@ import { ButtonContainerSend, InformacoesTecnicas, Title } from './styled';
 import { freelaObj } from './data';
 
 const ServicosFrellaCard: React.FC = () => {
+    const handleButtonWpp = (name: string) => {
+        const message = `Olá, estou entrando em contato pois queria fazer um orçamento pelo serviço de ${name}`;
+
+        const numeroWpp = import.meta.env.VITE_USER_NUMERO;
+        const url = `https://wa.me/${numeroWpp}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+    };
+
     return (
         <div>
             <Title>
@@ -21,7 +29,7 @@ const ServicosFrellaCard: React.FC = () => {
                             </span>
                             <p>{data.descricao}</p>
                             <ButtonContainerSend>
-                                <button className="btn-send-message">
+                                <button className="btn-send-message" onClick={() => handleButtonWpp(data.nome)}>
                                     <div className="svg-wrapper-1">
                                         <div className="svg-wrapper">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -51,7 +59,7 @@ const ServicosFrellaCard: React.FC = () => {
                             </span>
                             <p>{data.descricao}</p>
                             <ButtonContainerSend>
-                                <button className="btn-send-message">
+                                <button className="btn-send-message" onClick={() => handleButtonWpp(data.nome)}>
                                     <div className="svg-wrapper-1">
                                         <div className="svg-wrapper">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
