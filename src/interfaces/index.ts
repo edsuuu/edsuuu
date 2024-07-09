@@ -72,5 +72,5 @@ export interface FreelancerData {
     id: number;
     nome: string;
     descricao: string;
-    preco?: string;
+    Icon: IconType;
 }

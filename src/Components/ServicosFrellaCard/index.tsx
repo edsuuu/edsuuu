@@ -1,8 +1,9 @@
 import React from 'react';
 import { ButtonContainerSend, InformacoesTecnicas, Title } from './styled';
 import { freelaObj } from './data';
+import { FreelancerData } from '../../interfaces';
 
-const ServicosFrellaCard: React.FC = () => {
+const ServicosFrellaCard: React.FC<FreelancerData> = () => {
     return (
         <div>
             <Title>
@@ -12,11 +13,14 @@ const ServicosFrellaCard: React.FC = () => {
             </Title>
             <InformacoesTecnicas>
                 {freelaObj.slice(0, 3).map((data, index) => {
+                    const Icon = data.Icon;
                     return (
                         <div className="card-frella" key={index}>
                             <h2>{data.nome}</h2>
+                            <span>
+                                <Icon size={40} />
+                            </span>
                             <p>{data.descricao}</p>
-
                             <ButtonContainerSend>
                                 <button className="btn-send-message">
                                     <div className="svg-wrapper-1">
@@ -39,11 +43,14 @@ const ServicosFrellaCard: React.FC = () => {
             </InformacoesTecnicas>
             <InformacoesTecnicas>
                 {freelaObj.slice(3, 5).map((data, index) => {
+                    const Icon = data.Icon;
                     return (
                         <div className="card-frella" key={index}>
                             <h2>{data.nome}</h2>
+                            <span>
+                                <Icon size={40} />
+                            </span>
                             <p>{data.descricao}</p>
-
                             <ButtonContainerSend>
                                 <button className="btn-send-message">
                                     <div className="svg-wrapper-1">
@@ -67,4 +74,5 @@ const ServicosFrellaCard: React.FC = () => {
         </div>
     );
 };
+
 export default ServicosFrellaCard;
