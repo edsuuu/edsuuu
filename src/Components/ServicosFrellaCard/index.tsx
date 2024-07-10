@@ -48,7 +48,7 @@ const ServicosFrellaCard: React.FC = () => {
                     );
                 })}
             </InformacoesTecnicas>
-            {/* <InformacoesTecnicas>
+            <InformacoesTecnicas>
                 {freelaObj.slice(3, 5).map((data, index) => {
                     const Icon = data.Icon;
                     return (
@@ -77,7 +77,7 @@ const ServicosFrellaCard: React.FC = () => {
                         </div>
                     );
                 })}
-            </InformacoesTecnicas> */}
+            </InformacoesTecnicas>
         </div>
     );
 };
