@@ -102,8 +102,8 @@ const Terminal: React.FC = () => {
                                         # <span>Sobre</span>
                                     </h2>
                                     <p>
-                                        Meu nome é Edson. Atuava na área administrativa e migrei para a área de desenvolvimento de software há mais de 1 ano. Durante esse tempo, passei a desenvolver
-                                        aplicações web, single-page applications e sistemas web. <LinkStyled to="/projetos"> Ver meus Projetos</LinkStyled>
+                                        Meu nome é Edson. Estou desenvolvendo software há mais de 1 ano. Durante esse tempo, passei a desenvolver sistemas web e landing pages.{' '}
+                                        <LinkStyled to="/projetos">Ver meus Projetos</LinkStyled>
                                     </p>
                                 </div>
                                 <Curriculo>
