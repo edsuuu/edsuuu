@@ -32,10 +32,12 @@ import {
     SiTypescript,
     SiVercel,
     SiWebpack,
+    SiSpring,
 } from 'react-icons/si';
 import { IconItem } from '../../interfaces';
 
 import styled from 'styled-components';
+import { FaJava } from 'react-icons/fa';
 
 export const StyledSiTypescript = styled(SiTypescript)`
     color: white;
@@ -60,7 +62,21 @@ export const StyledSiJavascript = styled(SiJavascript)`
         color: #f0db4f;
     }
 `;
+export const StyledFaJava = styled(FaJava)`
+    color: white;
+    transition: 0.3s;
+    &:hover {
+        color: #0d8ac7;
+    }
+`;
 
+export const StyledSiSpring = styled(SiSpring)`
+    color: white;
+    transition: 0.3s;
+    &:hover {
+        color: #3b8413;
+    }
+`;
 export const StyledSiReact = styled(SiReact)`
     color: white;
     transition: 0.3s;
@@ -301,16 +317,17 @@ export const StyledSiOpensourcehardware = styled(SiOpensourcehardware)`
 `;
 
 export const languagesObj: IconItem[] = [
+    { name: 'Java', Icon: StyledFaJava },
     { name: 'TypeScript', Icon: StyledSiTypescript },
     { name: 'Node.js', Icon: StyledSiNodedotjs },
     { name: 'JavaScript', Icon: StyledSiJavascript },
 ];
 export const frameworksObj: IconItem[] = [
+    { name: 'Spring', Icon: StyledSiSpring },
     { name: 'React', Icon: StyledSiReact },
     { name: 'Redux', Icon: StyledSiRedux },
     { name: 'Jest ', Icon: StyledSiJest },
     { name: 'StyledComponents', Icon: StyledSiStyledcomponents },
-    { name: 'Sass', Icon: StyledSiSass },
 ];
 export const hostingObj: IconItem[] = [
     { name: 'AWS', Icon: StyledSiAmazon },
