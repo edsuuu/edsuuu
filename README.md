@@ -102,7 +102,7 @@
 <div align="center">
     <a href="https://github.com/anuraghazra/github-readme-stats">
         <img src="https://github-readme-stats.vercel.app/api/wakatime?username=20525642-7f6a-44d2-aa9f-b243c764fc51&layout=compact&theme=github_dark&border_color=00a4ef&bg_color=000000&"
-            alt="wakatime">
+            alt="Wakatime">
     </a>
 </div>
 <br/>
