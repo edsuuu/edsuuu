@@ -52,10 +52,6 @@
         <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC.svg?logo=typescript&logoColor=white">
         <img alt="React" src="https://img.shields.io/badge/React-20232a.svg?logo=react&logoColor=%2361DAFB">
         <img alt="C#" src="https://custom-icon-badges.demolab.com/badge/C%23-68217A.svg?logo=cs2&logoColor=white">
-        <img alt="Express.js" src="https://img.shields.io/badge/Express.js-404d59.svg?logo=express&logoColor=white">
-        <img alt="CSS" src="https://img.shields.io/badge/CSS-1572B6.svg?logo=css3&logoColor=white">
-        <img alt="HTML" src="https://img.shields.io/badge/HTML-E34F26.svg?logo=html5&logoColor=white">
-        <img alt="Webpack" src="https://img.shields.io/badge/Webpack-000?logo=webpack&logoColor=white" />
         <img alt="Redux" src="https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white" />
         <img alt="Sass" src="https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=white" />
         <img alt="StyledComponents" src="https://img.shields.io/badge/Styled_Components-0C0D0F?logo=styled-components&logoColor=white"/>
@@ -72,8 +68,6 @@
         <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-4ea94b.svg?logo=mongodb&logoColor=white">
         <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-316192.svg?logo=postgresql&logoColor=white">
         <img alt="MySQL" src="https://img.shields.io/badge/MySQL-316192.svg?logo=mysql&logoColor=white">
-        <img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub%20Pages-000.svg?logo=github&logoColor=white">
-        <img alt="Render" src="https://img.shields.io/badge/Render-000.svg?logo=render&logoColor=white">
         <img alt="Docker" src="https://img.shields.io/badge/-Docker-000?&logo=Docker">
    </p>
    <h3>💻 Software and Tools 💻</h3>
@@ -86,7 +80,6 @@
         <img alt="Bash" src="https://img.shields.io/badge/Bash-121011.svg?logo=gnu-bash&logoColor=white">
         <img alt="Linux" src="https://img.shields.io/badge/-Linux-000?&logo=Linux">
         <img alt="Windows" src="https://img.shields.io/badge/Windows-000.svg?&style=flat-square&logo=windows&logoColor=0078D6">
-        <img alt="PowerShell" src="https://img.shields.io/badge/Terminal-000.svg?&style=flat-square&logo=powershell&logoColor=white">
         <img alt="Spotify" src="https://img.shields.io/badge/Spotify-000.svg?&style=flat-square&logo=spotify&logoColor=1ED760">
         <img alt="Insomnia" src="https://img.shields.io/badge/Insomnia-5849BE?logo=insomnia&logoColor=white" />
 
