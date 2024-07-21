@@ -11,15 +11,15 @@ import {
     ContentPSW,
     ContainerButtonProjectPSW,
     LinkStyled,
-    Curriculo,
+    // Curriculo,
     BreveDescricao,
 } from './styled';
 import * as Icon from 'react-icons/vsc';
 import Skills from '../Skills';
-import { FaDownload } from 'react-icons/fa';
+// import { FaDownload } from 'react-icons/fa';
 import { toast } from 'react-toastify';
-import curriculo from '../../Assets/Curriculo.pdf';
-import PDFViewer from '../PDFViewer';
+// import curriculo from '../../Assets/Curriculo.pdf';
+// import PDFViewer from '../PDFViewer';
 
 const Terminal: React.FC = () => {
     const [showContent, setShowContent] = useState(false);
@@ -32,6 +32,7 @@ const Terminal: React.FC = () => {
         return () => clearTimeout(timer);
     }, []);
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const handleDownloadCurriculo = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         toast.success('O download será iniciado em alguns segundos ', { theme: 'dark' });
@@ -106,7 +107,7 @@ const Terminal: React.FC = () => {
                                         <LinkStyled to="/projetos">Ver meus Projetos</LinkStyled>
                                     </p>
                                 </div>
-                                <Curriculo>
+                                {/* <Curriculo>
                                     <div>
                                         <h2>
                                             # <span>Meu currículo</span>
@@ -122,7 +123,7 @@ const Terminal: React.FC = () => {
                                             <span className="tooltip">Download</span>
                                         </button>
                                     </div>
-                                </Curriculo>
+                                </Curriculo> */}
                             </BreveDescricao>
                         </>
 
