@@ -17,7 +17,7 @@ import {
 import * as Icon from 'react-icons/vsc';
 import Skills from '../Skills';
 // import { FaDownload } from 'react-icons/fa';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 // import curriculo from '../../Assets/Curriculo.pdf';
 // import PDFViewer from '../PDFViewer';
 
@@ -33,19 +33,19 @@ const Terminal: React.FC = () => {
     }, []);
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const handleDownloadCurriculo = (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-        toast.success('O download será iniciado em alguns segundos ', { theme: 'dark' });
+    // const handleDownloadCurriculo = (e: React.MouseEvent<HTMLButtonElement>) => {
+    //     e.preventDefault();
+    //     toast.success('O download será iniciado em alguns segundos ', { theme: 'dark' });
 
-        setTimeout(() => {
-            const link = document.createElement('a');
-            link.href = curriculo;
-            link.setAttribute('download', 'Curriculo.pdf');
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }, 3000);
-    };
+    //     setTimeout(() => {
+    //         const link = document.createElement('a');
+    //         link.href = curriculo;
+    //         link.setAttribute('download', 'Curriculo.pdf');
+    //         document.body.appendChild(link);
+    //         link.click();
+    //         document.body.removeChild(link);
+    //     }, 3000);
+    // };
 
     return (
         <PowerShell>
