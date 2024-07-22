@@ -7,7 +7,7 @@ import Project from '../Pages/Projects';
 import { TransitionProvider } from '../Context/TransitionContext';
 import TransitionComponent from '../Components/Transition';
 import React from 'react';
-import Freelancer from '../Pages/Freelancer';
+// import Freelancer from '../Pages/Freelancer';
 // import ProjectInfo from '../Pages/ProjectInfo';
 
 const AppRoutes: React.FC = () => {
@@ -40,14 +40,14 @@ const AppRoutes: React.FC = () => {
                     }
                 />
 
-                <Route
+                {/* <Route
                     path="/freelancer"
                     element={
                         <TransitionComponent>
                             <Freelancer />
                         </TransitionComponent>
                     }
-                />
+                /> */}
 
                 <Route
                     path="/contato"
