@@ -13,13 +13,9 @@ export const Container = styled.div`
         --hover-btn-color: #00a4ef;
         --default-btn-color: #fff;
         --font-size: 16px;
-        /* 👆 this field should not be empty */
         --font-weight: 600;
         --font-family: Menlo, Roboto Mono, monospace;
-        /* 👆 this field should not be empty */
     }
-
-    /* button settings 👆 */
 
     .ui-btn {
         box-sizing: border-box;

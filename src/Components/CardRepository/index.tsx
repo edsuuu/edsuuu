@@ -6,7 +6,7 @@ import { ButtonsLinks } from '../ButtonCode/styled';
 import { ProjectsObjProps } from '../../interfaces';
 
 const alertToast = () => toast.error('Não estou em deploy');
-const alertRedirect = () => toast.info('Voce vai ser redirecionado em alguns segundos');
+const alertRedirect = () => toast.info('Você será redirecionado');
 
 const CardRepository: React.FC<ProjectsObjProps> = ({ name, descricao, deployURL, githubURL, imageURL, icons, deploy }) => {
     const handleDeployClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -16,7 +16,7 @@ const CardRepository: React.FC<ProjectsObjProps> = ({ name, descricao, deployURL
             alertRedirect();
             setTimeout(() => {
                 window.open(deployURL, '_blank');
-            }, 2000);
+            }, 1500);
         } else if (deploy === false) {
             alertToast();
         }
@@ -28,7 +28,7 @@ const CardRepository: React.FC<ProjectsObjProps> = ({ name, descricao, deployURL
 
         setTimeout(() => {
             window.open(githubURL, '_blank');
-        }, 3000);
+        }, 1000);
     };
 
     return (
