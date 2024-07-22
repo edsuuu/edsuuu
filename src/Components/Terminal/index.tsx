@@ -27,25 +27,10 @@ const Terminal: React.FC = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowContent(true);
-        }, 2300);
+        }, 2200);
 
         return () => clearTimeout(timer);
     }, []);
-
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    // const handleDownloadCurriculo = (e: React.MouseEvent<HTMLButtonElement>) => {
-    //     e.preventDefault();
-    //     toast.success('O download será iniciado em alguns segundos ', { theme: 'dark' });
-
-    //     setTimeout(() => {
-    //         const link = document.createElement('a');
-    //         link.href = curriculo;
-    //         link.setAttribute('download', 'Curriculo.pdf');
-    //         document.body.appendChild(link);
-    //         link.click();
-    //         document.body.removeChild(link);
-    //     }, 3000);
-    // };
 
     return (
         <PowerShell>
@@ -103,27 +88,11 @@ const Terminal: React.FC = () => {
                                         # <span>Sobre</span>
                                     </h2>
                                     <p>
-                                        Meu nome é Edson. Estou desenvolvendo software há mais de 1 ano. Durante esse tempo, passei a desenvolver sistemas web e landing pages.{' '}
+                                        Meu nome é Edson. Estou desenvolvendo software há mais de 1 ano. Durante esse tempo, passei a desenvolver sistemas web e landing pages.
+                                        <br />
                                         <LinkStyled to="/projetos">Ver meus Projetos</LinkStyled>
                                     </p>
                                 </div>
-                                {/* <Curriculo>
-                                    <div>
-                                        <h2>
-                                            # <span>Meu currículo</span>
-                                        </h2>
-                                    </div>
-                                    <div className="btns-curriculo">
-                                        <PDFViewer />
-
-                                        <button className="btn-download" onClick={handleDownloadCurriculo}>
-                                            <div className="icons-terminal">
-                                                <FaDownload size={20} />
-                                            </div>
-                                            <span className="tooltip">Download</span>
-                                        </button>
-                                    </div>
-                                </Curriculo> */}
                             </BreveDescricao>
                         </>
 

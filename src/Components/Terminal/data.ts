@@ -335,7 +335,6 @@ export const hostingObj: IconItem[] = [
     { name: 'Azure', Icon: StyledSiAzuredevops },
     { name: 'Vercel', Icon: StyledSiVercel },
     { name: 'Nginx', Icon: StyledSiNginx },
-    { name: 'OpenSource', Icon: StyledSiOpensourcehardware },
 ];
 
 export const databasesObj: IconItem[] = [
