@@ -10,7 +10,7 @@ const rotas: RotasNavigationProps[] = [
     { name: 'Sobre', to: '/sobre' },
     { name: 'Projetos', to: '/projetos' },
     { name: 'Contato', to: '/contato' },
-    { name: 'Freelancer', to: '/freelancer' },
+    // { name: 'Freelancer', to: '/freelancer' },
 ];
 
 const Navigation: React.FC = () => {
