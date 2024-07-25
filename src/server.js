@@ -12,21 +12,6 @@ const app = express();
 
 app.use(helmet());
 
-app.use(
-    helmet.contentSecurityPolicy({
-        directives: {
-            defaultSrc: ["'self'"],
-            scriptSrc: ["'self'", "'unsafe-inline'", 'https://www.googletagmanager.com'],
-            styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
-            imgSrc: ["'self'", 'data:', 'https://raw.githubusercontent.com', 'https://pro.fontawesome.com'],
-            connectSrc: ["'self'"],
-            fontSrc: ["'self'", 'https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
-            objectSrc: ["'none'"],
-            frameSrc: ["'none'"],
-        },
-    }),
-);
-
 app.use(morgan('combined'));
 
 app.use(express.static(path.join(__dirname, '../dist')));
