@@ -2,12 +2,15 @@
 import express from 'express';
 import morgan from 'morgan';
 import path from 'path';
+import helmet from 'helmet';
+
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 
+app.use(helmet());
 app.use(morgan('combined'));
 
 app.use(express.static(path.join(__dirname, '../dist')));
