@@ -281,7 +281,7 @@ export const BreveDescricao = styled.div`
     p {
         padding: 0px 5rem;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
     span {
         color: #00a4ef;
