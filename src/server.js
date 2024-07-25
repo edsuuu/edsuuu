@@ -11,6 +11,15 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 
 app.use(helmet());
+
+app.use(
+    helmet.hsts({
+        maxAge: 31536000,
+        includeSubDomains: false,
+        preload: true,
+    }),
+);
+
 app.use(morgan('combined'));
 
 app.use(express.static(path.join(__dirname, '../dist')));
