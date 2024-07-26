@@ -1,17 +1,5 @@
 import { ProjectsObjProps } from '../../interfaces';
-import {
-    StyledBiLogoMongodb,
-    StyledBiLogoRedux,
-    StyledBiLogoTypescript,
-    StyledDiReact,
-    StyledDiSass,
-    StyledFaNode,
-    StyledGrMysql,
-    StyledRiJavascriptFill,
-    StyledSiStyledcomponents,
-    StyledTbBrandCss3,
-    StyledTiHtml5,
-} from './styled';
+import { StyledBiLogoMongodb, StyledBiLogoRedux, StyledBiLogoTypescript, StyledDiReact, StyledDiSass, StyledFaNode, StyledGrMysql, StyledRiJavascriptFill, StyledSiStyledcomponents } from './styled';
 
 export const projectsObj: ProjectsObjProps[] = [
     {
@@ -69,40 +57,6 @@ export const projectsObj: ProjectsObjProps[] = [
         imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/valorant.png',
         deploy: false,
         deployURL: '',
-    },
-
-    {
-        name: 'Pomodoro App',
-        descricao: 'Criação do projeto do pomodoro app',
-        categories: ['front'],
-        tecnologias: ['ReactJs ', 'Javascript ', 'Css'],
-        icons: [StyledDiReact, StyledRiJavascriptFill, StyledTbBrandCss3],
-        githubURL: 'https://github.com/edsuuu/pomodoro-app',
-        imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/pomodoro.png',
-        deploy: true,
-        deployURL: 'https://pomodoro-timer-tsx.vercel.app/',
-    },
-    {
-        name: 'Coffe Shop ',
-        descricao: 'Umas das Primeiras pagina',
-        categories: ['front'],
-        tecnologias: ['HTML ', 'CSS'],
-        icons: [StyledTiHtml5, StyledTbBrandCss3],
-        githubURL: 'https://github.com/edsuuu/coffee-shop',
-        imageURL: 'https://raw.githubusercontent.com/edsuuu/coffee-shop/main/img/coffe-shop.png',
-        deploy: true,
-        deployURL: 'https://edsuuu.github.io/coffee-shop/',
-    },
-    {
-        name: 'Blog Universe',
-        descricao: 'Umas das Primeiras pagina',
-        categories: ['front'],
-        tecnologias: ['HTML ', 'SCSS'],
-        icons: [StyledTiHtml5, StyledDiSass],
-        githubURL: 'https://github.com/edsuuu/universe',
-        imageURL: 'https://raw.githubusercontent.com/edsuuu/universe/master/imagem/blog-universe.png',
-        deploy: true,
-        deployURL: 'https://edsuuu.github.io/universe/',
     },
 
     {
