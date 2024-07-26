@@ -58,7 +58,6 @@ export const projectsObj: ProjectsObjProps[] = [
         deploy: false,
         deployURL: '',
     },
-
     {
         name: 'Api Valorant',
         descricao: 'Api para cadastro de contas com sistema admin e sistema de logs',
@@ -78,17 +77,6 @@ export const projectsObj: ProjectsObjProps[] = [
         icons: [StyledFaNode, StyledGrMysql],
         githubURL: 'https://github.com/edsuuu/api_escola',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/api-1.webp',
-        deploy: false,
-        deployURL: '',
-    },
-    {
-        name: 'Api Carros',
-        descricao: 'Uma api que cadastra placa e modelo de carro',
-        categories: ['fullstack', 'backend'],
-        tecnologias: ['Node ', 'MySql'],
-        icons: [StyledFaNode, StyledGrMysql],
-        githubURL: 'https://github.com/edsuuu/api-carro',
-        imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/api-3.webp',
         deploy: false,
         deployURL: '',
     },
