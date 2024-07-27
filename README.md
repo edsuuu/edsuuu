@@ -27,16 +27,11 @@
 <br/>
 
 <div align="center">
-    <a href="https://github.com/anuraghazra/github-readme-stats"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=donut&langs_count=8&theme=github_dark&border_color=00a4ef&bg_color=000000" alt="img" /></a>
+    <a href="https://github.com/anuraghazra/github-readme-stats"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=donut&langs_count=7&theme=github_dark&border_color=00a4ef&bg_color=000000" alt="img" /></a>
     <a href="https://github.com/anuraghazra/github-readme-stats"><img src="https://github-readme-stats.vercel.app/api?username=edsuuu&&rank_icon=github&theme=github_dark&border_color=00a4ef&bg_color=000000&show=reviews,prs_merged,prs_merged_percentage" style="height: 280px"/></a>
 </div>
 <br>
 
-<div align="center">
-
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=edsuuu&bg_color=000000&color=3391ff&line=3391ff&point=ffffff&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
-</div>
 
 <div align="center">
         <h2>🛠️ My Favorite Tools 🛠️</h2>
