@@ -7,7 +7,7 @@
 
 <div align='center'>
 
-# [**Visite meu Portfolio**](https://meuportfolio-edsu.ddns.net)
+# [**Open my Portfolio**](https://meuportfolio-edsu.ddns.net)
 
   <p align='center'>
     <a href="https://www.linkedin.com/in/edsonlima343"><img height="30" src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/linkedin.png?raw=true"></a>&nbsp;&nbsp;
@@ -99,18 +99,5 @@
             <img alt="" src="[https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&flatten=1&weeks=40&animation=wave&format=svg&gap=0.6&animation_frequency=0.2&animation_amplitude=20&theme=pink](https://ssr-contributions-svg.vercel.app/_/edsuuu?chart=3dbar&gap=0.6&scale=2&flatten=2&animation=wave&animation_duration=4&animation_delay=0.06&animation_amplitude=24&animation_frequency=0.1&animation_wave_center=0_3&format=svg&weeks=34&theme=blue)">
     </picture>
     </a>
-</div>
-<h2 align="center">👨‍💻 Favorite Repositories 👨‍💻</h2>
-<div align="center">
-      <a href="https://github.com/edsuuu/edsuuu" target="_blank">
-         <img
-            src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=edsuuu&theme=react&border_color=00a4ef&bg_color=000"
-            alt="">
-      </a>
-      <a href="https://github.com/edsuuu/ubuntu-info" target="_blank">
-         <img
-            src="https://github-readme-stats.vercel.app/api/pin/?username=edsuuu&repo=ubuntu-info&theme=react&border_color=00a4ef&bg_color=000"
-            alt="">
-      </a>
 </div>
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00a4ef&height=120&section=footer" alt="ondas"/>
