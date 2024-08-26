@@ -50,11 +50,10 @@ export const projectsObj: ProjectsObjProps[] = [
         descricao: 'Api para cadastro de perfil de alunos com upload de fotos',
         categories: ['fullstack', 'backend'],
         tecnologias: ['Node ', 'MySql ', 'Sucrase'],
-        icons: [StyledFaNode, StyledGrMysql],
+        icons: [StyledBiLogoTypescript, StyledFaNode, StyledGrMysql],
         githubURL: 'https://github.com/edsuuu/api_escola',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/api-1.webp',
         deploy: false,
         deployURL: '',
     },
-
 ];
