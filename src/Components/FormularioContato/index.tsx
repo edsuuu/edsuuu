@@ -13,7 +13,7 @@ const FormularioContato: React.FC = () => {
     const [message, setMensagem] = useState<string>('');
     const [caracteres, setDiminuiCaracteres] = useState<number>(2500);
 
-    const manutecao = false;
+    const manutecao = true;
 
     function clearInputs() {
         setNome('');
@@ -29,7 +29,7 @@ const FormularioContato: React.FC = () => {
         let formErrors = false;
 
         if (manutecao)
-            return toast.error('Não está funcionando, ainda estamos em Desenvolvimento', {
+            return toast.error('No momento a api do formulário está em manutenção, por favor tente pelo linkedin ou via email.', {
                 position: 'top-center',
                 theme: 'colored',
             });
