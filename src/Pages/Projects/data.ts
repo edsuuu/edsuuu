@@ -1,15 +1,14 @@
 import { ProjectsObjProps } from '../../interfaces';
-import { StyledBiLogoMongodb, StyledBiLogoRedux, StyledBiLogoTypescript, StyledDiReact, StyledDiSass, StyledFaNode, StyledGrMysql, StyledRiJavascriptFill, StyledSiStyledcomponents } from './styled';
+import { StyledBiLogoMongodb, StyledBiLogoTypescript, StyledDiReact, StyledDiSass, StyledFaNode, StyledGrMysql, StyledRiJavascriptFill, StyledSiStyledcomponents } from './styled';
 
 export const projectsObj: ProjectsObjProps[] = [
     {
-        name: 'Meu Portfolio',
-        descricao: 'Meu projeto principal, colocando todo conhecimento em pratica',
-        categories: ['front', 'build'],
-        tecnologias: ['ReactTs ', 'Styled Components'],
-        icons: [StyledDiReact, StyledBiLogoTypescript, StyledSiStyledcomponents],
-        githubURL: 'https://github.com/edsuuu/edsuuu',
-        imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/portfolio.png',
+        name: 'MicroSaas',
+        descricao: 'MicroSaas para comercio sendo desenvolvido com Typescript, typeorm sequelize, e postgre',
+        categories: ['fullstack', 'backend'],
+        icons: [StyledFaNode, StyledGrMysql],
+        githubURL: 'https://github.com/edsuuu/api_escola',
+        imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/api-3.webp',
         deploy: false,
         deployURL: '',
     },
@@ -19,7 +18,7 @@ export const projectsObj: ProjectsObjProps[] = [
         categories: ['front', 'build'],
         tecnologias: ['ReactTs ', 'Styled Components'],
         icons: [StyledDiReact, StyledBiLogoTypescript, StyledSiStyledcomponents],
-        githubURL: 'https://github.com/edsuuu/hydra-landing-page',
+        githubURL: 'https://github.com/edsuuu/api-saas',
         imageURL: 'https://raw.githubusercontent.com/edsuuu/hydra-landing-page/main/hydra-page.png',
         deploy: true,
         deployURL: 'https://hydra-landing-page-nu.vercel.app',
@@ -35,32 +34,9 @@ export const projectsObj: ProjectsObjProps[] = [
         deploy: true,
         deployURL: 'https://landing-page-nft-three.vercel.app',
     },
-
     {
-        name: 'Front Escola',
-        descricao: 'Front para consumir a Api_Escola',
-        categories: ['front', 'fullstack'],
-        tecnologias: ['ReactJs ', 'Javascript ', 'Styled Components ', 'Redux'],
-        icons: [StyledDiReact, StyledRiJavascriptFill, StyledSiStyledcomponents, StyledBiLogoRedux],
-        githubURL: 'https://github.com/edsuuu/front-escola ',
-        imageURL: 'https://raw.githubusercontent.com/edsuuu/front-escola/main/public/image.png',
-        deploy: false,
-        deployURL: '',
-    },
-    {
-        name: 'Front Valorant',
-        descricao: 'Front para consumir a Api_Valorant',
-        categories: ['build', 'front', 'fullstack'],
-        tecnologias: ['ReactTs ', 'TypeScript ', 'Styled Components ', 'Redux'],
-        icons: [StyledDiReact, StyledBiLogoTypescript, StyledSiStyledcomponents, StyledBiLogoRedux],
-        githubURL: 'https://github.com/edsuuu/AccontsValorant',
-        imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/valorant.png',
-        deploy: false,
-        deployURL: '',
-    },
-    {
-        name: 'Api Valorant',
-        descricao: 'Api para cadastro de contas com sistema admin e sistema de logs',
+        name: 'API Contas',
+        descricao: 'Api para cadastro de contas de jogos, com autenticação e rotas protegidas',
         categories: ['build', 'backend'],
         tecnologias: ['TypeScript ', 'Node ', 'MongoDB'],
         icons: [StyledBiLogoTypescript, StyledFaNode, StyledBiLogoMongodb],
@@ -70,7 +46,7 @@ export const projectsObj: ProjectsObjProps[] = [
         deployURL: '',
     },
     {
-        name: 'Api Escola',
+        name: 'Api Gestão de alunos',
         descricao: 'Api para cadastro de perfil de alunos com upload de fotos',
         categories: ['fullstack', 'backend'],
         tecnologias: ['Node ', 'MySql ', 'Sucrase'],
@@ -80,15 +56,5 @@ export const projectsObj: ProjectsObjProps[] = [
         deploy: false,
         deployURL: '',
     },
-    {
-        name: 'Agenda MVC ',
-        descricao: 'Um projeto MVC, usanando EJS para desenvolvimento da interface, simula uma agenda de contatos',
-        categories: ['fullstack', 'backend', 'front'],
-        tecnologias: ['Node ', 'EJS ', 'MongoDB'],
-        icons: [StyledFaNode, StyledBiLogoMongodb],
-        githubURL: 'https://github.com/edsuuu/projeto_agenda_mvc',
-        imageURL: 'https://raw.githubusercontent.com/edsuuu/edsuuu/main/public/Assets/pj-agenda.png',
-        deploy: false,
-        deployURL: '',
-    },
+
 ];
