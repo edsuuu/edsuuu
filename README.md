@@ -7,7 +7,7 @@
 
 <div align='center'>
 
-# [**Abrir meu Portfolio**](https://meuportfolio-edsu.ddns.net)
+# [**Abrir meu Portfolio**](https://edsuuu.vercel.app)
 
   <p align='center'>
     <a href="https://www.linkedin.com/in/edsonlima343"><img height="30" src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/linkedin.png?raw=true"></a>&nbsp;&nbsp;
@@ -29,7 +29,7 @@
 <div align="center">
     <a href="https://github.com/anuraghazra/github-readme-stats"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=donut&langs_count=7&theme=github_dark&border_color=00a4ef&bg_color=000000" alt="img" /></a>
     <a href="https://github.com/anuraghazra/github-readme-stats"><img src="https://github-readme-stats.vercel.app/api?username=edsuuu&&rank_icon=github&theme=github_dark&border_color=00a4ef&bg_color=000000&show=reviews,prs_merged,prs_merged_percentage" style="height: 280px"/></a>
-</div>
+</div>-
 <br>
 
 
