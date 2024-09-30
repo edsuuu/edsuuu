@@ -88,14 +88,12 @@ const Terminal: React.FC = () => {
                                         # <span>Sobre</span>
                                     </h2>
                                     <p>
-                                        Meu nome é Edson. Estou desenvolvendo software há mais de 1 ano. Durante esse tempo, passei a desenvolver sistemas web e landing pages.
                                         <br />
                                         <LinkStyled to="/projetos">Ver meus Projetos</LinkStyled>
                                     </p>
                                 </div>
                             </BreveDescricao>
                         </>
-
                         <Skills />
                     </ContainerButtonProjectPSW>
                 </div>
