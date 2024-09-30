@@ -24,13 +24,13 @@
 <div align="center">
     <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=edsuuu&theme=windows-dark&border_radius=5&locale=en&date_format=j%2Fn%5B%2FY%5D" alt="GitHub Streak" /></a>
 </div>
-<br/>
+<!-- <br/> -->
 
-<div align="center">
+<!-- <div align="center">
     <a href="https://github.com/anuraghazra/github-readme-stats"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=edsuuu&layout=donut&langs_count=7&theme=github_dark&border_color=00a4ef&bg_color=000000" alt="img" /></a>
     <a href="https://github.com/anuraghazra/github-readme-stats"><img src="https://github-readme-stats.vercel.app/api?username=edsuuu&&rank_icon=github&theme=github_dark&border_color=00a4ef&bg_color=000000&show=reviews,prs_merged,prs_merged_percentage" style="height: 280px"/></a>
 </div>-
-<br>
+<br> -->
 
 
 <div align="center">
