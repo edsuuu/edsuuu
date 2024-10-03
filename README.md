@@ -6,7 +6,6 @@
 
 <div align="center">
         <h2>🛠️ My Favorite Tools 🛠️</h2>
-        <h3>👨‍💻 Programming, Frameworks and Markup Languages 👨‍💻</h3>
    <p>
         <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC.svg?logo=typescript&logoColor=white">
         <img alt="Node.js" src="https://img.shields.io/badge/Node.js-43853D.svg?logo=node.js&logoColor=white">
@@ -16,28 +15,21 @@
         <img alt="Redux" src="https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white" />
         <img alt="Sass" src="https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=white" />
         <img alt="StyledComponents" src="https://img.shields.io/badge/Styled_Components-0C0D0F?logo=styled-components&logoColor=white"/>
-
    </p>
-   <h3>🗄️ Databases and Cloud Hosting 🗄️</h3>
    <p>
-        <img alt="Apache" src="https://img.shields.io/badge/apache-%23D42029.svg?logo=apache&logoColor=white">
         <img alt="Google Cloud" src="https://img.shields.io/badge/Google%20Cloud-black?logo=google-cloud">
-        <img alt="Nginx" src="https://img.shields.io/badge/nginx-%23009639.svg?&logo=nginx&logoColor=white">
         <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-4ea94b.svg?logo=mongodb&logoColor=white">
         <img alt="MySQL" src="https://img.shields.io/badge/MySQL-316192.svg?logo=mysql&logoColor=white">
         <img alt="MariaDB" src="https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=white">
+        <img alt="Nginx" src="https://img.shields.io/badge/nginx-%23009639.svg?&logo=nginx&logoColor=white">
+        <img alt="Apache" src="https://img.shields.io/badge/apache-%23D42029.svg?logo=apache&logoColor=white">
         <img alt="Docker" src="https://img.shields.io/badge/-Docker-000?&logo=Docker">
    </p>
-   <h3>💻 Software and Tools 💻</h3>
    <p>
-        <img alt="Dark Reader" src="https://img.shields.io/badge/-Dark%20Reader-141E24?logo=dark-reader&logoColor=white">
-        <img alt="Discord" src="https://img.shields.io/badge/-Discord-5865F2.svg?logo=discord&logoColor=white">
         <img alt="GitHub Desktop" src="https://img.shields.io/badge/GitHub%20Desktop-8034A9.svg?logo=github&logoColor=white">
-        <img alt="OBS Studio" src="https://img.shields.io/badge/-OBS-302E31?logo=obs-studio&logoColor=white">
         <img alt="Git" src="https://img.shields.io/badge/-Git-black?logo=git">
         <img alt="Bash" src="https://img.shields.io/badge/Bash-121011.svg?logo=gnu-bash&logoColor=white">
         <img alt="Linux" src="https://img.shields.io/badge/-Linux-000?&logo=Linux">
-        <img alt="Windows" src="https://img.shields.io/badge/Windows-000.svg?logo=windows&logoColor=0078D6">
         <img alt="Spotify" src="https://img.shields.io/badge/Spotify-000.svg?logo=spotify&logoColor=1ED760">
         <img alt="Insomnia" src="https://img.shields.io/badge/Insomnia-5849BE?logo=insomnia&logoColor=white" />
 
