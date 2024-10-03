@@ -1,7 +1,5 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00a4ef&height=120&section=header" alt="ondas"/>
 
-# [**Abrir meu Portfolio**](https://edsuuu.vercel.app)
-
 <div align="center">
     <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=edsuuu&theme=windows-dark&border_radius=5&locale=en&date_format=j%2Fn%5B%2FY%5D" alt="GitHub Streak" /></a>
 </div>
