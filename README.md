@@ -22,11 +22,12 @@
    </p>
    <h3>🗄️ Databases and Cloud Hosting 🗄️</h3>
    <p>
-        <img alt="Apache" src="https://img.shields.io/badge/apache-%23D42029.svg?style=flat-square&logo=apache&logoColor=white">
-        <img alt="Google Cloud" src="https://img.shields.io/badge/Google%20Cloud-black?style=flat-square&logo=google-cloud">
+        <img alt="Apache" src="https://img.shields.io/badge/apache-%23D42029.svg?logo=apache&logoColor=white">
+        <img alt="Google Cloud" src="https://img.shields.io/badge/Google%20Cloud-black?logo=google-cloud">
         <img alt="Nginx" src="https://img.shields.io/badge/nginx-%23009639.svg?&logo=nginx&logoColor=white">
         <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-4ea94b.svg?logo=mongodb&logoColor=white">
         <img alt="MySQL" src="https://img.shields.io/badge/MySQL-316192.svg?logo=mysql&logoColor=white">
+        <img alt="MariaDB" src="https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=white">
         <img alt="Docker" src="https://img.shields.io/badge/-Docker-000?&logo=Docker">
    </p>
    <h3>💻 Software and Tools 💻</h3>
@@ -35,11 +36,11 @@
         <img alt="Discord" src="https://img.shields.io/badge/-Discord-5865F2.svg?logo=discord&logoColor=white">
         <img alt="GitHub Desktop" src="https://img.shields.io/badge/GitHub%20Desktop-8034A9.svg?logo=github&logoColor=white">
         <img alt="OBS Studio" src="https://img.shields.io/badge/-OBS-302E31?logo=obs-studio&logoColor=white">
-        <img alt="Git" src="https://img.shields.io/badge/-Git-black?style=flat-square&logo=git">
+        <img alt="Git" src="https://img.shields.io/badge/-Git-black?logo=git">
         <img alt="Bash" src="https://img.shields.io/badge/Bash-121011.svg?logo=gnu-bash&logoColor=white">
         <img alt="Linux" src="https://img.shields.io/badge/-Linux-000?&logo=Linux">
-        <img alt="Windows" src="https://img.shields.io/badge/Windows-000.svg?&style=flat-square&logo=windows&logoColor=0078D6">
-        <img alt="Spotify" src="https://img.shields.io/badge/Spotify-000.svg?&style=flat-square&logo=spotify&logoColor=1ED760">
+        <img alt="Windows" src="https://img.shields.io/badge/Windows-000.svg?logo=windows&logoColor=0078D6">
+        <img alt="Spotify" src="https://img.shields.io/badge/Spotify-000.svg?logo=spotify&logoColor=1ED760">
         <img alt="Insomnia" src="https://img.shields.io/badge/Insomnia-5849BE?logo=insomnia&logoColor=white" />
 
    </p>
