@@ -10,9 +10,9 @@ import {
     PwsTabsTitle,
     ContentPSW,
     ContainerButtonProjectPSW,
-    LinkStyled,
+    // LinkStyled,
     // Curriculo,
-    BreveDescricao,
+    // BreveDescricao,
 } from './styled';
 import * as Icon from 'react-icons/vsc';
 import Skills from '../Skills';
@@ -75,25 +75,12 @@ const Terminal: React.FC = () => {
                     <p>PortFolio 1.0.0</p>
                 </div>
                 <div className="comands">
-                    <p>C:\Sobre\edsu&gt;</p>
+                    <p>edsuuu@linux: ~$</p>
                     <MaquinaWriteAbout text="cat sobre-mim.txt" />
                 </div>
 
                 <div className={showContent ? 'show-content' : ''}>
                     <ContainerButtonProjectPSW className="container-button-project-psw">
-                        <>
-                            <BreveDescricao>
-                                <div>
-                                    <h2>
-                                        # <span>Sobre</span>
-                                    </h2>
-                                    <p>
-                                        <br />
-                                        <LinkStyled to="/projetos">Ver meus Projetos</LinkStyled>
-                                    </p>
-                                </div>
-                            </BreveDescricao>
-                        </>
                         <Skills />
                     </ContainerButtonProjectPSW>
                 </div>
