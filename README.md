@@ -5,35 +5,30 @@
 </div>
 
 <div align="center">
-        <h2>🛠️ My Favorite Tools 🛠️</h2>
-   <p>
+        <h2>🛠️ Favorite Tools 🛠️</h2>
+        <img alt="LARAVEL" src="https://img.shields.io/badge/Laravel-%23FF2D20.svg?logo=laravel&logoColor=white">
+        <img alt="PHP" src="https://img.shields.io/badge/PHP-%23777BB4.svg?logo=php&logoColor=white">
         <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC.svg?logo=typescript&logoColor=white">
-        <img alt="PHP" src="https://img.shields.io/badge/php-%23777BB4.svg?logo=php&logoColor=white">
-        <img alt="Node.js" src="https://img.shields.io/badge/Node.js-43853D.svg?logo=node.js&logoColor=white">
-        <img alt="Java" src="https://img.shields.io/badge/Java-%23ED8B00.svg?logo=openjdk&logoColor=white">
         <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=javascript&logoColor=black">
-        <img alt="React" src="https://img.shields.io/badge/React-20232a.svg?logo=react&logoColor=%2361DAFB">
-        <img alt="Redux" src="https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white" />
-        <img alt="Sass" src="https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=white" />
-        <img alt="StyledComponents" src="https://img.shields.io/badge/Styled_Components-0C0D0F?logo=styled-components&logoColor=white"/>
+        <img alt="React" src="https://img.shields.io/badge/React%20&%20Native-20232a.svg?logo=react&logoColor=%2361DAFB">
+        <img alt="Tailwindcss" src="https://img.shields.io/badge/Tailwindcss-%2338B2AC.svg?logo=tailwind-css&logoColor=white">
+        <img alt="StyledComponets" src="https://img.shields.io/badge/Styled--Components-DB7093?logo=styled-components&logoColor=white">
    </p>
    <p>
-        <img alt="Google Cloud" src="https://img.shields.io/badge/Google%20Cloud-black?logo=google-cloud">
-        <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-4ea94b.svg?logo=mongodb&logoColor=white">
         <img alt="MySQL" src="https://img.shields.io/badge/MySQL-316192.svg?logo=mysql&logoColor=white">
-        <img alt="MariaDB" src="https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=white">
-        <img alt="Nginx" src="https://img.shields.io/badge/nginx-%23009639.svg?&logo=nginx&logoColor=white">
-        <img alt="Apache" src="https://img.shields.io/badge/apache-%23D42029.svg?logo=apache&logoColor=white">
-        <img alt="Docker" src="https://img.shields.io/badge/-Docker-000?&logo=Docker">
+        <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-4ea94b.svg?logo=mongodb&logoColor=white">
+        <img alt="Nginx" src="https://img.shields.io/badge/Nginx-%23009639.svg?&logo=nginx&logoColor=white">
+        <img alt="Apache" src="https://img.shields.io/badge/Apache-%23D42029.svg?logo=apache&logoColor=white">
    </p>
    <p>
-        <img alt="GitHub Desktop" src="https://img.shields.io/badge/GitHub%20Desktop-8034A9.svg?logo=github&logoColor=white">
         <img alt="Git" src="https://img.shields.io/badge/-Git-black?logo=git">
         <img alt="Bash" src="https://img.shields.io/badge/Bash-121011.svg?logo=gnu-bash&logoColor=white">
         <img alt="Linux" src="https://img.shields.io/badge/-Linux-000?&logo=Linux">
+        <img alt="MacOs" src="https://img.shields.io/badge/MacOs-8034A9?logo=macos&logoColor=F0F0F0">
         <img alt="Spotify" src="https://img.shields.io/badge/Spotify-000.svg?logo=spotify&logoColor=1ED760">
         <img alt="Insomnia" src="https://img.shields.io/badge/Insomnia-5849BE?logo=insomnia&logoColor=white" />
-
+        <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white" />
+        <img alt="Tor" src="https://img.shields.io/badge/Tor-%237E4798.svg?logo=tor-project&logoColor=white" />
    </p>
 
 <img alt="ProfileVisits" src="https://komarev.com/ghpvc/?username=edsuuu&label=Profile%20Visits&color=blue&style=for-the-badge">
