@@ -19,7 +19,7 @@ const Skills: React.FC = () => {
                             <IconsComponent key={index} name={item.name} Icon={item.Icon} />
                         ))}
                     </div>
-                    <p>Gosto de estar sempre atualizado e aprender novas tecnologias e habilidades. Por isso, sempre procuro fazer cursos online para expandir meus conhecimentos.</p>
+                    {/* <p>Gosto de estar sempre atualizado e aprender novas tecnologias e habilidades. Por isso, sempre procuro fazer cursos online para expandir meus conhecimentos.</p> */}
                 </div>
                 <div className="card-infos">
                     <h2>Frameworks</h2>
@@ -28,7 +28,7 @@ const Skills: React.FC = () => {
                             <IconsComponent key={index} name={item.name} Icon={item.Icon} />
                         ))}
                     </div>
-                    <p>Costumo desenvolver aplicações front-end utilizando frameworks como React e Redux, e estilização como Styled Components e Sass, para criar interfaces.</p>
+                    {/* <p>Costumo desenvolver aplicações front-end utilizando frameworks como React e Redux, e estilização como Styled Components e Sass, para criar interfaces.</p> */}
                 </div>
                 <div className="card-infos">
                     <div>
@@ -39,9 +39,9 @@ const Skills: React.FC = () => {
                             <IconsComponent key={index} name={item.name} Icon={item.Icon} />
                         ))}
                     </div>
-                    <div>
+                    {/* <div>
                         <p>Priorizo sempre hospedar meus projetos em uma cloud para criar um ambiente de produção, implementando novos recursos e descobrindo novos projetos open source.</p>
-                    </div>
+                    </div> */}
                 </div>
             </InformacoesTecnicas>
             <InformacoesTecnicas>
@@ -54,9 +54,9 @@ const Skills: React.FC = () => {
                             <IconsComponent key={index} name={item.name} Icon={item.Icon} />
                         ))}
                     </div>
-                    <div>
+                    {/* <div>
                         <p>Trabalho com diversos banco de dados, incluindo MongoDB, MariaDB, MySQL e PostgreSQL, conforme cada projeto.</p>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="card-infos">
                     <div>
@@ -67,9 +67,9 @@ const Skills: React.FC = () => {
                             <IconsComponent key={index} name={item.name} Icon={item.Icon} />
                         ))}
                     </div>
-                    <div>
+                    {/* <div>
                         <p>Utilizo Windows/Linux como sistema operacional, que me forneceu habilidades com Linha de Comando, Bash, Git e Docker.</p>
-                    </div>
+                    </div> */}
                 </div>
             </InformacoesTecnicas>
         </div>

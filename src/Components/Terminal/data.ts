@@ -11,9 +11,9 @@ import {
     SiJest,
     SiLinux,
     SiMariadb,
-    SiMicrosoft,
-    SiMicrosoftazure,
-    SiMicrosoftexcel,
+    // SiMicrosoft,
+    // SiMicrosoftazure,
+    // SiMicrosoftexcel,
     SiMongodb,
     SiMysql,
     SiNetlify,
@@ -33,17 +33,26 @@ import {
     SiVercel,
     SiWebpack,
     SiSpring,
+    SiApache,
 } from 'react-icons/si';
 import { IconItem } from '../../interfaces';
 
 import styled from 'styled-components';
-import { FaJava } from 'react-icons/fa';
+import { FaJava, FaLaravel, FaPhp } from 'react-icons/fa';
 
 export const StyledSiTypescript = styled(SiTypescript)`
     color: white;
     transition: 0.3s;
     &:hover {
         color: #007acc;
+    }
+`;
+
+export const StyledFaPhp = styled(FaPhp)`
+    color: white;
+    transition: 0.3s;
+    &:hover {
+        color: rgb(92, 102, 148);
     }
 `;
 
@@ -82,6 +91,14 @@ export const StyledSiReact = styled(SiReact)`
     transition: 0.3s;
     &:hover {
         color: #61dafb;
+    }
+`;
+
+export const StyledFaLaravel = styled(FaLaravel)`
+    color: white;
+    transition: 0.3s;
+    &:hover {
+        color: rgb(251, 143, 97);
     }
 `;
 
@@ -165,19 +182,19 @@ export const StyledSiNginx = styled(SiNginx)`
     }
 `;
 
+export const StyledSiApache = styled(SiApache)`
+    color: white;
+    transition: 0.3s;
+    &:hover {
+        color: rgb(150, 50, 0);
+    }
+`;
+
 export const StyledSiGooglecloud = styled(SiGooglecloud)`
     color: white;
     transition: 0.3s;
     &:hover {
         color: #4285f4;
-    }
-`;
-
-export const StyledSiAzuredevops = styled(SiMicrosoftazure)`
-    color: white;
-    transition: 0.3s;
-    &:hover {
-        color: #0078d7;
     }
 `;
 
@@ -269,13 +286,13 @@ export const StyledSiGithub = styled(SiGithub)`
     }
 `;
 
-export const StyledSiMicrosoft = styled(SiMicrosoft)`
-    color: white;
-    transition: 0.3s;
-    &:hover {
-        color: #0078d4;
-    }
-`;
+// export const StyledSiMicrosoft = styled(SiMicrosoft)`
+//     color: white;
+//     transition: 0.3s;
+//     &:hover {
+//         color: #0078d4;
+//     }
+// `;
 
 export const StyledSiSpotify = styled(SiSpotify)`
     color: white;
@@ -301,13 +318,13 @@ export const StyledSiLinux = styled(SiLinux)`
     }
 `;
 
-export const StyledSiMicrosoftexcel = styled(SiMicrosoftexcel)`
-    color: white;
-    transition: 0.3s;
-    &:hover {
-        color: #217346;
-    }
-`;
+// export const StyledSiMicrosoftexcel = styled(SiMicrosoftexcel)`
+//     color: white;
+//     transition: 0.3s;
+//     &:hover {
+//         color: #217346;
+//     }
+// `;
 export const StyledSiOpensourcehardware = styled(SiOpensourcehardware)`
     color: white;
     transition: 0.3s;
@@ -317,39 +334,38 @@ export const StyledSiOpensourcehardware = styled(SiOpensourcehardware)`
 `;
 
 export const languagesObj: IconItem[] = [
-    { name: 'Java', Icon: StyledFaJava },
+    { name: 'PHP', Icon: StyledFaPhp },
     { name: 'TypeScript', Icon: StyledSiTypescript },
     { name: 'Node.js', Icon: StyledSiNodedotjs },
     { name: 'JavaScript', Icon: StyledSiJavascript },
 ];
 export const frameworksObj: IconItem[] = [
-    { name: 'Spring', Icon: StyledSiSpring },
+    { name: 'Laravel', Icon: StyledFaLaravel },
     { name: 'React', Icon: StyledSiReact },
-    { name: 'Redux', Icon: StyledSiRedux },
-    { name: 'Jest ', Icon: StyledSiJest },
     { name: 'StyledComponents', Icon: StyledSiStyledcomponents },
 ];
 export const hostingObj: IconItem[] = [
-    { name: 'AWS', Icon: StyledSiAmazon },
+    // { name: 'AWS', Icon: StyledSiAmazon },
     { name: 'GoogleCloud', Icon: StyledSiGooglecloud },
-    { name: 'Azure', Icon: StyledSiAzuredevops },
+    // { name: 'Azure', Icon: StyledSiAzuredevops },
     { name: 'Vercel', Icon: StyledSiVercel },
     { name: 'Nginx', Icon: StyledSiNginx },
+    { name: 'Apache', Icon: StyledSiApache },
 ];
 
 export const databasesObj: IconItem[] = [
-    { name: 'MongoDB', Icon: StyledSiMongodb },
-    { name: 'MariaDB', Icon: StyledSiMariadb },
     { name: 'MySQL', Icon: StyledSiMysql },
+    { name: 'MongoDB', Icon: StyledSiMongodb },
     { name: 'PostgreSQL', Icon: StyledSiPostgresql },
+    // { name: 'MariaDB', Icon: StyledSiMariadb },
 ];
 
 export const sistemasEferramentasObj: IconItem[] = [
     { name: 'Linux', Icon: StyledSiLinux },
-    { name: 'Windows', Icon: StyledSiMicrosoft },
+    // { name: 'Windows', Icon: StyledSiMicrosoft },
     { name: 'Docker', Icon: StyledSiDocker },
     { name: 'Git', Icon: StyledSiGit },
     { name: 'Insomnia', Icon: StyledSiInsomnia },
-    { name: 'Excel', Icon: StyledSiMicrosoftexcel },
+    // { name: 'Excel', Icon: StyledSiMicrosoftexcel },
     { name: 'Spotify', Icon: StyledSiSpotify },
 ];
