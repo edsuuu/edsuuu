@@ -3,9 +3,6 @@
 <div align="center">
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00A4EF&width=435&lines=Hey%2C+I+am+Edson+a+FullStack+Developer+..." alt="Typing SVG" /></a>
-<br><br>
-
-<h3>Skills</h3>
 
 <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=laravel,php,ts,js,react,tailwind,mysql,mongodb&theme=dark" alt="My Skills" />
