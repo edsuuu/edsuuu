@@ -1,13 +1,13 @@
 "use client";
 
 import { AtSign, Home, Languages, Moon, Sun, Terminal } from "lucide-react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import * as React from "react";
 
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../lang";
+import TransitionLink from "../transition/TransitionLink";
 
 const Sidebar = ({
     className,
@@ -167,7 +167,7 @@ const NavLink = ({
     isMobile?: boolean;
 }) => {
     return (
-        <Link
+        <TransitionLink
             href={href}
             onClick={onClick}
             className={`group relative flex items-center p-3 rounded-md transition-all duration-300 cursor-pointer ${isActive ? "bg-gray-100 dark:bg-gray-800 text-primary" : "hover:bg-gray-100 dark:hover:bg-gray-800"} ${isMobile ? "justify-start gap-4 w-full" : "justify-center"}`}
@@ -189,7 +189,7 @@ const NavLink = ({
                     {label}
                 </div>
             )}
-        </Link>
+        </TransitionLink>
     );
 };
 
