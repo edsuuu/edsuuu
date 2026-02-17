@@ -36,7 +36,7 @@ const Sidebar = ({
     if (!mounted && !isMobile) {
         return (
             <aside
-                className={`border-r border-gray-200 dark:border-gray-800 flex flex-col py-10 bg-white dark:bg-[#11111a] z-20 transition-colors duration-300 ${isMobile ? "relative w-72 items-start h-full" : "fixed h-full w-16 md:w-16 items-center"} ${className}`}
+                className={`border-r border-gray-200 dark:border-gray-800 flex flex-col py-10 bg-white dark:bg-background z-20 transition-colors duration-300 ${isMobile ? "relative w-72 items-start h-full" : "fixed h-full w-16 md:w-16 items-center"} ${className}`}
             >
                 <nav
                     className={`flex-1 flex flex-col gap-8 w-full mt-20 ${isMobile ? "px-4" : "items-center"}`}
@@ -51,7 +51,7 @@ const Sidebar = ({
 
     return (
         <aside
-            className={`border-r border-gray-200 dark:border-gray-800 flex flex-col py-10 bg-white dark:bg-[#11111a] z-20 transition-colors duration-300 ${isMobile ? "relative w-72 items-start h-full" : "fixed h-full w-16 md:w-16 items-center"} ${className}`}
+            className={`border-r border-gray-200 dark:border-gray-800 flex flex-col py-10 bg-white dark:bg-background z-20 transition-colors duration-300 ${isMobile ? "relative w-72 items-start h-full" : "fixed h-full w-16 md:w-16 items-center"} ${className}`}
         >
             <nav
                 className={`flex-1 flex flex-col gap-4 w-full mt-20 ${isMobile ? "px-4" : "items-center"}`}
