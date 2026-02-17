@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { useLanguage } from "./contexts/LanguageContext";
 import { translations } from "./lang";
-import { useLanguage } from "./context/LanguageContext";
 
 export default function NotFound() {
     const { lang } = useLanguage();
@@ -34,15 +33,6 @@ export default function NotFound() {
                     </span>
                 </div>
             </div>
-
-            <div className="fixed bottom-12 right-12 hidden lg:block opacity-10 text-[8px] leading-none text-primary font-mono select-none pointer-events-none whitespace-pre">
-                {`    ____
-   /    \\
-  |  X X |
-   \\ --- /
-    \`---'   `}
-            </div>
-
             <footer className="fixed bottom-0 left-0 w-full h-8 bg-white/80 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-900 z-20 flex items-center justify-between px-4 md:pl-24 text-[10px] uppercase tracking-widest text-gray-500 font-mono">
                 <div className="flex items-center gap-4">
                     <span className="flex items-center gap-1">

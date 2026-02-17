@@ -1,14 +1,16 @@
 "use client";
 
-import { Send, Code, Briefcase, Mail, CheckCircle, Clock } from "lucide-react";
+import { Briefcase, CheckCircle, Code, Mail, Send } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+
+import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../lang";
-import { useLanguage } from "../context/LanguageContext";
 
 export default function Contact() {
     const { lang } = useLanguage();
     const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+    const [traceId, setTraceId] = useState<string>("");
 
     const contactTranslations = translations[lang].contact;
 
@@ -16,6 +18,8 @@ export default function Contact() {
         e.preventDefault();
         setStatus("sending");
         setTimeout(() => {
+            const id = Math.random().toString(36).substring(7).toUpperCase();
+            setTraceId(id);
             setStatus("sent");
         }, 1500);
     };
@@ -34,7 +38,7 @@ export default function Contact() {
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-                        <div className="bg-gray-100 dark:bg-[#0c0c0c] border border-gray-300 dark:border-gray-800 rounded-lg overflow-hidden shadow-2xl relative h-full min-h-[500px] flex flex-col">
+                        <div className="bg-gray-100 dark:bg-[#0c0c0c] border border-gray-300 dark:border-gray-800 rounded-lg overflow-hidden shadow-2xl relative h-full min-h-125 flex flex-col">
                             <div className="bg-gray-200 dark:bg-[#1a1a1a] px-6 py-3 border-b border-gray-300 dark:border-gray-800 flex items-center justify-between">
                                 <div className="flex gap-2">
                                     <div className="w-3.5 h-3.5 rounded-full bg-red-500/80"></div>
@@ -65,11 +69,7 @@ export default function Contact() {
                                                 }
                                             </p>
                                             <p className="text-gray-500 text-xs text-center border-t border-gray-200 dark:border-gray-800 pt-2 w-full">
-                                                Trace ID:{" "}
-                                                {Math.random()
-                                                    .toString(36)
-                                                    .substring(7)
-                                                    .toUpperCase()}
+                                                Trace ID: {traceId}
                                             </p>
                                         </div>
                                         <button
@@ -197,7 +197,7 @@ export default function Contact() {
                                         </div>
                                     </Link>
                                     <Link
-                                        href="https://linkedin.com/in/edson"
+                                        href="https://www.linkedin.com/in/edsonlima343/"
                                         target="_blank"
                                         className="group block"
                                     >
@@ -209,7 +209,8 @@ export default function Contact() {
                                         <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300 group-hover:text-primary transition-colors font-mono text-lg md:text-xl">
                                             <Briefcase size={24} />
                                             <span className="border-b border-dashed border-gray-400 dark:border-gray-700 group-hover:border-primary pb-0.5">
-                                                endpoint: linkedin.com/in/edson
+                                                endpoint:
+                                                linkedin.com/in/edsonlima343
                                             </span>
                                             <span className="opacity-0 group-hover:opacity-100 transition-opacity text-xs text-green-600 dark:text-green-500 font-bold">
                                                 {"<CONNECT>"}
