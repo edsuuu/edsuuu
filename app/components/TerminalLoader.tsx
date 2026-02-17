@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import ParticlesBackground from "./ParticlesBackground";
+
 interface TerminalLoaderProps {
     onComplete: () => void;
 }
@@ -22,7 +24,6 @@ const logMessages = [
 const TerminalLoader = ({ onComplete }: TerminalLoaderProps) => {
     const [progress, setProgress] = useState(0);
     const [isExiting, setIsExiting] = useState(false);
-    const canvasRef = useRef<HTMLCanvasElement>(null);
     const scrollRef = useRef<HTMLDivElement>(null);
 
     const visibleLogs = useMemo(() => {
@@ -32,62 +33,7 @@ const TerminalLoader = ({ onComplete }: TerminalLoaderProps) => {
     }, [progress]);
 
     useEffect(() => {
-        const canvas = canvasRef.current;
-        if (!canvas) return;
-
-        const ctx = canvas.getContext("2d");
-        if (!ctx) return;
-
-        const resizeCanvas = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight * 1.25;
-        };
-
-        resizeCanvas();
-        window.addEventListener("resize", resizeCanvas);
-
-        const letters =
-            "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$<>{}[]*/+=-_!?;:@#&%";
-        const fontSize = 14;
-        const columns = Math.ceil(canvas.width / fontSize);
-
-        const drops = new Array(columns)
-            .fill(0)
-            .map(() => Math.floor(Math.random() * -50));
-
-        const draw = () => {
-            ctx.fillStyle = "rgba(10, 10, 15, 0.05)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.fillStyle = "#00a4ef";
-            ctx.font = `${fontSize}px monospace`;
-
-            for (let i = 0; i < drops.length; i++) {
-                const text = letters.charAt(
-                    Math.floor(Math.random() * letters.length),
-                );
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-                if (
-                    drops[i] * fontSize > canvas.height &&
-                    Math.random() > 0.975
-                ) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        };
-
-        const intervalId = setInterval(draw, 50);
-
-        return () => {
-            clearInterval(intervalId);
-            window.removeEventListener("resize", resizeCanvas);
-        };
-    }, []);
-
-    useEffect(() => {
-        const duration = 2500;
+        const duration = 3500;
         const intervalTime = 20;
         const steps = duration / intervalTime;
         const increment = 100 / steps;
@@ -128,19 +74,16 @@ const TerminalLoader = ({ onComplete }: TerminalLoaderProps) => {
 
     return (
         <div
-            className={`fixed inset-x-0 top-0 h-[115vh] z-50 flex items-start justify-center text-slate-800 dark:text-slate-200 font-mono cursor-wait transition-transform duration-700 ease-in-out bg-background dark:bg-[#0a0a0f] overflow-hidden`}
+            className={`fixed inset-x-0 top-0 h-[115vh] z-50 flex items-start justify-center text-slate-800 dark:text-slate-200 font-mono cursor-wait transition-transform duration-700 ease-in-out bg-background dark:bg-background overflow-hidden`}
             style={{
                 transform: isExiting ? "translateY(-100%)" : "translateY(0)",
                 borderRadius: "0 0 50% 50% / 0 0 15vh 15vh",
             }}
         >
-            <canvas
-                ref={canvasRef}
-                className="absolute inset-0 z-0 opacity-20 w-full h-full"
-            />
+            <ParticlesBackground id="loader-particles" speed={1} />
 
             <div className="relative z-10 w-full max-w-4xl px-2 md:px-6 animate-fade-in mt-[20vh] md:mt-[25vh]">
-                <div className="bg-white dark:bg-[#11111a] border border-gray-200 dark:border-slate-800 rounded-lg overflow-hidden shadow-xl dark:shadow-[0_0_20px_rgba(0,164,239,0.15)]">
+                <div className="bg-white dark:bg-background border border-gray-200 dark:border-slate-800 rounded-lg overflow-hidden shadow-xl dark:shadow-[0_0_20px_rgba(0,164,239,0.15)]">
                     <div className="bg-gray-100 dark:bg-slate-800/50 px-4 py-2 flex items-center gap-2 border-b border-gray-200 dark:border-slate-700">
                         <div className="flex gap-1.5">
                             <div className="w-3 h-3 rounded-full bg-red-500/50"></div>

@@ -4,7 +4,7 @@
 :root {
     --background: #f5f5f5;
     --foreground: #1e293b;
-    --background-dark: #11111a;
+    --background-dark: #0a0a0f;
     --surface-dark: #0a0a0a;
     --primary: #00a4ef;
     --grid-line: rgba(50, 50, 50, 0.2);
@@ -13,7 +13,7 @@
 }
 
 .dark {
-    --background: #11111a;
+    --background: #0a0a0f;
     --foreground: #ededed;
 }
 
