@@ -6,11 +6,10 @@ import { CgMenu } from 'react-icons/cg';
 import { IoMdClose } from 'react-icons/io';
 
 const rotas: RotasNavigationProps[] = [
-    // { name: 'Home', to: '/' },
-    // { name: 'Sobre', to: '/sobre' },
-    // { name: 'Projetos', to: '/projetos' },
-    // { name: 'Contato', to: '/contato' },
-    // { name: 'Freelancer', to: '/freelancer' },
+    { name: 'Home', to: '/' },
+    { name: 'Sobre', to: '/sobre' },
+    { name: 'Projetos', to: '/projetos' },
+    { name: 'Contato', to: '/contato' },
 ];
 
 const Navigation: React.FC = () => {
