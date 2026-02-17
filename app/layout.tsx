@@ -7,6 +7,7 @@ import * as React from "react";
 
 import Footer from "./components/Footer";
 import MobileNavbar from "./components/MobileNavbar";
+import ParticlesBackground from "./components/ParticlesBackground";
 import Sidebar from "./components/Sidebar";
 import GlobalLoader from "./components/TerminalLoader";
 import { LanguageProvider } from "./contexts/LanguageContext";
@@ -36,7 +37,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${jetbrainsMono.variable} antialiased bg-background-light dark:bg-[#11111a] font-sans text-gray-800 dark:text-gray-200 min-h-screen transition-colors duration-300 overflow-hidden relative`}
+                className={`${jetbrainsMono.variable} antialiased font-sans text-gray-800 dark:text-gray-200 min-h-screen transition-colors duration-300 overflow-hidden relative`}
             >
                 <ThemeProvider
                     attribute="class"
@@ -45,6 +46,7 @@ export default function RootLayout({
                 >
                     <LanguageProvider>
                         <GlobalLoader />
+                        <ParticlesBackground />
 
                         <div className="absolute inset-0 digital-grid pointer-events-none z-0 opacity-20 dark:opacity-30"></div>
 
