@@ -4,15 +4,15 @@
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00A4EF&width=455&lines=Hey%2C+I+am+Edson+a+FullStack+Developer" alt="Typing SVG" /></a>
 <br>
-<a href="https://edsuuu.vercel.app/">
+<a href="https://edsuuu.vercel.app/" target="_blank">
 <img src="https://img.shields.io/badge/Portfolio-black?style=flat&logo=vercel&logoColor=white" alt="Portfolio">
 </a>
-<br>
+<br><br>
 
 <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=laravel,php,ts,js,react,tailwind,mysql,mongodb&theme=dark" alt="My Skills" />
 </a>
-<br>
+<br><br>
 <p>
     <img alt="Bash" src="https://img.shields.io/badge/Bash-121011.svg?logo=gnu-bash&logoColor=white">
     <img alt="Git" src="https://img.shields.io/badge/-Git-black?logo=git">
