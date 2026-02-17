@@ -1,19 +1,18 @@
 "use client";
 
-import { useMemo } from "react";
 import {
-    Folder,
-    FileCode,
-    Layers,
     Code,
     Database,
     File,
+    FileCode,
+    Layers,
     Terminal as TerminalIcon,
 } from "lucide-react";
 import Link from "next/link";
+import { useMemo } from "react";
 
+import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../lang";
-import { useLanguage } from "../context/LanguageContext";
 
 export default function Projects() {
     const { lang } = useLanguage();
@@ -79,12 +78,12 @@ export default function Projects() {
                 color: "text-gray-400 hover:text-primary",
             },
         ],
-        [lang],
+        [projectsTranslations],
     );
 
     return (
         <div className="flex-1 p-4 md:p-10 flex flex-col overflow-y-auto h-full text-gray-800 dark:text-gray-200">
-            <div className="w-full max-w-[1600px] mx-auto border border-gray-300 dark:border-gray-800 rounded-lg shadow-2xl bg-white dark:bg-terminal-bg flex flex-col overflow-hidden text-base md:text-lg h-full max-h-[90vh]">
+            <div className="w-full max-w-400 mx-auto border border-gray-300 dark:border-gray-800 rounded-lg shadow-2xl bg-white dark:bg-terminal-bg flex flex-col overflow-hidden text-base md:text-lg h-full max-h-[90vh]">
                 <div className="bg-gray-100 dark:bg-terminal-header border-b border-gray-300 dark:border-gray-800 px-6 py-3 flex items-center justify-between shrink-0">
                     <div className="flex items-center gap-2.5">
                         <div className="w-3.5 h-3.5 rounded-full bg-red-500"></div>

@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { AtSign, Home, Languages, Moon, Sun, Terminal } from "lucide-react";
 import Link from "next/link";
-import { Home, Terminal, AtSign, Moon, Sun, Languages } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-import { useLanguage } from "../context/LanguageContext";
+import * as React from "react";
+
+import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../lang";
 
 const Sidebar = ({
@@ -17,16 +18,16 @@ const Sidebar = ({
     onClose?: () => void;
     isMobile?: boolean;
 }) => {
-    const { theme, setTheme, resolvedTheme } = useTheme();
+    const { setTheme, resolvedTheme } = useTheme();
     const { lang, toggleLanguage } = useLanguage();
-    const [mounted, setMounted] = useState(false);
+    const mounted = React.useSyncExternalStore(
+        () => () => {},
+        () => true,
+        () => false,
+    );
     const pathname = usePathname();
 
     const sidebarTranslations = translations[lang].sidebar;
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     const toggleDarkMode = () => {
         setTheme(resolvedTheme === "dark" ? "light" : "dark");
