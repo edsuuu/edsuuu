@@ -4,7 +4,7 @@
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00A4EF&width=455&lines=Hey%2C+I+am+Edson+a+FullStack+Developer" alt="Typing SVG" /></a>
 <br>
-<a href="https://edsuuu.vercel.app/" target="_blank">
+<a href="https://edsuuu.vercel.app/">
 <img src="https://img.shields.io/badge/Portfolio-black?style=flat&logo=vercel&logoColor=white" alt="Portfolio">
 </a>
 <br><br>
