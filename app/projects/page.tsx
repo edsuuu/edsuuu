@@ -1,19 +1,18 @@
 "use client";
 
-import { useMemo } from "react";
 import {
-    Folder,
-    FileCode,
-    Layers,
     Code,
     Database,
     File,
+    FileCode,
+    Layers,
     Terminal as TerminalIcon,
 } from "lucide-react";
 import Link from "next/link";
+import { useMemo } from "react";
 
+import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../lang";
-import { useLanguage } from "../context/LanguageContext";
 
 export default function Projects() {
     const { lang } = useLanguage();
@@ -79,7 +78,7 @@ export default function Projects() {
                 color: "text-gray-400 hover:text-primary",
             },
         ],
-        [lang],
+        [projectsTranslations],
     );
 
     return (

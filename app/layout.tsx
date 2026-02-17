@@ -1,13 +1,15 @@
-import * as React from "react";
+import "./globals.css";
+
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
-import "./globals.css";
-import Sidebar from "./components/Sidebar";
-import MobileNavbar from "./components/MobileNavbar";
-import GlobalLoader from "./components/TerminalLoader";
-import Footer from "./components/Footer";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { LanguageProvider } from "./context/LanguageContext";
+import * as React from "react";
+
+import Footer from "./components/Footer";
+import MobileNavbar from "./components/MobileNavbar";
+import Sidebar from "./components/Sidebar";
+import GlobalLoader from "./components/TerminalLoader";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 const jetbrainsMono = JetBrains_Mono({
     variable: "--font-jetbrains-mono",
@@ -44,7 +46,6 @@ export default function RootLayout({
                     <LanguageProvider>
                         <GlobalLoader />
 
-                        {/* Background Grid */}
                         <div className="absolute inset-0 digital-grid pointer-events-none z-0 opacity-20 dark:opacity-30"></div>
 
                         <MobileNavbar />

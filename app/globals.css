@@ -36,6 +36,7 @@
     --animate-blink: blink 1s step-end infinite;
     --animate-fade-in: fadeIn 0.5s ease-in-out;
     --animate-pulse: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    --animate-pulse-once: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) 1;
 
     @keyframes blink {
 
@@ -101,7 +102,6 @@ body {
             linear-gradient(to bottom, rgba(50, 50, 50, 0.2) 1px, transparent 1px);
         background-size: 40px 40px;
         transition: opacity 0.3s ease;
-        /* Ensure opacity transitions */
     }
 
     .cursor-blink::after {
