@@ -11,6 +11,8 @@ import ParticlesBackground from "./components/ParticlesBackground";
 import Sidebar from "./components/Sidebar";
 import GlobalLoader from "./components/TerminalLoader";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import TransitionComponent from "./transition/TransitionComponent";
+import { TransitionProvider } from "./transition/TransitionContext";
 
 const jetbrainsMono = JetBrains_Mono({
     variable: "--font-jetbrains-mono",
@@ -45,20 +47,24 @@ export default function RootLayout({
                     enableSystem
                 >
                     <LanguageProvider>
-                        <GlobalLoader />
-                        <ParticlesBackground />
+                        <TransitionProvider>
+                            <GlobalLoader />
+                            <ParticlesBackground />
 
-                        <div className="absolute inset-0 digital-grid pointer-events-none z-0 opacity-20 dark:opacity-30"></div>
+                            <div className="absolute inset-0 digital-grid pointer-events-none z-0 opacity-20 dark:opacity-30"></div>
 
-                        <MobileNavbar />
+                            <MobileNavbar />
 
-                        <div className="flex h-screen relative z-10 pt-16 md:pt-0">
-                            <Sidebar className="hidden md:flex" />
-                            <main className="flex-1 flex flex-col relative overflow-hidden">
-                                {children}
-                            </main>
-                            <Footer />
-                        </div>
+                            <div className="flex h-screen relative z-10 pt-16 md:pt-0">
+                                <Sidebar className="hidden md:flex" />
+                                <main className="flex-1 flex flex-col relative overflow-hidden">
+                                    <TransitionComponent>
+                                        {children}
+                                    </TransitionComponent>
+                                </main>
+                                <Footer />
+                            </div>
+                        </TransitionProvider>
                     </LanguageProvider>
                 </ThemeProvider>
             </body>
