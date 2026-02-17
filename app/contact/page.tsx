@@ -24,7 +24,7 @@ export default function Contact() {
         <div className="flex-1 w-full h-full overflow-hidden flex flex-col relative text-gray-800 dark:text-gray-200">
             <div className="scanline"></div>
             <main className="flex-1 flex flex-col justify-center items-center pl-16 md:pl-24 pr-4 md:pr-8 w-full h-full overflow-y-auto">
-                <div className="max-w-[1400px] w-full py-10 mx-auto">
+                <div className="max-w-350 w-full py-10 mx-auto">
                     <div className="mb-10 text-lg md:text-xl font-bold opacity-80 font-mono">
                         <span className="text-green-500">guest@internet</span>:
                         <span className="text-blue-500">~/contact-portal</span>$

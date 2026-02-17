@@ -28,6 +28,8 @@
     --color-terminal-header: var(--terminal-header);
     --color-error-red: #ff4444;
 
+    --spacing-400: 100rem;
+
     --font-display: var(--font-jetbrains-mono), monospace;
     --font-sans: var(--font-jetbrains-mono), monospace;
 

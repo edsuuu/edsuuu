@@ -42,7 +42,7 @@ export default function RootLayout({
                     enableSystem
                 >
                     <LanguageProvider>
-                        {/* <GlobalLoader /> */}
+                        <GlobalLoader />
 
                         {/* Background Grid */}
                         <div className="absolute inset-0 digital-grid pointer-events-none z-0 opacity-20 dark:opacity-30"></div>
