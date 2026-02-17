@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext } from "react";
 
 type Language = "pt-br" | "en";
 
@@ -14,23 +14,31 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
     undefined,
 );
 
+const getSnapshot = () => {
+    if (typeof window === "undefined") return "en";
+    const saved = localStorage.getItem("preferred-language");
+    return (saved === "pt-br" || saved === "en" ? saved : "en") as Language;
+};
+
+const getServerSnapshot = () => "en" as Language;
+
+const subscribe = (callback: () => void) => {
+    window.addEventListener("storage", callback);
+    return () => window.removeEventListener("storage", callback);
+};
+
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
     children,
 }) => {
-    const [lang, setLangState] = useState<Language>("pt-br");
-
-    useEffect(() => {
-        const savedLang = localStorage.getItem(
-            "preferred-language",
-        ) as Language;
-        if (savedLang && (savedLang === "pt-br" || savedLang === "en")) {
-            setLangState(savedLang);
-        }
-    }, []);
+    const lang = React.useSyncExternalStore(
+        subscribe,
+        getSnapshot,
+        getServerSnapshot,
+    );
 
     const setLang = (newLang: Language) => {
-        setLangState(newLang);
         localStorage.setItem("preferred-language", newLang);
+        window.dispatchEvent(new Event("storage"));
     };
 
     const toggleLanguage = () => {
