@@ -1,0 +1,157 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+    --background: #f5f5f5;
+    --foreground: #1e293b;
+    --background-dark: #11111a;
+    --surface-dark: #0a0a0a;
+    --primary: #00a4ef;
+    --grid-line: rgba(50, 50, 50, 0.2);
+    --terminal-bg: #0c0c0c;
+    --terminal-header: #1a1a1a;
+}
+
+.dark {
+    --background: #11111a;
+    --foreground: #ededed;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-primary: var(--primary);
+    --color-background-dark: var(--background-dark);
+    --color-surface-dark: var(--surface-dark);
+    --color-grid-line: var(--grid-line);
+    --color-terminal-bg: var(--terminal-bg);
+    --color-terminal-header: var(--terminal-header);
+    --color-error-red: #ff4444;
+
+    --font-display: var(--font-jetbrains-mono), monospace;
+    --font-sans: var(--font-jetbrains-mono), monospace;
+
+    --animate-blink: blink 1s step-end infinite;
+    --animate-fade-in: fadeIn 0.5s ease-in-out;
+    --animate-pulse: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-jetbrains-mono), monospace;
+}
+
+body {
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-sidebar-container {
+    transform: translateX(-100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.mobile-sidebar-container.open {
+    transform: translateX(0);
+}
+
+
+@layer utilities {
+    .digital-grid {
+        background-image:
+            linear-gradient(to right, rgba(50, 50, 50, 0.2) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(50, 50, 50, 0.2) 1px, transparent 1px);
+        background-size: 40px 40px;
+        transition: opacity 0.3s ease;
+        /* Ensure opacity transitions */
+    }
+
+    .cursor-blink::after {
+        content: '_';
+        display: inline-block;
+        animation: blink 1s step-end infinite;
+        color: var(--primary);
+        margin-left: 2px;
+    }
+
+    .terminal-glow {
+        box-shadow: 0 0 20px rgba(0, 164, 239, 0.15);
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--surface-dark);
+        border-radius: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--primary);
+        border-radius: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #008ecc;
+    }
+
+    .scanline {
+        width: 100%;
+        height: 100px;
+        z-index: 10;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 164, 239, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+        opacity: 0.1;
+        position: absolute;
+        bottom: 100%;
+        animation: scanline 10s linear infinite;
+        pointer-events: none;
+    }
+}
+
+@keyframes scanline {
+    0% {
+        bottom: 100%;
+    }
+
+    100% {
+        bottom: -100px;
+    }
+}
