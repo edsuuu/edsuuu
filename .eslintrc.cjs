@@ -7,7 +7,7 @@ module.exports = {
         'plugin:react-hooks/recommended',
         'plugin:prettier/recommended',
         'plugin:react/recommended',
-        'prettier', // Adiciona a configuração do Prettier
+        'prettier',
     ],
     ignorePatterns: ['dist', '.eslintrc.cjs'],
     globals: {
