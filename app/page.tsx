@@ -100,7 +100,7 @@ export default function Home() {
     return (
         <div className="flex-1 flex flex-col justify-center items-center md:items-start pl-12 md:pl-40 pr-8 h-full overflow-y-auto py-10">
             <div className="max-w-4xl w-full">
-                <div className="mb-2 text-base md:text-lg text-gray-500 font-bold opacity-60 font-mono">
+                <div className="mb-2 text-base md:text-lg text-gray-800 dark:text-gray-300 font-bold opacity-60 font-mono">
                     <span className="text-green-500">root@edson-dev</span>:
                     <span className="text-blue-500">~</span>$
                     ./init_portfolio.sh
@@ -110,14 +110,14 @@ export default function Home() {
                     <span className="text-primary">.</span>
                 </h1>
                 <h2 className="text-xl md:text-2xl text-primary font-medium tracking-wide flex items-center gap-3 flex-wrap">
-                    <span className="opacity-70 text-gray-600 dark:text-gray-400">
+                    <span className="opacity-70 text-gray-800 dark:text-gray-400">
                         Edson {"// "}
                     </span>
                     <span>{homeTranslations.developer}</span>
                 </h2>
 
                 <div className="mt-10 md:mt-12 flex flex-col gap-8">
-                    <div className="flex items-center text-lg md:text-xl text-gray-400 font-mono">
+                    <div className="flex items-center text-lg md:text-xl text-gray-800 dark:text-gray-400 font-mono">
                         <span className="mr-3 text-green-500">➜</span>
                         <span className="cursor-blink">
                             {homeTranslations.waiting}
