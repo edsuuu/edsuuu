@@ -1,11 +1,3 @@
 {
-    "window.zoomLevel": 0.2,
-    "editor.tabSize": 4,
-    "code-runner.executorMap": {
-        "typescript": "npx ts-node --files --transpile-only"
-    },
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit",
-        "source.fixAll": "explicit"
-    }
+    "remote.autoForwardPortsFallback": 0
 }
