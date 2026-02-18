@@ -80,6 +80,26 @@ export default function Home() {
             assignmentColor: "text-gray-600 dark:text-gray-400",
             variableColor: "text-gray-600 dark:text-gray-100",
         },
+        {
+            name: "python",
+            keyword: "",
+            variable: translations.languages,
+            assignment: " = [",
+            suffix: "]",
+            color: "text-blue-500",
+            assignmentColor: "text-gray-600 dark:text-gray-400",
+            variableColor: "text-blue-500 dark:text-yellow-400",
+        },
+        {
+            name: "sql",
+            keyword: "SELECT * FROM ",
+            variable: translations.languages,
+            assignment: " WHERE name IN (",
+            suffix: ");",
+            color: "text-rose-500",
+            assignmentColor: "text-gray-600 dark:text-gray-400",
+            variableColor: "text-purple-600 dark:text-purple-400",
+        },
     ];
 
     useEffect(() => {
@@ -134,22 +154,22 @@ export default function Home() {
             items: loading
                 ? [{ name: "Loading...", icon: <Code size={14} /> }]
                 : displayedLanguages.map((l) => {
-                    const icon = getLanguageIcon(l.name);
-                    return {
-                        name: l.name,
-                        icon: icon ? (
-                            <Image
-                                src={icon}
-                                alt={l.name}
-                                width={14}
-                                height={14}
-                                className="w-3.5 h-3.5 object-contain"
-                            />
-                        ) : (
-                            <Code size={14} />
-                        ),
-                    };
-                }),
+                      const icon = getLanguageIcon(l.name);
+                      return {
+                          name: l.name,
+                          icon: icon ? (
+                              <Image
+                                  src={icon}
+                                  alt={l.name}
+                                  width={14}
+                                  height={14}
+                                  className="w-3.5 h-3.5 object-contain"
+                              />
+                          ) : (
+                              <Code size={14} />
+                          ),
+                      };
+                  }),
             isDynamic: true,
             hasMore: wakatimeLanguages.length > 5,
         },
@@ -163,27 +183,27 @@ export default function Home() {
             items: loading
                 ? [{ name: "Loading...", icon: <Monitor size={14} /> }]
                 : wakatimeSystems
-                    .filter((os) => !os.name.toLowerCase().includes("wsl"))
-                    .map((os) => {
-                        const icon = getOSIcon(os.name);
-                        const shouldInvert = ["Mac", "macOS", "iOS"].some(
-                            (k) => os.name.includes(k),
-                        );
-                        return {
-                            name: os.name,
-                            icon: icon ? (
-                                <Image
-                                    src={icon}
-                                    alt={os.name}
-                                    width={14}
-                                    height={14}
-                                    className={`w-3.5 h-3.5 object-contain ${shouldInvert ? "dark:invert" : ""}`}
-                                />
-                            ) : (
-                                <Cpu size={14} />
-                            ),
-                        };
-                    }),
+                      .filter((os) => !os.name.toLowerCase().includes("wsl"))
+                      .map((os) => {
+                          const icon = getOSIcon(os.name);
+                          const shouldInvert = ["Mac", "macOS", "iOS"].some(
+                              (k) => os.name.includes(k),
+                          );
+                          return {
+                              name: os.name,
+                              icon: icon ? (
+                                  <Image
+                                      src={icon}
+                                      alt={os.name}
+                                      width={14}
+                                      height={14}
+                                      className={`w-3.5 h-3.5 object-contain ${shouldInvert ? "dark:invert" : ""}`}
+                                  />
+                              ) : (
+                                  <Cpu size={14} />
+                              ),
+                          };
+                      }),
             isDynamic: true,
         },
     ];
