@@ -6,6 +6,7 @@ export const en = {
         languages: "languages",
         devops: "devops",
         systems: "systems",
+        view_more: "View More",
     },
     contact: {
         connection_established: "Connection established.",
@@ -45,6 +46,7 @@ export const en = {
         switch_to_pt: "Switch to PT-BR",
         theme_label: "Theme",
         lang_label: "Language",
+        stats: "./stats",
     },
     notFound: {
         title: "404 - Not Found",
