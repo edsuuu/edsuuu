@@ -7,63 +7,78 @@ import {
     GitBranch,
     Monitor,
     Server,
-    Terminal,
 } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import { useLanguage } from "./contexts/LanguageContext";
-import { translations } from "./lang";
-
-interface WakatimeLanguage {
-    name: string;
-    total_seconds: number;
-    percent: number;
-    text: string;
-}
-
 import { useWakatime } from "./contexts/WakatimeContext";
+import { translations as translationData } from "./lang";
 import TransitionLink from "./transition/TransitionLink";
+import { WakatimeStats } from "./types/wakatime";
+import { getLanguageIcon, getOSIcon } from "./utils/iconHelpers";
 
 export default function Home() {
     const { lang } = useLanguage();
     const { data, loading } = useWakatime();
     const [syntaxIndex, setSyntaxIndex] = useState(0);
 
-    const wakatimeLanguages: WakatimeLanguage[] =
-        (data?.stats as { languages: WakatimeLanguage[] })?.languages || [];
+    const stats = (data?.stats as unknown as WakatimeStats) || null;
+    const wakatimeLanguages = stats?.languages || [];
+    const wakatimeSystems = stats?.operating_systems || [];
 
-    const homeTranslations = translations[lang].home;
+    const translations = translationData[lang].home;
 
     const syntaxes = [
         {
             name: "php",
-            prefix: `$${homeTranslations.languages} = [`,
+            keyword: "",
+            variable: "$" + translations.languages,
+            assignment: " = [",
             suffix: "];",
             color: "text-indigo-400",
+            assignmentColor: "text-gray-600 dark:text-gray-400",
+            variableColor: "text-indigo-400",
         },
         {
             name: "javascript",
-            prefix: `const ${homeTranslations.languages} = [`,
+            keyword: "const ",
+            variable: translations.languages,
+            assignment: " = [",
             suffix: "];",
-            color: "text-yellow-400",
+            color: "text-purple-400",
+            assignmentColor: "text-blue-500",
+            variableColor: "text-yellow-600 dark:text-yellow-300",
         },
         {
             name: "typescript",
-            prefix: `const ${homeTranslations.languages}: string[] = [`,
+            keyword: "const ",
+            variable: translations.languages,
+            assignment: ": string[] = [",
             suffix: "];",
             color: "text-blue-400",
+            assignmentColor: "text-blue-500",
+            variableColor: "text-yellow-600 dark:text-yellow-300",
         },
         {
             name: "go",
-            prefix: `${homeTranslations.languages} := []string{`,
+            keyword: "",
+            variable: translations.languages,
+            assignment: " := []string{",
             suffix: "}",
             color: "text-cyan-400",
+            assignmentColor: "text-gray-600 dark:text-gray-400",
+            variableColor: "text-gray-600 dark:text-gray-100",
         },
         {
             name: "java",
-            prefix: `String[] ${homeTranslations.languages} = {`,
+            keyword: "String[] ",
+            variable: translations.languages,
+            assignment: " = {",
             suffix: "};",
             color: "text-orange-400",
+            assignmentColor: "text-gray-600 dark:text-gray-400",
+            variableColor: "text-gray-600 dark:text-gray-100",
         },
     ];
 
@@ -89,46 +104,87 @@ export default function Home() {
         targetLanguages.some((t) => t.toLowerCase() === l.name.toLowerCase()),
     );
 
+    const devOpsTools = [
+        { name: "Apache", icon: <Server size={14} /> },
+        { name: "AWS", icon: <Cpu size={14} /> },
+        { name: "Docker", icon: <Cpu size={14} /> },
+        { name: "GCP", icon: <Cpu size={14} /> },
+        { name: "Git", icon: <GitBranch size={14} /> },
+        { name: "Nginx", icon: <Server size={14} /> },
+    ];
+
     const techStacks: {
         label: string;
         items: { name: string; icon: React.ReactNode }[];
         isDynamic?: boolean;
         hasMore?: boolean;
-        prefix?: string;
-        suffix?: string;
-        color?: string;
+        syntax?: {
+            name?: string;
+            keyword: string;
+            variable: string;
+            assignment: string;
+            suffix: string;
+            color: string;
+            assignmentColor?: string;
+            variableColor?: string;
+        };
     }[] = [
         {
-            label: homeTranslations.languages,
+            label: translations.languages,
             items: loading
                 ? [{ name: "Loading...", icon: <Code size={14} /> }]
-                : displayedLanguages.map((l) => ({ name: l.name, icon: <Code size={14} /> })),
+                : displayedLanguages.map((l) => {
+                    const icon = getLanguageIcon(l.name);
+                    return {
+                        name: l.name,
+                        icon: icon ? (
+                            <Image
+                                src={icon}
+                                alt={l.name}
+                                width={14}
+                                height={14}
+                                className="w-3.5 h-3.5 object-contain"
+                            />
+                        ) : (
+                            <Code size={14} />
+                        ),
+                    };
+                }),
             isDynamic: true,
             hasMore: wakatimeLanguages.length > 5,
         },
         {
-            label: homeTranslations.devops,
-            items: [
-                { name: "Nginx", icon: <Server size={14} /> },
-                { name: "Docker", icon: <Cpu size={14} /> },
-                { name: "Git", icon: <GitBranch size={14} /> },
-                { name: "Apache", icon: <Server size={14} /> },
-                { name: "GCP", icon: <Cpu size={14} /> },
-                { name: "AWS", icon: <Cpu size={14} /> },
-            ],
-            prefix: `const ${homeTranslations.devops} = [`,
-            suffix: "];",
-            color: "text-purple-400",
+            label: translations.devops,
+            items: devOpsTools,
+            isDynamic: true,
         },
         {
-            label: homeTranslations.systems,
-            items: [
-                { name: "Linux", icon: <Monitor size={14} /> },
-                { name: "Bash", icon: <Terminal size={14} /> },
-            ],
-            prefix: `${homeTranslations.systems} := []string{`,
-            suffix: "}",
-            color: "text-green-400",
+            label: translations.systems,
+            items: loading
+                ? [{ name: "Loading...", icon: <Monitor size={14} /> }]
+                : wakatimeSystems
+                    .filter((os) => !os.name.toLowerCase().includes("wsl"))
+                    .map((os) => {
+                        const icon = getOSIcon(os.name);
+                        const shouldInvert = ["Mac", "macOS", "iOS"].some(
+                            (k) => os.name.includes(k),
+                        );
+                        return {
+                            name: os.name,
+                            icon: icon ? (
+                                <Image
+                                    src={icon}
+                                    alt={os.name}
+                                    width={14}
+                                    height={14}
+                                    className={`w-3.5 h-3.5 object-contain ${shouldInvert ? "dark:invert" : ""}`}
+                                />
+                            ) : (
+                                <Cpu size={14} />
+                            ),
+                        };
+                    }),
+            isDynamic: true,
         },
     ];
 
@@ -141,39 +197,71 @@ export default function Home() {
                     ./init_portfolio.sh
                 </div>
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mb-4">
-                    {homeTranslations.hello}
+                    {translations.hello}
                     <span className="text-primary">.</span>
                 </h1>
                 <h2 className="text-xl md:text-2xl text-primary font-medium tracking-wide flex items-center gap-3 flex-wrap">
                     <span className="opacity-70 text-gray-800 dark:text-gray-400">
                         Edson {"// "}
                     </span>
-                    <span>{homeTranslations.developer}</span>
+                    <span>{translations.developer}</span>
                 </h2>
 
                 <div className="mt-10 md:mt-12 flex flex-col gap-8">
                     <div className="flex flex-col gap-6 text-xs md:text-sm text-gray-500 dark:text-gray-400 font-mono tracking-wide">
                         {techStacks.map((stack, idx) => {
-                            const prefix = stack.isDynamic
-                                ? currentSyntax.prefix
-                                : stack.prefix;
-                            const suffix = stack.isDynamic
-                                ? currentSyntax.suffix
-                                : stack.suffix;
-                            const colorClass = stack.isDynamic
-                                ? currentSyntax.color
-                                : stack.color || "text-purple-400";
+                            const syntax = stack.isDynamic
+                                ? currentSyntax
+                                : stack.syntax!;
+
+                            // Fallback for types if syntax is undefined (though it shouldn't be based on logic)
+                            const keyword = syntax?.keyword || "";
+
+                            // Handle variable name
+                            let displayVariable = syntax?.variable || "";
+
+                            if (stack.isDynamic) {
+                                displayVariable = stack.label;
+                                // PHP special case for dynamic items
+                                if (syntax.name === "php") {
+                                    displayVariable = `$${displayVariable}`;
+                                }
+                            }
+
+                            const assignment = syntax?.assignment || "";
+                            const suffix = syntax?.suffix || "";
+                            const colorClass =
+                                syntax?.color || "text-purple-400"; // declaration color
+                            const assignmentColor =
+                                syntax?.assignmentColor ||
+                                "text-gray-600 dark:text-gray-400";
+                            const variableColor =
+                                syntax?.variableColor ||
+                                "text-yellow-500 dark:text-yellow-300";
 
                             return (
                                 <div
                                     key={idx}
                                     className="transition-all duration-500"
                                 >
-                                    <span
-                                        className={`${colorClass} transition-colors duration-500 font-bold`}
-                                    >
-                                        {prefix}
-                                    </span>
+                                    <div className="transition-all duration-500">
+                                        <span
+                                            className={`${colorClass} font-bold transition-colors duration-500`}
+                                        >
+                                            {keyword}
+                                        </span>
+                                        <span
+                                            className={`${variableColor} font-bold transition-colors duration-500`}
+                                        >
+                                            {displayVariable}
+                                        </span>
+                                        <span
+                                            className={`${assignmentColor} transition-colors duration-500`}
+                                        >
+                                            {assignment}
+                                        </span>
+                                    </div>
+
                                     <div className="flex flex-wrap gap-3 mt-2 pl-4 md:pl-6 mb-2">
                                         {stack.items.map((item, i) => (
                                             <span
@@ -196,10 +284,13 @@ export default function Home() {
                                             href="/stats"
                                             className="ml-6 mb-2 flex items-center gap-1 text-xs text-primary hover:text-primary/80 transition-colors"
                                         >
-                                            <ChevronDown size={12} /> View More
+                                            <ChevronDown size={12} />{" "}
+                                            {translations.view_more}
                                         </TransitionLink>
                                     )}
-                                    <span className="text-gray-400 transition-all duration-500 opacity-60">
+                                    <span
+                                        className={`${assignmentColor} transition-all duration-500`}
+                                    >
                                         {suffix}
                                     </span>
                                 </div>
@@ -210,7 +301,7 @@ export default function Home() {
                     <div className="flex items-center text-lg md:text-xl text-gray-800 dark:text-gray-400 font-mono">
                         <span className="mr-3 text-green-500">➜</span>
                         <span className="cursor-blink">
-                            {homeTranslations.waiting}
+                            {translations.waiting}
                         </span>
                     </div>
                 </div>
