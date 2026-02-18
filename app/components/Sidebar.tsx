@@ -1,6 +1,14 @@
 "use client";
 
-import { AtSign, Home, Languages, Moon, Sun, Terminal } from "lucide-react";
+import {
+    AtSign,
+    BarChart,
+    Home,
+    Languages,
+    Moon,
+    Sun,
+    Terminal,
+} from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import * as React from "react";
@@ -77,6 +85,14 @@ const Sidebar = ({
                     icon={<AtSign size={24} />}
                     label={sidebarTranslations.contact}
                     isActive={pathname === "/contact"}
+                    onClick={onClose}
+                    isMobile={isMobile}
+                />
+                <NavLink
+                    href="/stats"
+                    icon={<BarChart size={24} />}
+                    label="Stats"
+                    isActive={pathname === "/stats"}
                     onClick={onClose}
                     isMobile={isMobile}
                 />

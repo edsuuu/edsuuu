@@ -10,7 +10,7 @@ export async function GET() {
                 webhook_receiver: 'POST /api/github',
             }
         });
-    } catch (error) {
+    } catch (_error) {
         return NextResponse.json({ error: 'Failed to process request' }, { status: 500 });
     }
 }
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
             message: 'Webhook received successfully',
             payload_received: body
         });
-    } catch (error) {
+    } catch (_error) {
         return NextResponse.json({ error: 'Invalid payload' }, { status: 400 });
     }
 }
