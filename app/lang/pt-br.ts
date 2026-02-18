@@ -6,6 +6,7 @@ export const ptBR = {
         languages: "linguagens",
         devops: "devops",
         systems: "sistemas",
+        view_more: "Ver Mais",
     },
     contact: {
         connection_established: "Conexão estabelecida.",
@@ -45,6 +46,7 @@ export const ptBR = {
         switch_to_en: "Mudar para EN",
         theme_label: "Tema",
         lang_label: "Idioma",
+        stats: "./stats",
     },
     notFound: {
         title: "404 - Não Encontrado",

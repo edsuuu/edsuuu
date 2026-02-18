@@ -91,7 +91,7 @@ const Sidebar = ({
                 <NavLink
                     href="/stats"
                     icon={<BarChart size={24} />}
-                    label="Stats"
+                    label={sidebarTranslations.stats}
                     isActive={pathname === "/stats"}
                     onClick={onClose}
                     isMobile={isMobile}
