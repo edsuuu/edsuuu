@@ -21,9 +21,9 @@
     <img alt="Spotify" src="https://img.shields.io/badge/Spotify-000.svg?logo=spotify&logoColor=1ED760">
 </p>
 <br>
-
+<!-- 
 <img src="https://github-readme-stats.vercel.app/api/wakatime?username=20525642-7f6a-44d2-aa9f-b243c764fc51&layout=compact&theme=github_dark&border_color=00a4ef&bg_color=000000&" alt="Wakatime">
-<br><br>
+<br><br> -->
 
 <img alt="ProfileVisits" src="https://komarev.com/ghpvc/?username=edsuuu&label=Profile%20Visits&color=blue&style=for-the-badge">
 <img src="https://wakatime.com/badge/user/20525642-7f6a-44d2-aa9f-b243c764fc51.svg?&color=blue&style=for-the-badge" alt="wakatime">
