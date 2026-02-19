@@ -14,6 +14,7 @@ const logMessages = [
     "portfolio.setName('Edson');",
     "portfolio.setRole('FullStack');",
     "Fetching projects from GitHub API...",
+    "Fetching coding stats from Wakatime API...",
     "Loading styles: tailwindcss v4.0",
     "Parsing database connections...",
     "Rendering React components...",

@@ -8,7 +8,9 @@ interface TerminalPromptProps {
     user?: string;
     host?: string;
     path: string;
-    command: string;
+    command?: string;
+    children?: React.ReactNode;
+    className?: string;
 }
 
 export default function TerminalPrompt({
@@ -16,18 +18,20 @@ export default function TerminalPrompt({
     host = "internet",
     path,
     command,
+    children,
+    className = "mb-10",
 }: TerminalPromptProps) {
     const [displayedCommand, setDisplayedCommand] = useState("");
-    const [isTyping, setIsTyping] = useState(false);
     const { isLoading } = useLoader();
 
     useEffect(() => {
         if (isLoading) return;
 
         setDisplayedCommand("");
-        setIsTyping(true);
 
-        if (!command) return;
+        if (!command) {
+            return;
+        }
 
         let currentIndex = 0;
         const intervalId = setInterval(() => {
@@ -35,7 +39,6 @@ export default function TerminalPrompt({
                 setDisplayedCommand(command.slice(0, currentIndex + 1));
                 currentIndex++;
             } else {
-                setIsTyping(false);
                 clearInterval(intervalId);
             }
         }, 50);
@@ -44,19 +47,19 @@ export default function TerminalPrompt({
     }, [command, isLoading]);
 
     return (
-        <div className="mb-10 text-lg md:text-xl font-bold opacity-80 font-mono">
-            <span className="text-green-500">
-                {user}@{host}
-            </span>
-            :<span className="text-blue-500">{path}</span>$
-            <span className="text-gray-600 dark:text-gray-100 ml-2">
+        <div
+            className={`text-lg md:text-xl font-bold opacity-80 font-mono flex flex-wrap items-center gap-2 ${className}`}
+        >
+            <div className="flex items-center gap-px">
+                <span className="text-green-500">
+                    {user}@{host}
+                </span>
+                :<span className="text-blue-500">{path}</span>$
+            </div>
+            <span className="text-gray-600 dark:text-gray-100">
                 {displayedCommand}
             </span>
-            {isTyping && (
-                <span className="text-gray-600 dark:text-gray-100 animate-pulse">
-                    _
-                </span>
-            )}
+            {children}
         </div>
     );
 }

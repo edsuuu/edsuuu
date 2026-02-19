@@ -3,235 +3,208 @@
 import {
     Code,
     Database,
-    File,
     FileCode,
-    Layers,
+    LucideIcon,
+    Play,
     Terminal as TerminalIcon,
 } from "lucide-react";
 import Link from "next/link";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 
 import TerminalPrompt from "../components/TerminalPrompt";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../lang";
 
+interface StackItem {
+    label: string;
+}
+
+interface ProjectLinks {
+    code?: string;
+    demo?: string;
+}
+
+interface Project {
+    id: string;
+    name: string;
+    type: string;
+    icon: LucideIcon;
+    description: string;
+    stack?: StackItem[];
+    links: ProjectLinks;
+}
+
+const ProjectCard = ({
+    project,
+    t,
+}: {
+    project: Project;
+    t: Record<string, string>;
+}) => {
+    return (
+        <div className="group relative cursor-pointer border-l-4 border-transparent hover:border-primary bg-white/60 dark:bg-surface-dark/40 p-6 border-y border-y-gray-200 dark:border-y-gray-800 hover:bg-white dark:hover:bg-surface-dark transition-all w-full shadow-sm hover:shadow-md hover:shadow-primary/5">
+            <div className="flex flex-col md:flex-row gap-6">
+                <div className="mt-1 text-gray-400 group-hover:text-primary transition-colors shrink-0">
+                    {project.icon ? (
+                        <project.icon size={24} />
+                    ) : (
+                        <Code size={24} />
+                    )}
+                </div>
+                <div className="flex-1 w-full">
+                    <div className="flex items-center justify-between mb-2">
+                        <h3 className="font-bold text-xl text-gray-700 dark:text-gray-300 group-hover:text-primary transition-colors font-display">
+                            {project.name}
+                        </h3>
+                        <span className="text-[10px] font-mono text-gray-400 border border-gray-200 dark:border-gray-800 px-2 py-0.5 rounded">
+                            ID: #{project.id}
+                        </span>
+                    </div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 font-mono mb-4 leading-relaxed">
+                        {project.description ||
+                            "No description available for this project."}
+                    </div>
+                    {project.stack && (
+                        <div className="flex flex-wrap gap-2 mb-4">
+                            {project.stack.map((tech, idx) => (
+                                <span
+                                    key={idx}
+                                    className="text-[10px] px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded font-mono border border-gray-200 dark:border-gray-700 uppercase"
+                                >
+                                    {tech.label}
+                                </span>
+                            ))}
+                        </div>
+                    )}
+                    <div className="card-actions flex flex-wrap gap-3 pt-4 border-t border-gray-100 dark:border-gray-800/50 mt-2 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                        <Link
+                            href={project.links?.code || "#"}
+                            className="flex items-center gap-2 px-4 py-2 text-xs font-mono text-primary border border-primary hover:bg-primary/10 transition-colors rounded-sm uppercase tracking-wider"
+                        >
+                            <Code size={16} />
+                            {t.view_code}
+                        </Link>
+                        {project.links?.demo && (
+                            <Link
+                                href={project.links.demo}
+                                className="flex items-center gap-2 px-4 py-2 text-xs font-mono text-white bg-primary hover:bg-primary/90 transition-colors rounded-sm uppercase tracking-wider border border-primary shadow-[0_0_10px_rgba(0,164,239,0.3)]"
+                            >
+                                <Play size={16} />
+                                {t.live_demo}
+                            </Link>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 export default function Projects() {
     const { lang } = useLanguage();
-
     const projectsTranslations = translations[lang].projects;
+    const [searchQuery, setSearchQuery] = useState("");
 
     const projects = useMemo(
         () => [
             {
-                id: "finance-dashboard",
-                name: "finance-dashboard-v2.ts",
-                type: "file",
-                permissions: "-rwxr-xr-x",
-                owner: "edson",
-                group: "staff",
-                date: "Feb 10 14:00",
-                icon: FileCode,
-                color: "text-gray-400 hover:text-primary",
-            },
-            {
-                id: "ai-image-gen",
-                name: "ai-image-gen.py",
-                type: "file",
-                permissions: "-rw-r--r--",
-                owner: "edson",
-                group: "staff",
-                date: "Jan 22 09:30",
-                icon: File,
-                color: "text-gray-400 hover:text-primary",
-            },
-            {
-                id: "laravel-ecommerce",
-                name: "laravel-ecommerce.app",
+                id: "001",
+                name: "nexus_cloud",
                 type: "app",
-                permissions: "-rwxr-xr-x",
-                owner: "edson",
-                group: "staff",
-                date: "Feb 15 11:20",
+                icon: Database,
+                description:
+                    "Distributed infrastructure management platform designed for scaling microservices architecture with minimal overhead.",
+                stack: [{ label: "Docker" }, { label: "K8s" }, { label: "Go" }],
+                links: { code: "#", demo: "#" },
+            },
+            {
+                id: "002",
+                name: "laravel-ecommerce",
+                type: "app",
                 icon: TerminalIcon,
-                color: "text-primary font-bold",
-                isHead: true,
                 description: projectsTranslations.description,
                 stack: [
-                    { icon: FileCode, label: "PHP 8.2" },
-                    { icon: Layers, label: "Laravel 10" },
-                    { icon: Code, label: "React Frontend" },
-                    { icon: Database, label: "MySQL" },
+                    { label: "PHP 8.2" },
+                    { label: "Laravel 10" },
+                    { label: "React" },
+                    { label: "MySQL" },
                 ],
-                links: {
-                    code: "#",
-                    demo: "#",
-                },
+                links: { code: "#", demo: "#" },
             },
             {
-                id: "social-network",
-                name: "social-network-api.go",
-                type: "file",
-                permissions: "-rwxr-xr-x",
-                owner: "edson",
-                group: "staff",
-                date: "Dec 05 18:45",
+                id: "003",
+                name: "void_terminal",
+                type: "app",
                 icon: FileCode,
-                color: "text-gray-400 hover:text-primary",
+                description:
+                    "Web-based CLI for remote server management. Fully responsive with WebSocket integration.",
+                stack: [
+                    { label: "NodeJS" },
+                    { label: "Socket.io" },
+                    { label: "xterm.js" },
+                ],
+                links: { code: "#", demo: "#" },
+            },
+            {
+                id: "004",
+                name: "finance-dashboard",
+                type: "file",
+                icon: FileCode,
+                description:
+                    "Real-time financial data visualization dashboard with predictive analytics.",
+                stack: [
+                    { label: "TypeScript" },
+                    { label: "Next.js" },
+                    { label: "Tremor" },
+                ],
+                links: { code: "#" },
             },
         ],
         [projectsTranslations],
     );
 
+    const filteredProjects = projects.filter((p) =>
+        p.name.toLowerCase().includes(searchQuery.toLowerCase()),
+    );
+
     return (
-        <div className="flex-1 p-4 md:p-10 flex flex-col overflow-y-auto h-full text-gray-800 dark:text-gray-200">
-            <div className="w-full max-w-400 mx-auto border border-gray-300 dark:border-gray-800 rounded-lg shadow-2xl bg-white dark:bg-terminal-bg flex flex-col overflow-hidden text-base md:text-lg h-full max-h-[90vh]">
-                <div className="bg-gray-100 dark:bg-terminal-header border-b border-gray-300 dark:border-gray-800 px-6 py-3 flex items-center justify-between shrink-0">
-                    <div className="flex items-center gap-2.5">
-                        <div className="w-3.5 h-3.5 rounded-full bg-red-500"></div>
-                        <div className="w-3.5 h-3.5 rounded-full bg-yellow-500"></div>
-                        <div className="w-3.5 h-3.5 rounded-full bg-green-500"></div>
-                    </div>
-                    <div className="text-sm text-gray-500 font-medium font-mono">
-                        projects.sh — bash — 120x40
-                    </div>
-                    <div className="w-10"></div>
-                </div>
-
-                <div className="p-8 font-mono text-gray-700 dark:text-gray-300 flex-1 overflow-y-auto">
+        <div className="flex-1 flex flex-col h-full overflow-hidden mt-5">
+            <div className="p-6 md:p-10 pb-0">
+                <div className="max-w-7xl mx-auto w-full">
                     <TerminalPrompt
-                        user="edson"
-                        host="portfolio"
+                        user="root"
+                        host="edson-dev"
                         path="~/projects"
-                        command="ls -la"
-                    />
+                        command="ls -la | grep"
+                        className="mb-0"
+                    >
 
-                    <div className="grid grid-cols-[auto_auto_auto_auto_1fr] gap-x-8 md:gap-x-16 gap-y-3 mb-10 text-sm md:text-base whitespace-nowrap">
-                        <div className="text-gray-400">drwxr-xr-x</div>{" "}
-                        <div className="text-gray-500">2</div>{" "}
-                        <div className="text-gray-400">edson</div>{" "}
-                        <div className="text-gray-500">staff</div>{" "}
-                        <div className="text-blue-500 dark:text-blue-400">
-                            .
+                        <div className="flex-1 min-w-50 relative flex items-center">
+                            <input
+                                className="bg-transparent border-none border-b border-blue-500 p-0 text-gray-800 dark:text-gray-100 focus:ring-0 placeholder-gray-500/50 font-bold w-full outline-none ml-2 caret-gray-900 dark:caret-white"
+                                type="text"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                placeholder={
+                                    projectsTranslations.search_placeholder
+                                }
+                                autoFocus
+                            />
                         </div>
-                        <div className="text-gray-400">drwxr-xr-x</div>{" "}
-                        <div className="text-gray-500">5</div>{" "}
-                        <div className="text-gray-400">edson</div>{" "}
-                        <div className="text-gray-500">staff</div>{" "}
-                        <div className="text-blue-500 dark:text-blue-400">
-                            ..
-                        </div>
-                        {projects.map((project) => (
-                            <div key={project.id} className="contents group">
-                                <div
-                                    className={`font-mono ${project.name === "laravel-ecommerce.app" ? "text-primary font-bold" : "text-gray-400"}`}
-                                >
-                                    {project.permissions}
-                                </div>
-                                <div className="text-gray-500">1</div>
-                                <div
-                                    className={`${project.name === "laravel-ecommerce.app" ? "text-primary font-bold" : "text-gray-400"}`}
-                                >
-                                    {project.owner}
-                                </div>
-                                <div className="text-gray-500">
-                                    {project.group}
-                                </div>
-                                <div
-                                    className={`cursor-pointer transition-colors flex items-center gap-3 ${project.color}`}
-                                >
-                                    {project.name}
-                                    {project.isHead && (
-                                        <span className="text-gray-500 font-normal ml-4 text-xs">
-                                            {"<-- HEAD"}
-                                        </span>
-                                    )}
-                                </div>
-                            </div>
+                    </TerminalPrompt>
+                </div>
+            </div>
+
+            <div className="flex-1 overflow-y-auto p-6 md:p-10 space-y-0 no-scrollbar w-full">
+                <div className="max-w-7xl mx-auto w-full">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+                        {filteredProjects.map((project) => (
+                            <ProjectCard
+                                key={project.id}
+                                project={project}
+                                t={projectsTranslations}
+                            />
                         ))}
-                    </div>
-
-                    <div className="flex flex-wrap items-center gap-2 mb-4">
-                        <span className="text-green-600 dark:text-green-500 font-bold">
-                            edson@portfolio
-                        </span>
-                        <span className="text-gray-400 dark:text-gray-500">
-                            :
-                        </span>
-                        <span className="text-blue-600 dark:text-blue-500 font-bold">
-                            ~/projects
-                        </span>
-                        <span className="text-gray-400 dark:text-gray-500">
-                            $
-                        </span>
-                        <span className="text-gray-900 dark:text-white">
-                            {projectsTranslations.view_project}{" "}
-                            laravel-ecommerce.app
-                        </span>
-                    </div>
-
-                    {projects.map(
-                        (project) =>
-                            project.description && (
-                                <div
-                                    key={`details-${project.id}`}
-                                    className="border-l-2 border-primary pl-4 ml-1 md:ml-4 py-2 mb-8 animate-fade-in"
-                                >
-                                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 font-display">
-                                        {project.name ===
-                                        "laravel-ecommerce.app"
-                                            ? projectsTranslations.title
-                                            : project.name}
-                                    </h3>
-                                    <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-2xl leading-relaxed">
-                                        {project.description}
-                                    </p>
-
-                                    {project.stack && (
-                                        <div className="flex flex-wrap gap-4 mb-6 text-xs uppercase tracking-wider font-bold text-gray-500">
-                                            {project.stack.map((tech, idx) => (
-                                                <div
-                                                    key={idx}
-                                                    className="flex items-center gap-2"
-                                                >
-                                                    <tech.icon size={14} />
-                                                    <span>{tech.label}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-
-                                    <div className="flex gap-4 font-mono text-sm">
-                                        <Link
-                                            href={project.links?.code || "#"}
-                                            className="text-primary hover:text-gray-900 dark:hover:text-white hover:underline decoration-primary underline-offset-4 transition-all"
-                                        >
-                                            {projectsTranslations.view_code}
-                                        </Link>
-                                        <Link
-                                            href={project.links?.demo || "#"}
-                                            className="text-primary hover:text-gray-900 dark:hover:text-white hover:underline decoration-primary underline-offset-4 transition-all"
-                                        >
-                                            {projectsTranslations.live_demo}
-                                        </Link>
-                                    </div>
-                                </div>
-                            ),
-                    )}
-
-                    <div className="flex items-center gap-2 mt-4">
-                        <span className="text-green-600 dark:text-green-500 font-bold">
-                            edson@portfolio
-                        </span>
-                        <span className="text-gray-400 dark:text-gray-500">
-                            :
-                        </span>
-                        <span className="text-blue-600 dark:text-blue-500 font-bold">
-                            ~/projects
-                        </span>
-                        <span className="text-gray-400 dark:text-gray-500">
-                            $
-                        </span>
-                        <span className="cursor-blink"></span>
                     </div>
                 </div>
             </div>
