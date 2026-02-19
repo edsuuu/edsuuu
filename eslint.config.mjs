@@ -19,9 +19,7 @@ const eslintConfig = defineConfig([
             "@stylistic/indent": ["error", 4],
         },
     },
-    // Override default ignores of eslint-config-next.
     globalIgnores([
-        // Default ignores of eslint-config-next:
         ".next/**",
         "out/**",
         "build/**",
