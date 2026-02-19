@@ -30,7 +30,6 @@ jobs:
                   GH_TOKEN: ${{ github.token }}
 
     quality-check:
-        if: github.event_name == 'pull_request'
         runs-on: ubuntu-latest
 
         steps:
@@ -46,12 +45,14 @@ jobs:
             - run: npm run build
 
     auto-merge:
-        needs: quality-check
-        if: github.event_name == 'pull_request' && success()
+        needs: [create-pr, quality-check]
+        if: github.ref == 'refs/heads/dev' && github.event_name == 'push' && success()
         runs-on: ubuntu-latest
 
         steps:
+            - uses: actions/checkout@v4
+
             - name: Enable auto merge
-              run: gh pr merge ${{ github.event.pull_request.number }} --auto --merge
+              run: gh pr merge dev --auto --merge
               env:
                   GH_TOKEN: ${{ github.token }}
