@@ -13,7 +13,6 @@ export default function MobileNavbar() {
     const [shouldRender, setShouldRender] = useState(false);
 
     const [lastPathname, setLastPathname] = useState(pathname);
-
     if (pathname !== lastPathname) {
         setLastPathname(pathname);
         if (isOpen) {

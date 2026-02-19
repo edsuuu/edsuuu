@@ -2,59 +2,57 @@ name: CI/CD Pipeline
 
 on:
     push:
-        branches:
-            - dev
-            - main
+        branches: [dev]
     pull_request:
+        branches: [main]
 
 permissions:
     contents: write
     pull-requests: write
 
 jobs:
-    quality-check:
-        name: Lint & Build
+    create-pr:
+        if: github.event_name == 'push'
         runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: "20"
-                  cache: "npm"
-
-            - name: Install Dependencies
-              run: npm ci
-
-            - name: Run Linter
-              run: npm run lint
-
-            - name: Run Build
-              run: npm run build
-
-    auto-pr-merge:
-        name: Auto PR & Merge
-        needs: quality-check
-        if: github.ref == 'refs/heads/dev' && github.event_name == 'push'
-        runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
 
             - name: Create Pull Request
-              id: create-pr
               run: |
                   gh pr create \
                     --base main \
                     --head dev \
                     --title "Auto PR: dev -> main" \
-                    --body "Automated Pull Request from dev to main." \
-                    || echo "PR likely already exists or failed, continuing..."
+                    --body "Automated Pull Request" \
+                  || echo "PR already exists"
               env:
                   GH_TOKEN: ${{ github.token }}
 
-            - name: Enable Auto Merge
-              run: |
-                  gh pr merge dev --auto --merge
+    quality-check:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+                  cache: npm
+
+            - run: npm ci
+            - run: npm run lint
+            - run: npm run build
+
+    auto-merge:
+        needs: [create-pr, quality-check]
+        if: github.ref == 'refs/heads/dev' && github.event_name == 'push' && success()
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Enable auto merge
+              run: gh pr merge dev --auto --merge
               env:
                   GH_TOKEN: ${{ github.token }}
