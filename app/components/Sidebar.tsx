@@ -73,6 +73,14 @@ const Sidebar = ({
                     isMobile={isMobile}
                 />
                 <NavLink
+                    href="/stats"
+                    icon={<BarChart size={24} />}
+                    label={sidebarTranslations.stats}
+                    isActive={pathname === "/stats"}
+                    onClick={onClose}
+                    isMobile={isMobile}
+                />
+                <NavLink
                     href="/projects"
                     icon={<Terminal size={24} />}
                     label={sidebarTranslations.projects}
@@ -85,14 +93,6 @@ const Sidebar = ({
                     icon={<AtSign size={24} />}
                     label={sidebarTranslations.contact}
                     isActive={pathname === "/contact"}
-                    onClick={onClose}
-                    isMobile={isMobile}
-                />
-                <NavLink
-                    href="/stats"
-                    icon={<BarChart size={24} />}
-                    label={sidebarTranslations.stats}
-                    isActive={pathname === "/stats"}
                     onClick={onClose}
                     isMobile={isMobile}
                 />

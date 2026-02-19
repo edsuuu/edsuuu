@@ -1,8 +1,10 @@
 "use client";
 
-import { Code, Cpu, Edit3 } from "lucide-react";
+import { Code, Cpu, Edit3, ExternalLink } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
+import TerminalPrompt from "../components/TerminalPrompt";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useWakatime } from "../contexts/WakatimeContext";
 import { translations as translationData } from "../lang";
@@ -17,14 +19,12 @@ export default function Stats() {
     const { lang } = useLanguage();
     const translations = translationData[lang].stats;
 
-    // State for API data
     const { data: wakatimeData, loading } = useWakatime();
 
     const stats = (wakatimeData?.stats as unknown as WakatimeStats) || null;
     const allTime =
         (wakatimeData?.all_time as unknown as WakatimeAllTime) || null;
 
-    // Helper functions for formatting
     const formatDuration = (seconds: number) => {
         const hrs = Math.floor(seconds / 3600);
         const mins = Math.floor((seconds % 3600) / 60);
@@ -39,20 +39,19 @@ export default function Stats() {
         : { hrs: 0, mins: 0 };
 
     return (
-        <div className="flex-1 flex flex-col pl-4 md:pl-10 overflow-y-auto w-full h-full relative">
+        <div className="flex-1 flex flex-col pl-0 md:pl-10 pt-5 md:pt-0 overflow-y-auto w-full h-full relative">
             <div className="digital-grid absolute inset-0 pointer-events-none z-0 opacity-20 dark:opacity-30"></div>
 
-            <div className="p-4 md:p-8 lg:p-12 max-w-7xl mx-auto w-full z-10 relative">
-                <div className="mb-2 text-base md:text-lg text-gray-800 dark:text-gray-300 font-bold opacity-60 font-mono">
-                    <span className="text-green-500">root@edson-dev</span>:
-                    <span className="text-blue-500">~</span>${" "}
-                    {translations.command}
-                </div>
+            <div className="p-4 md:p-8 lg:p-12 pb-20 max-w-7xl mx-auto w-full z-10 relative">
+                <TerminalPrompt
+                    user="root"
+                    host="edson-dev"
+                    path="~"
+                    command={translations.command}
+                />
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                    {/* Top Stats Row */}
                     <div className="col-span-1 lg:col-span-12 flex flex-col md:flex-row gap-6">
-                        {/* Total Time */}
                         <div className="bg-white dark:bg-black/40 border border-gray-200 dark:border-gray-800 p-6 rounded-md flex-1">
                             <div className="text-xs text-gray-400 uppercase tracking-widest mb-1">
                                 {translations.total_coding_time}
@@ -70,8 +69,6 @@ export default function Stats() {
                                 </span>
                             </div>
                         </div>
-
-                        {/* Daily Average */}
                         <div className="bg-white dark:bg-black/40 border border-gray-200 dark:border-gray-800 p-6 rounded-md flex-1">
                             <div className="text-xs text-gray-400 uppercase tracking-widest mb-1">
                                 {translations.daily_average}
@@ -145,9 +142,7 @@ export default function Stats() {
                         </div>
                     </div>
 
-                    {/* Editors & OS */}
                     <div className="col-span-1 lg:col-span-6 flex flex-col gap-6">
-                        {/* Editors */}
                         <div className="bg-white dark:bg-black/40 border border-gray-200 dark:border-gray-800 p-6 rounded-md flex-1">
                             <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 dark:text-gray-300 flex items-center gap-2 mb-6">
                                 <Edit3 className="text-primary" size={20} />
@@ -275,6 +270,20 @@ export default function Stats() {
                                 )}
                             </div>
                         </div>
+                    </div>
+
+                    <div className="col-span-1 lg:col-span-12 text-xs md:text-sm text-gray-400 font-mono flex flex-wrap items-center justify-center md:justify-start gap-x-2 gap-y-1">
+                        <span className="text-green-500">➜</span>
+                        {translations.data_source}{" "}
+                        <span className="text-gray-600">(@latest)</span>...
+                        <Link
+                            href="https://wakatime.com/@edsuuu"
+                            target="_blank"
+                            className="ml-2 text-primary hover:text-primary/80 flex items-center gap-1 transition-colors"
+                        >
+                            {translations.view_profile}
+                            <ExternalLink size={12} />
+                        </Link>
                     </div>
                 </div>
             </div>
