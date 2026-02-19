@@ -28,7 +28,7 @@ export default function Contact() {
     return (
         <div className="flex-1 w-full h-full overflow-hidden flex flex-col relative text-gray-800 dark:text-gray-200">
             <div className="scanline"></div>
-            <main className="flex-1 flex flex-col items-center px-4 md:pl-24 md:pr-8 w-full h-full overflow-y-auto pt-5 md:pt-0 pb-10">
+            <main className="flex-1 flex flex-col items-center justify-center px-4 md:pl-24 md:pr-8 w-full h-full overflow-y-auto pt-5 md:pt-0 pb-10">
                 <div className="max-w-350 w-full py-10 mx-auto">
                     <TerminalPrompt
                         user="guest"
