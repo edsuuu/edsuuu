@@ -237,15 +237,12 @@ export default function Home() {
                                 ? currentSyntax
                                 : stack.syntax!;
 
-                            // Fallback for types if syntax is undefined (though it shouldn't be based on logic)
                             const keyword = syntax?.keyword || "";
 
-                            // Handle variable name
                             let displayVariable = syntax?.variable || "";
 
                             if (stack.isDynamic) {
                                 displayVariable = stack.label;
-                                // PHP special case for dynamic items
                                 if (syntax.name === "php") {
                                     displayVariable = `$${displayVariable}`;
                                 }
@@ -254,7 +251,7 @@ export default function Home() {
                             const assignment = syntax?.assignment || "";
                             const suffix = syntax?.suffix || "";
                             const colorClass =
-                                syntax?.color || "text-purple-400"; // declaration color
+                                syntax?.color || "text-purple-400";
                             const assignmentColor =
                                 syntax?.assignmentColor ||
                                 "text-gray-600 dark:text-gray-400";
