@@ -35,6 +35,7 @@ export const en = {
         view_code: "[view_code]",
         live_demo: "[live_demo]",
         title: "Laravel E-commerce Platform",
+        search_placeholder: "search for a project here",
     },
     sidebar: {
         home: "~/home",
