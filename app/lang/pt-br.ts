@@ -35,6 +35,7 @@ export const ptBR = {
         view_code: "[ver_codigo]",
         live_demo: "[demo_ao_vivo]",
         title: "Plataforma de E-commerce Laravel",
+        search_placeholder: "pesquise por um projeto aqui",
     },
     sidebar: {
         home: "~/home",

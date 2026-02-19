@@ -26,6 +26,7 @@
     --color-grid-line: var(--grid-line);
     --color-terminal-bg: var(--terminal-bg);
     --color-terminal-header: var(--terminal-header);
+    --color-accent-cyan: #00f2ff;
     --color-error-red: #ff4444;
 
     --spacing-400: 100rem;
