@@ -13,7 +13,7 @@ export class WakatimeService {
         };
     }
 
-    async getAllTimeStats() {
+    public async getAllTimeStats() {
         try {
             const response = await fetch(`${this.baseUrl}/stats/all_time`, {
                 headers: this.getHeaders(),

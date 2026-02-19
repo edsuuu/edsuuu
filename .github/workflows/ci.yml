@@ -1,11 +1,11 @@
-name: Lint Code
+name: CI - Lint & Build
 
 on:
     push:
     pull_request:
 
 jobs:
-    lint:
+    ci:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
@@ -21,3 +21,6 @@ jobs:
 
             - name: Run Linter
               run: npm run lint
+
+            - name: Run Build
+              run: npm run build
