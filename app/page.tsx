@@ -1,3 +1,4 @@
+/* eslint-disable @stylistic/indent */
 "use client";
 
 import {
@@ -11,6 +12,7 @@ import {
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+import TerminalPrompt from "./components/TerminalPrompt";
 import { useLanguage } from "./contexts/LanguageContext";
 import { useWakatime } from "./contexts/WakatimeContext";
 import { translations as translationData } from "./lang";
@@ -211,11 +213,12 @@ export default function Home() {
     return (
         <div className="flex-1 flex flex-col justify-center items-center md:items-start pl-12 md:pl-40 pr-8 h-full overflow-y-auto py-10">
             <div className="max-w-4xl w-full">
-                <div className="mb-2 text-base md:text-lg text-gray-800 dark:text-gray-300 font-bold opacity-60 font-mono">
-                    <span className="text-green-500">root@edson-dev</span>:
-                    <span className="text-blue-500">~</span>$
-                    ./init_portfolio.sh
-                </div>
+                <TerminalPrompt
+                    user="root"
+                    host="edson-dev"
+                    path="~"
+                    command="./init_portfolio.sh"
+                />
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mb-4">
                     {translations.hello}
                     <span className="text-primary">.</span>

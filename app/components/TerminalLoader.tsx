@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import { useLoader } from "../contexts/LoaderContext";
 import ParticlesBackground from "./ParticlesBackground";
 
 interface TerminalLoaderProps {
@@ -74,7 +75,7 @@ const TerminalLoader = ({ onComplete }: TerminalLoaderProps) => {
 
     return (
         <div
-            className={`fixed inset-x-0 top-0 h-[115vh] z-50 flex items-start justify-center text-slate-800 dark:text-slate-200 font-mono cursor-wait transition-transform duration-700 ease-in-out bg-background dark:bg-background overflow-hidden`}
+            className={`fixed inset-x-0 top-0 h-[115vh] z-100 flex items-start justify-center text-slate-800 dark:text-slate-200 font-mono cursor-wait transition-transform duration-700 ease-in-out bg-background dark:bg-background overflow-hidden`}
             style={{
                 transform: isExiting ? "translateY(-100%)" : "translateY(0)",
                 borderRadius: "0 0 50% 50% / 0 0 15vh 15vh",
@@ -144,9 +145,9 @@ const TerminalLoader = ({ onComplete }: TerminalLoaderProps) => {
 };
 
 export default function GlobalLoader() {
-    const [loading, setLoading] = useState(true);
+    const { isLoading, setIsLoading } = useLoader();
 
-    if (!loading) return null;
+    if (!isLoading) return null;
 
-    return <TerminalLoader onComplete={() => setLoading(false)} />;
+    return <TerminalLoader onComplete={() => setIsLoading(false)} />;
 }

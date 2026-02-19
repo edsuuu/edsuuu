@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import { useMemo } from "react";
 
+import TerminalPrompt from "../components/TerminalPrompt";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../lang";
 
@@ -97,23 +98,12 @@ export default function Projects() {
                 </div>
 
                 <div className="p-8 font-mono text-gray-700 dark:text-gray-300 flex-1 overflow-y-auto">
-                    <div className="flex flex-wrap items-center gap-3 mb-8">
-                        <span className="text-green-600 dark:text-green-500 font-bold">
-                            edson@portfolio
-                        </span>
-                        <span className="text-gray-400 dark:text-gray-500">
-                            :
-                        </span>
-                        <span className="text-blue-600 dark:text-blue-500 font-bold">
-                            ~/projects
-                        </span>
-                        <span className="text-gray-400 dark:text-gray-500">
-                            $
-                        </span>
-                        <span className="text-gray-900 dark:text-white">
-                            ls -la
-                        </span>
-                    </div>
+                    <TerminalPrompt
+                        user="edson"
+                        host="portfolio"
+                        path="~/projects"
+                        command="ls -la"
+                    />
 
                     <div className="grid grid-cols-[auto_auto_auto_auto_1fr] gap-x-8 md:gap-x-16 gap-y-3 mb-10 text-sm md:text-base whitespace-nowrap">
                         <div className="text-gray-400">drwxr-xr-x</div>{" "}

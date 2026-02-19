@@ -4,6 +4,7 @@ import { Briefcase, CheckCircle, Code, Mail, Send } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
+import TerminalPrompt from "../components/TerminalPrompt";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../lang";
 
@@ -27,15 +28,14 @@ export default function Contact() {
     return (
         <div className="flex-1 w-full h-full overflow-hidden flex flex-col relative text-gray-800 dark:text-gray-200">
             <div className="scanline"></div>
-            <main className="flex-1 flex flex-col justify-center items-center pl-16 md:pl-24 pr-4 md:pr-8 w-full h-full overflow-y-auto">
+            <main className="flex-1 flex flex-col items-center px-4 md:pl-24 md:pr-8 w-full h-full overflow-y-auto pt-5 md:pt-0 pb-10">
                 <div className="max-w-350 w-full py-10 mx-auto">
-                    <div className="mb-10 text-lg md:text-xl font-bold opacity-80 font-mono">
-                        <span className="text-green-500">guest@internet</span>:
-                        <span className="text-blue-500">~/contact-portal</span>$
-                        <span className="text-gray-600 dark:text-gray-100 ml-2">
-                            connect --secure edson@dev
-                        </span>
-                    </div>
+                    <TerminalPrompt
+                        user="guest"
+                        host="internet"
+                        path="~/contact-portal"
+                        command="connect --secure edson@dev"
+                    />
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
                         <div className="bg-gray-100 dark:bg-[#0c0c0c] border border-gray-300 dark:border-gray-800 rounded-lg overflow-hidden shadow-2xl relative h-full min-h-125 flex flex-col">
