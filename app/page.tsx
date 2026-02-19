@@ -1,4 +1,3 @@
-/* eslint-disable @stylistic/indent */
 "use client";
 
 import {
