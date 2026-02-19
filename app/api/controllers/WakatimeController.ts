@@ -9,7 +9,7 @@ export class WakatimeController {
         this.service = service;
     }
 
-    async getData() {
+    public async getData() {
         const getAllTime = this.service.getAllTimeStats();
 
         try {

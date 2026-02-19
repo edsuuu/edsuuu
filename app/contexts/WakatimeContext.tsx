@@ -20,7 +20,7 @@ const WakatimeContext = createContext<WakatimeContextType | undefined>(
 );
 
 const CACHE_KEY = "wakatime_cache";
-const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 hours
+const CACHE_DURATION = 6 * 60 * 60 * 1000;
 
 export const WakatimeProvider: React.FC<{ children: React.ReactNode }> = ({
     children,

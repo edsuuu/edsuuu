@@ -38,7 +38,7 @@ export default function TerminalPrompt({
                 setIsTyping(false);
                 clearInterval(intervalId);
             }
-        }, 50); // Adjust typing speed here
+        }, 50);
 
         return () => clearInterval(intervalId);
     }, [command, isLoading]);
