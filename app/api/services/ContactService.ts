@@ -6,8 +6,8 @@ import { getContactEmailTemplate } from "../templates/ContactEmailTemplate";
 const contactSchema = z.object({
     name: z.string().min(1, "Name is required"),
     email: z.string().email("Invalid email address"),
-    subject: z.string().min(1, "Subject is required"),
-    message: z.string().min(1, "Message is required"),
+    subject: z.string().min(1, "Subject is required").max(50, "Subject must be at most 50 characters"),
+    message: z.string().min(1, "Message is required").max(3000, "Message must be at most 3000 characters"),
 });
 
 export type ContactData = z.infer<typeof contactSchema>;
