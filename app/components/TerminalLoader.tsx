@@ -34,6 +34,8 @@ const TerminalLoader = ({ onComplete }: TerminalLoaderProps) => {
         return logMessages.slice(0, count);
     }, [progress]);
 
+    const { isBlocked } = useLoader();
+
     useEffect(() => {
         const duration = 3500;
         const intervalTime = 20;
@@ -55,7 +57,7 @@ const TerminalLoader = ({ onComplete }: TerminalLoaderProps) => {
     }, []);
 
     useEffect(() => {
-        if (progress >= 100) {
+        if (progress >= 99 && !isBlocked) {
             const exitTimer = setTimeout(() => {
                 setIsExiting(true);
 
@@ -66,7 +68,7 @@ const TerminalLoader = ({ onComplete }: TerminalLoaderProps) => {
             }, 700);
             return () => clearTimeout(exitTimer);
         }
-    }, [progress, onComplete]);
+    }, [progress, isBlocked, onComplete]);
 
     useEffect(() => {
         if (scrollRef.current) {
