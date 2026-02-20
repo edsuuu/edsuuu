@@ -14,6 +14,8 @@ export const en = {
         encrypted: "Channel encrypted using AES-256.",
         packet_delivered: "PACKET DELIVERED",
         send_new_packet: "[send_new_packet]",
+        name: "Name: [sender_id]",
+        placeholder_name: "enter_your_full_name",
         from: "From: [user@internet]",
         placeholder_email: "enter_your_email",
         subject: "Subject: [packet_header]",
