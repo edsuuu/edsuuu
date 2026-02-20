@@ -13,15 +13,18 @@ const contactSchema = z.object({
 export type ContactData = z.infer<typeof contactSchema>;
 
 export class ContactService {
-    private resend: Resend;
+    private resend: Resend | null = null;
 
-    constructor() {
-        this.resend = new Resend(process.env.RESEND_API_KEY);
-    }
+    constructor() { }
 
     async sendEmail(data: ContactData): Promise<{ id?: string; error?: string }> {
-        if (!process.env.RESEND_API_KEY) {
+        const apiKey = process.env.RESEND_API_KEY;
+        if (!apiKey) {
             return { error: "Resend configuration error: RESEND_API_KEY is not set" };
+        }
+
+        if (!this.resend) {
+            this.resend = new Resend(apiKey);
         }
 
         const validation = contactSchema.safeParse(data);
