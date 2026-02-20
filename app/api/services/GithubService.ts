@@ -18,14 +18,14 @@ export class GithubService {
     private token: string;
 
     constructor() {
-        const token = process.env.GITHUB_TOKEN;
-        if (!token) {
-            throw new Error("GITHUB_TOKEN not found");
-        }
-        this.token = token;
+        this.token = process.env.GITHUB_TOKEN || "";
     }
 
     public async getRepos() {
+        if (!this.token || this.token === "") {
+            console.error("GITHUB_TOKEN not found");
+            return null;
+        }
         try {
             const response = await fetch(this.baseUrl, {
                 method: "POST",
