@@ -82,13 +82,21 @@ export class ApiController {
         try {
             const body = await request.json();
             const result = await this.contactService.sendEmail(body);
+
+            if (result.error) {
+                return NextResponse.json(
+                    { error: result.error },
+                    { status: result.error.includes("validation") || result.error.includes("Invalid") ? 400 : 500 },
+                );
+            }
+
             return NextResponse.json({ success: true, data: result });
         } catch (error: unknown) {
             console.error("Contact Error:", error);
             const message = error instanceof Error ? error.message : "Internal Server Error";
             return NextResponse.json(
                 { error: message },
-                { status: message.includes("validation") || message.includes("Invalid") ? 400 : 500 },
+                { status: 500 },
             );
         }
     }

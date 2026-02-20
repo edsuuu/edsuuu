@@ -19,18 +19,22 @@ export class ContactService {
         this.resend = new Resend(process.env.RESEND_API_KEY);
     }
 
-    async sendEmail(data: ContactData): Promise<{ id: string }> {
+    async sendEmail(data: ContactData): Promise<{ id?: string; error?: string }> {
+        if (!process.env.RESEND_API_KEY) {
+            return { error: "Resend configuration error: RESEND_API_KEY is not set" };
+        }
+
         const validation = contactSchema.safeParse(data);
 
         if (!validation.success) {
-            throw new Error(validation.error.message);
+            return { error: validation.error.message };
         }
 
         const { name, email, subject, message } = validation.data;
         const emailTo = process.env.EMAIL_TO;
 
         if (!emailTo) {
-            throw new Error("Email configuration error: EMAIL_TO is not set");
+            return { error: "Email configuration error: EMAIL_TO is not set" };
         }
 
         const timestamp = new Date().toISOString().replace(/T/, " ").replace(/\..+/, "").replace(/-/g, ".") + "_UTC";
@@ -45,7 +49,7 @@ export class ContactService {
 
         if (error) {
             console.error("Resend error:", error);
-            throw new Error("Failed to send email");
+            return { error: "Failed to send email" };
         }
 
         return { id: resendData?.id || "unknown" };
