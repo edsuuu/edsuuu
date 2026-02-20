@@ -15,6 +15,7 @@ export default function Contact() {
     );
     const [traceId, setTraceId] = useState<string>("");
     const [errorMessage, setErrorMessage] = useState("");
+    const [message, setMessage] = useState("");
 
     const contactTranslations = translations[lang].contact;
 
@@ -170,7 +171,7 @@ export default function Contact() {
                                                     placeholder={
                                                         contactTranslations.placeholder_subject
                                                     }
-                                                    type="text"
+                                                    maxLength={50}
                                                     required
                                                 />
                                             </div>
@@ -179,19 +180,31 @@ export default function Contact() {
                                             <label className="block text-primary text-xs uppercase tracking-wider font-bold">
                                                 {contactTranslations.message}
                                             </label>
-                                            <div className="flex gap-2 border-b border-gray-300 dark:border-gray-800 focus-within:border-primary transition-colors pb-2">
-                                                <span className="text-gray-500 mt-1">
-                                                    &gt;
-                                                </span>
-                                                <textarea
-                                                    name="message"
-                                                    className="w-full bg-transparent border-none focus:ring-0 p-0 text-gray-700 dark:text-gray-300 placeholder-gray-400 dark:placeholder-gray-700 text-sm resize-none outline-none"
-                                                    placeholder={
-                                                        contactTranslations.placeholder_message
-                                                    }
-                                                    rows={4}
-                                                    required
-                                                ></textarea>
+                                            <div className="flex flex-col gap-2 border-b border-gray-300 dark:border-gray-800 focus-within:border-primary transition-colors pb-2 relative">
+                                                <div className="flex gap-2">
+                                                    <span className="text-gray-500 mt-1">
+                                                        &gt;
+                                                    </span>
+                                                    <textarea
+                                                        name="message"
+                                                        value={message}
+                                                        onChange={(e) =>
+                                                            setMessage(
+                                                                e.target.value,
+                                                            )
+                                                        }
+                                                        className="w-full bg-transparent border-none focus:ring-0 p-0 text-gray-700 dark:text-gray-300 placeholder-gray-400 dark:placeholder-gray-700 text-sm resize-none outline-none"
+                                                        placeholder={
+                                                            contactTranslations.placeholder_message
+                                                        }
+                                                        rows={4}
+                                                        maxLength={3000}
+                                                        required
+                                                    ></textarea>
+                                                </div>
+                                                <div className="text-[12px] text-gray-400 dark:text-gray-600 font-mono absolute bottom-2 right-2">
+                                                    {message.length}/3000
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="pt-4">
