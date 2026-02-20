@@ -1,6 +1,6 @@
 "use client";
 
-import { Briefcase, CheckCircle, Code, Mail, Send } from "lucide-react";
+import { Briefcase, CheckCircle, Code, Send } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -10,19 +10,46 @@ import { translations } from "../lang";
 
 export default function Contact() {
     const { lang } = useLanguage();
-    const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+    const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+        "idle",
+    );
     const [traceId, setTraceId] = useState<string>("");
+    const [errorMessage, setErrorMessage] = useState("");
 
     const contactTranslations = translations[lang].contact;
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus("sending");
-        setTimeout(() => {
-            const id = Math.random().toString(36).substring(7).toUpperCase();
-            setTraceId(id);
+        setErrorMessage("");
+
+        const formData = new FormData(e.target as HTMLFormElement);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || "Failed to send email");
+            }
+
+            setTraceId(result.data?.id || "unknown");
             setStatus("sent");
-        }, 1500);
+        } catch (error: unknown) {
+            console.error("Submission error:", error);
+            setStatus("error");
+            if (error instanceof Error) {
+                setErrorMessage(error.message);
+            } else {
+                setErrorMessage("Something went wrong. Please try again.");
+            }
+        }
     };
 
     return (
@@ -86,6 +113,30 @@ export default function Contact() {
                                         onSubmit={handleSubmit}
                                         className={`space-y-6 ${status === "sending" ? "opacity-50 pointer-events-none" : ""}`}
                                     >
+                                        {status === "error" && (
+                                            <div className="text-red-500 text-sm font-mono border border-red-500/20 bg-red-500/10 p-3 rounded">
+                                                Error: {errorMessage}
+                                            </div>
+                                        )}
+                                        <div className="space-y-2">
+                                            <label className="block text-primary text-xs uppercase tracking-wider font-bold">
+                                                {contactTranslations.name}
+                                            </label>
+                                            <div className="flex items-center gap-2 border-b border-gray-300 dark:border-gray-800 focus-within:border-primary transition-colors">
+                                                <span className="text-gray-500">
+                                                    &gt;
+                                                </span>
+                                                <input
+                                                    name="name"
+                                                    className="w-full bg-transparent border-none focus:ring-0 p-0 text-gray-700 dark:text-gray-300 placeholder-gray-400 dark:placeholder-gray-700 text-sm h-8 outline-none"
+                                                    placeholder={
+                                                        contactTranslations.placeholder_name
+                                                    }
+                                                    required
+                                                    type="text"
+                                                />
+                                            </div>
+                                        </div>
                                         <div className="space-y-2">
                                             <label className="block text-primary text-xs uppercase tracking-wider font-bold">
                                                 {contactTranslations.from}
@@ -95,6 +146,7 @@ export default function Contact() {
                                                     &gt;
                                                 </span>
                                                 <input
+                                                    name="email"
                                                     className="w-full bg-transparent border-none focus:ring-0 p-0 text-gray-700 dark:text-gray-300 placeholder-gray-400 dark:placeholder-gray-700 text-sm h-8 outline-none"
                                                     placeholder={
                                                         contactTranslations.placeholder_email
@@ -113,11 +165,13 @@ export default function Contact() {
                                                     &gt;
                                                 </span>
                                                 <input
+                                                    name="subject"
                                                     className="w-full bg-transparent border-none focus:ring-0 p-0 text-gray-700 dark:text-gray-300 placeholder-gray-400 dark:placeholder-gray-700 text-sm h-8 outline-none"
                                                     placeholder={
                                                         contactTranslations.placeholder_subject
                                                     }
                                                     type="text"
+                                                    required
                                                 />
                                             </div>
                                         </div>
@@ -130,11 +184,13 @@ export default function Contact() {
                                                     &gt;
                                                 </span>
                                                 <textarea
+                                                    name="message"
                                                     className="w-full bg-transparent border-none focus:ring-0 p-0 text-gray-700 dark:text-gray-300 placeholder-gray-400 dark:placeholder-gray-700 text-sm resize-none outline-none"
                                                     placeholder={
                                                         contactTranslations.placeholder_message
                                                     }
                                                     rows={4}
+                                                    required
                                                 ></textarea>
                                             </div>
                                         </div>
@@ -142,6 +198,7 @@ export default function Contact() {
                                             <button
                                                 className="group flex items-center gap-2 text-green-600 dark:text-green-500 hover:text-green-700 dark:hover:text-green-400 transition-colors text-sm font-bold uppercase tracking-wider cursor-pointer"
                                                 type="submit"
+                                                disabled={status === "sending"}
                                             >
                                                 <span className="group-hover:translate-x-1 transition-transform">
                                                     {
@@ -214,23 +271,6 @@ export default function Contact() {
                                             </span>
                                             <span className="opacity-0 group-hover:opacity-100 transition-opacity text-xs text-green-600 dark:text-green-500 font-bold">
                                                 {"<CONNECT>"}
-                                            </span>
-                                        </div>
-                                    </Link>
-                                    <Link
-                                        href="mailto:edson@dev.local"
-                                        className="group block"
-                                    >
-                                        <div className="text-xs text-gray-500 uppercase tracking-widest mb-2 font-mono">
-                                            {contactTranslations.direct_signal}
-                                        </div>
-                                        <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300 group-hover:text-primary transition-colors font-mono text-lg md:text-xl">
-                                            <Mail size={24} />
-                                            <span className="border-b border-dashed border-gray-400 dark:border-gray-700 group-hover:border-primary pb-0.5">
-                                                endpoint: edson@dev.local
-                                            </span>
-                                            <span className="opacity-0 group-hover:opacity-100 transition-opacity text-xs text-green-600 dark:text-green-500 font-bold">
-                                                {"<SMTP>"}
                                             </span>
                                         </div>
                                     </Link>
