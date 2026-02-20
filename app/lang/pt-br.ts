@@ -14,6 +14,8 @@ export const ptBR = {
         encrypted: "Canal criptografado com AES-256.",
         packet_delivered: "PACOTE ENTREGUE",
         send_new_packet: "[enviar_novo_pacote]",
+        name: "Nome: [id_remetente]",
+        placeholder_name: "digite_seu_nome_completo",
         from: "De: [usuario@internet]",
         placeholder_email: "digite_seu_email",
         subject: "Assunto: [cabecalho_pacote]",
