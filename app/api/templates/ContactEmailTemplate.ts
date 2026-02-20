@@ -20,7 +20,7 @@ export const getContactEmailTemplate = (name: string, email: string, subject: st
     </style>
 </head>
 <body style="margin: 0; padding: 40px 0; background-color: #ffffff;">
-    <table align="center" border="0" cellpadding="0" cellspacing="0" width="750" style="border: 1px solid #f1f1f1; border-spacing: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="850" style="border: 1px solid #f1f1f1; border-spacing: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
         <!-- Header -->
         <tr>
             <td align="center" bgcolor="#000000" style="padding: 50px 0;">
@@ -38,7 +38,7 @@ export const getContactEmailTemplate = (name: string, email: string, subject: st
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>
                                     <td width="120" style="font-size: 11px; font-weight: bold; color: ${primaryColor}; text-transform: uppercase; letter-spacing: 2px;">Sender:</td>
-                                    <td style="font-size: 16px; font-weight: 500; color: #111827;">${name}</td>
+                                    <td style="font-size: 16px; font-weight: 500; color: #111827; word-break: break-all;">${name}</td>
                                 </tr>
                             </table>
                         </td>
@@ -48,7 +48,7 @@ export const getContactEmailTemplate = (name: string, email: string, subject: st
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>
                                     <td width="120" style="font-size: 11px; font-weight: bold; color: ${primaryColor}; text-transform: uppercase; letter-spacing: 2px;">Email:</td>
-                                    <td style="font-size: 16px; font-weight: 500; color: #111827;">${email}</td>
+                                    <td style="font-size: 16px; font-weight: 500; color: #111827; word-break: break-all;">${email}</td>
                                 </tr>
                             </table>
                         </td>
@@ -58,7 +58,7 @@ export const getContactEmailTemplate = (name: string, email: string, subject: st
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>
                                     <td width="120" style="font-size: 11px; font-weight: bold; color: ${primaryColor}; text-transform: uppercase; letter-spacing: 2px;">Subject:</td>
-                                    <td style="font-size: 16px; font-weight: 500; color: #111827;">${subject}</td>
+                                    <td style="font-size: 16px; font-weight: 500; color: #111827; word-break: break-all;">${subject}</td>
                                 </tr>
                             </table>
                         </td>
@@ -66,7 +66,7 @@ export const getContactEmailTemplate = (name: string, email: string, subject: st
                     <tr>
                         <td>
                             <div style="font-size: 11px; font-weight: bold; color: ${primaryColor}; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">Message:</div>
-                            <div style="background-color: rgba(255,255,255,0.8); border: 1px solid #f1f1f1; padding: 25px; font-size: 16px; color: #374151; line-height: 1.7; min-height: 150px;">
+                            <div style="background-color: rgba(255,255,255,0.8); border: 1px solid #f1f1f1; padding: 25px; font-size: 16px; color: #374151; line-height: 1.7; min-height: 150px; word-break: break-all; word-wrap: break-word; overflow-wrap: break-word;">
                                 ${message.replace(/\n/g, "<br/>")}
                             </div>
                         </td>
