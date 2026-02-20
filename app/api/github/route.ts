@@ -1,29 +1,11 @@
-import { NextResponse } from 'next/server';
+import { GithubController } from "../controllers/GithubController";
+import { GithubService } from "../services/GithubService";
+
+export const dynamic = "force-dynamic";
 
 export async function GET() {
-    try {
-        return NextResponse.json({
-            message: 'GitHub API Integration Scheme',
-            status: 'pending configuration',
-            endpoints: {
-                get_user: 'GET /api/github?username=...',
-                webhook_receiver: 'POST /api/github',
-            }
-        });
-    } catch (_error) {
-        return NextResponse.json({ error: 'Failed to process request' }, { status: 500 });
-    }
-}
+    const service = new GithubService();
+    const controller = new GithubController(service);
 
-export async function POST(request: Request) {
-    try {
-        const body = await request.json();
-
-        return NextResponse.json({
-            message: 'Webhook received successfully',
-            payload_received: body
-        });
-    } catch (_error) {
-        return NextResponse.json({ error: 'Invalid payload' }, { status: 400 });
-    }
+    return await controller.getData();
 }

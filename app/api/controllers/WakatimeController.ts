@@ -9,7 +9,7 @@ export class WakatimeController {
         this.service = service;
     }
 
-    public async getData() {
+    public async getJsonData() {
         const getAllTime = this.service.getAllTimeStats();
 
         try {
@@ -34,12 +34,21 @@ export class WakatimeController {
                 }
                 : null;
 
-            return NextResponse.json({
+            return {
                 all_time: formattedAllTime,
                 stats: formattedStats,
-            });
+            };
         } catch (error) {
             console.error("Error in WakatimeController:", error);
+            throw error;
+        }
+    }
+
+    public async getData() {
+        try {
+            const data = await this.getJsonData();
+            return NextResponse.json(data);
+        } catch {
             return NextResponse.json(
                 { error: "Failed to fetch Wakatime data" },
                 { status: 500 }
