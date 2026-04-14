@@ -3,6 +3,7 @@
 import {
     AtSign,
     BarChart,
+    Globe,
     Home,
     Languages,
     Moon,
@@ -69,6 +70,14 @@ const Sidebar = ({
                     icon={<Home size={24} />}
                     label={sidebarTranslations.home}
                     isActive={pathname === "/"}
+                    onClick={onClose}
+                    isMobile={isMobile}
+                />
+                <NavLink
+                    href="/trace"
+                    icon={<Globe size={24} />}
+                    label="./trace"
+                    isActive={pathname === "/trace"}
                     onClick={onClose}
                     isMobile={isMobile}
                 />

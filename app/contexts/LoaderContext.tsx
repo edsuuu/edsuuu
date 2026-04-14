@@ -8,6 +8,7 @@ interface LoaderContextType {
     registerBlocker: (id: string) => void;
     unregisterBlocker: (id: string) => void;
     isBlocked: boolean;
+    sessionStartTime: number;
 }
 
 const LoaderContext = createContext<LoaderContextType | undefined>(undefined);
@@ -15,6 +16,7 @@ const LoaderContext = createContext<LoaderContextType | undefined>(undefined);
 export function LoaderProvider({ children }: { children: React.ReactNode }) {
     const [isLoading, setIsLoading] = useState(true);
     const [blockers, setBlockers] = useState<Set<string>>(new Set());
+    const [sessionStartTime] = useState<number>(() => Date.now());
 
     const registerBlocker = (id: string) => {
         setBlockers((prev) => {
@@ -40,6 +42,7 @@ export function LoaderProvider({ children }: { children: React.ReactNode }) {
                 registerBlocker,
                 unregisterBlocker,
                 isBlocked: blockers.size > 0,
+                sessionStartTime,
             }}
         >
             {children}
