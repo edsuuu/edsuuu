@@ -1,0 +1,3 @@
+{
+    "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)README.md' ':(exclude).github'"
+}

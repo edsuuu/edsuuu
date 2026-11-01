@@ -18,6 +18,7 @@ import re
 import subprocess
 import textwrap
 import urllib.request
+from datetime import date
 from html import escape, unescape
 from pathlib import Path
 
@@ -97,12 +98,13 @@ def clip(text, n):
 
 
 # ---------------------------------------------------------------- hero
-def hero():
+def hero(numbers):
     W, H, X = 1000, 212, 6
     css = """.gl{fill:none;stroke:var(--grid)}
 .net line{stroke:var(--brand);stroke-opacity:.22}.net circle{fill:var(--brand);fill-opacity:.55}
 .pulse{animation:pulse 3s ease-in-out infinite}@keyframes pulse{50%{fill-opacity:.15}}
-@keyframes in{from{opacity:0;transform:translateY(6px)}}@keyframes ty{from{opacity:0}}"""
+@keyframes in{from{opacity:0;transform:translateY(6px)}}@keyframes ty{from{opacity:0}}
+.sep{stroke:var(--line)}"""
 
     def intro(delay):
         return f'style="animation:in .5s ease-out {delay}s both"'
@@ -135,6 +137,15 @@ def hero():
              f'{escape(HEADLINE)}{t(".", "br")}</text>')
     b.append(f'<text x="{X}" y="182" font-size="22" class="br" {intro(1.35)}>Fullstack Developer</text>')
 
+    # números do Git em 2x2, no vão entre o nome e a rede de partículas
+    sx = 372
+    assert X + tw(HEADLINE + ".", size) * 0.96 < sx - 24, "headline invade o bloco de números"
+    b.append(f'<line x1="{sx}.5" y1="80" x2="{sx}.5" y2="186" class="sep" {intro(1.5)}/>')
+    for k, (value, label) in enumerate(numbers):
+        x, y = sx + 32 + (k % 2) * 190, 108 + (k // 2) * 62
+        b.append(f'<g {intro(1.55 + k * .08)}><text x="{x}" y="{y}" font-size="30" class="b fg">{value:,}</text>'
+                 f'<text x="{x}" y="{y + 20}" font-size="12" class="mu" letter-spacing=".4">{escape(label)}</text></g>')
+
     write("hero.svg", W, H, "".join(b), css, f"root@{USER}:~$ ./init_portfolio.sh — {HEADLINE}. Fullstack Developer")
 
 
@@ -145,17 +156,38 @@ QUERY = """query($login: String!) { user(login: $login) { repositories(first: 10
   totalSize edges { size node { name color } } } }}}}"""
 
 
-def recent_repos(n=6):
+def gql(query):
     token = os.environ.get("GITHUB_TOKEN") or subprocess.run(
         ["gh", "auth", "token"], capture_output=True, text=True, check=True).stdout.strip()
     req = urllib.request.Request(
         "https://api.github.com/graphql",
-        data=json.dumps({"query": QUERY, "variables": {"login": USER}}).encode(),
+        data=json.dumps({"query": query, "variables": {"login": USER}}).encode(),
         headers={"Authorization": f"bearer {token}"})
     data = json.load(urllib.request.urlopen(req))
     if "errors" in data:
         raise SystemExit(data["errors"])
-    nodes = data["data"]["user"]["repositories"]["nodes"]
+    return data["data"]["user"]
+
+
+def stats():
+    """Números do topo: totais desde a criação da conta + os últimos 12 meses do gráfico."""
+    first = gql("""query($login: String!) { user(login: $login) { createdAt contributionsCollection {
+      contributionCalendar { totalContributions weeks { contributionDays { contributionCount } } } } } }""")
+    years = range(int(first["createdAt"][:4]), date.today().year + 1)
+    per_year = " ".join(f'y{y}: contributionsCollection(from: "{y}-01-01T00:00:00Z", to: "{y}-12-31T23:59:59Z") '
+                        "{ totalCommitContributions totalPullRequestContributions }" for y in years)
+    yearly = gql(f"query($login: String!) {{ user(login: $login) {{ {per_year} }} }}").values()
+    cal = first["contributionsCollection"]["contributionCalendar"]
+    return [
+        (sum(y["totalCommitContributions"] for y in yearly), "commits"),
+        (sum(y["totalPullRequestContributions"] for y in yearly), "pull requests"),
+        (cal["totalContributions"], "contributions · 12m"),
+        (sum(d["contributionCount"] > 0 for w in cal["weeks"] for d in w["contributionDays"]), "active days · 12m"),
+    ]
+
+
+def recent_repos(n=6):
+    nodes = gql(QUERY)["repositories"]["nodes"]
     # o repo do perfil fica de fora (o workflow faz push nele), e repo sem código não vira card
     return [r for r in nodes if r["name"] != USER and r["languages"]["totalSize"]][:n]
 
@@ -233,7 +265,7 @@ def link(label):
 
 
 if __name__ == "__main__":
-    hero()
+    hero(stats())
     for label in LINKS:
         link(label)
     repos = recent_repos()
