@@ -1,0 +1,44 @@
+name: README
+
+on:
+    schedule:
+        - cron: "17 */3 * * *"
+    workflow_dispatch:
+
+permissions:
+    contents: write
+
+jobs:
+    recent-projects:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-python@v5
+              with:
+                  python-version: "3.12"
+
+            - name: JetBrains Mono
+              run: |
+                  mkdir -p "$RUNNER_TEMP/jbm"
+                  for w in Regular Bold; do
+                    curl -sSfL -o "$RUNNER_TEMP/jbm/JetBrainsMono-$w.ttf" \
+                      "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/v2.304/fonts/ttf/JetBrainsMono-$w.ttf"
+                  done
+
+            - run: pip install fonttools brotli
+
+            - run: python .github/readme/build.py
+              env:
+                  GITHUB_TOKEN: ${{ github.token }}
+                  JBMONO_DIR: ${{ runner.temp }}/jbm
+
+            - name: Commit
+              run: |
+                  git add -A README.md .github/readme
+                  git diff --cached --quiet && exit 0
+                  git config user.name "github-actions[bot]"
+                  git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                  git commit -m "chore(readme): atualiza projetos recentes"
+                  git push
