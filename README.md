@@ -52,10 +52,10 @@
 ### ~/recent-projects
 
 <!-- recent:start -->
-<a href="https://github.com/edsuuu/Wallget"><img src=".github/readme/recent-1.svg" width="49%" alt="Wallget: Papel de parede animado com widgets e tema preto sob medida para o Windows 11"></a>
-<a href="https://github.com/edsuuu/macropad"><img src=".github/readme/recent-2.svg" width="49%" alt="macropad: App para configurar a macropad chinesa de 3 teclas + knob (CH57x, USB 1189:8890): teclas, knob, comandos e LED, com desenho 3D ao vivo"></a>
-<a href="https://github.com/edsuuu/magoagent"><img src=".github/readme/recent-3.svg" width="49%" alt="magoagent: Quadro branco nativo em Rust com servidor MCP para qualquer IA desenhar e ver o resultado"></a>
-<a href="https://github.com/edsuuu/monitorctl"><img src=".github/readme/recent-4.svg" width="49%" alt="monitorctl: Controle de monitores (DDC/CI: brilho, contraste, cor, AOC/Alienware) e de telas/áudio no Windows e Linux"></a>
+<a href="https://github.com/edsuuu/monitorctl"><img src=".github/readme/recent-1.svg" width="49%" alt="monitorctl: Controle de monitores (DDC/CI: brilho, contraste, cor, AOC/Alienware) e de telas/áudio no Windows e Linux"></a>
+<a href="https://github.com/edsuuu/Wallget"><img src=".github/readme/recent-2.svg" width="49%" alt="Wallget: Papel de parede animado com widgets e tema preto sob medida para o Windows 11"></a>
+<a href="https://github.com/edsuuu/macropad"><img src=".github/readme/recent-3.svg" width="49%" alt="macropad: App para configurar a macropad chinesa de 3 teclas + knob (CH57x, USB 1189:8890): teclas, knob, comandos e LED, com desenho 3D ao vivo"></a>
+<a href="https://github.com/edsuuu/magoagent"><img src=".github/readme/recent-4.svg" width="49%" alt="magoagent: Quadro branco nativo em Rust com servidor MCP para qualquer IA desenhar e ver o resultado"></a>
 <a href="https://github.com/edsuuu/unkvoid"><img src=".github/readme/recent-5.svg" width="49%" alt="unkvoid: Compartilhamento de tela, áudio e voz com SFU próprio, tudo auto-hospedado"></a>
 <a href="https://github.com/edsuuu/MoneyClips"><img src=".github/readme/recent-6.svg" width="49%" alt="MoneyClips: Corta vídeos em Shorts com IA e posta sozinho no YouTube e no TikTok"></a>
 <!-- recent:end -->
