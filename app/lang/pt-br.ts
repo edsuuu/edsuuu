@@ -25,7 +25,6 @@ export const ptBR = {
         send_script: "./enviar_pacote.sh",
         open_ports: "Portas Abertas",
         github_protocol: "Protocolo Github",
-        linkedin_uplink: "Conexão LinkedIn",
         direct_signal: "Sinal Direto",
         mode_insert: "MODO: INSERÇÃO",
         encryption_active: "CRIPTOGRAFIA: AES-256 ATIVO",

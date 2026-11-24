@@ -215,7 +215,7 @@ export default function Home() {
             <div className="max-w-4xl w-full">
                 <TerminalPrompt
                     user="root"
-                    host="edson-dev"
+                    host="dev"
                     path="~"
                     command="./init_portfolio.sh"
                 />
@@ -225,7 +225,7 @@ export default function Home() {
                 </h1>
                 <h2 className="text-xl md:text-2xl text-primary font-medium tracking-wide flex items-center gap-3 flex-wrap">
                     <span className="opacity-70 text-gray-800 dark:text-gray-400">
-                        Edson {"// "}
+                        {"// "}
                     </span>
                     <span>{translations.developer}</span>
                 </h2>

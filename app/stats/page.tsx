@@ -45,7 +45,7 @@ export default function Stats() {
             <div className="p-4 md:p-8 lg:p-12 pb-20 max-w-7xl mx-auto w-full z-10 relative">
                 <TerminalPrompt
                     user="root"
-                    host="edson-dev"
+                    host="dev"
                     path="~"
                     command={translations.command}
                 />

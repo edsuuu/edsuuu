@@ -25,7 +25,6 @@ export const en = {
         send_script: "./send_packet.sh",
         open_ports: "Open Ports",
         github_protocol: "Github Protocol",
-        linkedin_uplink: "LinkedIn Uplink",
         direct_signal: "Direct Signal",
         mode_insert: "MODE: INSERT",
         encryption_active: "ENCRYPTION: AES-256 ACTIVE",

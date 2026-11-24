@@ -140,7 +140,7 @@ const ProjectsContent = () => {
                 <div className="max-w-7xl mx-auto w-full">
                     <TerminalPrompt
                         user="root"
-                        host="edson-dev"
+                        host="dev"
                         path="~/projects"
                         command="ls -la | grep"
                         className="mb-0"

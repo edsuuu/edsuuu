@@ -1,6 +1,6 @@
 "use client";
 
-import { Briefcase, CheckCircle, Code, Send } from "lucide-react";
+import { CheckCircle, Code, Send } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -62,7 +62,7 @@ export default function Contact() {
                         user="guest"
                         host="internet"
                         path="~/contact-portal"
-                        command="connect --secure edson@dev"
+                        command="connect --secure dev@portfolio"
                     />
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
@@ -263,27 +263,6 @@ export default function Contact() {
                                             </span>
                                             <span className="opacity-0 group-hover:opacity-100 transition-opacity text-xs text-green-600 dark:text-green-500 font-bold">
                                                 {"<GET>"}
-                                            </span>
-                                        </div>
-                                    </Link>
-                                    <Link
-                                        href="https://www.linkedin.com/in/edsonlima343/"
-                                        target="_blank"
-                                        className="group block"
-                                    >
-                                        <div className="text-xs text-gray-500 uppercase tracking-widest mb-2 font-mono">
-                                            {
-                                                contactTranslations.linkedin_uplink
-                                            }
-                                        </div>
-                                        <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300 group-hover:text-primary transition-colors font-mono text-lg md:text-xl">
-                                            <Briefcase size={24} />
-                                            <span className="border-b border-dashed border-gray-400 dark:border-gray-700 group-hover:border-primary pb-0.5">
-                                                endpoint:
-                                                linkedin.com/in/edsonlima343
-                                            </span>
-                                            <span className="opacity-0 group-hover:opacity-100 transition-opacity text-xs text-green-600 dark:text-green-500 font-bold">
-                                                {"<CONNECT>"}
                                             </span>
                                         </div>
                                     </Link>

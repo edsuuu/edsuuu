@@ -11,7 +11,7 @@ interface TerminalLoaderProps {
 
 const logMessages = [
     "const portfolio = new Developer();",
-    "portfolio.setName('Edson');",
+    "portfolio.setName('Dev');",
     "portfolio.setRole('FullStack');",
     "Fetching projects from GitHub API...",
     "Fetching coding stats from Wakatime API...",

@@ -81,7 +81,7 @@ export const getContactEmailTemplate = (name: string, email: string, subject: st
                                     <td><hr style="border: 0; border-top: 1px solid #f1f1f1;" /></td>
                                 </tr>
                             </table>
-                            <div style="font-size: 16px; font-weight: bold; color: #111827; margin-top: 15px;">Edson // Fullstack</div>
+                            <div style="font-size: 16px; font-weight: bold; color: #111827; margin-top: 15px;">Fullstack</div>
                             <div style="font-size: 11px; color: #9ca3af; margin-top: 5px; text-transform: uppercase;">Hash_Verified: OK</div>
                         </td>
                     </tr>

@@ -23,8 +23,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Edson - Fullstack Developer",
-    description: "Edson's Developer Portfolio",
+    title: "Fullstack Developer",
+    description: "Developer Portfolio",
 };
 
 function ThemeProvider({
