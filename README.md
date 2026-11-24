@@ -1,17 +1,11 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00a4ef&height=120&section=header" alt="ondas"/>
 
-<a href="https://edsuuu.vercel.app/">
-  <img src=".github/readme/hero.svg" width="100%" alt="root@edsuuu:~$ ./init_portfolio.sh — edsuuu. Fullstack Developer">
-</a>
+<img src=".github/readme/hero.svg" width="100%" alt="root@edsuuu:~$ ./init_portfolio.sh — edsuuu. Fullstack Developer">
 
 <p>
-  <a href="https://edsuuu.vercel.app/stats"><img src="https://wakatime.com/badge/user/20525642-7f6a-44d2-aa9f-b243c764fc51.svg?style=flat&color=00a4ef" width="229" alt="WakaTime coding time"></a>
   <img src="https://komarev.com/ghpvc/?username=edsuuu&label=profile%20views&color=00a4ef&style=flat" width="145" alt="profile views">
 </p>
 
-<a href="https://edsuuu.vercel.app/"><img src=".github/readme/link-portfolio.svg" height="34" alt="portfolio"></a>
-<a href="https://edsuuu.vercel.app/contact"><img src=".github/readme/link-contact.svg" height="34" alt="contact"></a>
-<a href="https://edsuuu.vercel.app/stats"><img src=".github/readme/link-stats.svg" height="34" alt="coding stats"></a>
 
 ### ~/stack
 
