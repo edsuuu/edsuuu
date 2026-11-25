@@ -46,8 +46,8 @@
 ### ~/recent-projects
 
 <!-- recent:start -->
-<a href="https://github.com/edsuuu/VI-BR-PORT"><img src=".github/readme/recent-1.svg" width="49%" alt="VI-BR-PORT: Xbox Series X|S (Scarlett, GDK) compatibility layer for Windows: native D3D12 runtime and GFX10 to DXIL shader recompiler, tuned for 8 GB NVIDIA GPUs. Fork of VIctory. No game files."></a>
-<a href="https://github.com/edsuuu/magoagent"><img src=".github/readme/recent-2.svg" width="49%" alt="magoagent: Canvas infinito nativo em Rust para orquestrar agentes de IA: terminais, chats, navegador e notas num quadro sem fim, com servidor MCP embutido"></a>
+<a href="https://github.com/edsuuu/magoagent"><img src=".github/readme/recent-1.svg" width="49%" alt="magoagent: Canvas infinito nativo em Rust para orquestrar agentes de IA: terminais, chats, navegador e notas num quadro sem fim, com servidor MCP embutido"></a>
+<a href="https://github.com/edsuuu/VI-BR-PORT"><img src=".github/readme/recent-2.svg" width="49%" alt="VI-BR-PORT: Xbox Series X|S (Scarlett, GDK) compatibility layer for Windows: native D3D12 runtime and GFX10 to DXIL shader recompiler, tuned for 8 GB NVIDIA GPUs. Fork of VIctory. No game files."></a>
 <a href="https://github.com/edsuuu/design-system-html"><img src=".github/readme/recent-3.svg" width="49%" alt="design-system-html: Processo para IA fazer design previsível: design system em HTML vivo extraído de referências"></a>
 <a href="https://github.com/edsuuu/Wallget"><img src=".github/readme/recent-4.svg" width="49%" alt="Wallget: Papel de parede animado com widgets e tema preto sob medida para o Windows 11"></a>
 <a href="https://github.com/edsuuu/OpenHeadphones"><img src=".github/readme/recent-5.svg" width="49%" alt="OpenHeadphones: OpenHeadphones: open source app for JBL headphones on Windows, macOS and Linux. Battery, noise cancelling (ANC), equalizer, gestures and settings from the tray. Not an official JBL app. | App de código aberto para fones JBL no PC."></a>
